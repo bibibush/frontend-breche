@@ -1,7 +1,19 @@
 import { Form } from "react-bootstrap";
 import useActions from "../hooks/useActions";
+import { useCallback, useState } from "react";
+import axios from "axios";
 
 export default function CommandeCSE() {
+  const [files, setFiles] = useState([]);
+  const onChangeupload = useCallback((event) => {
+    setFiles(event.target.files);
+  }, []);
+  const upload = useCallback(() => {
+    const formdata = new FormData();
+    formdata.append("order_file", files[0]);
+    axios.post();
+  }, [files]);
+
   const { putName, putEntreprise, putAdresse, putNumero, putEmail } =
     useActions();
 
@@ -60,6 +72,7 @@ export default function CommandeCSE() {
             type="file"
             size="lg"
             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            onChange={onChangeupload}
           />
         </Form.Group>
       </div>
