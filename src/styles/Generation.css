@@ -1,0 +1,25 @@
+.generation {
+  position: relative;
+  height: 850px;
+  background-image: url("../images/SALAISONS\ DE\ LA\ BRECHE\ -\ Famille\ Prost.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.generation-cover {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.generation .generation-desc {
+  position: absolute;
+  text-align: center;
+  width: 906;
+  bottom: 85px;
+  left: 50%;
+  margin-left: calc(906px / -2);
+}
+.generation .generation-desc p {
+  color: #d3ffc5;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.4;
+}

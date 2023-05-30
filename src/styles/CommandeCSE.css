@@ -1,0 +1,20 @@
+.orders {
+  margin-top: 99px;
+  position: relative;
+}
+.orders .user_info {
+  width: 650px;
+  margin: 150px auto;
+}
+.orders .user_info p {
+  font-size: 36px;
+  margin-bottom: 65px;
+}
+.orders .user_orders {
+  width: 1100px;
+  margin: 0 auto;
+}
+.orders .user_orders p {
+  font-size: 36px;
+  margin-bottom: 65px;
+}

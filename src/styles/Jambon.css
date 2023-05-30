@@ -1,0 +1,77 @@
+.jambons-bg {
+  position: relative;
+  height: 1100px;
+  padding-top: 56px;
+  background-color: #f9f9f9;
+}
+.jambons-bg p {
+  text-align: center;
+  position: absolute;
+  width: 495px;
+  left: 50%;
+  margin: 0 0 46px calc(495px / -2);
+  font-size: 36px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border-bottom: 5px solid #c4c0ba;
+  border-radius: 6px;
+}
+
+.jambons {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  column-gap: 30px;
+  row-gap: 115px;
+  left: 50%;
+  top: 232px;
+  margin-left: calc(960px / -2);
+}
+.jambons .jambon {
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.jambons .jambon .desc {
+  width: 250px;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(250px / -2);
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: center;
+  background-color: rgba(131, 155, 41, 0.7);
+  color: white;
+  margin-top: 190px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.jambons .jambon:hover .desc {
+  height: 190px;
+  margin-top: 0;
+}
+.jambons .jambon .desc .inner {
+  width: 165px;
+}
+.jambons .jambon img {
+  width: 250px;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.jambons .jambon .jambon_desc {
+  font-size: 23px;
+}
+.jambons .jambon .jambon_desc .title {
+  line-height: 1.4;
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+}
+.jambons .jambon .jambon_desc .price {
+  margin-top: 22px;
+  font-size: 18px;
+}

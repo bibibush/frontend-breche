@@ -1,0 +1,56 @@
+/* PRESENT */
+.present {
+  position: relative;
+  height: 878px;
+  background-image: url("../images/saucisson-1000x1000_195477095.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.present .present-cover {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.present .present-logo {
+  position: absolute;
+  width: 328px;
+  height: 226px;
+  left: 38%;
+  margin-left: calc(328px / -2);
+  bottom: 365px;
+}
+.present .logo-div {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(150px);
+  display: flex;
+  width: 256px;
+  left: 66%;
+  margin-left: calc(256px / -2);
+  justify-content: center;
+  bottom: 335px;
+}
+
+.present .logo-artisan {
+  width: 256px;
+  height: 254px;
+}
+
+.present .present-desc {
+  position: absolute;
+  bottom: 225px;
+  left: 52%;
+  margin-left: calc(681px / -2);
+}
+.present .present-desc p {
+  color: white;
+  font-family: "Noto Serif", serif;
+  font-size: 36px;
+}
+/* .present .present-desc .btn {
+  position: absolute;
+  bottom: -78px;
+  left: 50%;
+  margin-left: calc(126px / -2);
+} */

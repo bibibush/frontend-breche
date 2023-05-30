@@ -1,0 +1,71 @@
+.contact-nous {
+  height: 1300px;
+  position: relative;
+  font-family: "Noto Serif", serif;
+  background-image: url("../images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+#form-contact {
+  position: absolute;
+  top: 186px;
+  width: 802px;
+  height: 957px;
+  left: 50%;
+  margin-left: calc(802px / -2);
+  background-color: #c0dfa7;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4);
+  padding: 26px 56px;
+}
+#form-contact .nom-email {
+  display: flex;
+  margin-bottom: 35px;
+}
+#form-contact label {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#form-contact input,
+#form-contact textarea,
+#form-contact select {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: #fcfcf5;
+}
+#form-contact input:focus,
+#form-contact textarea:focus,
+#form-contact select:focus {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.mb-3 {
+  margin-top: 25px;
+}
+#form-contact .nom-email .mb-3:first-child,
+#form-contact .nom-email .mb-3:nth-child(2) {
+  margin-top: 0;
+}
+#form-contact .nom-email .mb-3 input {
+  width: 330px;
+}
+#form-contact .nom-email .mb-3:nth-child(2) {
+  margin-left: 30px;
+}
+
+#form-contact .btn {
+  position: absolute;
+  width: 186px;
+  background-color: #a81817;
+  border-color: #a81817;
+  bottom: 36px;
+  left: 50%;
+  margin-left: calc(186px / -2);
+  font-size: 19px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+#form-contact .btn:active {
+  background-color: #6f1111;
+  border-color: #6f1111;
+}

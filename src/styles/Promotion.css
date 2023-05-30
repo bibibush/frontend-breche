@@ -1,0 +1,120 @@
+/* PROMOTION */
+.promotion {
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+  background-image: url("../images/green-food\ bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.promotion .promotion-title {
+  position: relative;
+  width: 539px;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffebb8;
+}
+.promotion .promotion-title p {
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.promotion .promotion-title .promotion-title_bar {
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  margin-left: calc(589px / -2);
+  border-radius: 8px;
+  width: 589px;
+  height: 4px;
+  background-color: #a81817;
+}
+.promotion .swiper {
+  width: calc(619px * 3 + 40px);
+  height: calc(100% - 155px);
+  position: absolute;
+  top: 155px;
+  left: 50%;
+  margin-left: calc((619px * 3 +40px) / -2);
+}
+.promotion .swiper .swiper-slide img {
+  width: 619px;
+  height: 400px;
+  border-radius: 12px;
+}
+.promotion .swiper .swiper-slide {
+  opacity: 0.3;
+  transition: 0.8s;
+}
+.promotion .swiper .swiper-slide .swiper-slide_desc {
+  display: none;
+}
+.promotion .swiper .swiper-slide-active {
+  opacity: 1;
+  transition: 0.8s;
+  position: relative;
+}
+.promotion .swiper .swiper-slide-active .swiper-slide_desc {
+  display: block;
+  position: absolute;
+  width: 489px;
+  left: 50%;
+  margin-left: calc(489px / -2);
+  bottom: 90px;
+  text-align: center;
+}
+.promotion .swiper .swiper-slide-active .swiper-slide_desc p {
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+.promotion .swiper .swiper-slide-active .swiper-slide_desc .breche_btn {
+  position: absolute;
+  left: 50%;
+  margin-left: calc(126px / -2);
+  bottom: -59px;
+}
+.promotion .swiper .swiper-button-next {
+  opacity: 0;
+  transform: translateX(150px);
+  position: absolute;
+  width: 45px;
+  height: 56px;
+  right: 522px;
+  top: 365px;
+  background-image: url("../images/keyboard_double_arrow_right_FILL1_wght400_GRAD0_opsz48.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.8s;
+}
+.promotion .swiper:hover .swiper-button-next {
+  opacity: 1;
+  transform: translateX(0);
+}
+.promotion .swiper .swiper-button-prev {
+  opacity: 0;
+  transform: translateX(-150px);
+  position: absolute;
+  left: 522px;
+  top: 365px;
+  width: 45px;
+  height: 56px;
+  background-image: url("../images/keyboard_double_arrow_left_FILL1_wght400_GRAD0_opsz48.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.8s;
+}
+.promotion .swiper:hover .swiper-button-prev {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.promotion .swiper .swiper-button-prev::after,
+.promotion .swiper .swiper-button-next::after {
+  display: none;
+}

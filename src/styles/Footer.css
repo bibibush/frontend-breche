@@ -1,0 +1,9 @@
+.entre_info {
+  font-variation-settings: "FILL" 1;
+}
+footer {
+  height: 250px;
+  bottom: 0;
+  background-color: #333;
+  color: white;
+}

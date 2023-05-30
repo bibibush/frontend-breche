@@ -1,0 +1,87 @@
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { Button } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
+
+export default function ContactNous() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_86851li",
+        "template_uotx5h8",
+        form.current,
+        "NJQ4XLjnvXHFHZMp5"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Votre demande est bien passé ");
+          window.location.href = "/contact";
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Votre demande n'est pas passé ");
+        }
+      );
+  };
+  // const change = (target) => {
+  //   return target.value;
+  // };
+
+  return (
+    <section className="contact-nous">
+      <Form ref={form} id="form-contact" onSubmit={sendEmail}>
+        <div className="nom-email">
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Votre Nom *</Form.Label>
+            <Form.Control required type="text" name="user_name" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Votre numero telephone</Form.Label>
+            <Form.Control type="text" name="user_numero" />
+          </Form.Group>
+        </div>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Adresse email *</Form.Label>
+          <Form.Control
+            required
+            type="email"
+            placeholder="exemple@exemple.com"
+            name="user_email"
+          />
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Votre entreprise</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="votre entreprise"
+              name="entreprise"
+            />
+          </Form.Group>
+        </Form.Group>
+        <Form.Label>Objet *</Form.Label>
+        <Form.Select required aria-label="Default select example" name="objet">
+          <option value="">Choisissez</option>
+          <option value="un">Un</option>
+          <option value="deux">Deux</option>
+          <option value="trois">Trois</option>
+        </Form.Select>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Sujet</Form.Label>
+          <Form.Control type="text" name="sujet" placeholder="Sujet" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Question *</Form.Label>
+          <Form.Control as="textarea" rows={9} name="message" required />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Envoyer
+        </Button>
+      </Form>
+    </section>
+  );
+}

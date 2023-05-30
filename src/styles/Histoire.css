@@ -1,0 +1,285 @@
+.histoire {
+  position: relative;
+  white-space: pre-line;
+  background-color: #f8fff5;
+}
+.histoire .histoire-desc {
+  position: relative;
+  height: 280px;
+  margin-top: 99px;
+  background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f4ead8;
+}
+.histoire .histoire-desc .histoire-desc-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.histoire .histoire-desc h1 {
+  position: absolute;
+  bottom: 126px;
+  left: 50%;
+  width: 365px;
+  text-align: center;
+  margin-left: calc(365px / -2);
+}
+.histoire .years {
+  position: absolute;
+  background-color: #839b29;
+  color: #f8f9f0;
+  border-radius: 0 0 8px 8px;
+  left: 50%;
+  margin-left: calc(850px / -2);
+}
+.histoire .years.fixed {
+  background-color: #f8f9f0;
+  color: #333;
+}
+.histoire .years.fixed .no-histoire {
+  background-color: #839b29;
+  color: #f8f9f0;
+  border-radius: 0;
+}
+.histoire .years.fixed .breche {
+  background-color: #839b29;
+  color: #f8f9f0;
+  border-radius: 0;
+}
+.histoire .years.fixed .monts {
+  background-color: #839b29;
+  color: #f8f9f0;
+  border-radius: 0;
+}
+.histoire .years.fixed .no-system {
+  background-color: #839b29;
+  color: #f8f9f0;
+  border-radius: 0;
+}
+.histoire .years.fixed .no-plan {
+  background-color: #839b29;
+  color: #f8f9f0;
+  border-radius: 0;
+}
+.histoire .years.fixed > ul li:hover {
+  background-color: #839b29;
+  color: #f8f9f0;
+  border-radius: 0;
+}
+.histoire .years.fixed > ul li::after {
+  background-color: #839b29;
+}
+.histoire .years > ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.histoire .years > ul li {
+  font-size: 21px;
+  margin-right: 48px;
+  padding: 20px 15px;
+  border-radius: 0 0 8px 8px;
+  position: relative;
+}
+.histoire .years > ul li::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 30%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background-color: #333;
+  border-radius: 8px;
+  right: -21px;
+}
+.histoire .years > ul li:last-child::after {
+  display: none;
+}
+.histoire .years > ul li:hover {
+  background-color: #f8f9f0;
+  color: #333;
+  border-radius: 0;
+  cursor: pointer;
+}
+.histoire .years > ul li:last-child {
+  margin-right: 0;
+  padding-right: 58px;
+}
+.histoire .histoire-content {
+  height: 700px;
+}
+.histoire .histoire-content.notre_histoire {
+  background-color: #333;
+  color: #f8f9f0;
+}
+.histoire .histoire-content.notre_histoire .notre_histoire_left_right {
+  display: flex;
+  position: relative;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left {
+  position: absolute;
+  top: 135px;
+  left: 6.5vw;
+}
+
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  img {
+  width: 580px;
+  height: 380px;
+  margin-top: 35px;
+  border-radius: 12%;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  .notre_histoire_left_img_desc {
+  margin-top: 28px;
+  font-size: 18px;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  .notre_histoire_left_img_desc
+  .notre_histoire_left_img_desc_p1 {
+  display: flex;
+  margin-bottom: 25px;
+  position: relative;
+  color: #ffe39e;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  .notre_histoire_left_img_desc
+  .notre_histoire_left_img_desc_p1
+  p {
+  margin-right: 176px;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  .notre_histoire_left_img_desc
+  .notre_histoire_left_img_desc_p1
+  p:last-child {
+  position: absolute;
+  right: -155px;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  .notre_histoire_left_img_desc
+  .notre_histoire_left_img_desc_p2 {
+  display: flex;
+  position: relative;
+  line-height: 2;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  .notre_histoire_left_img_desc
+  .notre_histoire_left_img_desc_p2
+  p:nth-child(2) {
+  margin-left: 65px;
+  position: relative;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  .notre_histoire_left_img_desc
+  .notre_histoire_left_img_desc_p2
+  p:nth-child(2)
+  span {
+  position: absolute;
+  display: block;
+  width: 296px;
+  text-align: center;
+  left: 0;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_left
+  .notre_histoire_left_img_desc
+  .notre_histoire_left_img_desc_p2
+  p:nth-child(3) {
+  position: absolute;
+  top: 0;
+  right: 45px;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_right {
+  position: absolute;
+  right: 5vw;
+  top: 205px;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_right
+  > p {
+  font-size: 56px;
+  color: #99d188;
+  text-align: center;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_right
+  .notre_histoire_right-desc {
+  margin-top: 56px;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_right
+  .notre_histoire_right-desc
+  h2 {
+  margin-bottom: 32px;
+  color: #99d188;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_right
+  .notre_histoire_right-desc
+  h3 {
+  font-size: 20px;
+  font-family: "Noto Serif", serif;
+  line-height: 1.7;
+  text-align: center;
+}
+.histoire
+  .histoire-content.notre_histoire
+  .notre_histoire_left_right
+  .notre_histoire_right
+  .notre_histoire_right-desc
+  h3
+  span {
+  color: #99d188;
+}
+
+.histoire .histoire-content.notre_system {
+  background-color: orangered;
+}
+.histoire .histoire-content.notre_plan {
+  background-color: royalblue;
+}

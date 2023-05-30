@@ -1,0 +1,31 @@
+.explanation {
+  position: relative;
+  height: 800px;
+  background-image: url("../images/Purveyors\ of\ healthy\,\ earty\ harvests.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.explanation img {
+  position: absolute;
+  width: 700px;
+  height: 590px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.explanation .title-desc {
+  position: absolute;
+  top: 133px;
+  right: 280px;
+  text-align: center;
+}
+.explanation .title-desc .title {
+  opacity: 0;
+  transform: translateX(150px);
+  font-size: 72px;
+}
+.explanation .title-desc .desc {
+  margin-top: 63px;
+  font-size: 32px;
+}
