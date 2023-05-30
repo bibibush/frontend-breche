@@ -27,6 +27,7 @@ export default function Download() {
       link.remove();
       window.URL.revokeObjectURL(fileObjectUrl);
     } catch (err) {
+      alert(err.response.statusText);
       console.log("err", err.response);
     }
   }, []);

@@ -1,6 +1,7 @@
 .how_to_order {
   margin-top: 99px;
   white-space: pre-line;
+  position: relative;
 }
 .how_to_order .astuce {
   width: 1200px;
@@ -136,4 +137,75 @@
   color: #839b29;
   font-size: 27px;
   font-weight: 700;
+}
+.how_to_order .fifth {
+  margin-top: 156px;
+  width: 100%;
+}
+.how_to_order .fifth p {
+  font-size: 40px;
+  margin-bottom: 56px;
+  margin-left: 46px;
+}
+.how_to_order .fifth .fifth_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how_to_order .fifth .fifth_flex img {
+  width: 736px;
+  height: 436px;
+}
+.how_to_order .fifth .fifth_flex .fifth_desc {
+  font-size: 28px;
+  font-family: "Noto Serif", serif;
+  line-height: 1.4;
+  text-align: center;
+  margin-left: 66px;
+}
+.how_to_order .fifth .fifth_flex .fifth_desc span:first-child {
+  font-size: 55px;
+}
+.how_to_order .fifth .fifth_flex .fifth_desc span:nth-child(3) {
+  color: #839b29;
+  font-size: 27px;
+  font-weight: 700;
+}
+.how_to_order .sixth {
+  margin-top: 156px;
+  width: 100%;
+}
+.how_to_order .sixth p {
+  font-size: 40px;
+  margin-bottom: 56px;
+  margin-left: 46px;
+}
+.how_to_order .sixth .sixth_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how_to_order .sixth .sixth_flex .sixth_desc {
+  font-size: 28px;
+  font-family: "Noto Serif", serif;
+  line-height: 1.4;
+  text-align: center;
+  margin-left: 66px;
+  margin-bottom: 156px;
+}
+.how_to_order .sixth .sixth_flex .sixth_desc span:first-child {
+  font-size: 55px;
+}
+.how_to_order .sixth .sixth_flex .sixth_desc span:last-child {
+  color: #839b29;
+  font-size: 27px;
+  font-weight: 700;
+}
+.how_to_order button {
+  position: absolute;
+  width: 656px;
+  height: 66px;
+  left: 50%;
+  margin-left: calc(656px / -2);
+  bottom: -156px;
 }

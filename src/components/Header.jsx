@@ -100,6 +100,9 @@ export default function Header() {
     getMe();
   }, [getMe]);
 
+  const clickCommande = () => {
+    window.location.href = "/astuce";
+  };
   return (
     <header>
       <div className="up-menu">
@@ -360,10 +363,12 @@ export default function Header() {
             </div>
           </li>
 
-          <li>
-            <a href="/astuce">
-              <div className="menu-name">Commandez CSE</div>
-            </a>
+          <li
+            onClick={
+              user.username === "annonymous" ? handleShow : clickCommande
+            }
+          >
+            <div className="menu-name">Commandez CSE</div>
           </li>
 
           <li>
