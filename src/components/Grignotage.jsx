@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import usePrototypes from "../hooks/usePrototypes";
 
 export default function Grignotage() {
@@ -12,7 +11,7 @@ export default function Grignotage() {
           const { id, imgurl, title, desc } = grignotage;
 
           return (
-            <Link to={`/nosproduits?id=${id}`} key={id}>
+            <a href={`/nosproduits?id=${id}`} key={id}>
               <div className="grignotage" key={id}>
                 <div className="desc">
                   <div className="inner">
@@ -24,7 +23,7 @@ export default function Grignotage() {
                   <div className="title">{title}</div>
                 </div>
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>

@@ -1,6 +1,7 @@
 .orders {
   margin-top: 99px;
   position: relative;
+  height: 1100px;
 }
 .orders .user_info {
   width: 650px;
@@ -17,4 +18,22 @@
 .orders .user_orders p {
   font-size: 36px;
   margin-bottom: 65px;
+}
+.orders .user_orders .mb-3 {
+  position: relative;
+}
+.orders .user_orders .mb-3 label {
+  font-size: 27px;
+  text-align: center;
+  width: 450px;
+  position: absolute;
+  top: -135px;
+  left: 50%;
+  margin-left: calc(450px / -2);
+}
+.orders .user_orders .mb-3 input {
+  width: 600px;
+  margin: 255px auto 0 auto;
+  background-color: #eeffd6;
+  font-size: 20px;
 }

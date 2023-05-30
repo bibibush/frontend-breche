@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import usePrototypes from "../hooks/usePrototypes";
 
 export default function Jambon() {
@@ -11,7 +10,7 @@ export default function Jambon() {
           const { id, imgurl, title, desc } = jambon;
 
           return (
-            <Link to={`/nosproduits?id=${id}`} key={id}>
+            <a href={`/nosproduits?id=${id}`} key={id}>
               <div className="jambon" key={id}>
                 <div className="desc">
                   <div className="inner">
@@ -23,7 +22,7 @@ export default function Jambon() {
                   <div className="title">{title}</div>
                 </div>
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import usePrototypes from "../hooks/usePrototypes";
 
 export default function Allegee() {
@@ -11,7 +10,7 @@ export default function Allegee() {
           const { id, imgurl, title, desc } = allegee;
 
           return (
-            <Link to={`/nosproduits?id=${id}`} key={id}>
+            <a href={`/nosproduits?id=${id}`} key={id}>
               <div className="allegee" key={id}>
                 <div className="desc">
                   <div className="inner">
@@ -23,7 +22,7 @@ export default function Allegee() {
                   <div className="title">{title}</div>
                 </div>
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>

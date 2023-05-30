@@ -1,6 +1,5 @@
 import { useState } from "react";
 import usePrototypes from "../hooks/usePrototypes";
-import { Link } from "react-router-dom";
 
 export default function Search() {
   const { prototypes } = usePrototypes();
@@ -27,7 +26,7 @@ export default function Search() {
         {searched.map((search) => {
           const { id, imgurl, title, desc } = search;
           return (
-            <Link to={`/nosproduits?id=${id}`} key={id}>
+            <a href={`/nosproduits?id=${id}`} key={id}>
               <div className="keyword-search" key={id}>
                 <div className="desc">
                   <div className="inner">
@@ -39,7 +38,7 @@ export default function Search() {
                   <div className="title">{title}</div>
                 </div>
               </div>
-            </Link>
+            </a>
           );
         })}
       </div>

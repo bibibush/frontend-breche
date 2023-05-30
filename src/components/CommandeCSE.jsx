@@ -1,7 +1,5 @@
 import { Form } from "react-bootstrap";
 import useActions from "../hooks/useActions";
-import Download from "./Download";
-import "../styles/Download.css";
 
 export default function CommandeCSE() {
   const { putName, putEntreprise, putAdresse, putNumero, putEmail } =
@@ -56,7 +54,14 @@ export default function CommandeCSE() {
       </div>
       <div className="user_orders">
         <p>Commandez avec un excel</p>
-        <Download />
+        <Form.Group controlId="formFileLg" className="mb-3">
+          <Form.Label>Enregistrez votre fiche en bas</Form.Label>
+          <Form.Control
+            type="file"
+            size="lg"
+            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          />
+        </Form.Group>
       </div>
     </section>
   );
