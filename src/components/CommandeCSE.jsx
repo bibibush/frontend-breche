@@ -9,9 +9,18 @@ export default function CommandeCSE() {
     setFiles(event.target.files);
   }, []);
   const upload = useCallback(() => {
-    const formdata = new FormData();
+    const formdata = new FormData(document.getElementById("info"));
     formdata.append("order_file", files[0]);
-    axios.post();
+    axios
+      .post("/api/upload/", formdata, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((res) => {
+        console.log("upload success", res);
+      })
+      .catch((err) => {
+        console.log("upload error", err.response);
+      });
   }, [files]);
 
   const { putName, putEntreprise, putAdresse, putNumero, putEmail } =
@@ -28,6 +37,7 @@ export default function CommandeCSE() {
               onChange={putName}
               type="text"
               placeholder="Votre Nom"
+              name="name"
             />
           </Form.Group>
           <Form.Group className="mb-3 entreprise">
@@ -36,6 +46,7 @@ export default function CommandeCSE() {
               onChange={putEntreprise}
               type="text"
               placeholder="Votre entreprise"
+              name="entreprise"
             />
           </Form.Group>
           <Form.Group className="mb-3 adresse">
@@ -44,6 +55,7 @@ export default function CommandeCSE() {
               onChange={putAdresse}
               type="text"
               placeholder="Votre adresse"
+              name="adresse"
             />
           </Form.Group>
           <Form.Group className="mb-3 telephone">
@@ -52,6 +64,7 @@ export default function CommandeCSE() {
               onChange={putNumero}
               type="text"
               placeholder="01-23-45-67-89"
+              name="phonenumber"
             />
           </Form.Group>
           <Form.Group className="mb-3 email">
@@ -60,7 +73,12 @@ export default function CommandeCSE() {
               onChange={putEmail}
               type="email"
               placeholder="name@example.com"
+              name="email"
             />
+          </Form.Group>
+          <Form.Group style={{ display: "none" }} className="mb-3 email">
+            <Form.Label>Votre adresse Email</Form.Label>
+            <Form.Control type="text" name="user" />
           </Form.Group>
         </Form>
       </div>
@@ -75,6 +93,7 @@ export default function CommandeCSE() {
             onChange={onChangeupload}
           />
         </Form.Group>
+        <button onClick={upload}>envoyer</button>
       </div>
     </section>
   );
