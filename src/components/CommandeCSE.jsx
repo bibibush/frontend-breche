@@ -76,10 +76,6 @@ export default function CommandeCSE() {
               name="email"
             />
           </Form.Group>
-          <Form.Group style={{ display: "none" }} className="mb-3 email">
-            <Form.Label>Votre adresse Email</Form.Label>
-            <Form.Control type="text" name="user" />
-          </Form.Group>
         </Form>
       </div>
       <div className="user_orders">
