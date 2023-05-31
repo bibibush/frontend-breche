@@ -1,4 +1,4 @@
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import useActions from "../hooks/useActions";
 import { useCallback, useState } from "react";
 import axios from "axios";
@@ -17,8 +17,10 @@ export default function CommandeCSE() {
       })
       .then((res) => {
         console.log("upload success", res);
+        window.location.href = `/commande/success?id=${res.data.id}`;
       })
       .catch((err) => {
+        alert(err.response.statusText);
         console.log("upload error", err.response);
       });
   }, [files]);
@@ -89,7 +91,7 @@ export default function CommandeCSE() {
             onChange={onChangeupload}
           />
         </Form.Group>
-        <button onClick={upload}>envoyer</button>
+        <Button onClick={upload}>Envoyer</Button>
       </div>
     </section>
   );

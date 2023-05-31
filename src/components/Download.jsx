@@ -11,17 +11,17 @@ export default function Download() {
       link.href = fileObjectUrl;
       link.style.display = "none";
 
-      // const injectFilename = (res) => {
-      //   const disposition = res.headers["content-disposition"];
+      const injectFilename = (res) => {
+        const disposition = res.headers["content-disposition"];
 
-      //   const fileName = decodeURI(
-      //     disposition
-      //       .match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/)[1]
-      //       .replace(/['"]/g, "")
-      //   );
-      //   return fileName;
-      // };
-      link.download = "MODELE Tableau CSE 2022.xlsx";
+        const fileName = decodeURI(
+          disposition
+            .match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/)[1]
+            .replace(/['"]/g, "")
+        );
+        return fileName;
+      };
+      link.download = injectFilename(res);
       document.body.appendChild(link);
       link.click();
       link.remove();

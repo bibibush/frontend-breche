@@ -1,0 +1,18 @@
+.order_success {
+  margin-top: 99px;
+  height: 1500px;
+}
+.order_success .merci {
+  width: 850px;
+  margin: 185px auto;
+  text-align: center;
+}
+.order_success .merci h2 {
+  font-size: 55px;
+}
+.order_success .merci h3 {
+  margin-top: 65px;
+  font-size: 30px;
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+}

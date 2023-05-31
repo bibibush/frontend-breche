@@ -22,6 +22,7 @@ import "./styles/Nosproduits.css";
 import "./styles/CommandeCSE.css";
 import "./styles/Where.css";
 import "./styles/HowToOrder.css";
+import "./styles/OrderSuccess.css";
 import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
 
 import Header from "./components/Header";
@@ -55,6 +56,7 @@ import CommandeCSE from "./components/CommandeCSE";
 
 import axios from "axios";
 import HowToOrder from "./components/HowToOrder";
+import OrderSuccess from "./components/OrderSuccess";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -266,6 +268,7 @@ function App() {
           <>
             <AppStateProvider>
               <Header />
+              <Aide />
               <CommandeCSE />
               <Footer />
             </AppStateProvider>
@@ -278,6 +281,16 @@ function App() {
           <>
             <Header />
             <HowToOrder />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/commande/success"
+        element={
+          <>
+            <Header />
+            <OrderSuccess />
             <Footer />
           </>
         }
