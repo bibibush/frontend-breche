@@ -228,10 +228,19 @@ export default function Header() {
                       <Form.Group className="mb-3">
                         <Form.Label>Votre Nom</Form.Label>
                         <Form.Control
-                          name="username"
+                          name="nom"
                           type="text"
                           required
                           placeholder="Votre nom"
+                        />
+                      </Form.Group>
+                      <Form.Group className="mb-3">
+                        <Form.Label>Votre prenom</Form.Label>
+                        <Form.Control
+                          name="prenom"
+                          type="text"
+                          required
+                          placeholder="Votre prenom"
                         />
                       </Form.Group>
                       <Form.Group className="mb-3">

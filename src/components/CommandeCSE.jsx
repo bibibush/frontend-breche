@@ -39,7 +39,16 @@ export default function CommandeCSE() {
               onChange={putName}
               type="text"
               placeholder="Votre Nom"
-              name="name"
+              name="nom"
+            />
+          </Form.Group>
+          <Form.Group className="mb-3 nom">
+            <Form.Label>Votre prenom</Form.Label>
+            <Form.Control
+              onChange={putName}
+              type="text"
+              placeholder="Votre prenom"
+              name="prenom"
             />
           </Form.Group>
           <Form.Group className="mb-3 entreprise">
