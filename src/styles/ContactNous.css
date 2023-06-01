@@ -12,7 +12,7 @@
   position: absolute;
   top: 186px;
   width: 802px;
-  height: 957px;
+  height: 997px;
   left: 50%;
   margin-left: calc(802px / -2);
   background-color: #c0dfa7;
@@ -59,7 +59,7 @@
   width: 186px;
   background-color: #a81817;
   border-color: #a81817;
-  bottom: 36px;
+  bottom: 0;
   left: 50%;
   margin-left: calc(186px / -2);
   font-size: 19px;

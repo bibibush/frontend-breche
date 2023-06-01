@@ -24,7 +24,7 @@ export default function ContactNous() {
         },
         (error) => {
           console.log(error.text);
-          alert("Votre demande n'est pas passé ");
+          alert("Erreur");
         }
       );
   };
@@ -38,13 +38,17 @@ export default function ContactNous() {
         <div className="nom-email">
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Votre Nom *</Form.Label>
-            <Form.Control required type="text" name="user_name" />
+            <Form.Control required type="text" name="nom" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Votre numero telephone</Form.Label>
-            <Form.Control type="text" name="user_numero" />
+            <Form.Label>Votre prenom *</Form.Label>
+            <Form.Control required type="text" name="prenom" />
           </Form.Group>
         </div>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>Votre numero telephone</Form.Label>
+          <Form.Control type="text" name="user_numero" />
+        </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Adresse email *</Form.Label>
           <Form.Control
