@@ -38,7 +38,7 @@
   position: absolute;
   top: 155px;
   left: 50%;
-  margin-left: calc((619px * 3 +40px) / -2);
+  margin-left: calc((619px * 3 + 40px) / -2);
 }
 .promotion .swiper .swiper-slide img {
   width: 619px;

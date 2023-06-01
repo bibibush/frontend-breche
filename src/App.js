@@ -23,6 +23,7 @@ import "./styles/CommandeCSE.css";
 import "./styles/Where.css";
 import "./styles/HowToOrder.css";
 import "./styles/OrderSuccess.css";
+import "./styles/NotreHistoire.css";
 import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
 
 import Header from "./components/Header";
@@ -53,6 +54,7 @@ import Aide from "./components/Aide";
 import ToUp from "./components/ToUp";
 import Where from "./components/Where";
 import CommandeCSE from "./components/CommandeCSE";
+import NotreHistoire from "./components/NotreHistoire";
 
 import axios from "axios";
 import HowToOrder from "./components/HowToOrder";
@@ -74,18 +76,7 @@ function App() {
               <Aide />
               <ToUp />
               <Present />
-              <Where />
-              <div
-                style={{
-                  backgroundImage: `url(${image})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  backgroundAttachment: "fixed",
-                  height: "400px",
-                }}
-              ></div>
-              <Generation />
+              <NotreHistoire />
               <section className="promotion">
                 <PromotionTitle />
                 <Promotion />

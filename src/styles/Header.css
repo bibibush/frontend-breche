@@ -94,6 +94,7 @@ header .main-menu {
   position: absolute;
   display: flex;
   bottom: 0;
+  width: 1100px;
   left: 12%;
 }
 header .main-menu > li {
@@ -167,19 +168,23 @@ header .main-menu li .hidden-menu {
   box-sizing: border-box;
   border: 1.6px solid #839b29;
   border-radius: 0 0 4px 4px;
-  width: 1100px;
+  width: 1300px;
   height: 0;
   top: 39px;
-  left: -152px;
+  left: -223px;
   cursor: default;
   transition: 0.6s;
 }
 header .main-menu .NosSaucissons:hover .hidden-menu {
   visibility: visible;
-  height: 310px;
+  height: 160px;
+}
+header .main-menu .NosSelections:hover .hidden-menu {
+  visibility: visible;
+  height: 160px;
 }
 header .main-menu li .hidden-menu > .inner {
-  width: 1050px;
+  width: 1250px;
   height: 100%;
 }
 
@@ -188,28 +193,29 @@ header .main-menu li .hidden-menu ul {
   height: 80px;
   display: flex;
   align-items: center;
-  margin-top: 36px;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
-
-header .main-menu li .hidden-menu ul:last-child {
-  margin-top: 216px;
+header .main-menu .NosSelections .hidden-menu ul {
   left: 50%;
-  margin-left: calc(661px / -2);
-}
-header .main-menu li .hidden-menu ul:last-child li {
-  margin-right: 356px;
-}
-header .main-menu li .hidden-menu ul:last-child li:last-child {
-  margin-right: 0;
+  height: 80px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0 auto calc(888px / -2);
 }
 header .main-menu li .hidden-menu .hidden-menu-name {
   position: relative;
+  max-width: 180px;
   text-align: center;
-  margin-right: 26px;
+  margin-right: 46px;
 }
-header .main-menu .NosSelections .hidden-menu .hidden-menu-name {
-  margin-left: 186px;
-  margin-right: 136px;
+header .main-menu li .hidden-menu .hidden-menu-name:last-child {
+  margin-right: 0;
+}
+header .main-menu .NosSelections .hidden-menu .hidden-menu-name:last-child {
+  margin-left: 556px;
 }
 header .main-menu li .hidden-menu .hidden-menu-name::before {
   content: "";
@@ -218,10 +224,16 @@ header .main-menu li .hidden-menu .hidden-menu-name::before {
   width: 4px;
   height: 18px;
   background-color: #839b29;
-  left: -16px;
+  left: -25px;
   top: 0;
   bottom: 0;
   margin: auto 0;
+}
+header .main-menu .NosSelections .hidden-menu .hidden-menu-name::before {
+  height: 10px;
+  border-radius: 50%;
+  width: 10px;
+  left: -297px;
 }
 header
   .main-menu
@@ -230,11 +242,13 @@ header
   .hidden-menu-name:first-child::before {
   display: none;
 }
-header .main-menu li .hidden-menu ul:last-child li::before {
-  height: 24px;
-  left: -185px;
+header
+  .main-menu
+  .NosSelections
+  .hidden-menu
+  .hidden-menu-name:first-child::before {
+  display: none;
 }
-
 header .main-menu li .hidden-menu .hidden-menu-name p {
   font-family: "Noto Serif", serif;
   font-weight: 700;

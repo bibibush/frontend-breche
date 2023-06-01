@@ -304,14 +304,9 @@ export default function Header() {
       </div>
       <div className="inner">
         <ul className="main-menu">
-          <li>
-            <a href="/histoire">
-              <div className="menu-name">Notre histoire</div>
-            </a>
-          </li>
           <li className="NosSaucissons">
             <a href="/nossaucissons">
-              <div className="menu-name">Nos produits</div>
+              <div className="menu-name">Nos saucissons</div>
             </a>
             <div className="hidden-menu">
               <div className="inner">
@@ -347,15 +342,24 @@ export default function Header() {
                     </a>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </li>
+          <li className="NosSelections">
+            <a href="/nosselection/jambon">
+              <div className="menu-name">Notre selections</div>
+            </a>
+            <div className="hidden-menu">
+              <div className="inner">
                 <ul>
                   <li className="hidden-menu-name">
-                    <a href="/nosselection/jambon">
-                      <p>Gamme jambons</p>
+                    <a href={"/nosselection/jambon"}>
+                      <p>Gamme jambon</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
                     <a href="/nosselection/terrine">
-                      <p>Gamme terrines</p>
+                      <p>Gamme terrine</p>
                     </a>
                   </li>
                 </ul>
