@@ -1,0 +1,23 @@
+.login_required {
+  margin-top: 99px;
+  height: 700px;
+  position: relative;
+}
+.login_required .dialogue {
+  position: absolute;
+  width: 1200px;
+  background-color: orange;
+  top: 116px;
+  left: 50%;
+  margin-left: calc(1200px / -2);
+}
+.login_required .dialogue h2 {
+  margin: 86px 0;
+  text-align: center;
+}
+.login_required .dialogue #login {
+  width: 350px;
+  margin: 0 auto;
+}
+.login_required .dialogue h3 {
+}

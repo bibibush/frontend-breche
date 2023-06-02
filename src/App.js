@@ -24,6 +24,7 @@ import "./styles/Where.css";
 import "./styles/HowToOrder.css";
 import "./styles/OrderSuccess.css";
 import "./styles/NotreHistoire.css";
+import "./styles/LoginRequired.css";
 import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
 
 import Header from "./components/Header";
@@ -59,6 +60,7 @@ import NotreHistoire from "./components/NotreHistoire";
 import axios from "axios";
 import HowToOrder from "./components/HowToOrder";
 import OrderSuccess from "./components/OrderSuccess";
+import LoginRequired from "./components/LoginRequired";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -282,6 +284,16 @@ function App() {
           <>
             <Header />
             <OrderSuccess />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <>
+            <Header />
+            <LoginRequired />
             <Footer />
           </>
         }

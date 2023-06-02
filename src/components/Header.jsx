@@ -103,6 +103,9 @@ export default function Header() {
   const clickCommande = () => {
     window.location.href = "/astuce";
   };
+  const clickLogin = () => {
+    window.location.href = "/login";
+  };
   return (
     <header>
       <div className="up-menu">
@@ -378,7 +381,7 @@ export default function Header() {
 
           <li
             onClick={
-              user.username === "annonymous" ? handleShow : clickCommande
+              user.username === "annonymous" ? clickLogin : clickCommande
             }
           >
             <div className="menu-name">Commandez CSE</div>
