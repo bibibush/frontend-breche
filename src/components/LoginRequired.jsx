@@ -1,6 +1,23 @@
-import { Form } from "react-bootstrap";
+import axios from "axios";
+import { useCallback } from "react";
+import { Button, Form } from "react-bootstrap";
 
 export default function LoginRequired() {
+  const login = useCallback(() => {
+    const formdata = new FormData(document.getElementById("login"));
+
+    axios
+      .post("/api/login/", formdata)
+      .then((res) => {
+        console.log("login success", res);
+        window.location.href = "/astuce";
+      })
+      .catch((err) => {
+        console.log("login fail", err.response);
+        alert(err.response.statusText);
+      });
+  }, []);
+
   return (
     <section className="login_required">
       <div className="dialogue">
@@ -25,11 +42,16 @@ export default function LoginRequired() {
               placeholder="Password"
             />
           </Form.Group>
+          <Button variant="success" onClick={login}>
+            Connectez-vous
+          </Button>
         </Form>
-        <h3>
+      </div>
+      <div className="ps">
+        <p>
           Si vous n'avez pas votre compte, vous devez nous contacter pour
           recevoir un compte
-        </h3>
+        </p>
       </div>
     </section>
   );

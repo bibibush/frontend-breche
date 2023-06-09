@@ -39,7 +39,7 @@ export default function Header() {
       })
       .catch((err) => {
         console.log("login error", err.response);
-        alert("c'est pas bon");
+        alert(err.response.statusText);
         setShow(false);
       });
   };
