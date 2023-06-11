@@ -1,10 +1,10 @@
 import { Form, Button } from "react-bootstrap";
-import useActions from "../hooks/useActions";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 
 export default function CommandeCSE() {
   const [files, setFiles] = useState([]);
+  const [user, setUser] = useState({});
   const onChangeupload = useCallback((event) => {
     setFiles(event.target.files);
   }, []);
@@ -24,9 +24,18 @@ export default function CommandeCSE() {
         console.log("upload error", err.response);
       });
   }, [files]);
-
-  const { putName, putEntreprise, putAdresse, putNumero, putEmail } =
-    useActions();
+  const getme = useCallback(async () => {
+    try {
+      const res = await axios.get("/api/getme/");
+      console.log("getme", res);
+      setUser(res.data);
+    } catch (err) {
+      console.log("getme error", err.response);
+    }
+  }, []);
+  useEffect(() => {
+    getme();
+  }, [getme]);
 
   return (
     <section className="orders">
@@ -36,16 +45,16 @@ export default function CommandeCSE() {
           <Form.Group className="mb-3 nom">
             <Form.Label>Votre Nom</Form.Label>
             <Form.Control
-              onChange={putName}
               type="text"
               placeholder="Votre Nom"
+              defaultValue={user.nom}
               name="nom"
             />
           </Form.Group>
-          <Form.Group className="mb-3 nom">
+          <Form.Group className="mb-3 prenom">
             <Form.Label>Votre prenom</Form.Label>
             <Form.Control
-              onChange={putName}
+              defaultValue={user.prenom}
               type="text"
               placeholder="Votre prenom"
               name="prenom"
@@ -54,7 +63,7 @@ export default function CommandeCSE() {
           <Form.Group className="mb-3 entreprise">
             <Form.Label>Votre entreprise</Form.Label>
             <Form.Control
-              onChange={putEntreprise}
+              defaultValue={user.entreprise}
               type="text"
               placeholder="Votre entreprise"
               name="entreprise"
@@ -63,7 +72,7 @@ export default function CommandeCSE() {
           <Form.Group className="mb-3 adresse">
             <Form.Label>Votre adresse</Form.Label>
             <Form.Control
-              onChange={putAdresse}
+              defaultValue={user.adresse}
               type="text"
               placeholder="Votre adresse"
               name="adresse"
@@ -72,7 +81,7 @@ export default function CommandeCSE() {
           <Form.Group className="mb-3 telephone">
             <Form.Label>Votre numero de téléphone</Form.Label>
             <Form.Control
-              onChange={putNumero}
+              defaultValue={user.phonenumber}
               type="text"
               placeholder="01-23-45-67-89"
               name="phonenumber"
@@ -81,7 +90,7 @@ export default function CommandeCSE() {
           <Form.Group className="mb-3 email">
             <Form.Label>Votre adresse Email</Form.Label>
             <Form.Control
-              onChange={putEmail}
+              defaultValue={user.email}
               type="email"
               placeholder="name@example.com"
               name="email"

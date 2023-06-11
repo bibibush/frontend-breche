@@ -14,8 +14,8 @@ export default function OrderSuccess() {
       console.log("commande success", res);
       setSuccessInfo(res.data);
     } catch (err) {
-      alert(err.response.statusText);
       console.log(err.response);
+      alert(err.response.statusText);
     }
   }, [id]);
 
