@@ -2,6 +2,7 @@
   background-color: #486541;
   margin-top: 99px;
   height: 1350px;
+  white-space: pre-line;
 }
 .order_success .merci {
   width: 850px;
@@ -53,6 +54,9 @@
 }
 .order_success .commande_info ul li:last-child {
   margin-bottom: 0;
+}
+.order_success .commande_info ul .livraison span {
+  font-size: 16px;
 }
 .order_success .commande_info .download {
   position: absolute;

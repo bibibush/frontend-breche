@@ -1,15 +1,24 @@
 import { Form, Button } from "react-bootstrap";
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { registerLocale } from "react-datepicker";
+import fr from "date-fns/locale/fr";
+
+registerLocale("fr", fr);
 
 export default function CommandeCSE() {
   const [files, setFiles] = useState([]);
   const [user, setUser] = useState({});
+  const [startDate, setStartDate] = useState(new Date());
+
   const onChangeupload = useCallback((event) => {
     setFiles(event.target.files);
   }, []);
   const upload = useCallback(() => {
     const formdata = new FormData(document.getElementById("info"));
+    formdata.append("date", startDate.toLocaleDateString("fr-FR"));
     formdata.append("order_file", files[0]);
     axios
       .post("/api/upload/", formdata, {
@@ -23,7 +32,7 @@ export default function CommandeCSE() {
         alert(err.response.statusText);
         console.log("upload error", err.response);
       });
-  }, [files]);
+  }, [startDate, files]);
   const getme = useCallback(async () => {
     try {
       const res = await axios.get("/api/getme/");
@@ -110,6 +119,16 @@ export default function CommandeCSE() {
           />
         </Form.Group>
         <Button onClick={upload}>Envoyer</Button>
+        <div className="calendar">
+          <p>Choisisez la date que vous voulez recevoir votre commande</p>
+          <ReactDatePicker
+            className="date"
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            locale={"fr"}
+            dateFormat={"dd/ MMMM /yyyy"}
+          />
+        </div>
       </div>
     </section>
   );
