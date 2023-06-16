@@ -62,10 +62,16 @@
   text-align: center;
   font-weight: 700;
 }
-.orders .user_orders .calendar .date {
+.orders .user_orders .calendar .example-custom-input {
   position: absolute;
   font-size: 22px;
   text-align: center;
+  padding: 20px 30px;
+  border-radius: 8px;
+  background-color: #f5fff2;
   bottom: -26px;
   left: 17vw;
+}
+.orders .user_orders .calendar .react-datepicker__day--outside-month {
+  color: rgba(91, 135, 75, 0.692);
 }

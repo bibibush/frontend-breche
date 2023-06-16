@@ -1,5 +1,5 @@
 import { Form, Button } from "react-bootstrap";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, forwardRef } from "react";
 import axios from "axios";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -12,7 +12,15 @@ export default function CommandeCSE() {
   const [files, setFiles] = useState([]);
   const [user, setUser] = useState({});
   const [startDate, setStartDate] = useState(new Date());
-
+  const isWeekday = (date) => {
+    const day = date.getDay(date);
+    return day !== 0 && day !== 6;
+  };
+  const ExampleCustomInput = forwardRef(({ value, onClick }, ref) => (
+    <button className="example-custom-input" onClick={onClick} ref={ref}>
+      {value}
+    </button>
+  ));
   const onChangeupload = useCallback((event) => {
     setFiles(event.target.files);
   }, []);
@@ -123,10 +131,16 @@ export default function CommandeCSE() {
           <p>Choisisez la date que vous voulez recevoir votre commande</p>
           <ReactDatePicker
             className="date"
+            showMonthDropdown
+            showYearDropdown
+            shouldCloseOnSelect={false}
+            filterDate={isWeekday}
+            minDate={new Date()}
             selected={startDate}
             onChange={(date) => setStartDate(date)}
             locale={"fr"}
             dateFormat={"dd/ MMMM /yyyy"}
+            customInput={<ExampleCustomInput />}
           />
         </div>
       </div>
