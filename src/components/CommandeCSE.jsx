@@ -39,6 +39,7 @@ export default function CommandeCSE() {
       .catch((err) => {
         alert(err.response.statusText);
         console.log("upload error", err.response);
+        window.location.href = "/";
       });
   }, [startDate, files]);
   const getme = useCallback(async () => {
@@ -48,6 +49,7 @@ export default function CommandeCSE() {
       setUser(res.data);
     } catch (err) {
       console.log("getme error", err.response);
+      window.location.href = "/";
     }
   }, []);
   useEffect(() => {

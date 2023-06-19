@@ -40,6 +40,11 @@ export default function OrderSuccess() {
             <li className="phonenumber">{successInfo.phonenumber}</li>
             <li className="entreprise">{successInfo.entreprise}</li>
             <li className="email">{successInfo.email}</li>
+            <li className="order_number">
+              <span>Votre numero de la commande: </span> <br />
+              <br />
+              {successInfo.order_number}
+            </li>
             <li className="livraison">
               <span>Votre livraison vers</span> <br />
               <br />

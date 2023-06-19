@@ -36,6 +36,7 @@ export default function ClientDownload() {
       })
       .catch((err) => {
         alert(err.response);
+        window.location.href = "/";
       });
   }, [id]);
 
