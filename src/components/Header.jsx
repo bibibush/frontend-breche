@@ -173,7 +173,13 @@ export default function Header() {
                     </Button>
                   </Modal.Footer>
                 </Modal>
-                <li>Mes commandes</li>
+                <li
+                  onClick={() => {
+                    window.location.href = "/mescommandes";
+                  }}
+                >
+                  Mes commandes
+                </li>
               </>
             ) : (
               <>

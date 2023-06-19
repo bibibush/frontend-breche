@@ -25,6 +25,7 @@ import "./styles/HowToOrder.css";
 import "./styles/OrderSuccess.css";
 import "./styles/NotreHistoire.css";
 import "./styles/LoginRequired.css";
+import "./styles/MesCommande.css";
 import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
 
 import Header from "./components/Header";
@@ -56,6 +57,7 @@ import ToUp from "./components/ToUp";
 import Where from "./components/Where";
 import CommandeCSE from "./components/CommandeCSE";
 import NotreHistoire from "./components/NotreHistoire";
+import MesCommande from "./components/MesCommande";
 
 import axios from "axios";
 import HowToOrder from "./components/HowToOrder";
@@ -294,6 +296,16 @@ function App() {
           <>
             <Header />
             <LoginRequired />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/mescommandes"
+        element={
+          <>
+            <Header />
+            <MesCommande />
             <Footer />
           </>
         }
