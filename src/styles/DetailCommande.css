@@ -1,0 +1,15 @@
+.detail_commande {
+  position: relative;
+  height: 1200px;
+  padding-top: 99px;
+  white-space: pre-line;
+}
+.detail_commande .download {
+  background-color: #fb6161;
+  border-radius: 4px;
+  color: #fcfedc;
+  margin: 0;
+}
+.detail_commande .download .desc {
+  font-size: 23px;
+}

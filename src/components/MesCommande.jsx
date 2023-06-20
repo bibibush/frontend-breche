@@ -34,7 +34,14 @@ export default function MesCommande() {
                 {order.order_number}
               </div>
             </div>
-            <Button variant="warning">Detail de la commande</Button>
+            <Button
+              onClick={() => {
+                window.location.href = `/mescommandes/detail?id=${id}`;
+              }}
+              variant="warning"
+            >
+              Detail de la commande
+            </Button>
           </div>
         );
       })}
