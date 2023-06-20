@@ -1,5 +1,38 @@
 .mescommande {
   margin-top: 99px;
-  height: 1200px;
+  padding: 99px 0;
+  min-height: 700px;
   position: relative;
+  background-color: #b9c9b4;
+}
+.mescommande .commande_info {
+  width: 1100px;
+  height: 150px;
+  margin: 0 auto 85px auto;
+  padding: 15px;
+  background-color: #fafaf2;
+  border-radius: 8px;
+  position: relative;
+}
+.mescommande .commande_info .commande_detail {
+  display: flex;
+  line-height: 1.4;
+}
+.mescommande .commande_info .commande_detail .commande_date {
+  margin-right: 95px;
+  font-size: 20px;
+}
+.mescommande .commande_info .commande_detail .commande_date h3 {
+  font-size: 14px;
+}
+.mescommande .commande_info .commande_detail .commande_numero {
+  font-size: 20px;
+}
+.mescommande .commande_info .commande_detail .commande_numero h3 {
+  font-size: 14px;
+}
+.mescommande .commande_info > button {
+  position: absolute;
+  bottom: 8px;
+  right: 25px;
 }

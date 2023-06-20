@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 
 export default function MesCommande() {
   const [orders, setOrders] = useState([]);
@@ -10,6 +11,7 @@ export default function MesCommande() {
       setOrders(res.data);
     } catch (err) {
       console.log("orderInfo Error", err.response);
+      window.location.href = "/";
     }
   }, []);
   useEffect(() => {
@@ -19,8 +21,9 @@ export default function MesCommande() {
   return (
     <section className="mescommande">
       {orders.map((order) => {
+        const { id } = order;
         return (
-          <div key={order.id} className="commande_info">
+          <div key={id} className="commande_info">
             <div className="commande_detail">
               <div className="commande_date">
                 <h3>Date de commande</h3>
@@ -31,6 +34,7 @@ export default function MesCommande() {
                 {order.order_number}
               </div>
             </div>
+            <Button variant="warning">Detail de la commande</Button>
           </div>
         );
       })}

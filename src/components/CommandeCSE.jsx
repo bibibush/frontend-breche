@@ -143,6 +143,7 @@ export default function CommandeCSE() {
             locale={"fr"}
             dateFormat={"dd/ MMMM /yyyy"}
             customInput={<ExampleCustomInput />}
+            disabledKeyboardNavigation
           />
         </div>
       </div>
