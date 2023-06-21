@@ -1,9 +1,9 @@
 .detail_commande {
   position: relative;
-  height: 1200px;
-  padding-top: 99px;
+  padding: 99px 0;
   white-space: pre-line;
   background-color: #b9c9b4;
+  display: flex;
 }
 .detail_commande .download {
   background-color: #fb6161;
@@ -15,7 +15,7 @@
   font-size: 23px;
 }
 .detail_commande .excel_date {
-  margin: 89px auto auto 45px;
+  margin: 89px 350px 0 45px;
   max-width: 650px;
 }
 .detail_commande .excel_date .commande_number {
@@ -34,7 +34,7 @@
 .detail_commande .excel_date .excel {
   margin-bottom: 85px;
   background-color: #fafaf2;
-  padding: 15px;
+  padding: 35px;
   border-radius: 8px;
 }
 .detail_commande .excel_date .excel p {
@@ -56,7 +56,7 @@
 }
 .detail_commande .excel_date .excel .client_upload .mb-3 {
   width: 350px;
-  margin-right: 45px;
+  margin-right: 145px;
 }
 .detail_commande .excel_date .excel .client_upload button {
   height: 45px;
@@ -76,4 +76,23 @@
 }
 .detail_commande .excel_date .date .date_commande h3 {
   margin-right: 295px;
+}
+.detail_commande .excel_date .date .date_change {
+  display: flex;
+}
+.detail_commande .excel_date .date .date_change input {
+  width: 205px;
+}
+.detail_commande .commande_adresse {
+  margin-top: 89px;
+}
+.detail_commande .commande_adresse p {
+}
+.detail_commande .commande_adresse .commande_name {
+}
+.detail_commande .commande_adresse .commande_name p {
+}
+.detail_commande .commande_adresse .commande_name .commande_nom {
+}
+.detail_commande .commande_adresse .commande_name .commande_prenom {
 }
