@@ -15,21 +15,29 @@
   font-size: 23px;
 }
 .detail_commande .excel_date {
-  margin: 89px 350px 0 45px;
+  margin: 89px 550px 0 45px;
   max-width: 650px;
 }
 .detail_commande .excel_date .commande_number {
-  display: flex;
-  align-items: center;
-  font-size: 32px;
-  margin-bottom: 85px;
   background-color: #fafaf2;
+  margin-bottom: 85px;
   padding: 15px;
   border-radius: 8px;
 }
-.detail_commande .excel_date .commande_number p {
+.detail_commande .excel_date .commande_number div {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+}
+.detail_commande .excel_date .commande_number div:first-child {
+  margin-bottom: 55px;
+}
+.detail_commande .excel_date .commande_number div p {
   font-size: 26px;
   margin-right: 55px;
+}
+.detail_commande .excel_date .commande_number div:last-child p {
+  margin-right: 95px;
 }
 .detail_commande .excel_date .excel {
   margin-bottom: 85px;
@@ -84,15 +92,66 @@
   width: 205px;
 }
 .detail_commande .commande_adresse {
+  position: relative;
   margin-top: 89px;
-}
-.detail_commande .commande_adresse p {
+  background-color: #fafaf2;
+  padding: 135px 35px 35px 35px;
+  border-radius: 8px;
 }
 .detail_commande .commande_adresse .commande_name {
+  margin-bottom: 65px;
 }
 .detail_commande .commande_adresse .commande_name p {
+  font-size: 16px;
+  margin-bottom: 25px;
 }
 .detail_commande .commande_adresse .commande_name .commande_nom {
+  font-size: 22px;
 }
 .detail_commande .commande_adresse .commande_name .commande_prenom {
+  font-size: 22px;
+}
+.detail_commande .commande_adresse .adresse {
+  margin-bottom: 65px;
+}
+.detail_commande .commande_adresse .adresse p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.detail_commande .commande_adresse .adresse h3 {
+  font-size: 22px;
+}
+.detail_commande .commande_adresse .entreprise {
+  margin-bottom: 65px;
+}
+.detail_commande .commande_adresse .entreprise p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.detail_commande .commande_adresse .entreprise h3 {
+  font-size: 22px;
+}
+.detail_commande .commande_adresse .email {
+  margin-bottom: 65px;
+}
+.detail_commande .commande_adresse .email p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.detail_commande .commande_adresse .email h3 {
+  font-size: 22px;
+}
+.detail_commande .commande_adresse .phonenumber p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.detail_commande .commande_adresse .phonenumber h3 {
+  font-size: 22px;
+}
+.detail_commande .commande_adresse > button {
+  position: absolute;
+  width: 150px;
+  top: 35px;
+  left: 50%;
+  margin-left: calc(150px / -2);
 }

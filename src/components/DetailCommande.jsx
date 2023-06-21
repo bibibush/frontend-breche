@@ -17,6 +17,7 @@ export default function DetailCommande() {
 
   const [excelUpdate, setExcelUpdate] = useState(false);
   const [dateUpdate, setDateUpdate] = useState(false);
+  const [infoUpdate, setInfoUpdate] = useState(false);
   const [update] = useState(() => {
     if (excelUpdate || dateUpdate) {
       return true;
@@ -56,8 +57,14 @@ export default function DetailCommande() {
     <section className="detail_commande">
       <div className="excel_date">
         <div className="commande_number">
-          <p>Numero de votre commande: </p>
-          {successInfo.order_number}
+          <div>
+            <p>Numero de votre commande: </p>
+            {successInfo.order_number}
+          </div>
+          <div>
+            <p>Date de votre commande: </p>
+            {successInfo.modify_dt}
+          </div>
         </div>
         <div className="excel">
           <p>Fiche de votre commande: </p>
@@ -141,28 +148,73 @@ export default function DetailCommande() {
         </div>
       </div>
       <div className="commande_adresse">
-        <p>adresse</p>
-        <div className="commande_name">
-          <p>Votre nom et prenom</p>
-          <div className="commande_nom">{successInfo.nom}</div>
-          <div className="commande_prenom">{successInfo.prenom}</div>
-        </div>
-        <div className="adresse">
-          <p>Votre adresse</p>
-          <h3>{successInfo.adresse}</h3>
-        </div>
-        <div className="entreprise">
-          <p>Votre entreprise</p>
-          <h3>{successInfo.entreprise}</h3>
-        </div>
-        <div className="email">
-          <p>Votre adresse email</p>
-          <h3>{successInfo.email}</h3>
-        </div>
-        <div className="phonenumber">
-          <p>Votre numero téléphone</p>
-          <h3>{successInfo.phonenumber}</h3>
-        </div>
+        {infoUpdate ? (
+          <>
+            <div className="commande_name">
+              <p>Votre nom et prenom</p>
+              <input type="text" defaultValue={successInfo.nom} />
+              <br />
+              <br />
+              <input type="text" defaultValue={successInfo.prenom} />
+            </div>
+            <div className="adresse">
+              <p>Votre adresse</p>
+              <input type="text" defaultValue={successInfo.adresse} />
+            </div>
+            <div className="entreprise">
+              <p>Votre entreprise</p>
+              <input type="text" defaultValue={successInfo.entreprise} />
+            </div>
+            <div className="email">
+              <p>Votre adresse email</p>
+              <input type="text" defaultValue={successInfo.email} />
+            </div>
+            <div className="phonenumber">
+              <p>Votre numero téléphone</p>
+              <input type="text" defaultValue={successInfo.phonenumber} />
+            </div>
+            <Button
+              variant="danger"
+              onClick={() => {
+                setInfoUpdate(false);
+              }}
+            >
+              Annuler
+            </Button>
+          </>
+        ) : (
+          <>
+            <div className="commande_name">
+              <p>Votre nom et prenom</p>
+              <div className="commande_nom">{successInfo.nom}</div>
+              <div className="commande_prenom">{successInfo.prenom}</div>
+            </div>
+            <div className="adresse">
+              <p>Votre adresse</p>
+              <h3>{successInfo.adresse}</h3>
+            </div>
+            <div className="entreprise">
+              <p>Votre entreprise</p>
+              <h3>{successInfo.entreprise}</h3>
+            </div>
+            <div className="email">
+              <p>Votre adresse email</p>
+              <h3>{successInfo.email}</h3>
+            </div>
+            <div className="phonenumber">
+              <p>Votre numero téléphone</p>
+              <h3>{successInfo.phonenumber}</h3>
+            </div>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                setInfoUpdate(true);
+              }}
+            >
+              Changez les infos
+            </Button>
+          </>
+        )}
       </div>
     </section>
   );
