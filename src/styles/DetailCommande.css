@@ -3,6 +3,7 @@
   height: 1200px;
   padding-top: 99px;
   white-space: pre-line;
+  background-color: #b9c9b4;
 }
 .detail_commande .download {
   background-color: #fb6161;
@@ -12,4 +13,67 @@
 }
 .detail_commande .download .desc {
   font-size: 23px;
+}
+.detail_commande .excel_date {
+  margin: 89px auto auto 45px;
+  max-width: 650px;
+}
+.detail_commande .excel_date .commande_number {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  margin-bottom: 85px;
+  background-color: #fafaf2;
+  padding: 15px;
+  border-radius: 8px;
+}
+.detail_commande .excel_date .commande_number p {
+  font-size: 26px;
+  margin-right: 55px;
+}
+.detail_commande .excel_date .excel {
+  margin-bottom: 85px;
+  background-color: #fafaf2;
+  padding: 15px;
+  border-radius: 8px;
+}
+.detail_commande .excel_date .excel p {
+  font-size: 26px;
+  margin-bottom: 35px;
+}
+.detail_commande .excel_date .excel .client_download {
+  display: flex;
+  align-items: end;
+}
+.detail_commande .excel_date .excel .client_download button {
+  margin-left: 35px;
+  height: 56px;
+  color: white;
+}
+.detail_commande .excel_date .excel .client_upload {
+  display: flex;
+  align-items: end;
+}
+.detail_commande .excel_date .excel .client_upload .mb-3 {
+  width: 350px;
+  margin-right: 45px;
+}
+.detail_commande .excel_date .excel .client_upload button {
+  height: 45px;
+}
+.detail_commande .excel_date .date {
+  background-color: #fafaf2;
+  padding: 15px;
+  border-radius: 8px;
+}
+.detail_commande .excel_date .date p {
+  font-size: 26px;
+  margin-bottom: 35px;
+}
+.detail_commande .excel_date .date .date_commande {
+  font-size: 32px;
+  display: flex;
+}
+.detail_commande .excel_date .date .date_commande h3 {
+  margin-right: 295px;
 }
