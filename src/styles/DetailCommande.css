@@ -16,7 +16,7 @@
 }
 .detail_commande .excel_date {
   margin: 89px 550px 0 45px;
-  max-width: 650px;
+  max-width: 670px;
 }
 .detail_commande .excel_date .commande_number {
   background-color: #fafaf2;
@@ -69,6 +69,9 @@
 .detail_commande .excel_date .excel .client_upload button {
   height: 45px;
 }
+.detail_commande .excel_date .excel .client_upload button:last-child {
+  margin-left: 15px;
+}
 .detail_commande .excel_date .date {
   background-color: #fafaf2;
   padding: 15px;
@@ -90,6 +93,9 @@
 }
 .detail_commande .excel_date .date .date_change input {
   width: 205px;
+}
+.detail_commande .excel_date .date .date_change button:last-child {
+  margin-left: 15px;
 }
 .detail_commande .commande_adresse {
   position: relative;
@@ -154,4 +160,24 @@
   top: 35px;
   left: 50%;
   margin-left: calc(150px / -2);
+}
+.detail_commande .commande_adresse form > .buttons {
+  position: absolute;
+  display: flex;
+  top: 35px;
+  left: 35px;
+}
+.detail_commande .commande_adresse form > .buttons button {
+  width: 120px;
+}
+.detail_commande .commande_adresse form > .buttons button:last-child {
+  margin-left: 15px;
+  width: 80px;
+}
+.detail_commande > button {
+  position: absolute;
+  font-size: 22px;
+  width: 180px;
+  left: 50%;
+  bottom: 15px;
 }

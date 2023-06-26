@@ -18,18 +18,65 @@ export default function DetailCommande() {
   const [excelUpdate, setExcelUpdate] = useState(false);
   const [dateUpdate, setDateUpdate] = useState(false);
   const [infoUpdate, setInfoUpdate] = useState(false);
-  const [update] = useState(() => {
-    if (excelUpdate || dateUpdate) {
-      return true;
-    } else {
-      return false;
-    }
-  });
+
+  const date = new Date();
+  const [startDate, setStartDate] = useState();
+  const isWeekday = (date) => {
+    const day = date.getDay(date);
+    return day !== 0 && day !== 6;
+  };
 
   const [files, setFiles] = useState([]);
   const onChangeupload = useCallback((event) => {
     setFiles(event.target.files);
   }, []);
+
+  const infoUpload = useCallback(() => {
+    const formdata = new FormData(document.getElementById("info_form"));
+    axios
+      .post(`/api/info/${id}/update`, formdata)
+      .then((res) => {
+        console.log("infoupload success", res);
+        window.location.href = `/mescommandes/detail?id=${id}`;
+      })
+      .catch((err) => {
+        console.log(err.response.statusText);
+        alert(err.response.statusText);
+      });
+  }, [id]);
+  const excelUpload = useCallback(() => {
+    const formdata = new FormData();
+    formdata.append("order_file", files[0]);
+
+    axios
+      .post(`/api/excel/${id}/update`, formdata, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((res) => {
+        console.log("excelupload success", res);
+        window.location.href = `/mescommandes/detail?id=${id}`;
+      })
+      .catch((err) => {
+        console.log(err.response.statusText);
+        alert(err.response.statusText);
+      });
+  }, [id, files]);
+  const dateUpload = useCallback(() => {
+    const formdata = new FormData();
+    formdata.append("date", startDate.toLocaleDateString("fr-FR"));
+
+    axios
+      .post(`/api/date/${id}/update`, formdata)
+      .then((res) => {
+        console.log("date upload success", res);
+        window.location.href = `/mescommandes/detail?id=${id}`;
+      })
+      .catch((err) => {
+        console.log(err.response.statusText);
+        alert(err.response.statusText);
+      });
+  }, [id, startDate]);
+
   const getSuccess = useCallback(async () => {
     try {
       const res = await axios.get(`/api/success/${id}/`);
@@ -45,13 +92,6 @@ export default function DetailCommande() {
   useEffect(() => {
     getSuccess();
   }, [getSuccess]);
-
-  const date = new Date();
-  const [startDate, setStartDate] = useState();
-  const isWeekday = (date) => {
-    const day = date.getDay(date);
-    return day !== 0 && day !== 6;
-  };
 
   return (
     <section className="detail_commande">
@@ -79,6 +119,9 @@ export default function DetailCommande() {
                   onChange={onChangeupload}
                 />
               </Form.Group>
+              <Button variant="success" onClick={excelUpload}>
+                Enregistrez
+              </Button>
               <Button
                 variant="danger"
                 onClick={() => {
@@ -121,6 +164,9 @@ export default function DetailCommande() {
                 dateFormat={"dd/ MM /yyyy"}
                 disabledKeyboardNavigation
               />
+              <Button variant="success" onClick={dateUpload}>
+                Enregistrez
+              </Button>
               <Button
                 variant="danger"
                 onClick={() => {
@@ -149,39 +195,64 @@ export default function DetailCommande() {
       </div>
       <div className="commande_adresse">
         {infoUpdate ? (
-          <>
+          <form id="info_form">
             <div className="commande_name">
               <p>Votre nom et prenom</p>
-              <input type="text" defaultValue={successInfo.nom} />
+              <input type="text" name="nom" defaultValue={successInfo.nom} />
               <br />
               <br />
-              <input type="text" defaultValue={successInfo.prenom} />
+              <input
+                type="text"
+                name="prenom"
+                defaultValue={successInfo.prenom}
+              />
             </div>
             <div className="adresse">
               <p>Votre adresse</p>
-              <input type="text" defaultValue={successInfo.adresse} />
+              <input
+                type="text"
+                name="adresse"
+                defaultValue={successInfo.adresse}
+              />
             </div>
             <div className="entreprise">
               <p>Votre entreprise</p>
-              <input type="text" defaultValue={successInfo.entreprise} />
+              <input
+                type="text"
+                name="entreprise"
+                defaultValue={successInfo.entreprise}
+              />
             </div>
             <div className="email">
               <p>Votre adresse email</p>
-              <input type="text" defaultValue={successInfo.email} />
+              <input
+                type="text"
+                name="email"
+                defaultValue={successInfo.email}
+              />
             </div>
             <div className="phonenumber">
               <p>Votre numero téléphone</p>
-              <input type="text" defaultValue={successInfo.phonenumber} />
+              <input
+                type="text"
+                name="phonenumber"
+                defaultValue={successInfo.phonenumber}
+              />
             </div>
-            <Button
-              variant="danger"
-              onClick={() => {
-                setInfoUpdate(false);
-              }}
-            >
-              Annuler
-            </Button>
-          </>
+            <div className="buttons">
+              <Button variant="success" onClick={infoUpload}>
+                Enregistrez
+              </Button>
+              <Button
+                variant="danger"
+                onClick={() => {
+                  setInfoUpdate(false);
+                }}
+              >
+                Annuler
+              </Button>
+            </div>
+          </form>
         ) : (
           <>
             <div className="commande_name">
