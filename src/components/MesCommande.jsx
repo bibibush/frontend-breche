@@ -27,7 +27,7 @@ export default function MesCommande() {
             <div className="commande_detail">
               <div className="commande_date">
                 <h3>Date de commande</h3>
-                {order.modify_dt}
+                {order.create_dt}
               </div>
               <div className="commande_numero">
                 <h3>Numéro de commande</h3>

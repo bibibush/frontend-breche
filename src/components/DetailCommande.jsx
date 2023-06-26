@@ -103,6 +103,10 @@ export default function DetailCommande() {
           </div>
           <div>
             <p>Date de votre commande: </p>
+            {successInfo.create_dt}
+          </div>
+          <div>
+            <p>Date de votre commande modifié: </p>
             {successInfo.modify_dt}
           </div>
         </div>

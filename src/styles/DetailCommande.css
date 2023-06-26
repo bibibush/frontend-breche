@@ -36,8 +36,14 @@
   font-size: 26px;
   margin-right: 55px;
 }
-.detail_commande .excel_date .commande_number div:last-child p {
+.detail_commande .excel_date .commande_number div:nth-child(2) {
+  margin-bottom: 55px;
+}
+.detail_commande .excel_date .commande_number div:nth-child(2) p {
   margin-right: 95px;
+}
+.detail_commande .excel_date .commande_number div:last-child p {
+  font-size: 22px;
 }
 .detail_commande .excel_date .excel {
   margin-bottom: 85px;
@@ -90,6 +96,13 @@
 }
 .detail_commande .excel_date .date .date_change {
   display: flex;
+}
+.detail_commande
+  .excel_date
+  .date
+  .date_change
+  .react-datepicker__day--outside-month {
+  color: rgba(91, 135, 75, 0.692);
 }
 .detail_commande .excel_date .date .date_change input {
   width: 205px;
