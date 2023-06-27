@@ -118,6 +118,14 @@ export default function DetailCommande() {
               <p>Date de votre commande modifié: </p>
               {successInfo.modify_dt}
             </div>
+            <div>
+              <p>Statut de payment: </p>
+              {successInfo.pay ? (
+                <h3>Votre payment est bien passé</h3>
+              ) : (
+                <h3>Vous n'avez pas payé</h3>
+              )}
+            </div>
           </div>
           <div className="excel">
             <p>Fiche de votre commande: </p>

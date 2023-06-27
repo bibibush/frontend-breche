@@ -11,7 +11,9 @@ registerLocale("fr", fr);
 export default function CommandeCSE() {
   const [files, setFiles] = useState([]);
   const [user, setUser] = useState({});
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(
+    new Date().setDate(new Date().getDate() + 15)
+  );
   const isWeekday = (date) => {
     const day = date.getDay(date);
     return day !== 0 && day !== 6;
@@ -137,7 +139,7 @@ export default function CommandeCSE() {
             showYearDropdown
             shouldCloseOnSelect={false}
             filterDate={isWeekday}
-            minDate={new Date()}
+            minDate={new Date().setDate(new Date().getDate() + 15)}
             selected={startDate}
             onChange={(date) => setStartDate(date)}
             locale={"fr"}
