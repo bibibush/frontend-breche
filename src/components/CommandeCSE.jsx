@@ -11,9 +11,9 @@ registerLocale("fr", fr);
 export default function CommandeCSE() {
   const [files, setFiles] = useState([]);
   const [user, setUser] = useState({});
-  const [startDate, setStartDate] = useState(
-    new Date().setDate(new Date().getDate() + 15)
-  );
+
+  const date = new Date().setDate(new Date().getDate() + 15);
+  const [startDate, setStartDate] = useState(new Date(date));
   const isWeekday = (date) => {
     const day = date.getDay(date);
     return day !== 0 && day !== 6;

@@ -26,9 +26,16 @@
   font-size: 14px;
 }
 .mescommande .commande_info .commande_detail .commande_numero {
+  margin-right: 55px;
   font-size: 20px;
 }
 .mescommande .commande_info .commande_detail .commande_numero h3 {
+  font-size: 14px;
+}
+.mescommande .commande_info .commande_detail .commande_user {
+  font-size: 20px;
+}
+.mescommande .commande_info .commande_detail .commande_user h3 {
   font-size: 14px;
 }
 .mescommande .commande_info > button {

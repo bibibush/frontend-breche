@@ -173,13 +173,23 @@ export default function Header() {
                     </Button>
                   </Modal.Footer>
                 </Modal>
-                <li
-                  onClick={() => {
-                    window.location.href = "/mescommandes";
-                  }}
-                >
-                  Mes commandes
-                </li>
+                {user.email === "contact@salaisonsdelabreche.com" ? (
+                  <li
+                    onClick={() => {
+                      window.location.href = "/lescommandes";
+                    }}
+                  >
+                    Gérer les commandes
+                  </li>
+                ) : (
+                  <li
+                    onClick={() => {
+                      window.location.href = "/mescommandes";
+                    }}
+                  >
+                    Mes commandes
+                  </li>
+                )}
               </>
             ) : (
               <>

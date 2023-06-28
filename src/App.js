@@ -59,7 +59,9 @@ import Where from "./components/Where";
 import CommandeCSE from "./components/CommandeCSE";
 import NotreHistoire from "./components/NotreHistoire";
 import MesCommande from "./components/MesCommande";
+import LesCommandes from "./components/LesCommandes";
 import DetailCommande from "./components/DetailCommande";
+import ManageCommande from "./components/ManageCommande";
 
 import axios from "axios";
 import HowToOrder from "./components/HowToOrder";
@@ -318,6 +320,26 @@ function App() {
           <>
             <Header />
             <DetailCommande />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/lescommandes"
+        element={
+          <>
+            <Header />
+            <LesCommandes />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/lescommandes/detail"
+        element={
+          <>
+            <Header />
+            <ManageCommande />
             <Footer />
           </>
         }
