@@ -14,6 +14,10 @@
   border-radius: 8px;
   position: relative;
 }
+.mescommande .commande_info.done {
+  background-color: #808080;
+  color: #f0f0f0;
+}
 .mescommande .commande_info .commande_detail {
   display: flex;
   line-height: 1.4;

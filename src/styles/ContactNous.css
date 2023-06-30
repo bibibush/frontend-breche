@@ -2,11 +2,7 @@
   height: 1300px;
   position: relative;
   font-family: "Noto Serif", serif;
-  background-image: url("../images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: #c6c6c6;
 }
 #form-contact {
   position: absolute;
@@ -15,7 +11,7 @@
   height: 997px;
   left: 50%;
   margin-left: calc(802px / -2);
-  background-color: #c0dfa7;
+  background-color: #bccb9b;
   border-radius: 8px;
   box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.4);
   padding: 26px 56px;
@@ -59,7 +55,7 @@
   width: 186px;
   background-color: #a81817;
   border-color: #a81817;
-  bottom: 0;
+  bottom: 10px;
   left: 50%;
   margin-left: calc(186px / -2);
   font-size: 19px;

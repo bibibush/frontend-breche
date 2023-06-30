@@ -23,7 +23,10 @@ export default function MesCommande() {
       {orders.map((order) => {
         const { id } = order;
         return (
-          <div key={id} className="commande_info">
+          <div
+            key={id}
+            className={order.done ? "commande_info done" : "commande_info"}
+          >
             <div className="commande_detail">
               <div className="commande_date">
                 <h3>Date de commande</h3>

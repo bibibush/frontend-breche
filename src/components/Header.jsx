@@ -36,6 +36,7 @@ export default function Header() {
         console.log("login res", res);
         setUser(res.data);
         setShow(false);
+        window.location.href = "/";
       })
       .catch((err) => {
         console.log("login error", err.response);

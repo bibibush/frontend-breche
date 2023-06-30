@@ -9,7 +9,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson nature artisanal 250g",
       price: 10,
       desc: "Saucisson ARTISANAL 250g",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "a-02",
@@ -17,7 +17,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson nature artisanal bride main 400",
       price: 10,
       desc: "Saucisson ARTISANAL bridé main 400g",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "a-03",
@@ -25,8 +25,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson nature ARTISANAL Courbe 300g 400g",
       price: 10,
       desc: "Saucisson ARTISANAL Courbe 300-400g",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "a-04",
@@ -34,7 +33,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson nature ARTISANAL bride 600g 700g",
       price: 10,
       desc: "Saucisson ARTISANAL bridé 600-700g",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
   ]);
   const [traditionnelles] = useState([
@@ -44,7 +43,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson traditionnelles Bride 400g",
       price: 20,
       desc: "Saucisson Bridé 400g",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "b-02",
@@ -52,7 +51,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson traditionnelles Bride 600g 700g",
       price: 20,
       desc: "Saucisson Bridé 600-700g",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "b-03",
@@ -60,8 +59,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson traditionnelles 650g",
       price: 20,
       desc: "Saucisson 650g",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "b-04",
@@ -69,7 +67,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisse traditionnelles droite 250g",
       price: 20,
       desc: "Saucisse droite 250g",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "b-05",
@@ -77,7 +75,7 @@ const AppStateProvider = ({ children }) => {
       category: "Mini-rosette traditionnelles 400g",
       price: 20,
       desc: "Mini-rosette 400g",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "b-06",
@@ -85,8 +83,7 @@ const AppStateProvider = ({ children }) => {
       category: "Rosette traditionnelles 1kg 1.2kg",
       price: 20,
       desc: "Rosette 1 - 1.2kg",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
   ]);
   const [cuires] = useState([
@@ -96,7 +93,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson a cuire des Monts du Lyonnais 400g",
       price: 30,
       desc: "Saucisson à cuire des Monts du Lyonnais 400g",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "c-02",
@@ -104,7 +101,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson a cuire des Monts du Lyonnais a la Pistache 3% 400g",
       price: 30,
       desc: "Saucisson à cuire des Monts du Lyonnais à la Pistache 3% 400g",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "c-03",
@@ -114,8 +111,7 @@ const AppStateProvider = ({ children }) => {
         "Saucisson a cuire des Monts du Lyonnais a la Truffe Française 3% 400g",
       price: 30,
       desc: "Saucisson à cuire des Monts du Lyonnais à la Truffe Française 3% 400g",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "c-04",
@@ -124,7 +120,7 @@ const AppStateProvider = ({ children }) => {
       category: "Sabodet a cuire des Monts du Lyonnais 600g",
       price: 30,
       desc: "Sabodet à cuire des Monts du Lyonnais 600g",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
   ]);
   const [specialites] = useState([
@@ -134,7 +130,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson spécialités specialites pur porc 200g",
       price: 40,
       desc: "Saucisson pur porc",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "d-02",
@@ -142,7 +138,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson spécialités specialites aux noisettes 200g",
       price: 40,
       desc: "Saucisson aux noisettes",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "d-03",
@@ -150,8 +146,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites cepes 200g",
       price: 40,
       desc: "Saucisson aux cèpes",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "d-04",
@@ -159,7 +154,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites fromages 200g",
       price: 40,
       desc: "Saucisson au beaufort",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "d-05",
@@ -168,7 +163,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites gibier 200g",
       price: 40,
       desc: "Saucisson au Porc et Sanglier",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "d-06",
@@ -176,8 +171,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites 200g",
       price: 40,
       desc: "Saucisson aux noix",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "d-07",
@@ -186,7 +180,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites fromages 200g",
       price: 40,
       desc: "Saucisson au fromage de chèvre",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/single saus.png",
     },
     {
       id: "d-08",

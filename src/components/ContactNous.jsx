@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import axios from "axios";
 
 export default function ContactNous() {
   const form = useRef();
+  const [info, setInfo] = useState({});
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -31,23 +33,50 @@ export default function ContactNous() {
   // const change = (target) => {
   //   return target.value;
   // };
+  const getme = useCallback(async () => {
+    try {
+      const res = await axios.get("/api/getme/");
 
+      console.log("getme success", res);
+      setInfo(res.data);
+    } catch (err) {
+      console.log("getme error", err.response);
+    }
+  }, []);
+
+  useEffect(() => {
+    getme();
+  }, [getme]);
   return (
     <section className="contact-nous">
       <Form ref={form} id="form-contact" onSubmit={sendEmail}>
         <div className="nom-email">
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Votre Nom *</Form.Label>
-            <Form.Control required type="text" name="nom" />
+            <Form.Control
+              required
+              type="text"
+              name="nom"
+              defaultValue={info.nom}
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Votre prenom *</Form.Label>
-            <Form.Control required type="text" name="prenom" />
+            <Form.Control
+              required
+              type="text"
+              name="prenom"
+              defaultValue={info.prenom}
+            />
           </Form.Group>
         </div>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Votre numero telephone</Form.Label>
-          <Form.Control type="text" name="user_numero" />
+          <Form.Control
+            type="text"
+            name="user_numero"
+            defaultValue={info.phonenumber}
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Adresse email *</Form.Label>
@@ -56,6 +85,7 @@ export default function ContactNous() {
             type="email"
             placeholder="exemple@exemple.com"
             name="user_email"
+            defaultValue={info.email}
           />
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Votre entreprise</Form.Label>
@@ -63,6 +93,7 @@ export default function ContactNous() {
               type="text"
               placeholder="votre entreprise"
               name="entreprise"
+              defaultValue={info.entreprise}
             />
           </Form.Group>
         </Form.Group>

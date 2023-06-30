@@ -32,7 +32,7 @@ export default function ManageCommande() {
     setFiles(event.target.files);
   }, []);
 
-  const [pay, setPay] = useState(successInfo.pay);
+  const [pay, setPay] = useState();
   const payment = (event) => {
     setPay(event.target.checked);
   };
@@ -112,7 +112,8 @@ export default function ManageCommande() {
 
   useEffect(() => {
     getSuccess();
-  }, [getSuccess]);
+    console.log(pay);
+  }, [getSuccess, pay]);
 
   return (
     <section className="detail_commande">
@@ -217,7 +218,7 @@ export default function ManageCommande() {
                   shouldCloseOnSelect={false}
                   placeholderText="Choisiz la date"
                   filterDate={isWeekday}
-                  minDate={new Date().setDate(date.getDate() + 15)}
+                  minDate={date}
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
                   locale={"fr"}
