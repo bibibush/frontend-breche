@@ -172,7 +172,7 @@
   font-weight: 700;
 }
 .how_to_order .sixth {
-  margin-top: 156px;
+  margin: 156px 0;
   width: 100%;
 }
 .how_to_order .sixth p {
@@ -207,5 +207,5 @@
   height: 66px;
   left: 50%;
   margin-left: calc(656px / -2);
-  bottom: -156px;
+  bottom: -55px;
 }

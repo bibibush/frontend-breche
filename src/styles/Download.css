@@ -3,8 +3,11 @@
   width: 400px;
   align-items: center;
   border: 1px solid rgba(128, 128, 128, 0.678);
+  border-radius: 4px;
   cursor: pointer;
-  margin: 0 auto 216px auto;
+  margin: 75px auto;
+  background-color: #fb6161;
+  color: #fcfedc;
 }
 .download img {
   width: 86px;
@@ -12,8 +15,10 @@
 }
 .download .desc {
   margin-left: 15px;
+  width: 200px;
+  font-size: 20px;
 }
 .download .material-symbols-outlined {
   font-size: 36px;
-  margin-left: 32px;
+  margin-left: 33px;
 }

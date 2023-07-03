@@ -14,7 +14,7 @@
   margin: 86px 0;
   text-align: center;
 }
-.login_required .dialogue #login {
+.login_required .dialogue #loginrequired {
   width: 480px;
   padding: 28px 45px 78px 45px;
   border-radius: 8px;
@@ -22,7 +22,7 @@
   background-color: #feffe2;
   position: relative;
 }
-.login_required .dialogue #login button {
+.login_required .dialogue #loginrequired button {
   position: absolute;
   left: 50%;
   margin-left: calc(128px / -2);

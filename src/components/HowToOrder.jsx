@@ -1,8 +1,26 @@
+import { useCallback, useEffect } from "react";
 import Download from "../components/Download";
 import "../styles/Download.css";
 import { Button } from "react-bootstrap";
+import axios from "axios";
 
 export default function HowToOrder() {
+  const getme = useCallback(async () => {
+    try {
+      const res = await axios.get("/api/getme/");
+      console.log("check", res);
+      if (res.data.username === "") {
+        window.location.href = "/login";
+      }
+    } catch (err) {
+      console.log(err.response);
+    }
+  }, []);
+
+  useEffect(() => {
+    getme();
+  }, [getme]);
+
   return (
     <section className="how_to_order">
       <div className="astuce">
@@ -12,9 +30,9 @@ export default function HowToOrder() {
             <img src="./images/excel.png" alt="" />
             <div className="first_desc">
               <span>T</span>éléchargez <span>excel fiche</span>
-              <br /> en bas de cette page
             </div>
           </div>
+          <Download />
         </div>
         <div className="second">
           <p>EN DEUXIEME</p>
@@ -73,7 +91,6 @@ export default function HowToOrder() {
             </div>
           </div>
         </div>
-        <Download />
       </div>
       <Button
         onClick={() => {
@@ -82,7 +99,7 @@ export default function HowToOrder() {
         variant="warning"
         size="lg"
       >
-        Aller prochain page
+        Aller commander
       </Button>
     </section>
   );

@@ -50,7 +50,7 @@ export default function Header() {
       .then((res) => {
         console.log("logout res", res);
         setUser({
-          username: "annonymous",
+          username: "",
         });
       })
       .catch((err) => {
@@ -120,7 +120,7 @@ export default function Header() {
 
         <div className="sub-menu">
           <ul>
-            {user.username !== "annonymous" ? (
+            {user.username !== "" ? (
               <>
                 <li>{user.username}</li>
                 <li onClick={logout}>Log out</li>
@@ -396,11 +396,7 @@ export default function Header() {
             </div>
           </li>
 
-          <li
-            onClick={
-              user.username === "annonymous" ? clickLogin : clickCommande
-            }
-          >
+          <li onClick={user.username === "" ? clickLogin : clickCommande}>
             <div className="menu-name">Commandez CSE</div>
           </li>
 

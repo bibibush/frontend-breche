@@ -39,7 +39,7 @@ export default function CommandeCSE() {
         window.location.href = `/commande/success?id=${res.data.id}`;
       })
       .catch((err) => {
-        alert(err.response.statusText);
+        alert("Vous devez enregistrer un fiche de la commande");
         console.log("upload error", err.response);
         window.location.href = "/";
       });
@@ -63,24 +63,27 @@ export default function CommandeCSE() {
       <div className="user_info">
         <p>Votre Information</p>
         <Form id="info">
-          <Form.Group className="mb-3 nom">
-            <Form.Label>Votre Nom</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Votre Nom"
-              defaultValue={user.nom}
-              name="nom"
-            />
-          </Form.Group>
-          <Form.Group className="mb-3 prenom">
-            <Form.Label>Votre prenom</Form.Label>
-            <Form.Control
-              defaultValue={user.prenom}
-              type="text"
-              placeholder="Votre prenom"
-              name="prenom"
-            />
-          </Form.Group>
+          <div className="nom-prenom">
+            <Form.Group className="mb-3 nom">
+              <Form.Label>Votre Nom</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Votre Nom"
+                defaultValue={user.nom}
+                name="nom"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3 prenom">
+              <Form.Label>Votre prenom</Form.Label>
+              <Form.Control
+                defaultValue={user.prenom}
+                type="text"
+                placeholder="Votre prenom"
+                name="prenom"
+              />
+            </Form.Group>
+          </div>
+
           <Form.Group className="mb-3 entreprise">
             <Form.Label>Votre entreprise</Form.Label>
             <Form.Control
@@ -103,7 +106,7 @@ export default function CommandeCSE() {
             <Form.Label>Votre numero de téléphone</Form.Label>
             <Form.Control
               defaultValue={user.phonenumber}
-              type="text"
+              type="tel"
               placeholder="01-23-45-67-89"
               name="phonenumber"
             />
@@ -120,12 +123,12 @@ export default function CommandeCSE() {
         </Form>
       </div>
       <div className="user_orders">
-        <p>Commandez avec un excel</p>
         <Form.Group controlId="formFileLg" className="mb-3">
           <Form.Label>Enregistrez votre fiche en bas</Form.Label>
           <Form.Control
             type="file"
             size="lg"
+            required
             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             onChange={onChangeupload}
           />

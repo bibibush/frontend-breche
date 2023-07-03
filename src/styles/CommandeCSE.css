@@ -1,24 +1,40 @@
 .orders {
-  margin-top: 99px;
+  padding-top: 99px;
+  padding-bottom: 10px;
   position: relative;
+  background-color: #b9c9b4;
 }
 .orders .user_info {
   width: 650px;
-  margin: 150px auto;
+  margin: 99px auto;
 }
 .orders .user_info p {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 65px;
+  padding: 15px 20px;
+  background-color: #fafaf2;
+  border-radius: 8px;
+  text-align: center;
+  color: #696767;
+}
+.orders .user_info .nom-prenom {
+  display: flex;
+}
+.orders .user_info .nom-prenom .mb-3 {
+  width: 315px;
+}
+.orders .user_info .nom-prenom .mb-3:last-child {
+  margin-left: 20px;
 }
 .orders .user_orders {
   width: 1100px;
   margin: 0 auto 186px auto;
   position: relative;
+  background-color: #fafaf2;
+  padding: 100px 30px 100px 30px;
+  border-radius: 20px;
 }
-.orders .user_orders p {
-  font-size: 36px;
-  margin-bottom: 65px;
-}
+
 .orders .user_orders .mb-3 {
   position: relative;
 }
@@ -27,21 +43,21 @@
   text-align: center;
   width: 450px;
   position: absolute;
-  top: -135px;
+  top: -85px;
   left: 50%;
   margin-left: calc(450px / -2);
 }
 .orders .user_orders .mb-3 input {
   width: 600px;
-  margin: 255px auto 0 auto;
+  margin: 0 auto;
   font-size: 20px;
 }
 .orders .user_orders > button {
   position: absolute;
   width: 150px;
   height: 47px;
-  bottom: -56px;
-  right: 0;
+  bottom: 20px;
+  right: 20px;
   background-color: #59c064;
   border: 0;
   font-size: 22px;
@@ -68,7 +84,7 @@
   padding: 20px 30px;
   border-radius: 8px;
   background-color: #f5fff2;
-  bottom: -56px;
+  bottom: -86px;
   left: 17vw;
 }
 .orders .user_orders .calendar .react-datepicker__day--outside-month {
