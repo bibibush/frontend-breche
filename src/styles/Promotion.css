@@ -34,11 +34,12 @@
 }
 .promotion .swiper {
   width: 950px;
-  height: calc(100% - 155px);
+  height: 500px;
   position: absolute;
   top: 155px;
   left: 50%;
   margin-left: calc(950px / -2);
+  border-radius: 12px;
 }
 .promotion .swiper .swiper-slide img {
   width: 950px;
@@ -63,8 +64,11 @@
   width: 489px;
   left: 50%;
   margin-left: calc(489px / -2);
-  bottom: 90px;
+  top: 20px;
   text-align: center;
+  background-color: #fafaf2;
+  padding: 5px 10px;
+  border-radius: 15px;
 }
 .promotion .swiper .swiper-slide-active .swiper-slide_desc p {
   font-family: "Noto Serif", serif;

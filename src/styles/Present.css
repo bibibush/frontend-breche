@@ -14,11 +14,10 @@
 }
 .present .present-logo {
   position: absolute;
-  width: 328px;
-  height: 226px;
-  left: 38%;
-  margin-left: calc(328px / -2);
-  bottom: 365px;
+  width: 228px;
+  height: 156px;
+  left: 2vw;
+  top: 105px;
 }
 .present .logo-div {
   position: absolute;
@@ -26,15 +25,14 @@
   transform: translateX(150px);
   display: flex;
   width: 256px;
-  left: 66%;
-  margin-left: calc(256px / -2);
+  right: 5vw;
   justify-content: center;
-  bottom: 335px;
+  bottom: 165px;
 }
 
 .present .logo-artisan {
-  width: 256px;
-  height: 254px;
+  width: 156px;
+  height: 154px;
 }
 
 .present .present-desc {

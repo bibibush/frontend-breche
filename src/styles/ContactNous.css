@@ -53,6 +53,7 @@
 #form-contact .btn {
   position: absolute;
   width: 186px;
+  height: 46px;
   background-color: #a81817;
   border-color: #a81817;
   bottom: 10px;
@@ -60,6 +61,12 @@
   margin-left: calc(186px / -2);
   font-size: 19px;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+#form-contact .btn > div {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: calc(40px / -2);
 }
 #form-contact .btn:active {
   background-color: #6f1111;

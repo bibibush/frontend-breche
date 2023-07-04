@@ -5,12 +5,14 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from "react-datepicker";
 import fr from "date-fns/locale/fr";
+import { Oval } from "react-loader-spinner";
 
 registerLocale("fr", fr);
 
 export default function CommandeCSE() {
   const [files, setFiles] = useState([]);
   const [user, setUser] = useState({});
+  const [btnState, setBtnState] = useState(false);
 
   const date = new Date().setDate(new Date().getDate() + 15);
   const [startDate, setStartDate] = useState(new Date(date));
@@ -27,6 +29,7 @@ export default function CommandeCSE() {
     setFiles(event.target.files);
   }, []);
   const upload = useCallback(() => {
+    setBtnState(true);
     const formdata = new FormData(document.getElementById("info"));
     formdata.append("date", startDate.toLocaleDateString("fr-FR"));
     formdata.append("order_file", files[0]);
@@ -133,7 +136,13 @@ export default function CommandeCSE() {
             onChange={onChangeupload}
           />
         </Form.Group>
-        <Button onClick={upload}>Envoyer</Button>
+        {btnState ? (
+          <Button onClick={upload} disabled>
+            <Oval width={40} height={40} secondaryColor="black" />
+          </Button>
+        ) : (
+          <Button onClick={upload}>Envoyer</Button>
+        )}
         <div className="calendar">
           <p>Choisisez la date que vous voulez recevoir votre commande</p>
           <ReactDatePicker

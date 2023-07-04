@@ -118,6 +118,9 @@
 .detail_commande .excel_date .date .date_commande h3 {
   margin-right: 295px;
 }
+.detail_commande .excel_date .date .date_commande > button {
+  height: 56px;
+}
 .detail_commande .excel_date .date .date_change {
   display: flex;
 }

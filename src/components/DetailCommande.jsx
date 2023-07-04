@@ -174,8 +174,7 @@ export default function DetailCommande() {
                       setExcelUpdate(true);
                     }}
                   >
-                    Changez
-                    <br /> votre commande
+                    Changez votre commande
                   </Button>
                 )}
               </div>

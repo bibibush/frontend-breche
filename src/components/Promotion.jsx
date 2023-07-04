@@ -15,41 +15,41 @@ export default function Promotion() {
         disableOnInteraction: false,
       }}
       centeredSlides={true}
-      speed={1500}
+      speed={3000}
       loop={true}
     >
       <SwiperSlide>
-        <img src="./images/saucissons photoshop.png" alt="" />
+        <img src="./images/plancha monts du lyonnais.png" alt="" />
         <div className="swiper-slide_desc">
           <p>Gamme artisanale</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/saucissons photoshop.png" alt="" />
+        <img src="./images/plancha monts du lyonnais.png" alt="" />
         <div className="swiper-slide_desc">
           <p>Gamme traditionnelle</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/saucissons photoshop.png" alt="" />
+        <img src="./images/plancha monts du lyonnais.png" alt="" />
         <div className="swiper-slide_desc">
           <p>Gamme saucisson à cuire</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/saucissons photoshop.png" alt="" />
+        <img src="./images/plancha monts du lyonnais.png" alt="" />
         <div className="swiper-slide_desc">
           <p>Nos spécialités artisanales 200g</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/saucissons photoshop.png" alt="" />
+        <img src="./images/plancha monts du lyonnais.png" alt="" />
         <div className="swiper-slide_desc">
           <p>Gamme grignotage</p>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/saucissons photoshop.png" alt="" />
+        <img src="./images/plancha monts du lyonnais.png" alt="" />
         <div className="swiper-slide_desc">
           <p>Gamme allégée</p>
         </div>

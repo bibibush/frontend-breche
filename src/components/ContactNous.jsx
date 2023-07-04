@@ -3,13 +3,16 @@ import emailjs from "@emailjs/browser";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
+import { Oval } from "react-loader-spinner";
 
 export default function ContactNous() {
   const form = useRef();
   const [info, setInfo] = useState({});
+  const [btnState, setBtnState] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setBtnState(true);
 
     emailjs
       .sendForm(
@@ -113,9 +116,15 @@ export default function ContactNous() {
           <Form.Control as="textarea" rows={9} name="message" required />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Envoyer
-        </Button>
+        {btnState ? (
+          <Button disabled variant="primary" type="submit">
+            <Oval width={40} height={40} secondaryColor="black" color="white" />
+          </Button>
+        ) : (
+          <Button variant="primary" type="submit">
+            Envoyer
+          </Button>
+        )}
       </Form>
     </section>
   );

@@ -62,6 +62,12 @@
   border: 0;
   font-size: 22px;
 }
+.orders .user_orders > button > div {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: calc(40px / -2);
+}
 .orders .user_orders > button:hover {
   background-color: #428b49;
 }
