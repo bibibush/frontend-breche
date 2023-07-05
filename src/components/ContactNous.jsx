@@ -36,6 +36,7 @@ export default function ContactNous() {
   // const change = (target) => {
   //   return target.value;
   // };
+
   const getme = useCallback(async () => {
     try {
       const res = await axios.get("/api/getme/");

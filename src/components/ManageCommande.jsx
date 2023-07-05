@@ -202,8 +202,7 @@ export default function ManageCommande() {
                     setExcelUpdate(true);
                   }}
                 >
-                  Changez
-                  <br /> votre commande
+                  Changez la commande
                 </Button>
               </div>
             )}
@@ -258,7 +257,7 @@ export default function ManageCommande() {
           {infoUpdate ? (
             <form id="info_form">
               <div className="commande_name">
-                <p>Votre nom et prenom</p>
+                <p>Nom et prenom</p>
                 <input type="text" name="nom" defaultValue={successInfo.nom} />
                 <br />
                 <br />
@@ -269,7 +268,7 @@ export default function ManageCommande() {
                 />
               </div>
               <div className="adresse">
-                <p>Votre adresse</p>
+                <p>Adresse</p>
                 <input
                   type="text"
                   name="adresse"
@@ -277,7 +276,7 @@ export default function ManageCommande() {
                 />
               </div>
               <div className="entreprise">
-                <p>Votre entreprise</p>
+                <p>Entreprise</p>
                 <input
                   type="text"
                   name="entreprise"
@@ -285,7 +284,7 @@ export default function ManageCommande() {
                 />
               </div>
               <div className="email">
-                <p>Votre adresse email</p>
+                <p>Adresse email</p>
                 <input
                   type="text"
                   name="email"
@@ -293,7 +292,7 @@ export default function ManageCommande() {
                 />
               </div>
               <div className="phonenumber">
-                <p>Votre numero téléphone</p>
+                <p>Téléphone</p>
                 <input
                   type="text"
                   name="phonenumber"
@@ -317,24 +316,24 @@ export default function ManageCommande() {
           ) : (
             <>
               <div className="commande_name">
-                <p>Votre nom et prenom</p>
+                <p>Nom et prenom</p>
                 <div className="commande_nom">{successInfo.nom}</div>
                 <div className="commande_prenom">{successInfo.prenom}</div>
               </div>
               <div className="adresse">
-                <p>Votre adresse</p>
+                <p>Adresse</p>
                 <h3>{successInfo.adresse}</h3>
               </div>
               <div className="entreprise">
-                <p>Votre entreprise</p>
+                <p>Entreprise</p>
                 <h3>{successInfo.entreprise}</h3>
               </div>
               <div className="email">
-                <p>Votre adresse email</p>
+                <p>Adresse email</p>
                 <h3>{successInfo.email}</h3>
               </div>
               <div className="phonenumber">
-                <p>Votre numero téléphone</p>
+                <p>Numero téléphone</p>
                 <h3>{successInfo.phonenumber}</h3>
               </div>
               <Button

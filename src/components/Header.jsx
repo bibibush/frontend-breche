@@ -44,6 +44,11 @@ export default function Header() {
         setShow(false);
       });
   };
+  const loginEnter = useCallback((event) => {
+    if (event.key === "Enter") {
+      login();
+    }
+  }, []);
   const logout = () => {
     axios
       .get("/api/logout/")
@@ -87,6 +92,11 @@ export default function Header() {
         alert("c'est pas bon");
       });
   };
+  const enterPwdChange = useCallback((e) => {
+    if (e.key === "Enter") {
+      pwdchange();
+    }
+  }, []);
   const getMe = useCallback(async () => {
     try {
       const res = await axios.get("/api/getme/");
@@ -139,6 +149,7 @@ export default function Header() {
                           name="old_password"
                           type="password"
                           required
+                          onKeyDown={enterPwdChange}
                           placeholder="Votre mots du passe presentielles"
                         />
                       </Form.Group>
@@ -149,6 +160,7 @@ export default function Header() {
                           name="new_password1"
                           type="password"
                           required
+                          onKeyDown={enterPwdChange}
                           placeholder="Nouvelles mots du passe"
                         />
                       </Form.Group>
@@ -160,6 +172,7 @@ export default function Header() {
                           name="new_password2"
                           type="password"
                           required
+                          onKeyDown={enterPwdChange}
                           placeholder="Verifiez votres nouvelles mots du passe"
                         />
                       </Form.Group>
@@ -208,6 +221,7 @@ export default function Header() {
                           type="email"
                           required
                           placeholder="Email"
+                          onKeyDown={loginEnter}
                         />
                       </Form.Group>
 
@@ -218,6 +232,7 @@ export default function Header() {
                           type="password"
                           required
                           placeholder="Password"
+                          onKeyDown={loginEnter}
                         />
                       </Form.Group>
                     </Form>

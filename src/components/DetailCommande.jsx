@@ -44,6 +44,15 @@ export default function DetailCommande() {
         alert(err.response.statusText);
       });
   }, [id]);
+  const enterInfo = useCallback(
+    (e) => {
+      if (e.key === "Enter") {
+        infoUpload();
+      }
+    },
+    [infoUpload]
+  );
+
   const excelUpload = useCallback(() => {
     const formdata = new FormData();
     formdata.append("order_file", files[0]);
@@ -196,6 +205,11 @@ export default function DetailCommande() {
                   locale={"fr"}
                   dateFormat={"dd/ MM /yyyy"}
                   disabledKeyboardNavigation
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      dateUpload();
+                    }
+                  }}
                 />
                 <Button variant="success" onClick={dateUpload}>
                   Enregistrez
@@ -244,13 +258,19 @@ export default function DetailCommande() {
             <form id="info_form">
               <div className="commande_name">
                 <p>Votre nom et prenom</p>
-                <input type="text" name="nom" defaultValue={successInfo.nom} />
+                <input
+                  type="text"
+                  name="nom"
+                  defaultValue={successInfo.nom}
+                  onKeyDown={enterInfo}
+                />
                 <br />
                 <br />
                 <input
                   type="text"
                   name="prenom"
                   defaultValue={successInfo.prenom}
+                  onKeyDown={enterInfo}
                 />
               </div>
               <div className="adresse">
@@ -259,6 +279,7 @@ export default function DetailCommande() {
                   type="text"
                   name="adresse"
                   defaultValue={successInfo.adresse}
+                  onKeyDown={enterInfo}
                 />
               </div>
               <div className="entreprise">
@@ -267,6 +288,7 @@ export default function DetailCommande() {
                   type="text"
                   name="entreprise"
                   defaultValue={successInfo.entreprise}
+                  onKeyDown={enterInfo}
                 />
               </div>
               <div className="email">
@@ -275,6 +297,7 @@ export default function DetailCommande() {
                   type="text"
                   name="email"
                   defaultValue={successInfo.email}
+                  onKeyDown={enterInfo}
                 />
               </div>
               <div className="phonenumber">
@@ -283,6 +306,7 @@ export default function DetailCommande() {
                   type="text"
                   name="phonenumber"
                   defaultValue={successInfo.phonenumber}
+                  onKeyDown={enterInfo}
                 />
               </div>
               <div className="buttons">
