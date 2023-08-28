@@ -53,80 +53,91 @@ export default function ContactNous() {
   }, [getme]);
   return (
     <section className="contact-nous">
-      <Form ref={form} id="form-contact" onSubmit={sendEmail}>
-        <div className="nom-email">
+      <div className="contact-bg">
+        <Form ref={form} id="form-contact" onSubmit={sendEmail}>
+          <div className="nom-email">
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Votre Nom *</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="nom"
+                defaultValue={info.nom}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Votre prenom *</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="prenom"
+                defaultValue={info.prenom}
+              />
+            </Form.Group>
+          </div>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Votre Nom *</Form.Label>
+            <Form.Label>Votre numero telephone</Form.Label>
             <Form.Control
-              required
               type="text"
-              name="nom"
-              defaultValue={info.nom}
+              name="user_numero"
+              defaultValue={info.phonenumber}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Votre prenom *</Form.Label>
+            <Form.Label>Adresse email *</Form.Label>
             <Form.Control
               required
-              type="text"
-              name="prenom"
-              defaultValue={info.prenom}
+              type="email"
+              placeholder="exemple@exemple.com"
+              name="user_email"
+              defaultValue={info.email}
             />
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Votre entreprise</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="votre entreprise"
+                name="entreprise"
+                defaultValue={info.entreprise}
+              />
+            </Form.Group>
           </Form.Group>
-        </div>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Votre numero telephone</Form.Label>
-          <Form.Control
-            type="text"
-            name="user_numero"
-            defaultValue={info.phonenumber}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Adresse email *</Form.Label>
-          <Form.Control
+          <Form.Label>Objet *</Form.Label>
+          <Form.Select
             required
-            type="email"
-            placeholder="exemple@exemple.com"
-            name="user_email"
-            defaultValue={info.email}
-          />
+            aria-label="Default select example"
+            name="objet"
+          >
+            <option value="">Choisissez</option>
+            <option value="un">Un</option>
+            <option value="deux">Deux</option>
+            <option value="trois">Trois</option>
+          </Form.Select>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Votre entreprise</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="votre entreprise"
-              name="entreprise"
-              defaultValue={info.entreprise}
-            />
+            <Form.Label>Sujet</Form.Label>
+            <Form.Control type="text" name="sujet" placeholder="Sujet" />
           </Form.Group>
-        </Form.Group>
-        <Form.Label>Objet *</Form.Label>
-        <Form.Select required aria-label="Default select example" name="objet">
-          <option value="">Choisissez</option>
-          <option value="un">Un</option>
-          <option value="deux">Deux</option>
-          <option value="trois">Trois</option>
-        </Form.Select>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label>Sujet</Form.Label>
-          <Form.Control type="text" name="sujet" placeholder="Sujet" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Question *</Form.Label>
-          <Form.Control as="textarea" rows={9} name="message" required />
-        </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Question *</Form.Label>
+            <Form.Control as="textarea" rows={9} name="message" required />
+          </Form.Group>
 
-        {btnState ? (
-          <Button disabled variant="primary" type="submit">
-            <Oval width={40} height={40} secondaryColor="black" color="white" />
-          </Button>
-        ) : (
-          <Button variant="primary" type="submit">
-            Envoyer
-          </Button>
-        )}
-      </Form>
+          {btnState ? (
+            <Button disabled variant="primary" type="submit">
+              <Oval
+                width={40}
+                height={40}
+                secondaryColor="black"
+                color="white"
+              />
+            </Button>
+          ) : (
+            <Button variant="primary" type="submit">
+              Envoyer
+            </Button>
+          )}
+        </Form>
+      </div>
     </section>
   );
 }

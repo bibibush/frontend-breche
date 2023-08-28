@@ -17,7 +17,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson nature artisanal bride main 400",
       price: 10,
       desc: "Saucisson ARTISANAL bridé main 400g",
-      imgurl: "images/single saus.png",
+      imgurl: "images/IMG_3860.JPG",
     },
     {
       id: "a-03",
@@ -59,7 +59,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson traditionnelles 650g",
       price: 20,
       desc: "Saucisson 650g",
-      imgurl: "images/single saus.png",
+      imgurl: "images/650.JPG",
     },
     {
       id: "b-04",
@@ -83,7 +83,7 @@ const AppStateProvider = ({ children }) => {
       category: "Rosette traditionnelles 1kg 1.2kg",
       price: 20,
       desc: "Rosette 1 - 1.2kg",
-      imgurl: "images/single saus.png",
+      imgurl: "images/Rosette Complete.png",
     },
   ]);
   const [cuires] = useState([
@@ -130,7 +130,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson spécialités specialites pur porc 200g",
       price: 40,
       desc: "Saucisson pur porc",
-      imgurl: "images/single saus.png",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-02",
