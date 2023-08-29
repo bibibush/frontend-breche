@@ -75,32 +75,34 @@ export default function ContactNous() {
               />
             </Form.Group>
           </div>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Votre numero telephone</Form.Label>
-            <Form.Control
-              type="text"
-              name="user_numero"
-              defaultValue={info.phonenumber}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Adresse email *</Form.Label>
-            <Form.Control
-              required
-              type="email"
-              placeholder="exemple@exemple.com"
-              name="user_email"
-              defaultValue={info.email}
-            />
+          <div className="numero-email">
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Votre entreprise</Form.Label>
+              <Form.Label>Votre numero telephone</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="votre entreprise"
-                name="entreprise"
-                defaultValue={info.entreprise}
+                name="user_numero"
+                defaultValue={info.phonenumber}
               />
             </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Adresse email *</Form.Label>
+              <Form.Control
+                required
+                type="email"
+                placeholder="exemple@exemple.com"
+                name="user_email"
+                defaultValue={info.email}
+              />
+            </Form.Group>
+          </div>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>Votre entreprise</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="votre entreprise"
+              name="entreprise"
+              defaultValue={info.entreprise}
+            />
           </Form.Group>
           <Form.Label>Objet *</Form.Label>
           <Form.Select

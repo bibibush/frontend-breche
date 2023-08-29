@@ -3,15 +3,70 @@
   padding-top: 99px;
 }
 .contact-nous .contact-bg {
-  margin: 75px 240px;
+  margin: 75px 280px;
   padding: 125px 0 55px 0;
   border-radius: 8px;
   background-color: rgb(248, 249, 250);
 }
 .contact-nous .contact-bg form {
-  width: 400px;
+  width: 520px;
   margin: 0 auto;
 }
+.contact-nous .contact-bg form .mb-3 {
+  margin-top: 35px;
+}
 .contact-nous .contact-bg form input {
-  height: 45px;
+  height: 58px;
+}
+.contact-nous .contact-bg form .nom-email {
+  display: flex;
+}
+.contact-nous .contact-bg form .numero-email {
+  display: flex;
+}
+.contact-nous .contact-bg form .nom-email .mb-3 {
+  margin-top: 0;
+}
+.contact-nous .contact-bg form .nom-email input {
+  width: 240px;
+  margin-left: 40px;
+}
+.contact-nous .contact-bg form .numero-email input {
+  width: 240px;
+  margin-left: 40px;
+}
+.contact-nous .contact-bg form .nom-email .mb-3:first-child input {
+  margin-left: 0;
+}
+.contact-nous .contact-bg form .nom-email .mb-3:last-child label {
+  margin-left: 40px;
+}
+.contact-nous .contact-bg form .numero-email .mb-3:first-child input {
+  margin-left: 0;
+}
+.contact-nous .contact-bg form .numero-email .mb-3:last-child label {
+  margin-left: 40px;
+}
+.contact-nous .contact-bg form button {
+  width: 520px;
+  height: 47px;
+  position: relative;
+  background-color: #689ccd;
+  border-color: #689ccd;
+  margin-top: 25px;
+}
+.contact-nous .contact-bg form button:hover {
+  background-color: #9fbad3;
+  border-color: #9fbad3;
+}
+.contact-nous .contact-bg form button:active {
+  background-color: #9fbad3;
+  border-color: #9fbad3;
+}
+.contact-nous .contact-bg form button > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: calc(40px / -2);
 }

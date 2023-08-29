@@ -9,7 +9,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson nature artisanal 250g",
       price: 10,
       desc: "Saucisson ARTISANAL 250g",
-      imgurl: "images/single saus.png",
+      imgurl: "images/250 nature.JPG",
     },
     {
       id: "a-02",
@@ -51,7 +51,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson traditionnelles Bride 600g 700g",
       price: 20,
       desc: "Saucisson Bridé 600-700g",
-      imgurl: "images/single saus.png",
+      imgurl: "images/7-800 nature.JPG",
     },
     {
       id: "b-03",
