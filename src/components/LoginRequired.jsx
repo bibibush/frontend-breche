@@ -18,6 +18,15 @@ export default function LoginRequired() {
       });
   }, []);
 
+  const loginenter = useCallback(
+    (event) => {
+      if (event.key === "Enter") {
+        login();
+      }
+    },
+    [login]
+  );
+
   return (
     <section className="login_required">
       <div className="dialogue">
@@ -30,6 +39,7 @@ export default function LoginRequired() {
               type="email"
               required
               placeholder="Email"
+              onKeyDown={loginenter}
             />
           </Form.Group>
 
@@ -40,6 +50,7 @@ export default function LoginRequired() {
               type="password"
               required
               placeholder="Password"
+              onKeyDown={loginenter}
             />
           </Form.Group>
           <Button variant="success" onClick={login}>

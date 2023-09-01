@@ -25,7 +25,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson nature ARTISANAL Courbe 300g 400g",
       price: 10,
       desc: "Saucisson ARTISANAL Courbe 300-400g",
-      imgurl: "images/single saus.png",
+      imgurl: "images/coubre.JPG",
     },
     {
       id: "a-04",
@@ -33,7 +33,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson nature ARTISANAL bride 600g 700g",
       price: 10,
       desc: "Saucisson ARTISANAL bridé 600-700g",
-      imgurl: "images/single saus.png",
+      imgurl: "images/7-800 Arti.JPG",
     },
   ]);
   const [traditionnelles] = useState([
@@ -67,7 +67,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisse traditionnelles droite 250g",
       price: 20,
       desc: "Saucisse droite 250g",
-      imgurl: "images/single saus.png",
+      imgurl: "images/droite.JPG",
     },
     {
       id: "b-05",
@@ -75,7 +75,7 @@ const AppStateProvider = ({ children }) => {
       category: "Mini-rosette traditionnelles 400g",
       price: 20,
       desc: "Mini-rosette 400g",
-      imgurl: "images/single saus.png",
+      imgurl: "images/mini_rosette.JPG",
     },
     {
       id: "b-06",
@@ -138,7 +138,7 @@ const AppStateProvider = ({ children }) => {
       category: "Saucisson spécialités specialites aux noisettes 200g",
       price: 40,
       desc: "Saucisson aux noisettes",
-      imgurl: "images/single saus.png",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-03",
@@ -146,7 +146,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites cepes 200g",
       price: 40,
       desc: "Saucisson aux cèpes",
-      imgurl: "images/single saus.png",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-04",
@@ -154,7 +154,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites fromages 200g",
       price: 40,
       desc: "Saucisson au beaufort",
-      imgurl: "images/single saus.png",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-05",
@@ -163,7 +163,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites gibier 200g",
       price: 40,
       desc: "Saucisson au Porc et Sanglier",
-      imgurl: "images/single saus.png",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-06",
@@ -171,7 +171,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites 200g",
       price: 40,
       desc: "Saucisson aux noix",
-      imgurl: "images/single saus.png",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-07",
@@ -180,7 +180,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites fromages 200g",
       price: 40,
       desc: "Saucisson au fromage de chèvre",
-      imgurl: "images/single saus.png",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-08",
@@ -188,7 +188,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites fromages 200g",
       price: 40,
       desc: "Saucisson au roquefort",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-09",
@@ -196,8 +196,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites 200g",
       price: 40,
       desc: "Saucisson aux figues",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-10",
@@ -205,7 +204,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites pimente 200g",
       price: 40,
       desc: "Saucisson pimenté",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-11",
@@ -213,7 +212,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites 200g",
       price: 40,
       desc: "Saucisson au Porc et Cerf",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-12",
@@ -222,8 +221,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites gibier 200g",
       price: 40,
       desc: "Saucisson au Porc et Taureau",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-13",
@@ -231,7 +229,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites 200g",
       price: 40,
       desc: "Saucisson aux olives",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-14",
@@ -239,7 +237,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites 200g fromages",
       price: 40,
       desc: "Emmental et oignons frits",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-15",
@@ -247,8 +245,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites 200g",
       price: 40,
       desc: "Saucisson aux myrtilles",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-16",
@@ -256,7 +253,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites genepi 200g",
       price: 40,
       desc: "Saucisson au génépi",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-17",
@@ -264,7 +261,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites interieures 200g",
       price: 40,
       desc: "Saucisson herbes intérieures",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-18",
@@ -273,8 +270,7 @@ const AppStateProvider = ({ children }) => {
       price: 40,
       desc: `Saucisson au fenouil
       (disponible de mai à septembre)`,
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-19",
@@ -283,7 +279,7 @@ const AppStateProvider = ({ children }) => {
       price: 40,
       desc: `Saucisson à l'ail des ours
       (disponible à partir du mois de mai)`,
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-20",
@@ -291,7 +287,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites a l'ail",
       price: 40,
       desc: "Saucisson à l'ail 200g",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-21",
@@ -299,8 +295,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites fume 200g",
       price: 40,
       desc: "Saucisson fumé",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-22",
@@ -308,7 +303,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites cendre 200g",
       price: 40,
       desc: "Saucisson cendré",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-23",
@@ -317,7 +312,7 @@ const AppStateProvider = ({ children }) => {
       price: 40,
       desc: `mélange de plantes aromatiques,
        épices et fleurs`,
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-24",
@@ -325,8 +320,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites enrobe 200g",
       price: 40,
       desc: "Saucisson enrobé aux herbes de Provence",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-25",
@@ -334,7 +328,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites enrobe 200g",
       price: 40,
       desc: "Saucisson enrobé au poivre noir",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
     {
       id: "d-26",
@@ -342,7 +336,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson spécialités specialites concasse 200g",
       price: 40,
       desc: "Saucisson enrobé au piment fort concassé",
-      imgurl: "images/saucisson-sec-parfume-salaisons-du-velay.jpg",
+      imgurl: "images/bn200.JPG",
     },
   ]);
   const [grignotages] = useState([
@@ -352,7 +346,7 @@ const AppStateProvider = ({ children }) => {
       category: "grignotages Mignonettes Fagot de 8 pieces 240g environ",
       price: 40,
       desc: "Fagot de 8 pieces 240g environ",
-      imgurl: "images/saucisson-sec-auvergne-igp-salaisons-du-velay.jpg",
+      imgurl: "images/minionnette.JPG",
     },
   ]);
   const [allegees] = useState([
@@ -378,8 +372,7 @@ const AppStateProvider = ({ children }) => {
       category: "saucisson Filet mignon allege seche",
       price: 50,
       desc: "Filet mignon séché",
-      imgurl:
-        "images/saucisson-sec-reduit-en-matieres-grasses-salaisons-du-velay.jpg",
+      imgurl: "images/filet mignon.JPG",
     },
   ]);
   const [jambons] = useState([

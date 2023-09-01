@@ -86,8 +86,9 @@
 .orders .user_orders .calendar .example-custom-input {
   position: absolute;
   font-size: 22px;
-  text-align: center;
+  width: 280px;
   padding: 20px 30px;
+  text-align: center;
   border-radius: 8px;
   background-color: #f5fff2;
   bottom: -86px;

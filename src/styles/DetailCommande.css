@@ -134,7 +134,7 @@
 .detail_commande .excel_date .date .date_change input {
   width: 205px;
 }
-.detail_commande .excel_date .date .date_change button:last-child {
+.detail_commande .excel_date .date .date_change button {
   margin-left: 15px;
 }
 .detail_commande .commande_adresse {

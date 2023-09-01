@@ -44,12 +44,12 @@
   justify-content: center;
   background-color: rgba(131, 155, 41, 0.7);
   color: white;
-  margin-top: 190px;
+  margin-top: 280px;
   overflow: hidden;
   transition: 0.3s;
 }
 .grignotages .grignotage:hover .desc {
-  height: 190px;
+  height: 280px;
   margin-top: 0;
 }
 .grignotages .grignotage .desc .inner {
@@ -57,7 +57,7 @@
 }
 .grignotages .grignotage img {
   width: 250px;
-  height: 190px;
+  height: 280px;
   margin: 0 auto;
   border-radius: 8px;
 }

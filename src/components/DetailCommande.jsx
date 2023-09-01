@@ -105,10 +105,10 @@ export default function DetailCommande() {
   return (
     <section className="detail_commande">
       {successInfo.block ? (
-        <p>* Vous ne pouvez plus changer votre commande *</p>
+        <p>* Vous ne pouvez plus modifier votre commande *</p>
       ) : (
         <p>
-          * Vous pouvez changer votre commande jusqu'a 2 semaines avant la date
+          * Vous pouvez modifier votre commande jusqu'a 2 semaines avant la date
           que vous avez choisi pour recevoir la commande *
         </p>
       )}
