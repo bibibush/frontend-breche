@@ -6,9 +6,6 @@ import axios from "axios";
 
 export default function Header() {
   const [user, setUser] = useState({});
-  const click = () => {
-    window.location.href = "/search";
-  };
   const [show, setShow] = useState(false);
   const [regShow, setRegShow] = useState(false);
   const [pwdshow, setPwdshow] = useState(false);
@@ -119,6 +116,16 @@ export default function Header() {
   };
   return (
     <header>
+      <div className="header-contact">
+        <div className="numero">
+          <div className="material-symbols-outlined">phone_iphone</div>
+          <p>04 77 54 39 63</p>
+        </div>
+        <div className="email">
+          <div className="material-symbols-outlined">mail</div>
+          <p>contact@salaisonsdelabreche.com</p>
+        </div>
+      </div>
       <div className="up-menu">
         <a href="/">
           <img
@@ -340,10 +347,10 @@ export default function Header() {
               </>
             )}
           </ul>
-          <div className="search" onClick={click}>
+          <a className="search" href="/search">
             <input type="text" id="chercher" />
             <div className="material-symbols-outlined">search</div>
-          </div>
+          </a>
         </div>
       </div>
       <div className="inner">

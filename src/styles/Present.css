@@ -7,6 +7,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  white-space: pre-line;
 }
 .present .present-cover {
   height: 100%;
@@ -17,7 +18,7 @@
   width: 228px;
   height: 156px;
   left: 2vw;
-  top: 105px;
+  top: 185px;
 }
 .present .logo-div {
   position: absolute;
@@ -37,14 +38,19 @@
 
 .present .present-desc {
   position: absolute;
-  bottom: 225px;
+  bottom: 186px;
   left: 52%;
   margin-left: calc(681px / -2);
 }
-.present .present-desc p {
+.present .present-desc h1 {
   color: white;
   font-family: "Noto Serif", serif;
-  font-size: 36px;
+  font-size: 41px;
+  text-align: center;
+  line-height: 1.4;
+}
+.present .present-desc h1 > p {
+  color: #99d188;
 }
 /* .present .present-desc .btn {
   position: absolute;

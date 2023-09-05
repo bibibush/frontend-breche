@@ -1,7 +1,7 @@
 .searched {
   position: relative;
   height: 7300px;
-  padding-top: 86px;
+  padding-top: 135px;
   background-color: #f9f9f9;
   white-space: pre-line;
 }
@@ -44,7 +44,7 @@
   column-gap: 30px;
   row-gap: 65px;
   left: 50%;
-  top: 482px;
+  top: 525px;
   margin-left: calc((400px * 3 + 60px) / -2);
 }
 .searchs .keyword-search {

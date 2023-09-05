@@ -3,16 +3,40 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 99px;
+  height: 165px;
   background-color: #f8f9f0;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
   top: 0;
   z-index: 2;
 }
+header .header-contact {
+  width: 100%;
+  height: 66px;
+  background-color: #333;
+  display: flex;
+  color: white;
+  font-size: 22px;
+}
+header .header-contact > .numero {
+  display: flex;
+  align-items: center;
+  margin-left: 25vw;
+}
+header .header-contact > .numero p {
+  margin-left: 15px;
+}
+header .header-contact > .email {
+  margin-left: 155px;
+  display: flex;
+  align-items: center;
+}
+header .header-contact > .email p {
+  margin-left: 15px;
+}
 header > .inner {
-  height: 100%;
+  height: 99px;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 50%;
   margin-left: calc(1100px / -2);
 }

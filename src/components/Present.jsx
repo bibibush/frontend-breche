@@ -23,7 +23,10 @@ export default function Present() {
         className="present-logo"
       />
       <div className="present-desc">
-        <p>Salaison Artisanale depuis 3 générations</p>
+        <h1>
+          <p>Fabrication artisanale de saucissons</p>
+          depuis 3 generations
+        </h1>
       </div>
       <div className="logo-div">
         <img src="./images/logo artisan.png" alt="" className="logo-artisan" />
