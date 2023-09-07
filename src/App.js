@@ -28,6 +28,7 @@ import "./styles/LoginRequired.css";
 import "./styles/MesCommande.css";
 import "./styles/DetailCommande.css";
 // import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
+import "./styles/Logos.css";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -62,6 +63,7 @@ import MesCommande from "./components/MesCommande";
 import LesCommandes from "./components/LesCommandes";
 import DetailCommande from "./components/DetailCommande";
 import ManageCommande from "./components/ManageCommande";
+import Logos from "./components/Logos";
 
 import axios from "axios";
 import HowToOrder from "./components/HowToOrder";
@@ -84,6 +86,7 @@ function App() {
               <Aide />
               <ToUp />
               <Present />
+              <Logos />
               <NotreHistoire />
               <section className="promotion">
                 <PromotionTitle />
