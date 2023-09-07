@@ -27,14 +27,14 @@ import "./styles/NotreHistoire.css";
 import "./styles/LoginRequired.css";
 import "./styles/MesCommande.css";
 import "./styles/DetailCommande.css";
-import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
+// import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
 import Promotion from "./components/Promotion";
 import PromotionTitle from "./components/PromotionTitle";
 // import Explanation from "./components/Explanation";
-import Generation from "./components/Generation";
+// import Generation from "./components/Generation";
 // import Lyonnais from "./components/Lyonnais";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -55,7 +55,7 @@ import Histoire from "./components/Histoire";
 import Nosproduits from "./components/Nosproduits";
 import Aide from "./components/Aide";
 import ToUp from "./components/ToUp";
-import Where from "./components/Where";
+// import Where from "./components/Where";
 import CommandeCSE from "./components/CommandeCSE";
 import NotreHistoire from "./components/NotreHistoire";
 import MesCommande from "./components/MesCommande";
@@ -95,7 +95,7 @@ function App() {
         }
       />
       <Route
-        path="/nossaucissons"
+        path="/nossaucissons/artisanale"
         element={
           <>
             <AppStateProvider>

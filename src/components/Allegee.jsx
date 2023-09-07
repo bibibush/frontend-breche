@@ -17,7 +17,7 @@ export default function Allegee() {
                     <h3>{desc}</h3>
                   </div>
                 </div>
-                <img src={imgurl} alt="" />
+                <img src={imgurl} alt="Filet mignon séché" />
                 <div className="allegee_desc">
                   <div className="title">{title}</div>
                 </div>

@@ -22,6 +22,9 @@ header .header-contact > .numero {
   align-items: center;
   margin-left: 25vw;
 }
+header .header-contact > .numero .material-symbols-outlined {
+  font-variation-settings: "FILL" 1;
+}
 header .header-contact > .numero p {
   margin-left: 15px;
 }

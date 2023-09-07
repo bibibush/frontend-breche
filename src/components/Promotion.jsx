@@ -10,49 +10,31 @@ export default function Promotion() {
       modules={[Navigation, Autoplay]}
       className="mySwiper"
       slidesPerView={1}
+      spaceBetween={30}
       autoplay={{
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
       }}
-      centeredSlides={true}
       speed={3000}
       loop={true}
     >
       <SwiperSlide>
-        <img src="./images/gammes 1.png" alt="" />
-        <div className="swiper-slide_desc">
-          <p>Gamme artisanale</p>
-        </div>
+        <img src="./images/bn200.JPG" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/gammes 2.png" alt="" />
-        <div className="swiper-slide_desc">
-          <p>Gamme traditionnelle</p>
-        </div>
+        <img src="./images/hg 300-400.JPG" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/gammes 1.png" alt="" />
-        <div className="swiper-slide_desc">
-          <p>Gamme saucisson à cuire</p>
-        </div>
+        <img src="./images/7-800 Arti.JPG" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/gammes 2.png" alt="" />
-        <div className="swiper-slide_desc">
-          <p>Nos spécialités artisanales 200g</p>
-        </div>
+        <img src="./images/650.JPG" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/gammes 1.png" alt="" />
-        <div className="swiper-slide_desc">
-          <p>Gamme grignotage</p>
-        </div>
+        <img src="./images/coubre.JPG" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./images/gammes 2.png" alt="" />
-        <div className="swiper-slide_desc">
-          <p>Gamme allégée</p>
-        </div>
+        <img src="./images/250 nature.JPG" alt="" />
       </SwiperSlide>
     </Swiper>
   );

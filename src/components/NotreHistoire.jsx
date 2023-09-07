@@ -5,7 +5,7 @@ export default function NotreHistore() {
         <div className="notre_histoire_left">
           <img
             src="./images/SALAISONS DE LA BRECHE - Famille Prost.jpg"
-            alt=""
+            alt="La famille de saucisson"
           />
           <div className="notre_histoire_left_img_desc">
             <div className="notre_histoire_left_img_desc_p1">

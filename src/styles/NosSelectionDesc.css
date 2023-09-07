@@ -1,9 +1,10 @@
 .nosselection-desc {
   margin-top: 165px;
-  height: 380px;
+  height: 77vh;
   background-image: url("../images/JAMBON-CRU-ARTICLE.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top -30% left;
   background-attachment: fixed;
   color: #f4ead8;
   position: relative;

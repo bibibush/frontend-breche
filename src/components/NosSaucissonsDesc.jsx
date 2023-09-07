@@ -11,7 +11,7 @@ export default function NosSaucissonsDesc() {
         <h2>desc</h2>
       </div>
       <ButtonGroup size="lg" className="mb-2">
-        <Link to="/nossaucissons">
+        <Link to="/nossaucissons/artisanale">
           <Button>
             Gamme <br />
             Artisanale

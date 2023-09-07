@@ -118,7 +118,7 @@ export default function Header() {
     <header>
       <div className="header-contact">
         <div className="numero">
-          <div className="material-symbols-outlined">phone_iphone</div>
+          <div className="material-symbols-outlined">call</div>
           <p>04 77 54 39 63</p>
         </div>
         <div className="email">
@@ -356,14 +356,14 @@ export default function Header() {
       <div className="inner">
         <ul className="main-menu">
           <li className="NosSaucissons">
-            <a href="/nossaucissons">
+            <a href="/nossaucissons/artisanale">
               <div className="menu-name">Nos saucissons</div>
             </a>
             <div className="hidden-menu">
               <div className="inner">
                 <ul>
                   <li className="hidden-menu-name">
-                    <a href={"/nossaucissons"}>
+                    <a href={"/nossaucissons/artisanale"}>
                       <p>Gamme artisanale</p>
                     </a>
                   </li>
