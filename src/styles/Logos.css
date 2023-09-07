@@ -10,13 +10,26 @@
   justify-content: center;
   height: 245px;
 }
-.logos .logos_flex img {
-  width: 235px;
-  height: 195px;
+.logos .logos_flex .logos_flex_rond {
   margin-left: 50px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
 }
-.logos .logos_flex img:first-child {
+.logos .logos_flex .logos_flex_rond img {
+  width: 235px;
+  height: 155px;
+}
+.logos .logos_flex .logos_flex_rond:first-child {
   margin-left: 0;
+  width: 235px;
+}
+.logos .logos_flex .logos_flex_rond:first-child img {
+  width: 180px;
+  height: 180px;
 }
 .logos .logos_desc {
   display: flex;
