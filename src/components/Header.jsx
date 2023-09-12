@@ -356,7 +356,7 @@ export default function Header() {
       <div className="inner">
         <ul className="main-menu">
           <li className="NosSaucissons">
-            <a href="/nossaucissons/artisanale">
+            <a href="/nossaucissons">
               <div className="menu-name">Nos saucissons</div>
             </a>
             <div className="hidden-menu">
@@ -397,7 +397,7 @@ export default function Header() {
             </div>
           </li>
           <li className="NosSelections">
-            <a href="/nosselection/jambon">
+            <a href="/nosselection">
               <div className="menu-name">Notre selections</div>
             </a>
             <div className="hidden-menu">

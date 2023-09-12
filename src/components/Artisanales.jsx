@@ -1,31 +1,25 @@
-import usePrototypes from "../hooks/usePrototypes";
-
 export default function Artisanales() {
-  const { artisanales } = usePrototypes();
-
   return (
-    <section className="artisanales-bg">
-      <p>Gamme Artisanale</p>
-      <div className="artisanales">
-        {artisanales.map((artisanale) => {
-          const { id, imgurl, title, desc } = artisanale;
-
-          return (
-            <a href={`/nosproduits?id=${id}`} key={id}>
-              <div className="artisanale" key={id}>
-                <div className="desc">
-                  <div className="inner">
-                    <h3>{desc}</h3>
-                  </div>
-                </div>
-                <img src={imgurl} alt="" />
-                <div className="artisanale_desc">
-                  <div className="title">{title}</div>
-                </div>
-              </div>
-            </a>
-          );
-        })}
+    <section className="artisanale">
+      <div className="arti_250g">
+        <div className="artisanale_250_cover"></div>
+        <h1>ARTISANALE 250g</h1>
+        <h2>Saucisson ARTISANALE 250g Desc</h2>
+      </div>
+      <div className="arti_400g">
+        <div className="artisanale_400_cover"></div>
+        <h1>Saucisson ARTISANAL bridé main 400g</h1>
+        <h2>Saucisson ARTISANAL bridé main 400g Desc</h2>
+      </div>
+      <div className="arti_courbe">
+        <div className="artisanale_courbe_cover"></div>
+        <h1>Saucisson ARTISANAL Courbe</h1>
+        <h2>Saucisson ARTISANAL Courbe 300-400g Desc</h2>
+      </div>
+      <div className="arti_700">
+        <div className="artisanale_700_cover"></div>
+        <h1>Saucisson ARTISANAL bridé 600-700g</h1>
+        <h2>Saucisson ARTISANAL bridé 600-700g Desc</h2>
       </div>
     </section>
   );

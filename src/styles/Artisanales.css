@@ -1,77 +1,100 @@
-.artisanales-bg {
+.arti_250g {
+  height: 600px;
+  background-image: url("../images/250 nature.JPG");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top 20% right;
   position: relative;
-  height: 1100px;
-  padding-top: 56px;
-  background-color: #f9f9f9;
+  color: #f4ead8;
 }
-.artisanales-bg p {
-  text-align: center;
-  position: absolute;
-  width: 385px;
-  left: 50%;
-  margin: 0 0 46px calc(385px / -2);
-  font-size: 36px;
-  font-weight: 700;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-  border-bottom: 5px solid #c4c0ba;
-  border-radius: 6px;
+.arti_250g .artisanale_250_cover {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
 
-.artisanales {
+.arti_250g h1 {
   position: absolute;
-  display: grid;
-  grid-template-columns: repeat(2, 300px);
-  column-gap: 150px;
-  row-gap: 115px;
-  top: 232px;
-  left: 50%;
-  margin-left: calc(750px / -2);
+  font-size: 62px;
+  top: 10%;
+  left: 20px;
 }
-.artisanales .artisanale {
-  overflow: hidden;
-  text-align: center;
+.arti_250g h2 {
+  position: absolute;
+  bottom: 30%;
+  right: 20px;
+}
+.arti_400g {
+  height: 600px;
+  background-image: url("../images/hg 300-400.JPG");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top 20% right;
   position: relative;
-  cursor: pointer;
+  color: #f4ead8;
 }
-.artisanales .artisanale .desc {
-  width: 250px;
-  height: 0;
+.arti_400g .artisanale_400_cover {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+
+.arti_400g h1 {
   position: absolute;
-  left: 50%;
-  margin-left: calc(250px / -2);
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-  background-color: rgba(131, 155, 41, 0.7);
-  color: white;
-  margin-top: 280px;
-  overflow: hidden;
-  transition: 0.3s;
+  font-size: 62px;
+  top: 10%;
+  left: 20px;
 }
-.artisanales .artisanale:hover .desc {
-  height: 280px;
-  margin-top: 0;
+.arti_400g h2 {
+  position: absolute;
+  bottom: 30%;
+  right: 20px;
 }
-.artisanales .artisanale .desc .inner {
-  width: 165px;
+.arti_courbe {
+  height: 600px;
+  background-image: url("../images/coubre.JPG");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top 8% right;
+  position: relative;
+  color: #f4ead8;
 }
-.artisanales .artisanale img {
-  width: 250px;
-  height: 280px;
-  margin: 0 auto;
-  border-radius: 8px;
+.arti_courbe .artisanale_courbe_cover {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
-.artisanales .artisanale .artisanale_desc {
-  font-size: 23px;
+
+.arti_courbe h1 {
+  position: absolute;
+  font-size: 62px;
+  top: 10%;
+  left: 20px;
 }
-.artisanales .artisanale .artisanale_desc .title {
-  line-height: 1.4;
-  font-family: "Noto Serif", serif;
-  font-weight: 700;
+.arti_courbe h2 {
+  position: absolute;
+  bottom: 30%;
+  right: 20px;
 }
-.artisanales .artisanale .artisanale_desc .price {
-  margin-top: 22px;
-  font-size: 18px;
+.arti_700 {
+  height: 600px;
+  background-image: url("../images/7-800 Arti.JPG");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top 20% right;
+  position: relative;
+  color: #f4ead8;
+}
+.arti_700 .artisanale_700_cover {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.arti_700 h1 {
+  position: absolute;
+  font-size: 62px;
+  top: 10%;
+  left: 20px;
+}
+.arti_700 h2 {
+  position: absolute;
+  bottom: 30%;
+  right: 20px;
 }

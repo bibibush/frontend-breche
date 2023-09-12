@@ -29,6 +29,7 @@ import "./styles/MesCommande.css";
 import "./styles/DetailCommande.css";
 // import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
 import "./styles/Logos.css";
+import "./styles/Desc.css";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -64,6 +65,12 @@ import LesCommandes from "./components/LesCommandes";
 import DetailCommande from "./components/DetailCommande";
 import ManageCommande from "./components/ManageCommande";
 import Logos from "./components/Logos";
+import ArtisanaleDesc from "./components/ArtisanaleDesc";
+import TraditionnelleDesc from "./components/TraditionnelleDesc";
+import CuireDesc from "./components/CuireDesc";
+import SpecialiteDesc from "./components/SpecialiteDesc";
+import GrignotageDesc from "./components/GrignotageDesc";
+import AllegeeDesc from "./components/AllegeDesc";
 
 import axios from "axios";
 import HowToOrder from "./components/HowToOrder";
@@ -98,14 +105,23 @@ function App() {
         }
       />
       <Route
+        path="/nossaucissons"
+        element={
+          <>
+            <Header />
+            <NosSaucissonsDesc />
+            <Footer />
+          </>
+        }
+      />
+      <Route
         path="/nossaucissons/artisanale"
         element={
           <>
             <AppStateProvider>
               <Header />
-              <Aide />
-              <ToUp />
               <NosSaucissonsDesc />
+              <ArtisanaleDesc />
               <Artisanales />
               <Footer />
             </AppStateProvider>
@@ -118,9 +134,8 @@ function App() {
           <>
             <AppStateProvider>
               <Header />
-              <Aide />
-              <ToUp />
               <NosSaucissonsDesc />
+              <TraditionnelleDesc />
               <Traditionnelle />
               <Footer />
             </AppStateProvider>
@@ -133,9 +148,8 @@ function App() {
           <>
             <AppStateProvider>
               <Header />
-              <Aide />
-              <ToUp />
               <NosSaucissonsDesc />
+              <CuireDesc />
               <Cuire />
               <Footer />
             </AppStateProvider>
@@ -148,9 +162,8 @@ function App() {
           <>
             <AppStateProvider>
               <Header />
-              <Aide />
-              <ToUp />
               <NosSaucissonsDesc />
+              <SpecialiteDesc />
               <Specialite />
               <Footer />
             </AppStateProvider>
@@ -163,9 +176,8 @@ function App() {
           <>
             <AppStateProvider>
               <Header />
-              <Aide />
-              <ToUp />
               <NosSaucissonsDesc />
+              <GrignotageDesc />
               <Grignotage />
               <Footer />
             </AppStateProvider>
@@ -178,12 +190,22 @@ function App() {
           <>
             <AppStateProvider>
               <Header />
-              <Aide />
-              <ToUp />
               <NosSaucissonsDesc />
+              <AllegeeDesc />
               <Allegee />
               <Footer />
             </AppStateProvider>
+          </>
+        }
+      />
+      <Route
+        path="/nosselection"
+        element={
+          <>
+            <Header />
+            <Aide />
+            <NosSelectionDesc />
+            <Footer />
           </>
         }
       />

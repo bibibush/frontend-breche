@@ -1,6 +1,6 @@
 .nossaucissons-desc {
   margin-top: 165px;
-  height: 77vh;
+  height: 90vh;
   background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,7 +30,7 @@
 }
 .nossaucissons-desc .btn-group {
   position: absolute;
-  bottom: 0;
+  bottom: 13vh;
   width: 1320px;
   left: 50%;
   margin-left: calc(1320px / -2);
