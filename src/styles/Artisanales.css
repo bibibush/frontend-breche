@@ -1,100 +1,54 @@
-.arti_250g {
-  height: 600px;
-  background-image: url("../images/250 nature.JPG");
-  background-size: cover;
+.artisanale {
+  margin-top: 165px;
+  height: 95vh;
+  background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   background-position: top 20% right;
-  position: relative;
   color: #f4ead8;
+  position: relative;
+  white-space: pre-line;
 }
-.arti_250g .artisanale_250_cover {
+.artisanale .artisanale-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  height: 100%;
+}
+.artisanale .desc {
+  position: absolute;
+  width: 655px;
+  text-align: center;
+  top: 86px;
+  left: 10%;
+}
+.artisanale .desc h2 {
+  margin-top: 32px;
+}
+.artisanale img {
+  position: absolute;
+  width: 600px;
+  height: 510px;
+  top: 5%;
+  right: 35px;
+}
+.artisanale ul {
+  position: absolute;
+  color: rgb(236, 236, 236);
+  font-size: 34px;
+  right: 135px;
+  top: 105px;
+  font-family: "futuristic";
+}
+.artisanale ul li {
+  margin-bottom: 55px;
+  line-height: 1.2;
 }
 
-.arti_250g h1 {
-  position: absolute;
-  font-size: 62px;
-  top: 10%;
-  left: 20px;
-}
-.arti_250g h2 {
-  position: absolute;
-  bottom: 30%;
-  right: 20px;
-}
-.arti_400g {
-  height: 600px;
-  background-image: url("../images/hg 300-400.JPG");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top 20% right;
-  position: relative;
-  color: #f4ead8;
-}
-.arti_400g .artisanale_400_cover {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100%;
-}
-
-.arti_400g h1 {
-  position: absolute;
-  font-size: 62px;
-  top: 10%;
-  left: 20px;
-}
-.arti_400g h2 {
-  position: absolute;
-  bottom: 30%;
-  right: 20px;
-}
-.arti_courbe {
-  height: 600px;
-  background-image: url("../images/coubre.JPG");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top 8% right;
-  position: relative;
-  color: #f4ead8;
-}
-.arti_courbe .artisanale_courbe_cover {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100%;
-}
-
-.arti_courbe h1 {
-  position: absolute;
-  font-size: 62px;
-  top: 10%;
-  left: 20px;
-}
-.arti_courbe h2 {
-  position: absolute;
-  bottom: 30%;
-  right: 20px;
-}
-.arti_700 {
-  height: 600px;
-  background-image: url("../images/7-800 Arti.JPG");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top 20% right;
-  position: relative;
-  color: #f4ead8;
-}
-.arti_700 .artisanale_700_cover {
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
-}
-
-.arti_700 h1 {
-  position: absolute;
-  font-size: 62px;
-  top: 10%;
-  left: 20px;
-}
-.arti_700 h2 {
-  position: absolute;
-  bottom: 30%;
-  right: 20px;
+.modal-saucisson .modal-content img {
+  width: 900px;
+  border-radius: 8px;
+  height: 950px;
+  margin: 0 auto;
 }

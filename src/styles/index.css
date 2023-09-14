@@ -1,4 +1,8 @@
 /* COMMON */
+@font-face {
+  font-family: "futuristic";
+  src: url("../fonts/Futuristic\ Stylish.otf");
+}
 body {
   font-family: "Alkatra", cursive;
   color: #333;

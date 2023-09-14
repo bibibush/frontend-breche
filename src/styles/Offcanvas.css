@@ -1,0 +1,34 @@
+.offcanvas_button {
+  position: fixed;
+  font-size: 18px;
+  width: 350px;
+  top: 26%;
+  left: 20px;
+}
+
+.offcanvas {
+  background-color: rgb(230, 232, 228);
+}
+.offcanvas .linkBox {
+  background-color: rgb(249, 248, 248);
+  border-radius: 8px;
+  padding: 45px;
+}
+.offcanvas .offcanvas-body a {
+  display: block;
+  margin: 66px 0;
+  font-size: 22px;
+  text-align: center;
+  color: #2a304f;
+  font-family: "Noto Serif", serif;
+  transition: 0.4s;
+}
+.offcanvas .offcanvas-body a:hover {
+  color: #8f9132;
+}
+.offcanvas .offcanvas-body a:first-child {
+  margin: 0;
+}
+.offcanvas .offcanvas-body a:last-child {
+  margin: 0;
+}
