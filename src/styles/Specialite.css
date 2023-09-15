@@ -33,7 +33,7 @@
   top: 0;
   right: 35px;
 }
-.specialite ul {
+.specialite .specialite_items {
   position: absolute;
   color: rgb(236, 236, 236);
   font-size: 32px;
@@ -41,7 +41,10 @@
   top: 105px;
   font-family: "futuristic";
 }
-.specialite ul li {
+.specialite .specialite_items li {
   margin-bottom: 15px;
   line-height: 1.2;
+}
+.pagination {
+  position: absolute;
 }
