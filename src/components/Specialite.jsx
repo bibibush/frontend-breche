@@ -54,6 +54,12 @@ export default function Specialite() {
       <ReactPaginate
         className="pagination"
         pageCount={totalPage}
+        previousLabel={
+          <span class="material-symbols-outlined">arrow_back_ios</span>
+        }
+        nextLabel={
+          <span class="material-symbols-outlined">arrow_forward_ios</span>
+        }
         onPageChange={(event) => {
           setPage(event.selected + 1);
         }}
