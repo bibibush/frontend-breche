@@ -1,31 +1,27 @@
-import usePrototypes from "../hooks/usePrototypes";
-
 export default function Cuire() {
-  const { cuires } = usePrototypes();
-  return (
-    <section className="cuires-bg">
-      <p>Gamme Saucisson à cuire</p>
-      <div className="cuires">
-        {cuires.map((cuire) => {
-          const { id, imgurl, title, desc } = cuire;
+  const items = [
+    "Saucisson à cuire des Monts du Lyonnais",
+    "Saucisson à cuire des Monts du Lyonnais à la Pistache",
+    "Saucisson à cuire des Monts du Lyonnais à la Truffe Française",
+    "Sabodet à cuire des Monts du Lyonnais",
+  ];
 
-          return (
-            <a href={`/nosproduits?id=${id}`} key={id}>
-              <div className="cuire" key={id}>
-                <div className="desc">
-                  <div className="inner">
-                    <h3>{desc}</h3>
-                  </div>
-                </div>
-                <img src={imgurl} alt="" />
-                <div className="cuire_desc">
-                  <div className="title">{title}</div>
-                </div>
-              </div>
-            </a>
-          );
-        })}
+  return (
+    <section className="cuires">
+      <div className="cuires-cover"></div>
+      <div className="desc">
+        <h1>Gamme de saucisson à cuire</h1>
+        <h2>Desc</h2>
       </div>
+      <img src="images/칠판.png" alt="" />
+      <ul className="cuires_items">
+        {items.map((item) => {
+          return <li>{item}</li>;
+        })}
+      </ul>
+      <button>
+        <a href="/nossaucissons/specialite">Voir le prochaine gamme</a>
+      </button>
     </section>
   );
 }

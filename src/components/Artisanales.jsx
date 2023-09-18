@@ -45,6 +45,11 @@ export default function Artisanales() {
           Saucisson Artisanal bridé 600-700g
         </li>
       </ul>
+
+      <a href="/nossaucissons/traditionnelle">
+        <button>Voir le prochaine gamme</button>
+      </a>
+
       <Modal
         size="xl"
         className="modal-saucisson"

@@ -1,6 +1,6 @@
 .specialite {
   margin-top: 165px;
-  height: 130vh;
+  height: 90vh;
   background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -26,17 +26,34 @@
 .specialite .desc h2 {
   margin-top: 32px;
 }
+.specialite button {
+  position: absolute;
+  bottom: 115px;
+  left: 556px;
+  background-color: rgb(151, 45, 45);
+  padding: 25px 20px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+  transition: 0.4s;
+}
+.specialite button:hover {
+  background-color: rgb(92, 31, 31);
+}
+.specialite button a {
+  color: white;
+}
 .specialite img {
   position: absolute;
   width: 600px;
-  height: 800px;
+  height: 610px;
   top: 0;
   right: 35px;
 }
 .specialite .specialite_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 32px;
+  font-size: 34px;
   right: 135px;
   top: 105px;
   font-family: "futuristic";
@@ -44,13 +61,13 @@
 .specialite .specialite_items li {
   text-align: center;
   width: 405px;
-  margin-bottom: 15px;
+  margin-bottom: 55px;
   line-height: 1.2;
 }
 .specialite .pagination {
   position: absolute;
-  right: 252px;
-  top: 710px;
+  right: 212px;
+  top: 510px;
   font-size: 24px;
 }
 .specialite .pagination li {

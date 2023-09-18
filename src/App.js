@@ -133,12 +133,9 @@ function App() {
         path="/nossaucissons/cuires"
         element={
           <>
-            <AppStateProvider>
-              <Header />
-              <NosSaucissonsDesc />
-              <Cuire />
-              <Footer />
-            </AppStateProvider>
+            <Header />
+            <Cuire />
+            <Footer />
           </>
         }
       />
@@ -169,12 +166,9 @@ function App() {
         path="/nossaucissons/allegee"
         element={
           <>
-            <AppStateProvider>
-              <Header />
-              <NosSaucissonsDesc />
-              <Allegee />
-              <Footer />
-            </AppStateProvider>
+            <Header />
+            <Allegee />
+            <Footer />
           </>
         }
       />

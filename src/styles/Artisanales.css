@@ -26,6 +26,23 @@
 .artisanale .desc h2 {
   margin-top: 32px;
 }
+.artisanale button {
+  position: absolute;
+  bottom: 115px;
+  left: 556px;
+  background-color: rgb(151, 45, 45);
+  padding: 25px 20px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+  transition: 0.4s;
+}
+.artisanale button:hover {
+  background-color: rgb(92, 31, 31);
+}
+.artisanale a button {
+  color: white;
+}
 .artisanale img {
   position: absolute;
   width: 600px;

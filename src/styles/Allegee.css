@@ -1,81 +1,67 @@
-.allegees-bg {
+.allegees {
+  margin-top: 165px;
+  height: 92vh;
+  background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top 20% right;
+  color: #f4ead8;
   position: relative;
-  height: 899px;
-  padding-top: 56px;
-  background-color: #f9f9f9;
   white-space: pre-line;
 }
-.allegees-bg p {
-  text-align: center;
+.allegees .allegees-cover {
   position: absolute;
-  width: 395px;
-  left: 50%;
-  margin: 0 0 46px calc(395px / -2);
-  font-size: 36px;
-  font-weight: 700;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-  border-bottom: 5px solid #c4c0ba;
-  border-radius: 6px;
-}
-
-.allegees {
-  position: absolute;
-  display: grid;
-  grid-template-columns: repeat(3, 300px);
-  column-gap: 30px;
-  left: 50%;
-  top: 232px;
-  margin-left: calc(960px / -2);
-}
-.allegees .allegee {
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-}
-.allegees .allegee .desc {
-  width: 250px;
-  height: 0;
-  position: absolute;
-  left: 50%;
-  margin-left: calc(250px / -2);
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  justify-content: center;
-  background-color: rgba(131, 155, 41, 0.7);
-  color: white;
-  margin-top: 280px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-.allegees .allegee:hover .desc {
-  height: 280px;
-  margin-top: 0;
-}
-.allegees .allegee .desc .inner {
-  width: 165px;
-}
-.allegees .allegee img {
-  width: 250px;
-  height: 280px;
-  margin: 0 auto;
-  border-radius: 8px;
-}
-.allegees .allegee .allegee_desc {
-  font-size: 23px;
-}
-.allegees .allegee .allegee_desc .title {
-  line-height: 1.4;
-  font-family: "Noto Serif", serif;
-  font-weight: 700;
-}
-.allegees .allegee .price {
-  position: absolute;
-  font-size: 18px;
-  bottom: 0;
   width: 100%;
-  left: 50%;
-  margin-left: calc(100% / -2);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.allegees .desc {
+  position: absolute;
+  width: 655px;
+  text-align: center;
+  top: 86px;
+  left: 10%;
+  line-height: 1.4;
+}
+.allegees .desc h2 {
+  margin-top: 32px;
+}
+.allegees button {
+  position: absolute;
+  bottom: 115px;
+  left: 556px;
+  background-color: rgb(151, 45, 45);
+  padding: 25px 20px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+  transition: 0.4s;
+}
+.allegees button:hover {
+  background-color: rgb(92, 31, 31);
+}
+.allegees button a {
+  color: white;
+}
+.allegees img {
+  position: absolute;
+  width: 600px;
+  height: 530px;
+  top: 5%;
+  right: 35px;
+}
+.allegees .allegees_items {
+  position: absolute;
+  color: rgb(236, 236, 236);
+  font-size: 34px;
+  right: 135px;
+  top: 145px;
+  font-family: "futuristic";
+}
+.allegees .allegees_items li {
+  text-align: center;
+  width: 405px;
+  margin-bottom: 75px;
+  line-height: 1.4;
 }

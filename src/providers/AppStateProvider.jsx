@@ -115,8 +115,7 @@ const AppStateProvider = ({ children }) => {
     },
     {
       id: "c-04",
-      title: `Sabodet à cuire des Monts du
-      Lyonnais 600g`,
+      title: `Sabodet à cuire des Monts du Lyonnais 600g`,
       category: "Sabodet a cuire des Monts du Lyonnais 600g",
       price: 30,
       desc: "Sabodet à cuire des Monts du Lyonnais 600g",

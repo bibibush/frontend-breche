@@ -32,7 +32,7 @@ export default function Specialite() {
   ];
 
   const [page, setPage] = useState(1);
-  const limit = 10;
+  const limit = 4;
   const offset = (page - 1) * limit;
   let totalPage = Math.ceil(items.length / limit);
 
@@ -51,8 +51,14 @@ export default function Specialite() {
           return <li>{result}</li>;
         })}
       </ul>
+      <button>
+        <a href="/nossaucissons/allegee">Voir le prochaine gamme</a>
+      </button>
       <ReactPaginate
         className="pagination"
+        breakLabel="..."
+        pageRangeDisplayed={3}
+        marginPagesDisplayed={2}
         pageCount={totalPage}
         previousLabel={
           <span class="material-symbols-outlined">arrow_back_ios</span>
