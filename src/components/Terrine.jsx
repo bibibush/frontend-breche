@@ -1,32 +1,22 @@
-import usePrototypes from "../hooks/usePrototypes";
-
 export default function Grignotage() {
-  const { terrines } = usePrototypes();
+  const items = ["Assortiment de 12 terrines de 180g"];
 
   return (
-    <section className="terrines-bg">
-      <p>Gamme Terrines</p>
-      <div className="terrines">
-        {terrines.map((terrine) => {
-          const { id, imgurl, title, desc } = terrine;
-
-          return (
-            <a href={`/nosproduits?id=${id}`} key={id}>
-              <div className="terrine" key={id}>
-                <div className="desc">
-                  <div className="inner">
-                    <h3>{desc}</h3>
-                  </div>
-                </div>
-                <img src={imgurl} alt="" />
-                <div className="terrine_desc">
-                  <div className="title">{title}</div>
-                </div>
-              </div>
-            </a>
-          );
-        })}
+    <section className="terrine">
+      <div className="terrine-cover"></div>
+      <div className="desc">
+        <h1>Gamme Terrine</h1>
+        <h2>Desc</h2>
       </div>
+      <img src="images/칠판.png" alt="" />
+      <ul className="terrine_items">
+        {items.map((item) => {
+          return <li>{item}</li>;
+        })}
+      </ul>
+      <a href="/nosselection/jambon">
+        <button>Voir le gamme jambon</button>
+      </a>
     </section>
   );
 }

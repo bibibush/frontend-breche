@@ -41,7 +41,7 @@
 .cuires button:hover {
   background-color: rgb(92, 31, 31);
 }
-.cuires button a {
+.cuires a button {
   color: white;
 }
 .cuires img {

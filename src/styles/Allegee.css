@@ -41,7 +41,7 @@
 .allegees button:hover {
   background-color: rgb(92, 31, 31);
 }
-.allegees button a {
+.allegees a button {
   color: white;
 }
 .allegees img {
@@ -64,4 +64,9 @@
   width: 405px;
   margin-bottom: 75px;
   line-height: 1.4;
+  transition: 0.3s;
+}
+.allegees .allegees_items li:hover {
+  cursor: pointer;
+  color: rgb(70, 164, 77);
 }

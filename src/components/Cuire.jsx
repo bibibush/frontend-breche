@@ -19,9 +19,9 @@ export default function Cuire() {
           return <li>{item}</li>;
         })}
       </ul>
-      <button>
-        <a href="/nossaucissons/specialite">Voir le prochaine gamme</a>
-      </button>
+      <a href="/nossaucissons/specialite">
+        <button>Voir le prochaine gamme</button>
+      </a>
     </section>
   );
 }

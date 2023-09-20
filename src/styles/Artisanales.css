@@ -61,6 +61,11 @@
 .artisanale ul li {
   margin-bottom: 55px;
   line-height: 1.2;
+  transition: 0.3s;
+}
+.artisanale ul li:hover {
+  cursor: pointer;
+  color: rgb(70, 164, 77);
 }
 
 .modal-saucisson .modal-content img {

@@ -19,22 +19,34 @@ export default function Promotion() {
       loop={true}
     >
       <SwiperSlide>
-        <img src="images/bn200.JPG" alt="" />
+        <a href="/nossaucissons/artisanale">
+          <img src="images/hg 300-400.JPG" alt="" />
+        </a>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="images/hg 300-400.JPG" alt="" />
+        <a href="/nossaucissons/traditionnelle">
+          <img src="images/7-800 nature.JPG" alt="" />
+        </a>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="images/7-800 Arti.JPG" alt="" />
+        <a href="/nossaucissons/cuires">
+          <img src="images/650.JPG" alt="" />
+        </a>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="images/650.JPG" alt="" />
+        <a href="/nossaucissons/specialite">
+          <img src="images/bn200.JPG" alt="" />
+        </a>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="images/coubre.JPG" alt="" />
+        <a href="/nossaucissons/grignotage">
+          <img src="images/minionnette.JPG" alt="" />
+        </a>
       </SwiperSlide>
       <SwiperSlide>
-        <img src="images/250 nature.JPG" alt="" />
+        <a href="/nossaucissons/allegee">
+          <img src="images/filet mignon.JPG" alt="" />
+        </a>
       </SwiperSlide>
     </Swiper>
   );

@@ -153,12 +153,9 @@ function App() {
         path="/nossaucissons/grignotage"
         element={
           <>
-            <AppStateProvider>
-              <Header />
-              <NosSaucissonsDesc />
-              <Grignotage />
-              <Footer />
-            </AppStateProvider>
+            <Header />
+            <Grignotage />
+            <Footer />
           </>
         }
       />
@@ -177,7 +174,6 @@ function App() {
         element={
           <>
             <Header />
-            <Aide />
             <NosSelectionDesc />
             <Footer />
           </>
@@ -187,14 +183,9 @@ function App() {
         path="/nosselection/jambon"
         element={
           <>
-            <AppStateProvider>
-              <Header />
-              <Aide />
-              <ToUp />
-              <NosSelectionDesc />
-              <Jambon />
-              <Footer />
-            </AppStateProvider>
+            <Header />
+            <Jambon />
+            <Footer />
           </>
         }
       />
@@ -202,14 +193,9 @@ function App() {
         path="/nosselection/terrine"
         element={
           <>
-            <AppStateProvider>
-              <Header />
-              <Aide />
-              <ToUp />
-              <NosSelectionDesc />
-              <Terrine />
-              <Footer />
-            </AppStateProvider>
+            <Header />
+            <Terrine />
+            <Footer />
           </>
         }
       />

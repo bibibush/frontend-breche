@@ -1,32 +1,49 @@
-import usePrototypes from "../hooks/usePrototypes";
+import { useState } from "react";
+import { Modal } from "react-bootstrap";
 
 export default function Grignotage() {
-  const { grignotages } = usePrototypes();
+  const items = ["Mignonettes"];
+  const [show, setShow] = useState(false);
 
   return (
-    <section className="grignotages-bg">
-      <p>Gamme Grignotage</p>
-      <div className="grignotages">
-        {grignotages.map((grignotage) => {
-          const { id, imgurl, title, desc } = grignotage;
-
+    <section className="grignotage">
+      <div className="grignotage-cover"></div>
+      <div className="desc">
+        <h1>Gamme Grignotage</h1>
+        <h2>Desc</h2>
+      </div>
+      <img src="images/칠판.png" alt="" />
+      <ul className="grignotage_items">
+        {items.map((item) => {
           return (
-            <a href={`/nosproduits?id=${id}`} key={id}>
-              <div className="grignotage" key={id}>
-                <div className="desc">
-                  <div className="inner">
-                    <h3>{desc}</h3>
-                  </div>
-                </div>
-                <img src={imgurl} alt="" />
-                <div className="grignotage_desc">
-                  <div className="title">{title}</div>
-                </div>
-              </div>
-            </a>
+            <li
+              onClick={() => {
+                setShow(true);
+              }}
+            >
+              {item}
+            </li>
           );
         })}
-      </div>
+      </ul>
+      <a href="/nossaucissons/allegee">
+        <button>Voir le prochaine gamme</button>
+      </a>
+      <Modal
+        className="modal-saucisson"
+        show={show}
+        size="xl"
+        onHide={() => {
+          setShow(false);
+        }}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Mignonettes</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img src="images/minionnette.JPG" alt="" />
+        </Modal.Body>
+      </Modal>
     </section>
   );
 }
