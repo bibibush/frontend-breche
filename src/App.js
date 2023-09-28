@@ -30,6 +30,7 @@ import "./styles/DetailCommande.css";
 // import image from "./images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg";
 import "./styles/Logos.css";
 // import "./styles/Offcanvas.css";
+import "./styles/PasCompte.css";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -71,6 +72,7 @@ import axios from "axios";
 import HowToOrder from "./components/HowToOrder";
 import OrderSuccess from "./components/OrderSuccess";
 import LoginRequired from "./components/LoginRequired";
+import PasCompte from "./components/PasCompte";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -325,6 +327,16 @@ function App() {
           <>
             <Header />
             <ManageCommande />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/demander-compte"
+        element={
+          <>
+            <Header />
+            <PasCompte />
             <Footer />
           </>
         }

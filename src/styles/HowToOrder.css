@@ -1,54 +1,63 @@
 .order_how {
   padding-top: 165px;
-  height: 950px;
-  background-color: #f8f8f8;
+  height: 750px;
   position: relative;
 }
 .order_how .steps {
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   height: 350px;
-  background-color: #c2d5c5;
-  box-shadow: 0px 2px 12px black;
+  background-image: url("../images/159050523548392000-arbresle-ouest-lyonnais-monts-beaujolais-pierres-dorees-nature-ot-pays-de-l-arbresle-emmanuelle-guellec.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.order_how .steps .steps-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .order_how .steps .step {
   margin: 0 auto;
   font-size: 19px;
   line-height: 1.4;
   text-align: center;
+  z-index: 1;
 }
 .order_how .steps .step .step_num {
   margin-bottom: 55px;
   font-size: 32px;
 }
-.order_how .btn-group {
-  width: 583px;
-  position: absolute;
-  top: 585px;
-  left: 70%;
-  margin-left: calc(583px / -2);
-}
-.order_how .btn-group button {
-  background-color: #babed7;
+.order_how button {
+  background-color: #fafafa;
   border: none;
-  color: #333;
-  padding: 25px 55px;
+  transition: 0.3s;
+}
+.order_how button:hover {
+  background-color: #dedede;
+}
+.order_how .guide {
+  position: absolute;
+  right: 320px;
+  bottom: 85px;
+  border-radius: 8px;
+  padding: 25px 35px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
-.order_how .btn-group button:first-child:hover {
-  background-color: #888a9a;
-  color: white;
+.order_how .commander {
+  position: absolute;
+  right: 55px;
+  bottom: 85px;
+  border-radius: 8px;
+  padding: 25px 35px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
-.order_how .btn-group button:first-child:active {
-  background-color: #888a9a;
-}
-.order_how .btn-group button:last-child {
-  background-color: #d3ccbe;
-}
-.order_how .btn-group button:last-child:hover {
-  background-color: #908b80;
-  color: white;
-}
-.order_how .btn-group button:last-child:active {
-  background-color: #908b80;
+.how_to-modal img {
+  width: 650px;
+  height: 450px;
+  margin: 55px auto;
 }

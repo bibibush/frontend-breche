@@ -47,7 +47,7 @@ export default function Artisanales() {
       </ul>
 
       <a href="/nossaucissons/traditionnelle">
-        <button>Voir le prochaine gamme</button>
+        <button>Voir le gamme traditionnelle</button>
       </a>
 
       <Modal

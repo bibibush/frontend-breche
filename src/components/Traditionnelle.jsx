@@ -56,7 +56,7 @@ export default function Traditionnelle() {
         })}
       </ul>
       <a href="/nossaucissons/cuires">
-        <button>Voir le prochaine gamme</button>
+        <button>Voir le gamme saucisson cuire</button>
       </a>
       <Modal
         show={show_1}
@@ -70,7 +70,7 @@ export default function Traditionnelle() {
           <Modal.Title>Saucisson Bridé 400g</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src="images/hg 300-400.JPG" alt="" />
+          <img src="images/3-400 nature.JPG" alt="" />
         </Modal.Body>
       </Modal>
       <Modal

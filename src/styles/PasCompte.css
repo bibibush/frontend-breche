@@ -1,0 +1,48 @@
+.pas_compte {
+  padding-top: 165px;
+  height: 850px;
+}
+.pas_compte .question-cover {
+  height: 250px;
+  background-color: #364f31;
+  padding-top: 1px;
+}
+.pas_compte .question-cover h1 {
+  text-align: center;
+  margin-top: 105px;
+  color: #ffffe7;
+}
+.pas_compte h1 span {
+  font-weight: 700;
+  font-size: 69px;
+  font-family: "Alkatra", cursive;
+  margin-right: 15px;
+}
+.pas_compte .desc {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+}
+.pas_compte .desc h2 {
+  line-height: 1.6;
+  font-family: "Alkatra", cursive;
+  font-size: 32px;
+}
+.pas_compte .desc h2:first-child {
+  margin-right: 35px;
+  font-size: 52px;
+}
+.pas_compte .desc h2 span {
+  font-weight: 700;
+  font-size: 35px;
+  color: rgb(46, 46, 99);
+}
+.pas_compte a {
+  display: block;
+  width: 650px;
+  font-size: 34px;
+  text-align: center;
+  margin: 125px auto;
+  text-decoration: underline;
+  color: rgb(32, 92, 32);
+}

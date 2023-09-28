@@ -41,7 +41,7 @@ export default function Allegee() {
         })}
       </ul>
       <a href="/nossaucissons/artisanale">
-        <button>Voir le prochaine gamme</button>
+        <button>Voir le gamme artisanale</button>
       </a>
       <Modal
         className="modal-saucisson"
@@ -52,10 +52,10 @@ export default function Allegee() {
         }}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Mignonettes</Modal.Title>
+          <Modal.Title>Saucisson Allégé en Gras 700g</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src="images/minionnette.JPG" alt="" />
+          <img src="images/S.A.G.JPG" alt="" />
         </Modal.Body>
       </Modal>
       <Modal
@@ -67,10 +67,10 @@ export default function Allegee() {
         }}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Mignonettes</Modal.Title>
+          <Modal.Title>Demi Saucisson Allégé en Gras</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src="images/minionnette.JPG" alt="" />
+          <img src="images/S.A.G.JPG" alt="" />
         </Modal.Body>
       </Modal>
       <Modal

@@ -163,7 +163,7 @@ export default function Specialite() {
         })}
       </ul>
       <a href="/nossaucissons/grignotage">
-        <button>Voir le prochaine gamme</button>
+        <button>Voir le gamme grignotage</button>
       </a>
       <ReactPaginate
         className="pagination"

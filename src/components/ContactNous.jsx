@@ -111,9 +111,9 @@ export default function ContactNous() {
             name="objet"
           >
             <option value="">Choisissez</option>
-            <option value="un">Un</option>
-            <option value="deux">Deux</option>
-            <option value="trois">Trois</option>
+            <option value="Demander compte">Demander compte</option>
+            <option value="Prix">Prix</option>
+            <option value="CSE">CSE</option>
           </Form.Select>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Sujet</Form.Label>

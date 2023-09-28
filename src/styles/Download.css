@@ -2,12 +2,16 @@
   display: flex;
   width: 400px;
   align-items: center;
-  border: 1px solid rgba(128, 128, 128, 0.678);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   cursor: pointer;
   margin: 65px 35px;
-  background-color: #fb6161;
-  color: #fcfedc;
+  background-color: #f8f8f8;
+  color: black;
+  transition: 0.3s;
+}
+.download:hover {
+  background-color: #d8d8d8;
 }
 .download img {
   width: 86px;

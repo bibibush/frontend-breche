@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Download from "../components/Download";
 import "../styles/Download.css";
-import { Button, ButtonGroup, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import axios from "axios";
 
 export default function HowToOrder() {
@@ -26,6 +26,7 @@ export default function HowToOrder() {
   return (
     <section className="order_how">
       <div className="steps">
+        <div className="steps-cover"></div>
         <div className="step">
           <div className="step_num">Etape 1</div>
           <div className="desc">
@@ -45,24 +46,25 @@ export default function HowToOrder() {
         </div>
       </div>
       <Download />
-      <ButtonGroup size="lg">
-        <Button
-          onClick={() => {
-            window.location.href = "/commande";
-          }}
-        >
-          Aller commander
-        </Button>
-        <Button
-          onClick={() => {
-            setShow(true);
-          }}
-        >
-          Guide pour remplir le fiche
-        </Button>
-      </ButtonGroup>
+      <button
+        className="guide"
+        onClick={() => {
+          setShow(true);
+        }}
+      >
+        Guide pour remplir le fiche
+      </button>
+      <button
+        className="commander"
+        onClick={() => {
+          window.location.href = "/commande";
+        }}
+      >
+        Aller Commander
+      </button>
       <Modal
         show={show}
+        className="how_to-modal"
         size="lg"
         onHide={() => {
           setShow(false);
@@ -70,8 +72,15 @@ export default function HowToOrder() {
       >
         <Modal.Header closeButton>
           <Modal.Title>Guide pour remplir le fiche</Modal.Title>
-          <Modal.Body></Modal.Body>
         </Modal.Header>
+        <Modal.Body>
+          <img src="images/conseil.png" alt="" />
+          <img src="images/groupe 1.png" alt="" />
+          <img src="images/nom_prenom.png" alt="" />
+          <img src="images/quantite.png" alt="" />
+          <img src="images/totaltarif.png" alt="" />
+          <img src="images/recappe.png" alt="" />
+        </Modal.Body>
       </Modal>
     </section>
   );

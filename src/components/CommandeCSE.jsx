@@ -6,6 +6,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from "react-datepicker";
 import fr from "date-fns/locale/fr";
 import { Oval } from "react-loader-spinner";
+import gsap from "gsap";
+import { useRef } from "react";
 
 registerLocale("fr", fr);
 
@@ -57,8 +59,22 @@ export default function CommandeCSE() {
       window.location.href = "/";
     }
   }, []);
+  const ref = useRef();
+  const ref2 = useRef();
   useEffect(() => {
     getme();
+    gsap.to(ref.current, {
+      x: "30px",
+      duration: 1,
+      yoyoEase: "power2.out",
+      repeat: -1,
+    });
+    gsap.to(ref2.current, {
+      x: "-30px",
+      duration: 1,
+      yoyoEase: "power2.out",
+      repeat: -1,
+    });
   }, [getme]);
 
   return (
@@ -126,16 +142,66 @@ export default function CommandeCSE() {
         </Form>
       </div>
       <div className="user_orders">
-        <Form.Group controlId="formFileLg" className="mb-3">
-          <Form.Label>Enregistrez votre fiche en bas</Form.Label>
-          <Form.Control
-            type="file"
-            size="lg"
-            required
-            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            onChange={onChangeupload}
+        <svg
+          ref={ref}
+          xmlns="http://www.w3.org/2000/svg"
+          width="100"
+          zoomAndPan="magnify"
+          viewBox="0 0 375 374.999991"
+          height="100"
+          preserveAspectRatio="xMidYMid meet"
+          version="1.0"
+          style={{ position: "absolute", top: "22px" }}
+        >
+          <path
+            fill="#ff914d"
+            d="M 14.375 133.332031 L 241.808594 133.332031 L 241.808594 240.238281 L 14.375 240.238281 Z M 14.375 133.332031 "
+            fillOpacity="1"
+            fillRule="nonzero"
           />
-        </Form.Group>
+          <path
+            fill="#ff914d"
+            d="M 174.917969 67.332031 L 174.917969 306.226562 L 360.957031 186.785156 Z M 174.917969 67.332031 "
+            fillOpacity="1"
+            fillRule="nonzero"
+          />
+        </svg>
+        <svg
+          ref={ref2}
+          xmlns="http://www.w3.org/2000/svg"
+          width="100"
+          zoomAndPan="magnify"
+          viewBox="0 0 375 374.999991"
+          height="100"
+          preserveAspectRatio="xMidYMid meet"
+          version="1.0"
+          style={{ position: "absolute", top: "22px", right: "24px" }}
+        >
+          <path
+            fill="#ff914d"
+            d="M 360.617188 133.332031 L 133.1875 133.332031 L 133.1875 240.238281 L 360.617188 240.238281 Z M 360.617188 133.332031 "
+            fillOpacity="1"
+            fillRule="nonzero"
+          />
+          <path
+            fill="#ff914d"
+            d="M 200.078125 67.332031 L 200.078125 306.226562 L 14.039062 186.785156 Z M 200.078125 67.332031 "
+            fillOpacity="1"
+            fillRule="nonzero"
+          />
+        </svg>
+        <label htmlFor="fileupload">
+          {files.length === 0
+            ? "Enregistrez votre commande ici"
+            : files[0].name}
+        </label>
+        <input
+          id="fileupload"
+          type="file"
+          onChange={onChangeupload}
+          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          required
+        />
         {btnState ? (
           <Button onClick={upload} disabled>
             <Oval width={40} height={40} secondaryColor="black" />

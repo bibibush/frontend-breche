@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { useState, useCallback, useEffect } from "react";
 import axios from "axios";
 import ClientDownload from "./ClientDownload";
-import { Button, Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from "react-datepicker";
@@ -140,15 +140,17 @@ export default function DetailCommande() {
             <p>Fiche de votre commande: </p>
             {excelUpdate ? (
               <div className="client_upload">
-                <Form.Group controlId="formFileLg" className="mb-3">
-                  <Form.Label>Enregistrez votre fiche en bas</Form.Label>
-                  <Form.Control
-                    type="file"
-                    size="lg"
-                    accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                    onChange={onChangeupload}
-                  />
-                </Form.Group>
+                <label htmlFor="fileupdate">
+                  {files.length === 0
+                    ? "Enregistrez votre commande ici"
+                    : files[0].name}
+                </label>
+                <input
+                  id="fileupdate"
+                  type="file"
+                  onChange={onChangeupload}
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                />
                 <Button variant="success" onClick={excelUpload}>
                   Enregistrez
                 </Button>
@@ -156,7 +158,7 @@ export default function DetailCommande() {
                   variant="danger"
                   onClick={() => {
                     setExcelUpdate(false);
-                    setFiles();
+                    setFiles([]);
                   }}
                 >
                   Annuler

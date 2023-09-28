@@ -76,7 +76,13 @@ header .up-menu .sub-menu ul li {
   position: relative;
   transition: 0.4s;
 }
+header .up-menu .sub-menu ul li a {
+  transition: 0.4s;
+}
 header .up-menu .sub-menu ul li:hover {
+  color: #839b29;
+}
+header .up-menu .sub-menu ul li:hover a {
   color: #839b29;
 }
 header .up-menu .sub-menu ul li::before {

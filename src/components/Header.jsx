@@ -7,19 +7,14 @@ import axios from "axios";
 export default function Header() {
   const [user, setUser] = useState({});
   const [show, setShow] = useState(false);
-  const [regShow, setRegShow] = useState(false);
   const [pwdshow, setPwdshow] = useState(false);
 
   const handleClose = () => {
     setShow(false);
-    setRegShow(false);
     setPwdshow(false);
   };
   const handleShow = () => {
     setShow(true);
-  };
-  const handalshow = () => {
-    setRegShow(true);
   };
   const pwdhandleShow = () => {
     setPwdshow(true);
@@ -60,21 +55,7 @@ export default function Header() {
       });
     window.location.href = "/";
   };
-  const register = () => {
-    const regidata = new FormData(document.getElementById("register"));
 
-    axios
-      .post("/api/register/", regidata)
-      .then((res) => {
-        console.log("register res", res);
-        alert("c'est tout bon");
-        setRegShow(false);
-      })
-      .catch((err) => {
-        console.log("register error", err);
-        alert("c'est pas bon");
-      });
-  };
   const pwdchange = () => {
     const pwddata = new FormData(document.getElementById("pwdchange"));
 
@@ -214,7 +195,7 @@ export default function Header() {
               </>
             ) : (
               <>
-                <li onClick={handleShow}>Log in</li>
+                <li onClick={handleShow}>Connectez-vous</li>
                 <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
                     <Modal.Title>CONNECTEZ VOUS</Modal.Title>
@@ -249,108 +230,22 @@ export default function Header() {
                       Close
                     </Button>
                     <Button variant="primary" onClick={login}>
-                      Log in
+                      Connectez-vous
                     </Button>
                   </Modal.Footer>
                 </Modal>
-                <li onClick={handalshow}>Register</li>
-                <Modal
-                  size="lg"
-                  show={regShow}
-                  onHide={handleClose}
-                  aria-labelledby="example-modal-sizes-title-lg"
-                >
-                  <Modal.Header closeButton>
-                    <Modal.Title id="example-modal-sizes-title-lg">
-                      VOUS INSCRIEZ VOUS
-                    </Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <Form id="register">
-                      <Form.Group className="mb-3">
-                        <Form.Label>Votre Nom</Form.Label>
-                        <Form.Control
-                          name="nom"
-                          type="text"
-                          required
-                          placeholder="Votre nom"
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3">
-                        <Form.Label>Votre prenom</Form.Label>
-                        <Form.Control
-                          name="prenom"
-                          type="text"
-                          required
-                          placeholder="Votre prenom"
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3">
-                        <Form.Label>Votre Numero de téléphone</Form.Label>
-                        <Form.Control
-                          name="phonenumber"
-                          type="text"
-                          required
-                          placeholder="Votre Numero de téléphone"
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3">
-                        <Form.Label>Votre Adresse</Form.Label>
-                        <Form.Control
-                          name="adresse"
-                          type="text"
-                          required
-                          placeholder="Votre Adresse"
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3">
-                        <Form.Label>Votre Email</Form.Label>
-                        <Form.Control
-                          name="email"
-                          type="email"
-                          required
-                          placeholder="Email"
-                        />
-                      </Form.Group>
-
-                      <Form.Group className="mb-3">
-                        <Form.Label>mots du passe</Form.Label>
-                        <Form.Control
-                          name="password1"
-                          type="password"
-                          required
-                          placeholder="Password"
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3">
-                        <Form.Label>
-                          Mettez vous les même mots du passe
-                        </Form.Label>
-                        <Form.Control
-                          name="password2"
-                          type="password"
-                          required
-                          placeholder="Password"
-                        />
-                      </Form.Group>
-                    </Form>
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                      Close
-                    </Button>
-                    <Button variant="primary" onClick={register}>
-                      Register
-                    </Button>
-                  </Modal.Footer>
-                </Modal>
+                <li>
+                  <a href="/demander-compte">
+                    Vous n'avez pas un compte encore?
+                  </a>
+                </li>
               </>
             )}
           </ul>
-          <a className="search" href="/search">
+          {/* <a className="search" href="/search">
             <input type="text" id="chercher" />
             <div className="material-symbols-outlined">search</div>
-          </a>
+          </a> */}
         </div>
       </div>
       <div className="inner">

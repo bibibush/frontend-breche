@@ -27,7 +27,7 @@ export default function Grignotage() {
         })}
       </ul>
       <a href="/nossaucissons/allegee">
-        <button>Voir le prochaine gamme</button>
+        <button>Voir le gamme allégé</button>
       </a>
       <Modal
         className="modal-saucisson"

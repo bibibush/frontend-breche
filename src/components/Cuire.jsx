@@ -20,7 +20,7 @@ export default function Cuire() {
         })}
       </ul>
       <a href="/nossaucissons/specialite">
-        <button>Voir le prochaine gamme</button>
+        <button>Voir le gamme spécialité</button>
       </a>
     </section>
   );
