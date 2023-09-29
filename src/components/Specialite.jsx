@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
+import { Link } from "react-router-dom";
 
 export default function Specialite() {
   const items = [
@@ -76,6 +77,7 @@ export default function Specialite() {
         {results.map((result, i) => {
           return (
             <li
+              key={i}
               onClick={() => {
                 if (i === 0) {
                   setShow_1(true);
@@ -162,9 +164,9 @@ export default function Specialite() {
           );
         })}
       </ul>
-      <a href="/nossaucissons/grignotage">
+      <Link to="/nossaucissons/grignotage">
         <button>Voir le gamme grignotage</button>
-      </a>
+      </Link>
       <ReactPaginate
         className="pagination"
         breakLabel="..."
@@ -172,10 +174,10 @@ export default function Specialite() {
         marginPagesDisplayed={2}
         pageCount={totalPage}
         previousLabel={
-          <span class="material-symbols-outlined">arrow_back_ios</span>
+          <span className="material-symbols-outlined">arrow_back_ios</span>
         }
         nextLabel={
-          <span class="material-symbols-outlined">arrow_forward_ios</span>
+          <span className="material-symbols-outlined">arrow_forward_ios</span>
         }
         onPageChange={(event) => {
           setPage(event.selected + 1);

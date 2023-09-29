@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Grignotage() {
   const items = ["Assortiment de 12 terrines de 180g"];
 
@@ -10,13 +12,13 @@ export default function Grignotage() {
       </div>
       <img src="images/칠판.png" alt="" />
       <ul className="terrine_items">
-        {items.map((item) => {
-          return <li>{item}</li>;
+        {items.map((item, i) => {
+          return <li key={i}>{item}</li>;
         })}
       </ul>
-      <a href="/nosselection/jambon">
+      <Link to="/nosselection/jambon">
         <button>Voir le gamme jambon</button>
-      </a>
+      </Link>
     </section>
   );
 }

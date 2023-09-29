@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Grignotage() {
   const items = ["Mignonettes"];
@@ -14,9 +15,10 @@ export default function Grignotage() {
       </div>
       <img src="images/칠판.png" alt="" />
       <ul className="grignotage_items">
-        {items.map((item) => {
+        {items.map((item, i) => {
           return (
             <li
+              key={i}
               onClick={() => {
                 setShow(true);
               }}
@@ -26,9 +28,9 @@ export default function Grignotage() {
           );
         })}
       </ul>
-      <a href="/nossaucissons/allegee">
+      <Link to="/nossaucissons/allegee">
         <button>Voir le gamme allégé</button>
-      </a>
+      </Link>
       <Modal
         className="modal-saucisson"
         show={show}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Allegee() {
   const items = [
@@ -23,6 +24,7 @@ export default function Allegee() {
         {items.map((item, i) => {
           return (
             <li
+              key={i}
               onClick={() => {
                 if (i === 0) {
                   setShow_1(true);
@@ -40,9 +42,9 @@ export default function Allegee() {
           );
         })}
       </ul>
-      <a href="/nossaucissons/artisanale">
+      <Link to="/nossaucissons/artisanale">
         <button>Voir le gamme artisanale</button>
-      </a>
+      </Link>
       <Modal
         className="modal-saucisson"
         show={show_1}

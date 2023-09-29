@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Artisanales() {
   const [show_250, setShow_250] = useState(false);
@@ -46,9 +47,9 @@ export default function Artisanales() {
         </li>
       </ul>
 
-      <a href="/nossaucissons/traditionnelle">
+      <Link to="/nossaucissons/traditionnelle">
         <button>Voir le gamme traditionnelle</button>
-      </a>
+      </Link>
 
       <Modal
         size="xl"

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Traditionnelle() {
   const items = [
@@ -29,6 +30,7 @@ export default function Traditionnelle() {
         {items.map((item, i) => {
           return (
             <li
+              key={i}
               onClick={() => {
                 if (i === 0) {
                   setShow_1(true);
@@ -55,9 +57,9 @@ export default function Traditionnelle() {
           );
         })}
       </ul>
-      <a href="/nossaucissons/cuires">
+      <Link to="/nossaucissons/cuires">
         <button>Voir le gamme saucisson cuire</button>
-      </a>
+      </Link>
       <Modal
         show={show_1}
         size="xl"

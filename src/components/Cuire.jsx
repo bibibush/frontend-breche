@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Cuire() {
   const items = [
     "Saucisson à cuire des Monts du Lyonnais",
@@ -15,13 +17,13 @@ export default function Cuire() {
       </div>
       <img src="images/칠판.png" alt="" />
       <ul className="cuires_items">
-        {items.map((item) => {
-          return <li>{item}</li>;
+        {items.map((item, i) => {
+          return <li key={i}>{item}</li>;
         })}
       </ul>
-      <a href="/nossaucissons/specialite">
+      <Link to="/nossaucissons/specialite">
         <button>Voir le gamme spécialité</button>
-      </a>
+      </Link>
     </section>
   );
 }

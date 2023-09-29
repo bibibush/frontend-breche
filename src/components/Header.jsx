@@ -67,6 +67,11 @@ export default function Header() {
       })
       .catch((err) => {
         console.log("pwdchange error", err.response);
+        if (err.response.status === 401) {
+          return alert(
+            "Vous devez mettre mot de passe different que l'ancienne"
+          );
+        }
         alert("c'est pas bon");
       });
   };
@@ -121,7 +126,7 @@ export default function Header() {
             {user.username !== "" ? (
               <>
                 <li>{user.username}</li>
-                <li onClick={logout}>Log out</li>
+                <li onClick={logout}>Déconnectez-vous</li>
                 <li onClick={pwdhandleShow}>Changer les mots du passe</li>
                 <Modal show={pwdshow} onHide={handleClose}>
                   <Modal.Header closeButton>

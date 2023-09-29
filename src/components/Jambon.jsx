@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Jambon() {
   const items = [
@@ -26,6 +27,7 @@ export default function Jambon() {
         {items.map((item, i) => {
           return (
             <li
+              key={i}
               onClick={() => {
                 if (i === 0) {
                   setShow_1(true);
@@ -49,9 +51,9 @@ export default function Jambon() {
           );
         })}
       </ul>
-      <a href="/nosselection/terrine">
+      <Link to="/nosselection/terrine">
         <button>Voir le gamme terrine</button>
-      </a>
+      </Link>
     </section>
   );
 }
