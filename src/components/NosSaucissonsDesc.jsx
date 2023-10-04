@@ -1,5 +1,4 @@
 import { ButtonGroup, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 export default function NosSaucissonsDesc() {
   return (
@@ -11,42 +10,42 @@ export default function NosSaucissonsDesc() {
         <h2>desc</h2>
       </div>
       <ButtonGroup size="lg" className="mb-2">
-        <Link to="/nossaucissons/artisanale">
+        <a href="/nossaucissons/artisanale">
           <Button>
             Gamme <br />
             Artisanale
           </Button>
-        </Link>
-        <Link to="/nossaucissons/traditionnelle">
+        </a>
+        <a href="/nossaucissons/traditionnelle">
           <Button>
             Gamme <br />
             Traditionnelle
           </Button>
-        </Link>
-        <Link to="/nossaucissons/cuires">
+        </a>
+        <a href="/nossaucissons/cuires">
           <Button>
             Gamme <br />
             Cuires
           </Button>
-        </Link>
-        <Link to="/nossaucissons/specialite">
+        </a>
+        <a href="/nossaucissons/specialite">
           <Button>
             Gamme <br />
             Spécialité
           </Button>
-        </Link>
-        <Link to="/nossaucissons/grignotage">
+        </a>
+        <a href="/nossaucissons/grignotage">
           <Button>
             Gamme <br />
             Grignotage
           </Button>
-        </Link>
-        <Link to="/nossaucissons/allegee">
+        </a>
+        <a href="/nossaucissons/allegee">
           <Button>
             Gamme <br />
             Allégé
           </Button>
-        </Link>
+        </a>
       </ButtonGroup>
     </section>
   );

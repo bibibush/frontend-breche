@@ -1,7 +1,7 @@
 .artisanale {
   margin-top: 165px;
   height: 95vh;
-  background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
+  background-image: url("../images/hg\ 300-400.JPG");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -28,8 +28,8 @@
 }
 .artisanale button {
   position: absolute;
-  bottom: 115px;
-  left: 556px;
+  bottom: 20vh;
+  left: 35vw;
   background-color: rgb(151, 45, 45);
   padding: 25px 20px;
   border-radius: 12px;
@@ -45,16 +45,17 @@
 }
 .artisanale img {
   position: absolute;
-  width: 600px;
-  height: 510px;
+  width: 580px;
+  height: 530px;
   top: 5%;
   right: 35px;
+  border-radius: 12px;
 }
 .artisanale ul {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 34px;
-  right: 135px;
+  font-size: 37px;
+  right: 95px;
   top: 105px;
   font-family: "futuristic";
 }
@@ -64,13 +65,12 @@
   transition: 0.3s;
 }
 .artisanale ul li:hover {
-  cursor: pointer;
   color: rgb(70, 164, 77);
 }
 
-.modal-saucisson .modal-content img {
+/* .modal-saucisson .modal-content img {
   width: 900px;
   border-radius: 8px;
   height: 950px;
   margin: 0 auto;
-}
+} */

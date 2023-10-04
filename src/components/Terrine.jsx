@@ -10,7 +10,7 @@ export default function Grignotage() {
         <h1>Gamme Terrine</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/칠판.png" alt="" />
+      <img src="images/Slate.png" alt="" />
       <ul className="terrine_items">
         {items.map((item, i) => {
           return <li key={i}>{item}</li>;

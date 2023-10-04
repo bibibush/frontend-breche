@@ -105,7 +105,7 @@ export default function Header() {
       <div className="header-contact">
         <div className="numero">
           <div className="material-symbols-outlined">call</div>
-          <p>04 77 54 39 63</p>
+          <p>04 77 54 38 55</p>
         </div>
         <div className="email">
           <div className="material-symbols-outlined">mail</div>

@@ -1,6 +1,6 @@
 .cuires {
   margin-top: 165px;
-  height: 92vh;
+  height: 120vh;
   background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,8 +29,8 @@
 }
 .cuires button {
   position: absolute;
-  bottom: 115px;
-  left: 556px;
+  bottom: 40vh;
+  left: 35vw;
   background-color: rgb(151, 45, 45);
   padding: 25px 20px;
   border-radius: 12px;
@@ -46,16 +46,17 @@
 }
 .cuires img {
   position: absolute;
-  width: 600px;
-  height: 630px;
+  width: 530px;
+  height: 710px;
   top: 5%;
   right: 35px;
+  border-radius: 12px;
 }
 .cuires .cuires_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 34px;
-  right: 135px;
+  font-size: 37px;
+  right: 88px;
   top: 105px;
   font-family: "futuristic";
 }
@@ -64,4 +65,8 @@
   width: 405px;
   margin-bottom: 55px;
   line-height: 1.4;
+  transition: 0.3s;
+}
+.cuires .cuires_items li:hover {
+  color: rgb(70, 164, 77);
 }

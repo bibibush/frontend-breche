@@ -10,6 +10,7 @@ export default function Present() {
     gsap.to(element.querySelector(".logo-div"), {
       opacity: 1,
       duration: 2,
+      delay: 0.5,
       x: 0,
     });
   }, []);

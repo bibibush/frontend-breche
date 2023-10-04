@@ -15,7 +15,7 @@ export default function Cuire() {
         <h1>Gamme de saucisson à cuire</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/칠판.png" alt="" />
+      <img src="images/Slate.png" alt="" />
       <ul className="cuires_items">
         {items.map((item, i) => {
           return <li key={i}>{item}</li>;

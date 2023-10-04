@@ -23,7 +23,7 @@
 .present .logo-div {
   position: absolute;
   opacity: 0;
-  transform: translateX(150px);
+  transform: translateX(90px);
   display: flex;
   width: 256px;
   right: 5vw;

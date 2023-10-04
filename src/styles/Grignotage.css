@@ -29,8 +29,8 @@
 }
 .grignotage button {
   position: absolute;
-  bottom: 115px;
-  left: 556px;
+  bottom: 20vh;
+  left: 35vw;
   background-color: rgb(151, 45, 45);
   padding: 25px 20px;
   border-radius: 12px;
@@ -46,16 +46,17 @@
 }
 .grignotage img {
   position: absolute;
-  width: 600px;
+  width: 400px;
   height: 460px;
   top: 5%;
   right: 35px;
+  border-radius: 12px;
 }
 .grignotage .grignotage_items {
   position: absolute;
   color: rgb(236, 236, 236);
   font-size: 42px;
-  right: 135px;
+  right: 28px;
   top: 195px;
   font-family: "futuristic";
 }
@@ -67,6 +68,5 @@
   transition: 0.3s;
 }
 .grignotage .grignotage_items li:hover {
-  cursor: pointer;
   color: rgb(70, 164, 77);
 }

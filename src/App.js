@@ -1,6 +1,6 @@
 import "./styles/Present.css";
 import "./styles/Header.css";
-import "./styles/Promotion.css";
+// import "./styles/Promotion.css";
 import "./styles/Generation.css";
 import "./styles/Lyonnais.css";
 import "./styles/Explanation.css";
@@ -34,8 +34,8 @@ import "./styles/PasCompte.css";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
-import Promotion from "./components/Promotion";
-import PromotionTitle from "./components/PromotionTitle";
+// import Promotion from "./components/Promotion";
+// import PromotionTitle from "./components/PromotionTitle";
 // import Explanation from "./components/Explanation";
 // import Generation from "./components/Generation";
 // import Lyonnais from "./components/Lyonnais";
@@ -92,10 +92,11 @@ function App() {
               <Present />
               <Logos />
               <NotreHistoire />
-              <section className="promotion">
+              <NosSaucissonsDesc />
+              {/* <section className="promotion">
                 <PromotionTitle />
                 <Promotion />
-              </section>
+              </section> */}
               <Footer />
             </AppStateProvider>
           </>
@@ -106,6 +107,7 @@ function App() {
         element={
           <>
             <Header />
+            <div className="margin" style={{ paddingTop: "165px" }}></div>
             <NosSaucissonsDesc />
             <Footer />
           </>

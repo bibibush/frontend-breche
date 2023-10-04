@@ -29,8 +29,8 @@
 }
 .allegees button {
   position: absolute;
-  bottom: 115px;
-  left: 556px;
+  bottom: 16vh;
+  left: 35vw;
   background-color: rgb(151, 45, 45);
   padding: 25px 20px;
   border-radius: 12px;
@@ -46,16 +46,17 @@
 }
 .allegees img {
   position: absolute;
-  width: 600px;
+  width: 530px;
   height: 530px;
   top: 5%;
   right: 35px;
+  border-radius: 12px;
 }
 .allegees .allegees_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 34px;
-  right: 135px;
+  font-size: 37px;
+  right: 88px;
   top: 145px;
   font-family: "futuristic";
 }
@@ -67,6 +68,5 @@
   transition: 0.3s;
 }
 .allegees .allegees_items li:hover {
-  cursor: pointer;
   color: rgb(70, 164, 77);
 }

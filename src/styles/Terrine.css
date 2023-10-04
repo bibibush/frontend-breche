@@ -28,8 +28,8 @@
 }
 .terrine button {
   position: absolute;
-  bottom: 115px;
-  left: 556px;
+  bottom: 20vh;
+  left: 35vw;
   background-color: rgb(25, 84, 46);
   padding: 25px 20px;
   border-radius: 12px;
@@ -45,16 +45,17 @@
 }
 .terrine img {
   position: absolute;
-  width: 600px;
+  width: 500px;
   height: 460px;
   top: 5%;
   right: 35px;
+  border-radius: 12px;
 }
 .terrine .terrine_items {
   position: absolute;
   color: rgb(236, 236, 236);
   font-size: 42px;
-  right: 135px;
+  right: 88px;
   top: 195px;
   font-family: "futuristic";
 }
@@ -66,6 +67,5 @@
   transition: 0.3s;
 }
 .terrine .terrine_items li:hover {
-  cursor: pointer;
   color: rgb(70, 164, 77);
 }

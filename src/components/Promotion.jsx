@@ -20,32 +20,22 @@ export default function Promotion() {
     >
       <SwiperSlide>
         <a href="/nossaucissons/artisanale">
-          <img src="images/hg 300-400.JPG" alt="" />
+          <img src="images/promo_arti.png" alt="" />
         </a>
       </SwiperSlide>
       <SwiperSlide>
         <a href="/nossaucissons/traditionnelle">
-          <img src="images/7-800 nature.JPG" alt="" />
+          <img src="images/promo_tra.png" alt="" />
         </a>
       </SwiperSlide>
       <SwiperSlide>
         <a href="/nossaucissons/cuires">
-          <img src="images/650.JPG" alt="" />
+          <img src="images/promo_cuire.png" alt="" />
         </a>
       </SwiperSlide>
       <SwiperSlide>
         <a href="/nossaucissons/specialite">
-          <img src="images/bn200.JPG" alt="" />
-        </a>
-      </SwiperSlide>
-      <SwiperSlide>
-        <a href="/nossaucissons/grignotage">
-          <img src="images/minionnette.JPG" alt="" />
-        </a>
-      </SwiperSlide>
-      <SwiperSlide>
-        <a href="/nossaucissons/allegee">
-          <img src="images/filet mignon.JPG" alt="" />
+          <img src="images/promo_spe.png" alt="" />
         </a>
       </SwiperSlide>
     </Swiper>
