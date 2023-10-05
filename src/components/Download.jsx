@@ -5,6 +5,7 @@ export default function Download() {
   const download = useCallback(async () => {
     try {
       const res = await axios.get("/api/download/", { responseType: "blob" });
+      console.log(res);
       const blob = new Blob([res.data]);
       const fileObjectUrl = window.URL.createObjectURL(blob);
       const link = document.createElement("a");

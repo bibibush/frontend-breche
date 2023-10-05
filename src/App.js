@@ -53,7 +53,7 @@ import Jambon from "./components/Jambon";
 import NosSelectionDesc from "./components/NosSelectionDesc";
 import Terrine from "./components/Terrine";
 import ContactNous from "./components/ContactNous";
-import Search from "./components/Search";
+// import Search from "./components/Search";
 import Histoire from "./components/Histoire";
 import Nosproduits from "./components/Nosproduits";
 import Aide from "./components/Aide";
@@ -210,20 +210,6 @@ function App() {
             <Header />
             <ContactNous />
             <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/search"
-        element={
-          <>
-            <AppStateProvider>
-              <Header />
-              <Aide />
-              <ToUp />
-              <Search />
-              <Footer />
-            </AppStateProvider>
           </>
         }
       />

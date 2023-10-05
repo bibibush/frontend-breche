@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Download from "../components/Download";
+import BondeCommande from "./BondeCommande";
+import "../styles/BondeCommande.css";
 import "../styles/Download.css";
 import { Modal } from "react-bootstrap";
 import axios from "axios";
@@ -30,7 +32,17 @@ export default function HowToOrder() {
         <div className="step">
           <div className="step_num">Etape 1</div>
           <div className="desc">
-            Téléchargez 'MODELE Tableau CSE 2022.xlsx' fiche
+            Téléchargez{" "}
+            <strong
+              style={{
+                fontWeight: "700",
+                fontSize: "21px",
+                textDecoration: "underline",
+              }}
+            >
+              'MODELE Tableau CSE 2022.xlsx'
+            </strong>{" "}
+            fiche
           </div>
         </div>
         <div className="step">
@@ -46,6 +58,7 @@ export default function HowToOrder() {
         </div>
       </div>
       <Download />
+      <BondeCommande />
       <button
         className="guide"
         onClick={() => {
