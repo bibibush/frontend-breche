@@ -98,6 +98,19 @@ export default function DetailCommande() {
     }
   }, [id]);
 
+  const deleteCommande = useCallback(() => {
+    axios
+      .delete(`/api/commande/${id}/delete`)
+      .then((res) => {
+        console.log("delete success !", res);
+        window.location.href = "/mes-commandes";
+      })
+      .catch((err) => {
+        console.log(err.response);
+        alert(err.response.statusText);
+      });
+  }, [id]);
+
   useEffect(() => {
     getSuccess();
   }, [getSuccess]);
@@ -372,6 +385,7 @@ export default function DetailCommande() {
           )}
         </div>
       </div>
+      <button onClick={deleteCommande}>Supprimez la commande</button>
     </section>
   );
 }
