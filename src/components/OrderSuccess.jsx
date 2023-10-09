@@ -16,6 +16,7 @@ export default function OrderSuccess() {
     } catch (err) {
       console.log(err.response);
       alert(err.response.statusText);
+      window.location.href = "/";
     }
   }, [id]);
 
@@ -26,8 +27,8 @@ export default function OrderSuccess() {
   return (
     <section className="order_success">
       <div className="merci">
-        <h2>Merci pour votre commande</h2>
-        <h3>Votre commande est bien passé</h3>
+        <h1>Merci pour votre commande</h1>
+        <h2>Votre commande est bien passé</h2>
       </div>
       <div className="commande_info">
         <p>L'information de votre commande</p>

@@ -37,7 +37,7 @@ export default function BondeCommande() {
 
   return (
     <div className="bondownload" onClick={download}>
-      <img src="images/pdf.png" alt="" />
+      <img src="images/pdf.png" alt="Fiche PDF" />
       <div className="desc">Bon de commande CSE</div>
       <div className="material-symbols-outlined">download</div>
     </div>

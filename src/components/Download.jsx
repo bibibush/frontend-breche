@@ -35,7 +35,7 @@ export default function Download() {
 
   return (
     <div className="download" onClick={download}>
-      <img src="./images/excel.png" alt="" />
+      <img src="./images/excel.png" alt="Fiche excel" />
       <div className="desc">MODELE Tableau CSE 2022.xlsx</div>
       <div className="material-symbols-outlined">download</div>
     </div>

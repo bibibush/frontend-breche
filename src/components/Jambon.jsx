@@ -16,13 +16,13 @@ export default function Jambon() {
         <h1>Gamme Jambon</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="" />
+      <img src="images/Slate.png" alt="Carte menu ardoise" />
       <ul className="jambon_items">
         {items.map((item, i) => {
           return <li key={i}>{item}</li>;
         })}
       </ul>
-      <Link to="/nosselection/terrine">
+      <Link to="/nos-selection/terrine">
         <button>Voir le gamme terrine</button>
       </Link>
     </section>

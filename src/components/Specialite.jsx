@@ -46,13 +46,13 @@ export default function Specialite() {
         <h1>Gamme spécialité</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="" />
+      <img src="images/Slate.png" alt="Carte menu ardoise" />
       <ul className="specialite_items">
         {results.map((result, i) => {
           return <li key={i}>{result}</li>;
         })}
       </ul>
-      <Link to="/nossaucissons/grignotage">
+      <Link to="/nos-saucissons/grignotage">
         <button>Voir le gamme grignotage</button>
       </Link>
       <ReactPaginate

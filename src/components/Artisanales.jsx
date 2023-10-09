@@ -8,7 +8,7 @@ export default function Artisanales() {
         <h1>Gamme artisanale</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="" />
+      <img src="images/Slate.png" alt="Carte menu ardoise" />
       <ul className="artisanale_items">
         <li>Saucisson Artisanal 250g</li>
         <li>Saucisson Artisanal bridé main 400g</li>
@@ -16,7 +16,7 @@ export default function Artisanales() {
         <li>Saucisson Artisanal bridé 600-700g</li>
       </ul>
 
-      <Link to="/nossaucissons/traditionnelle">
+      <Link to="/nos-saucissons/traditionnelle">
         <button>Voir le gamme traditionnelle</button>
       </Link>
     </section>

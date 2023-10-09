@@ -43,7 +43,7 @@ export default function LesCommande() {
             </div>
             <Button
               onClick={() => {
-                window.location.href = `/lescommandes/detail?id=${id}`;
+                window.location.href = `/les-commandes/detail?id=${id}`;
               }}
               variant="warning"
             >

@@ -10,13 +10,13 @@ export default function NosSelectionDesc() {
         <h2>desc</h2>
       </div>
       <ButtonGroup size="lg" className="mb-2">
-        <Link to="/nosselection/jambon">
+        <Link to="/nos-selection/jambon">
           <Button>
             Gamme <br />
             Jambon
           </Button>
         </Link>
-        <Link to="/nosselection/terrine">
+        <Link to="/nos-selection/terrine">
           <Button>
             Gamme <br />
             Terrines

@@ -41,12 +41,12 @@ export default function CommandeCSE() {
       })
       .then((res) => {
         console.log("upload success", res);
-        window.location.href = `/commande/success?id=${res.data.id}`;
+        window.location.href = `/commande-cse/success?id=${res.data.id}`;
       })
       .catch((err) => {
         alert("Vous devez enregistrer un fiche de la commande");
         console.log("upload error", err.response);
-        window.location.href = "/";
+        window.location.href = "/commande-cse";
       });
   }, [startDate, files]);
   const getme = useCallback(async () => {

@@ -95,7 +95,7 @@ export default function Header() {
   }, [getMe]);
 
   const clickCommande = () => {
-    window.location.href = "/astuce";
+    window.location.href = "/télécharge-cse";
   };
   const clickLogin = () => {
     window.location.href = "/login";
@@ -116,7 +116,7 @@ export default function Header() {
         <a href="/">
           <img
             src="./images/logo-Salaisons-de-la-Brèche-Blanc.png"
-            alt=""
+            alt="Logo salaisons de la bréche"
             className="logo"
           />
         </a>
@@ -183,7 +183,7 @@ export default function Header() {
                 {user.email === "contact@salaisonsdelabreche.com" ? (
                   <li
                     onClick={() => {
-                      window.location.href = "/lescommandes";
+                      window.location.href = "/les-commandes";
                     }}
                   >
                     Gérer les commandes
@@ -191,7 +191,7 @@ export default function Header() {
                 ) : (
                   <li
                     onClick={() => {
-                      window.location.href = "/mescommandes";
+                      window.location.href = "/mes-commandes";
                     }}
                   >
                     Mes commandes
@@ -256,39 +256,39 @@ export default function Header() {
       <div className="inner">
         <ul className="main-menu">
           <li className="NosSaucissons">
-            <a href="/nossaucissons">
+            <a href="/nos-saucissons">
               <div className="menu-name">Nos saucissons</div>
             </a>
             <div className="hidden-menu">
               <div className="inner">
                 <ul>
                   <li className="hidden-menu-name">
-                    <a href={"/nossaucissons/artisanale"}>
+                    <a href={"/nos-saucissons/artisanale"}>
                       <p>Gamme artisanale</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
-                    <a href="/nossaucissons/traditionnelle">
+                    <a href="/nos-saucissons/traditionnelle">
                       <p>Gamme traditionnelle</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
-                    <a href="/nossaucissons/cuires">
+                    <a href="/nos-saucissons/cuires">
                       <p>Gamme saucisson à cuire</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
-                    <a href="/nossaucissons/specialite">
+                    <a href="/nos-saucissons/spécialité">
                       <p>Nos spécialités artisanale 200g</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
-                    <a href="/nossaucissons/grignotage">
+                    <a href="/nos-saucissons/grignotage">
                       <p>Gamme grignotage</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
-                    <a href="/nossaucissons/allegee">
+                    <a href="/nos-saucissons/allégé">
                       <p>Gamme allégée</p>
                     </a>
                   </li>
@@ -297,19 +297,19 @@ export default function Header() {
             </div>
           </li>
           <li className="NosSelections">
-            <a href="/nosselection">
+            <a href="/nos-selection">
               <div className="menu-name">Notre selections</div>
             </a>
             <div className="hidden-menu">
               <div className="inner">
                 <ul>
                   <li className="hidden-menu-name">
-                    <a href={"/nosselection/jambon"}>
+                    <a href={"/nos-selection/jambon"}>
                       <p>Gamme jambon</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
-                    <a href="/nosselection/terrine">
+                    <a href="/nos-selection/terrine">
                       <p>Gamme terrine</p>
                     </a>
                   </li>

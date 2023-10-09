@@ -54,8 +54,6 @@ import NosSelectionDesc from "./components/NosSelectionDesc";
 import Terrine from "./components/Terrine";
 import ContactNous from "./components/ContactNous";
 // import Search from "./components/Search";
-import Histoire from "./components/Histoire";
-import Nosproduits from "./components/Nosproduits";
 import Aide from "./components/Aide";
 import ToUp from "./components/ToUp";
 // import Where from "./components/Where";
@@ -103,7 +101,7 @@ function App() {
         }
       />
       <Route
-        path="/nossaucissons"
+        path="/nos-saucissons"
         element={
           <>
             <Header />
@@ -114,7 +112,7 @@ function App() {
         }
       />
       <Route
-        path="/nossaucissons/artisanale"
+        path="/nos-saucissons/artisanale"
         element={
           <>
             <Header />
@@ -124,7 +122,7 @@ function App() {
         }
       />
       <Route
-        path="/nossaucissons/traditionnelle"
+        path="/nos-saucissons/traditionnelle"
         element={
           <>
             <Header />
@@ -134,7 +132,7 @@ function App() {
         }
       />
       <Route
-        path="/nossaucissons/cuires"
+        path="/nos-saucissons/cuires"
         element={
           <>
             <Header />
@@ -144,7 +142,7 @@ function App() {
         }
       />
       <Route
-        path="/nossaucissons/specialite"
+        path="/nos-saucissons/spécialité"
         element={
           <>
             <Header />
@@ -154,7 +152,7 @@ function App() {
         }
       />
       <Route
-        path="/nossaucissons/grignotage"
+        path="/nos-saucissons/grignotage"
         element={
           <>
             <Header />
@@ -164,7 +162,7 @@ function App() {
         }
       />
       <Route
-        path="/nossaucissons/allegee"
+        path="/nos-saucissons/allégé"
         element={
           <>
             <Header />
@@ -174,7 +172,7 @@ function App() {
         }
       />
       <Route
-        path="/nosselection"
+        path="/nos-selection"
         element={
           <>
             <Header />
@@ -184,7 +182,7 @@ function App() {
         }
       />
       <Route
-        path="/nosselection/jambon"
+        path="/nos-selection/jambon"
         element={
           <>
             <Header />
@@ -194,7 +192,7 @@ function App() {
         }
       />
       <Route
-        path="/nosselection/terrine"
+        path="/nos-selection/terrine"
         element={
           <>
             <Header />
@@ -214,30 +212,7 @@ function App() {
         }
       />
       <Route
-        path="/histoire"
-        element={
-          <>
-            <Header />
-            <ToUp />
-            <Histoire />
-            <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/nosproduits"
-        element={
-          <>
-            <AppStateProvider>
-              <Header />
-              <Nosproduits />
-              <Footer />
-            </AppStateProvider>
-          </>
-        }
-      />
-      <Route
-        path="/commande"
+        path="/commande-cse"
         element={
           <>
             <AppStateProvider>
@@ -250,7 +225,7 @@ function App() {
         }
       />
       <Route
-        path="/astuce"
+        path="/télécharge-cse"
         element={
           <>
             <Header />
@@ -260,7 +235,7 @@ function App() {
         }
       />
       <Route
-        path="/commande/success"
+        path="/commande-cse/success"
         element={
           <>
             <Header />
@@ -280,7 +255,7 @@ function App() {
         }
       />
       <Route
-        path="/mescommandes"
+        path="/mes-commandes"
         element={
           <>
             <Header />
@@ -290,7 +265,7 @@ function App() {
         }
       />
       <Route
-        path="/mescommandes/detail"
+        path="/mes-commandes/detail"
         element={
           <>
             <Header />
@@ -300,7 +275,7 @@ function App() {
         }
       />
       <Route
-        path="/lescommandes"
+        path="/les-commandes"
         element={
           <>
             <Header />
@@ -310,7 +285,7 @@ function App() {
         }
       />
       <Route
-        path="/lescommandes/detail"
+        path="/les-commandes/detail"
         element={
           <>
             <Header />

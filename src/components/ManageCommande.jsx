@@ -43,7 +43,7 @@ export default function ManageCommande() {
       .post(`/api/info/${id}/update`, formdata)
       .then((res) => {
         console.log("infoupload success", res);
-        window.location.href = `/lescommandes/detail?id=${id}`;
+        window.location.href = `/les-commandes/detail?id=${id}`;
       })
       .catch((err) => {
         console.log(err.response.statusText);
@@ -60,7 +60,7 @@ export default function ManageCommande() {
       })
       .then((res) => {
         console.log("excelupload success", res);
-        window.location.href = `/lescommandes/detail?id=${id}`;
+        window.location.href = `/les-commandes/detail?id=${id}`;
       })
       .catch((err) => {
         console.log(err.response.statusText);
@@ -75,7 +75,7 @@ export default function ManageCommande() {
       .post(`/api/date/${id}/update`, formdata)
       .then((res) => {
         console.log("date upload success", res);
-        window.location.href = `/lescommandes/detail?id=${id}`;
+        window.location.href = `/les-commandes/detail?id=${id}`;
       })
       .catch((err) => {
         console.log(err.response.statusText);
@@ -90,7 +90,7 @@ export default function ManageCommande() {
       .post(`/api/pay/${id}/update`, formdata)
       .then((res) => {
         console.log("payupdate success", res);
-        window.location.href = `/lescommandes/detail?id=${id}`;
+        window.location.href = `/les-commandes/detail?id=${id}`;
       })
       .catch((err) => {
         console.log(err.response);

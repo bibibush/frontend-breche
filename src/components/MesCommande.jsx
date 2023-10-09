@@ -39,7 +39,7 @@ export default function MesCommande() {
             </div>
             <Button
               onClick={() => {
-                window.location.href = `/mescommandes/detail?id=${id}`;
+                window.location.href = `/mes-commandes/detail?id=${id}`;
               }}
               variant="warning"
             >

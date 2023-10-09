@@ -42,7 +42,7 @@ export default function ClientDownload() {
 
   return (
     <div className="download" onClick={download}>
-      <img src="./images/excel.png" alt="" />
+      <img src="./images/excel.png" alt="Fiche excel" />
       <div className="desc">Votre commande</div>
       <div className="material-symbols-outlined">download</div>
     </div>

@@ -15,13 +15,13 @@ export default function Cuire() {
         <h1>Gamme de saucisson à cuire</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="" />
+      <img src="images/Slate.png" alt="Carte menu ardoise" />
       <ul className="cuires_items">
         {items.map((item, i) => {
           return <li key={i}>{item}</li>;
         })}
       </ul>
-      <Link to="/nossaucissons/specialite">
+      <Link to="/nos-saucissons/spécialité">
         <button>Voir le gamme spécialité</button>
       </Link>
     </section>

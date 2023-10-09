@@ -32,7 +32,7 @@ export default function HowToOrder() {
         <div className="step">
           <div className="step_num">Etape 1</div>
           <div className="desc">
-            Téléchargez{" "}
+            Téléchargez
             <strong
               style={{
                 fontWeight: "700",
@@ -41,7 +41,7 @@ export default function HowToOrder() {
               }}
             >
               'MODELE Tableau CSE 2022.xlsx'
-            </strong>{" "}
+            </strong>
             fiche
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function HowToOrder() {
       <button
         className="commander"
         onClick={() => {
-          window.location.href = "/commande";
+          window.location.href = "/commande-cse";
         }}
       >
         Aller Commander
@@ -87,12 +87,12 @@ export default function HowToOrder() {
           <Modal.Title>Guide pour remplir le fiche</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src="images/conseil.png" alt="" />
-          <img src="images/groupe 1.png" alt="" />
-          <img src="images/nom_prenom.png" alt="" />
-          <img src="images/quantite.png" alt="" />
-          <img src="images/totaltarif.png" alt="" />
-          <img src="images/recappe.png" alt="" />
+          <img src="images/conseil.png" alt="Guide pour commander CSE" />
+          <img src="images/groupe 1.png" alt="Guide pour commander CSE" />
+          <img src="images/nom_prenom.png" alt="Guide pour commander CSE" />
+          <img src="images/quantite.png" alt="Guide pour commander CSE" />
+          <img src="images/totaltarif.png" alt="Guide pour commander CSE" />
+          <img src="images/recappe.png" alt="Guide pour commander CSE" />
         </Modal.Body>
       </Modal>
     </section>

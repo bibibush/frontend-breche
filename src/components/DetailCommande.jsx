@@ -37,7 +37,7 @@ export default function DetailCommande() {
       .post(`/api/info/${id}/update`, formdata)
       .then((res) => {
         console.log("infoupload success", res);
-        window.location.href = `/mescommandes/detail?id=${id}`;
+        window.location.href = `/mes-commandes/detail?id=${id}`;
       })
       .catch((err) => {
         console.log(err.response.statusText);
@@ -63,7 +63,7 @@ export default function DetailCommande() {
       })
       .then((res) => {
         console.log("excelupload success", res);
-        window.location.href = `/mescommandes/detail?id=${id}`;
+        window.location.href = `/mes-commandes/detail?id=${id}`;
       })
       .catch((err) => {
         console.log(err.response.statusText);
@@ -78,7 +78,7 @@ export default function DetailCommande() {
       .post(`/api/date/${id}/update`, formdata)
       .then((res) => {
         console.log("date upload success", res);
-        window.location.href = `/mescommandes/detail?id=${id}`;
+        window.location.href = `/mes-commandes/detail?id=${id}`;
       })
       .catch((err) => {
         console.log(err.response.statusText);

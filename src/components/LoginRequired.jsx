@@ -10,7 +10,7 @@ export default function LoginRequired() {
       .post("/api/login/", formdata)
       .then((res) => {
         console.log("login success", res);
-        window.location.href = "/astuce";
+        window.location.href = "/télécharge-cse";
       })
       .catch((err) => {
         console.log("login fail", err.response);

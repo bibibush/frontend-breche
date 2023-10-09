@@ -17,13 +17,13 @@ export default function Traditionnelle() {
         <h1>Gamme traditionnelle</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="" />
+      <img src="images/Slate.png" alt="Carte menu ardoise" />
       <ul className="traditionnelle_items">
         {items.map((item, i) => {
           return <li key={i}>{item}</li>;
         })}
       </ul>
-      <Link to="/nossaucissons/cuires">
+      <Link to="/nos-saucissons/cuires">
         <button>Voir le gamme saucisson cuire</button>
       </Link>
     </section>

@@ -20,7 +20,7 @@ export default function Present() {
       <div className="present-cover"></div>
       <img
         src="./images/logo-Salaisons-de-la-Brèche- Fond transparent.png"
-        alt=""
+        alt="Logo salaisons de la brèche"
         className="present-logo"
       />
       <div className="present-desc">
@@ -30,7 +30,11 @@ export default function Present() {
         </h1>
       </div>
       <div className="logo-div">
-        <img src="./images/logo artisan.png" alt="" className="logo-artisan" />
+        <img
+          src="./images/logo artisan.png"
+          alt="Logo artisan"
+          className="logo-artisan"
+        />
       </div>
     </section>
   );
