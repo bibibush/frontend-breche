@@ -14,6 +14,14 @@
   border-radius: 8px;
   position: relative;
 }
+.mescommande .commande_info.paspaye {
+  background-color: rgb(167, 37, 37);
+  color: #f0f0f0;
+}
+.mescommande .commande_info.validable {
+  background-color: #3352a6;
+  color: #f0f0f0;
+}
 .mescommande .commande_info.done {
   background-color: #808080;
   color: #f0f0f0;

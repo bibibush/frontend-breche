@@ -7,6 +7,7 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from "react-datepicker";
 import fr from "date-fns/locale/fr";
+import MyVerticallyCenteredModal from "./MyVerticallyCenteredModal";
 
 registerLocale("fr", fr);
 
@@ -14,6 +15,8 @@ export default function ManageCommande() {
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
   const [successInfo, setSuccessInfo] = useState({});
+
+  const [show, setShow] = useState(false);
 
   const [excelUpdate, setExcelUpdate] = useState(false);
   const [dateUpdate, setDateUpdate] = useState(false);
@@ -100,7 +103,7 @@ export default function ManageCommande() {
 
   const getSuccess = useCallback(async () => {
     try {
-      const res = await axios.get(`/api/manage/${id}/`);
+      const res = await axios.get(`/api/ad/manage/${id}/`);
       console.log("commande success", res);
       setSuccessInfo(res.data);
     } catch (err) {
@@ -108,6 +111,19 @@ export default function ManageCommande() {
       alert(err.response.statusText);
       window.location.href = "/";
     }
+  }, [id]);
+
+  const deleteCommande = useCallback(() => {
+    axios
+      .delete(`/api/commande/${id}/delete`)
+      .then((res) => {
+        console.log("delete success !", res);
+        window.location.href = "/les-commandes";
+      })
+      .catch((err) => {
+        console.log(err.response);
+        alert(err.response.statusText);
+      });
   }, [id]);
 
   useEffect(() => {
@@ -239,7 +255,11 @@ export default function ManageCommande() {
               </div>
             ) : (
               <div className="date_commande">
-                <h3>{successInfo.date}</h3>
+                <h3>
+                  {new Date(successInfo.date).getDate()} /{" "}
+                  {new Date(successInfo.date).getMonth() + 1} /{" "}
+                  {new Date(successInfo.date).getFullYear()}
+                </h3>
                 <Button
                   variant="secondary"
                   onClick={() => {
@@ -348,6 +368,20 @@ export default function ManageCommande() {
           )}
         </div>
       </div>
+      <button
+        onClick={() => {
+          setShow(true);
+        }}
+      >
+        Supprimez la commande
+      </button>
+      <MyVerticallyCenteredModal
+        show={show}
+        onHide={() => {
+          setShow(false);
+        }}
+        deletecommande={deleteCommande}
+      />
     </section>
   );
 }

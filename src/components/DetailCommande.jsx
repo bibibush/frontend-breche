@@ -7,6 +7,7 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale } from "react-datepicker";
 import fr from "date-fns/locale/fr";
+import MyVerticallyCenteredModal from "./MyVerticallyCenteredModal";
 
 registerLocale("fr", fr);
 
@@ -18,6 +19,8 @@ export default function DetailCommande() {
   const [excelUpdate, setExcelUpdate] = useState(false);
   const [dateUpdate, setDateUpdate] = useState(false);
   const [infoUpdate, setInfoUpdate] = useState(false);
+
+  const [show, setShow] = useState(false);
 
   const date = new Date();
   const [startDate, setStartDate] = useState();
@@ -241,7 +244,11 @@ export default function DetailCommande() {
               </div>
             ) : (
               <div className="date_commande">
-                <h3>{successInfo.date}</h3>
+                <h3>
+                  {new Date(successInfo.date).getDate()} /{" "}
+                  {new Date(successInfo.date).getMonth() + 1} /{" "}
+                  {new Date(successInfo.date).getFullYear()}
+                </h3>
                 {successInfo.block ? (
                   <Button
                     variant="secondary"
@@ -385,7 +392,44 @@ export default function DetailCommande() {
           )}
         </div>
       </div>
-      <button onClick={deleteCommande}>Supprimez la commande</button>
+      {successInfo.validable ? (
+        <>
+          <button
+            disabled
+            style={{ backgroundColor: "rgba(183, 25, 25, 0.365)" }}
+            onClick={() => {
+              setShow(true);
+            }}
+          >
+            Supprimez la commande
+          </button>
+          {successInfo.done ? (
+            ""
+          ) : (
+            <h3>
+              * Vous pouvez pas supprimer cette commande parce qu'elle est déjà
+              validé. Si vous voulez supprimer cette commande, appelez nous s'il
+              vous plaît
+            </h3>
+          )}
+        </>
+      ) : (
+        <button
+          onClick={() => {
+            setShow(true);
+          }}
+        >
+          Supprimez la commande
+        </button>
+      )}
+
+      <MyVerticallyCenteredModal
+        show={show}
+        onHide={() => {
+          setShow(false);
+        }}
+        deletecommande={deleteCommande}
+      />
     </section>
   );
 }

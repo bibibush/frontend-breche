@@ -181,13 +181,22 @@ export default function Header() {
                   </Modal.Footer>
                 </Modal>
                 {user.email === "contact@salaisonsdelabreche.com" ? (
-                  <li
-                    onClick={() => {
-                      window.location.href = "/les-commandes";
-                    }}
-                  >
-                    Gérer les commandes
-                  </li>
+                  <>
+                    <li
+                      onClick={() => {
+                        window.location.href = "/les-commandes";
+                      }}
+                    >
+                      Gérer les commandes
+                    </li>
+                    <li
+                      onClick={() => {
+                        window.location.href = "/les-commandes/gestion";
+                      }}
+                    >
+                      Gérer les dates
+                    </li>
+                  </>
                 ) : (
                   <li
                     onClick={() => {

@@ -31,6 +31,7 @@ import "./styles/DetailCommande.css";
 import "./styles/Logos.css";
 // import "./styles/Offcanvas.css";
 import "./styles/PasCompte.css";
+import "./styles/Calendar.css";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -71,6 +72,7 @@ import HowToOrder from "./components/HowToOrder";
 import OrderSuccess from "./components/OrderSuccess";
 import LoginRequired from "./components/LoginRequired";
 import PasCompte from "./components/PasCompte";
+import Calendar from "./components/Calendar";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -300,6 +302,16 @@ function App() {
           <>
             <Header />
             <PasCompte />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/les-commandes/gestion"
+        element={
+          <>
+            <Header />
+            <Calendar />
             <Footer />
           </>
         }

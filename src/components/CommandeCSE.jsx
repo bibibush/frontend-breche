@@ -76,6 +76,7 @@ export default function CommandeCSE() {
       repeat: -1,
     });
   }, [getme]);
+  console.log(startDate);
 
   return (
     <section className="orders">

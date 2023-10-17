@@ -1,9 +1,21 @@
 import axios from "axios";
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
+import { Pagination } from "@mui/material";
 
 export default function MesCommande() {
   const [orders, setOrders] = useState([]);
+
+  const [page, setPage] = useState(1);
+  const limit = 5;
+  const offset = (page - 1) * limit;
+  let totalPage = Math.ceil(orders.length / limit);
+  let results = orders.slice(offset, offset + limit);
+  const pageChange = (event, value) => {
+    setPage(value);
+    window.scroll(0, 0);
+  };
+
   const orderInfo = useCallback(async () => {
     try {
       const res = await axios.get("/api/list/");
@@ -20,21 +32,18 @@ export default function MesCommande() {
 
   return (
     <section className="mescommande">
-      {orders.map((order) => {
-        const { id } = order;
+      {results.map((result) => {
+        const { id } = result;
         return (
-          <div
-            key={id}
-            className={order.done ? "commande_info done" : "commande_info"}
-          >
+          <div key={id} className="commande_info">
             <div className="commande_detail">
               <div className="commande_date">
                 <h3>Date de commande</h3>
-                {order.create_dt}
+                {result.create_dt}
               </div>
               <div className="commande_numero">
                 <h3>Numéro de commande</h3>
-                {order.order_number}
+                {result.order_number}
               </div>
             </div>
             <Button
@@ -48,6 +57,20 @@ export default function MesCommande() {
           </div>
         );
       })}
+      <Pagination
+        style={{
+          position: "absolute",
+          bottom: "38px",
+          left: "50%",
+          marginLeft: "calc(280px / -2)",
+        }}
+        count={totalPage}
+        variant="outlined"
+        shape="rounded"
+        color="secondary"
+        size="large"
+        onChange={pageChange}
+      />
     </section>
   );
 }

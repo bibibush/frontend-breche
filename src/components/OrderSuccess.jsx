@@ -49,7 +49,9 @@ export default function OrderSuccess() {
             <li className="livraison">
               <span>Votre livraison vers</span> <br />
               <br />
-              {successInfo.date}
+              {new Date(successInfo.date).getDate()} /{" "}
+              {new Date(successInfo.date).getMonth() + 1} /{" "}
+              {new Date(successInfo.date).getFullYear()}
             </li>
           </ul>
         </div>
