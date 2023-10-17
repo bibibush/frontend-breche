@@ -165,25 +165,26 @@ export default function Calendar() {
   }, [dateTotalCount, monthSelect, yearSelect, week, week2]);
 
   const GetOrder = useCallback(() => {
-    const order = orders.find(
+    const order = orders.filter(
       (order) =>
         new Date(order.date).toDateString() ===
         new Date(yearSelect, monthSelect - 1, daySelect).toDateString()
     );
-    if (order !== undefined) {
-      const { nom, date, entreprise, id } = order;
-
+    if (order.length !== 0) {
       return (
         <div className="orderbox">
           <p>
-            {new Date(date).getDate()} / {new Date(date).getMonth() + 1} /{" "}
-            {new Date(date).getFullYear()}
+            {daySelect} / {monthSelect} / {yearSelect}
           </p>
-          <a href={`/les-commandes/detail?id=${id}`}>
-            <div className="orderbox_content">
-              {entreprise} - {nom}
-            </div>
-          </a>
+          {order.map((o) => {
+            return (
+              <a href={`/les-commandes/detail?id=${o.id}`}>
+                <div className="orderbox_content">
+                  {o.entreprise} - {o.nom}
+                </div>
+              </a>
+            );
+          })}
         </div>
       );
     } else {
