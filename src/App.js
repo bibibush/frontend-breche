@@ -43,6 +43,7 @@ import Present from "./components/Present";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import NosSaucissonsDesc from "./components/NosSaucissonsDesc";
+import NosSaucissonsDescMobile from "./components/NosSaucissonsDescMobile";
 import AppStateProvider from "./providers/AppStateProvider";
 import Artisanales from "./components/Artisanales";
 import Traditionnelle from "./components/Traditionnelle";
@@ -56,7 +57,7 @@ import Terrine from "./components/Terrine";
 import ContactNous from "./components/ContactNous";
 // import Search from "./components/Search";
 import Aide from "./components/Aide";
-import ToUp from "./components/ToUp";
+// import ToUp from "./components/ToUp";
 // import Where from "./components/Where";
 import CommandeCSE from "./components/CommandeCSE";
 import NotreHistoire from "./components/NotreHistoire";
@@ -87,8 +88,6 @@ function App() {
           <>
             <AppStateProvider>
               <Header />
-              <Aide />
-              <ToUp />
               <Present />
               <Logos />
               <NotreHistoire />
@@ -107,8 +106,7 @@ function App() {
         element={
           <>
             <Header />
-            <div className="margin" style={{ paddingTop: "165px" }}></div>
-            <NosSaucissonsDesc />
+            <NosSaucissonsDescMobile />
             <Footer />
           </>
         }

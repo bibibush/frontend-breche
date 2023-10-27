@@ -9,6 +9,17 @@
   position: relative;
   white-space: pre-line;
 }
+.nossaucissons-desc.nossaucissons-mobile {
+  height: 70vh;
+  background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom 80% right;
+  background-attachment: fixed;
+  color: #f4ead8;
+  position: relative;
+  white-space: pre-line;
+}
 .nossaucissons-desc .desc-cover {
   position: absolute;
   width: 100%;
@@ -17,30 +28,34 @@
 }
 .nossaucissons-desc .desc {
   position: absolute;
-  width: 655px;
+  width: 50%;
   text-align: center;
-  top: 86px;
+  top: 16.5vh;
   left: 50%;
-  margin-left: calc(655px / -2);
+  margin-left: calc(50% / -2);
 }
 
 .nossaucissons-desc .desc h2 {
-  margin-top: 32px;
+  margin-top: 5%;
 }
 .nossaucissons-desc .btn-group {
   position: absolute;
+  width: 80%;
   left: 50%;
-  margin-left: calc(1320px / -2);
+  margin-left: calc(80% / -2);
   bottom: 30px;
   font-family: "Noto Serif", serif;
   background-color: #f8f9f0;
+}
+.nossaucissons-desc .btn-group a {
+  width: 20%;
 }
 .nossaucissons-desc .btn-group .btn {
   background-color: #f8f9f0;
   color: #333;
   border-color: #f8f9f0;
   font-size: 20px;
-  width: 220px;
+  width: 100%;
 }
 .nossaucissons-desc .btn-group .btn:hover {
   background-color: #839b29;
@@ -51,4 +66,27 @@
   background-color: #5e6f1f;
   color: white;
   border-color: #5e6f1f;
+}
+@media screen and (max-width: 1024px) {
+  .nossaucissons-desc {
+    height: 50vh;
+    background-position: top 10vh right 50%;
+  }
+  .nossaucissons-desc .desc {
+    top: 10vh;
+  }
+  .nossaucissons-desc .btn-group .btn {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nossaucissons-desc .desc h1 {
+    font-size: 1.5rem;
+  }
+  .nossaucissons-desc .desc h2 {
+    font-size: 1rem;
+  }
+  .nossaucissons-desc .btn-group .btn {
+    font-size: 0.4rem;
+  }
 }

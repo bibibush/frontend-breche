@@ -1,5 +1,4 @@
 .nosselection-desc {
-  margin-top: 165px;
   height: 77vh;
   background-image: url("../images/JAMBON-CRU-ARTICLE.jpg");
   background-size: cover;
@@ -18,30 +17,33 @@
 }
 .nosselection-desc .desc {
   position: absolute;
-  width: 655px;
+  width: 50%;
   text-align: center;
-  top: 86px;
+  top: 16.5vh;
   left: 50%;
-  margin-left: calc(655px / -2);
+  margin-left: calc(50% / -2);
 }
 .nosselection-desc .desc h2 {
-  margin-top: 32px;
+  margin-top: 5vh;
 }
 .nosselection-desc .btn-group {
   position: absolute;
   bottom: 0px;
-  width: 440px;
+  width: 30%;
   left: 50%;
-  margin-left: calc(440px / -2);
+  margin-left: calc(30% / -2);
   font-family: "Noto Serif", serif;
   background-color: #f8f9f0;
+}
+.nosselection-desc .btn-group a {
+  width: 50%;
 }
 .nosselection-desc .btn-group .btn {
   background-color: #f8f9f0;
   color: #333;
   border-color: #f8f9f0;
   font-size: 20px;
-  width: 220px;
+  width: 100%;
 }
 .nosselection-desc .btn-group .btn:hover {
   background-color: #839b29;
@@ -52,4 +54,32 @@
   background-color: #5e6f1f;
   color: white;
   border-color: #5e6f1f;
+}
+@media screen and (max-width: 1024px) {
+  .nosselection-desc {
+    height: 70vh;
+    background-size: 200%;
+    background-position: top -80% right 60%;
+  }
+  .nosselection-desc .desc {
+    top: 10vh;
+  }
+  .nosselection-desc .btn-group .btn {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nosselection-desc {
+    background-size: 255%;
+    background-position: bottom right 60%;
+  }
+  .nosselection-desc .desc h1 {
+    font-size: 1.5rem;
+  }
+  .nosselection-desc .desc h2 {
+    font-size: 1rem;
+  }
+  .nosselection-desc .btn-group .btn {
+    font-size: 0.6rem;
+  }
 }

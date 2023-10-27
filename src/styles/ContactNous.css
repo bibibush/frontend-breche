@@ -1,9 +1,9 @@
 .contact-nous {
   position: relative;
-  padding-top: 165px;
+  padding-top: 75px;
 }
 .contact-nous .contact-bg {
-  margin: 75px 280px;
+  margin: 0 280px 75px 280px;
   padding: 125px 0 55px 0;
   border-radius: 8px;
   background-color: rgb(248, 249, 250);

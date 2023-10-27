@@ -1,5 +1,4 @@
 .grignotage {
-  margin-top: 165px;
   height: 92vh;
   background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
   background-repeat: no-repeat;
@@ -18,14 +17,14 @@
 }
 .grignotage .desc {
   position: absolute;
-  width: 655px;
+  width: 40%;
   text-align: center;
-  top: 86px;
+  top: 10%;
   left: 10%;
   line-height: 1.4;
 }
 .grignotage .desc h2 {
-  margin-top: 32px;
+  margin-top: 6%;
 }
 .grignotage button {
   position: absolute;
@@ -46,27 +45,78 @@
 }
 .grignotage img {
   position: absolute;
-  width: 400px;
-  height: 460px;
+  width: 32%;
+  height: 50%;
   top: 5%;
-  right: 35px;
+  right: 2%;
   border-radius: 12px;
 }
 .grignotage .grignotage_items {
   position: absolute;
   color: rgb(236, 236, 236);
   font-size: 42px;
-  right: 28px;
-  top: 195px;
+  width: 25%;
+  right: 6%;
+  top: 22%;
   font-family: "futuristic";
 }
 .grignotage .grignotage_items li {
   text-align: center;
-  width: 405px;
-  margin-bottom: 75px;
+  margin-bottom: 18%;
   line-height: 1.4;
   transition: 0.3s;
 }
 .grignotage .grignotage_items li:hover {
   color: rgb(70, 164, 77);
+}
+@media screen and (min-width: 1580px) {
+  .grignotage .grignotage_items {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .grignotage {
+    height: 70vh;
+  }
+  .grignotage button {
+    left: 20vw;
+    bottom: 10vh;
+  }
+  .grignotage img {
+    height: 30%;
+    top: 10%;
+  }
+  .grignotage .grignotage_items {
+    font-size: 2rem;
+    right: 6%;
+    top: 20%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .grignotage {
+    height: 60vh;
+  }
+  .grignotage .desc {
+    left: 6%;
+  }
+  .grignotage .desc h1 {
+    font-size: 1rem;
+  }
+  .grignotage .desc h2 {
+    font-size: 0.8rem;
+  }
+  .grignotage button {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    left: 10vw;
+  }
+  .grignotage img {
+    width: 40%;
+    height: 20vh;
+  }
+  .grignotage .grignotage_items {
+    font-size: 0.9rem;
+    right: 10%;
+    top: 22%;
+  }
 }

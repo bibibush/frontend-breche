@@ -1,6 +1,6 @@
 .logos {
-  padding-top: 55px;
-  height: 500px;
+  padding-top: 3%;
+  height: 65vh;
   background-color: #f3f3f3;
   position: relative;
   box-shadow: 0 0 3px 6px rgba(0, 0, 0, 0.4);
@@ -8,11 +8,12 @@
 .logos .logos_flex {
   display: flex;
   justify-content: center;
-  height: 245px;
+  height: 60%;
 }
 .logos .logos_flex .logos_flex_rond {
-  margin-left: 50px;
-  height: 230px;
+  margin-left: 5%;
+  width: 17%;
+  height: 92%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,33 +21,56 @@
   border-radius: 50%;
 }
 .logos .logos_flex .logos_flex_rond img {
-  width: 235px;
-  height: 155px;
+  max-width: 92%;
+  max-height: 70%;
 }
 .logos .logos_flex .logos_flex_rond:first-child {
   margin-left: 0;
-  width: 235px;
 }
 .logos .logos_flex .logos_flex_rond:first-child img {
-  width: 180px;
-  height: 180px;
+  width: 72%;
 }
 .logos .logos_desc {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 245px);
+  height: calc(100% - 60%);
 }
 .logos .logos_desc h2 {
-  width: 235px;
+  width: 17%;
   color: #36602d;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
-  margin-left: 50px;
+  margin-left: 5%;
   line-height: 1.4;
   font-weight: 700;
   font-family: "Alkatra", cursive;
 }
 .logos .logos_desc h2:first-child {
   margin-left: 0;
+}
+.logos .logos_desc h2:last-child {
+  padding-left: 1.5%;
+}
+@media screen and (max-width: 1024px) {
+  .logos {
+    height: 30vh;
+  }
+  .logos .logos_flex .logos_flex_rond {
+    height: 70%;
+  }
+  .logos .logos_desc h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .logos {
+    height: 23vh;
+  }
+  .logos .logos_flex .logos_flex_rond {
+    height: 70%;
+  }
+  .logos .logos_desc h2 {
+    font-size: 0.75rem;
+  }
 }

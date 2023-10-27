@@ -1,5 +1,4 @@
 .jambon {
-  margin-top: 165px;
   height: 124vh;
   background-image: url("../images/JAMBON-CRU-ARTICLE.jpg");
   background-repeat: no-repeat;
@@ -18,13 +17,13 @@
 }
 .jambon .desc {
   position: absolute;
-  width: 655px;
+  width: 40%;
   text-align: center;
-  top: 86px;
+  top: 10%;
   left: 10%;
 }
 .jambon .desc h2 {
-  margin-top: 32px;
+  margin-top: 6%;
 }
 .jambon button {
   position: absolute;
@@ -45,27 +44,80 @@
 }
 .jambon img {
   position: absolute;
-  width: 530px;
-  height: 730px;
+  width: 34%;
+  height: 84%;
   top: 5%;
-  right: 35px;
+  right: 2%;
   border-radius: 12px;
 }
 .jambon .jambon_items {
   position: absolute;
   color: rgb(236, 236, 236);
   font-size: 37px;
-  right: 88px;
-  top: 105px;
+  width: 25%;
+  right: 6%;
+  top: 12%;
   font-family: "futuristic";
 }
 .jambon .jambon_items li {
   text-align: center;
-  width: 405px;
-  margin-bottom: 55px;
+  margin-bottom: 16%;
   line-height: 1.2;
   transition: 0.3s;
 }
 .jambon .jambon_items li:hover {
   color: rgb(70, 164, 77);
+}
+@media screen and (min-width: 1580px) {
+  .jambon .jambon_items {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .jambon {
+    height: 75vh;
+    background-position: bottom right 60%;
+  }
+  .jambon button {
+    left: 20vw;
+    bottom: 10vh;
+  }
+  .jambon img {
+    height: 60%;
+  }
+  .jambon .jambon_items {
+    font-size: 1.5rem;
+    right: 6%;
+    top: 10%;
+  }
+  .jambon .jambon_items li {
+    margin-bottom: 18%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .jambon {
+    height: 70vh;
+  }
+  .jambon .desc {
+    left: 6%;
+  }
+  .jambon .desc h1 {
+    font-size: 1rem;
+  }
+  .jambon .desc h2 {
+    font-size: 0.8rem;
+  }
+  .jambon button {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    left: 10vw;
+  }
+  .jambon img {
+    width: 40%;
+    height: 50vh;
+  }
+  .jambon .jambon_items {
+    font-size: 0.9rem;
+    right: 8%;
+  }
 }

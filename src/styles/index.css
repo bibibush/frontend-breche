@@ -6,7 +6,7 @@
 body {
   font-family: "Alkatra", cursive;
   color: #333;
-  width: 100vw;
+  margin-top: 21.5vh;
 }
 a {
   text-decoration: none;
@@ -23,7 +23,7 @@ p {
 }
 .inner {
   position: relative;
-  width: 1100px;
+  width: 80%;
   margin: 0 auto;
 }
 .breche_btn {
@@ -95,4 +95,9 @@ h2 {
 .to_up:hover {
   cursor: pointer;
   background-color: #4f4a82;
+}
+@media screen and (max-width: 1024px) {
+  body {
+    margin-top: 14vh;
+  }
 }

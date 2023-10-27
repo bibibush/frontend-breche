@@ -1,6 +1,4 @@
 .order_how {
-  padding-top: 165px;
-  height: 780px;
   position: relative;
 }
 .order_how .steps {
@@ -44,7 +42,7 @@
 .order_how .guide {
   position: absolute;
   right: 320px;
-  bottom: 85px;
+  bottom: 0;
   border-radius: 8px;
   padding: 25px 35px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -52,7 +50,7 @@
 .order_how .commander {
   position: absolute;
   right: 55px;
-  bottom: 85px;
+  bottom: 0;
   border-radius: 8px;
   padding: 25px 35px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);

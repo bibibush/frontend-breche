@@ -1,6 +1,5 @@
 .orders {
-  padding-top: 165px;
-  padding-bottom: 10px;
+  padding: 1px 0 10px 0;
   position: relative;
   background-color: #b9c9b4;
 }

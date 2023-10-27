@@ -1,11 +1,11 @@
 .detail_commande {
   position: relative;
-  padding: 165px 0;
+  padding: 0 0 165px 0;
   white-space: pre-line;
   background-color: #b9c9b4;
 }
 .detail_commande > p {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-top: 35px;
   text-align: center;
 }

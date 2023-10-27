@@ -1,5 +1,4 @@
 .traditionnelle {
-  margin-top: 165px;
   height: 120vh;
   background-image: url("../images/IMG_4165.JPG");
   background-repeat: no-repeat;
@@ -18,13 +17,13 @@
 }
 .traditionnelle .desc {
   position: absolute;
-  width: 655px;
+  width: 40%;
   text-align: center;
-  top: 86px;
+  top: 10%;
   left: 10%;
 }
 .traditionnelle .desc h2 {
-  margin-top: 32px;
+  margin-top: 6%;
 }
 .traditionnelle button {
   position: absolute;
@@ -45,27 +44,77 @@
 }
 .traditionnelle img {
   position: absolute;
-  width: 500px;
-  height: 680px;
+  width: 32%;
+  height: 80%;
   top: 5%;
-  right: 35px;
+  right: 2%;
   border-radius: 12px;
 }
 .traditionnelle .traditionnelle_items {
   position: absolute;
   color: rgb(236, 236, 236);
   font-size: 37px;
-  right: 85px;
-  top: 105px;
+  right: 8%;
+  top: 12%;
   font-family: "futuristic";
 }
 .traditionnelle .traditionnelle_items li {
   text-align: center;
-  width: 405px;
-  margin-bottom: 55px;
+  margin-bottom: 20%;
   line-height: 1.2;
   transition: 0.3s;
 }
 .traditionnelle .traditionnelle_items li:hover {
   color: rgb(70, 164, 77);
+}
+@media screen and (min-width: 1580px) {
+  .traditionnelle .traditionnelle_items {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .traditionnelle {
+    height: 75vh;
+    background-size: 120%;
+    background-position: top right 20%;
+  }
+  .traditionnelle button {
+    left: 20vw;
+    bottom: 10vh;
+  }
+  .traditionnelle img {
+    height: 55%;
+  }
+  .traditionnelle .traditionnelle_items {
+    font-size: 1.5rem;
+    right: 6%;
+    top: 10%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .traditionnelle {
+    height: 70vh;
+  }
+  .traditionnelle .desc {
+    left: 6%;
+  }
+  .traditionnelle .desc h1 {
+    font-size: 1.5rem;
+  }
+  .traditionnelle .desc h2 {
+    font-size: 1rem;
+  }
+  .traditionnelle button {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    left: 10vw;
+  }
+  .traditionnelle img {
+    width: 40%;
+    height: 35vh;
+  }
+  .traditionnelle .traditionnelle_items {
+    font-size: 0.8rem;
+    right: 7%;
+  }
 }

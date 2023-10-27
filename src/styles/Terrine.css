@@ -1,11 +1,10 @@
 .terrine {
-  margin-top: 165px;
   height: 98vh;
-  background-image: url("../images/JAMBON-CRU-ARTICLE.jpg");
+  background-image: url("../images/terrines.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
-  background-position: top -30% right;
+  background-size: 120%;
+  background-position: top 20% right;
   color: #f4ead8;
   position: relative;
   white-space: pre-line;
@@ -18,13 +17,13 @@
 }
 .terrine .desc {
   position: absolute;
-  width: 655px;
+  width: 40%;
   text-align: center;
-  top: 86px;
+  top: 10%;
   left: 10%;
 }
 .terrine .desc h2 {
-  margin-top: 32px;
+  margin-top: 6%;
 }
 .terrine button {
   position: absolute;
@@ -45,27 +44,81 @@
 }
 .terrine img {
   position: absolute;
-  width: 500px;
-  height: 460px;
+  width: 32%;
+  height: 65%;
   top: 5%;
-  right: 35px;
+  right: 2%;
   border-radius: 12px;
 }
 .terrine .terrine_items {
   position: absolute;
   color: rgb(236, 236, 236);
   font-size: 42px;
-  right: 88px;
-  top: 195px;
+  width: 25%;
+  right: 5.5%;
+  top: 28%;
   font-family: "futuristic";
 }
 .terrine .terrine_items li {
   text-align: center;
-  width: 405px;
-  margin-bottom: 55px;
+  margin-bottom: 16%;
   line-height: 1.2;
   transition: 0.3s;
 }
 .terrine .terrine_items li:hover {
   color: rgb(70, 164, 77);
+}
+@media screen and (min-width: 1580px) {
+  .terrine .terrine_items {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .terrine {
+    background-size: 230%;
+    background-position: bottom right 30%;
+    height: 75vh;
+  }
+  .terrine button {
+    left: 20vw;
+    bottom: 10vh;
+  }
+  .terrine img {
+    height: 20vh;
+    top: 10%;
+  }
+  .terrine .terrine_items {
+    font-size: 1.5rem;
+    right: 6%;
+    top: 18%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .terrine {
+    height: 70vh;
+    background-size: 350%;
+  }
+  .terrine .desc {
+    left: 6%;
+  }
+  .terrine .desc h1 {
+    font-size: 1rem;
+  }
+  .terrine .desc h2 {
+    font-size: 0.8rem;
+  }
+  .terrine button {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    left: 10vw;
+  }
+  .terrine img {
+    top: 10%;
+    width: 40%;
+  }
+  .terrine .terrine_items {
+    font-size: 1rem;
+    right: 8%;
+    top: 18%;
+  }
 }

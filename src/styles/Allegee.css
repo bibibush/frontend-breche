@@ -1,5 +1,4 @@
 .allegees {
-  margin-top: 165px;
   height: 92vh;
   background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
   background-repeat: no-repeat;
@@ -18,14 +17,14 @@
 }
 .allegees .desc {
   position: absolute;
-  width: 655px;
+  width: 40%;
   text-align: center;
-  top: 86px;
+  top: 10%;
   left: 10%;
   line-height: 1.4;
 }
 .allegees .desc h2 {
-  margin-top: 32px;
+  margin-top: 6%;
 }
 .allegees button {
   position: absolute;
@@ -46,27 +45,87 @@
 }
 .allegees img {
   position: absolute;
-  width: 530px;
-  height: 530px;
+  width: 34%;
+  height: 80%;
   top: 5%;
-  right: 35px;
+  right: 2%;
   border-radius: 12px;
 }
 .allegees .allegees_items {
   position: absolute;
   color: rgb(236, 236, 236);
   font-size: 37px;
-  right: 88px;
-  top: 145px;
+  width: 26%;
+  right: 6%;
+  top: 22%;
   font-family: "futuristic";
 }
 .allegees .allegees_items li {
   text-align: center;
-  width: 405px;
-  margin-bottom: 75px;
+  margin-bottom: 18%;
   line-height: 1.4;
   transition: 0.3s;
 }
 .allegees .allegees_items li:hover {
   color: rgb(70, 164, 77);
+}
+@media screen and (min-width: 1580px) {
+  .allegees .allegees_items {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .allegees {
+    height: 75vh;
+  }
+  .allegees .desc h1 {
+    font-size: 2rem;
+  }
+  .allegees .desc h2 {
+    font-size: 1.5rem;
+  }
+  .allegees button {
+    left: 20vw;
+    bottom: 10vh;
+  }
+  .allegees img {
+    height: 30vh;
+  }
+  .allegees .allegees_items {
+    font-size: 1.5rem;
+    right: 6%;
+    top: 10%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .allegees {
+    height: 70vh;
+  }
+  .allegees .desc {
+    left: 6%;
+  }
+  .allegees .desc h1 {
+    font-size: 1rem;
+  }
+  .allegees .desc h2 {
+    font-size: 0.8rem;
+  }
+  .allegees button {
+    padding: 15px 20px;
+    font-size: 0.8rem;
+    left: 10vw;
+  }
+  .allegees img {
+    top: 10%;
+    width: 40%;
+    height: 30vh;
+  }
+  .allegees .allegees_items {
+    top: 15%;
+    font-size: 0.9rem;
+    right: 8%;
+  }
+  .allegees .allegees_items li {
+    margin-bottom: 25%;
+  }
 }

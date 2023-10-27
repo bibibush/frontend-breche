@@ -176,9 +176,9 @@ export default function Calendar() {
           <p>
             {daySelect} / {monthSelect} / {yearSelect}
           </p>
-          {order.map((o) => {
+          {order.map((o, i) => {
             return (
-              <a href={`/les-commandes/detail?id=${o.id}`}>
+              <a key={i} href={`/les-commandes/detail?id=${o.id}`}>
                 <div className="orderbox_content">
                   {o.entreprise} - {o.nom}
                 </div>
