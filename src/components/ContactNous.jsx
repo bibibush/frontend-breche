@@ -119,7 +119,10 @@ export default function ContactNous() {
             <Form.Label>Sujet</Form.Label>
             <Form.Control type="text" name="sujet" placeholder="Sujet" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+          <Form.Group
+            className="mb-3 mb-text"
+            controlId="exampleForm.ControlTextarea1"
+          >
             <Form.Label>Question *</Form.Label>
             <Form.Control as="textarea" rows={9} name="message" required />
           </Form.Group>
