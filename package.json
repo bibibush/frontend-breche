@@ -2,7 +2,7 @@
   "name": "la-breche",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Bibibush.github.io/frontend_breche",
+  "homepage": "https://bibibush.github.io/frontend_breche",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.1",
