@@ -1,8 +1,6 @@
 import "./styles/Present.css";
 import "./styles/Header.css";
 // import "./styles/Promotion.css";
-import "./styles/Generation.css";
-import "./styles/Explanation.css";
 import "./styles/Footer.css";
 import "./styles/NosSaucissonsDesc.css";
 import "./styles/Artisanales.css";
@@ -19,7 +17,6 @@ import "./styles/Search.css";
 import "./styles/Histoire.css";
 import "./styles/Nosproduits.css";
 import "./styles/CommandeCSE.css";
-import "./styles/Where.css";
 import "./styles/HowToOrder.css";
 import "./styles/OrderSuccess.css";
 import "./styles/NotreHistoire.css";
@@ -35,8 +32,6 @@ import Header from "./components/Header";
 import Present from "./components/Present";
 // import Promotion from "./components/Promotion";
 // import PromotionTitle from "./components/PromotionTitle";
-// import Explanation from "./components/Explanation";
-// import Generation from "./components/Generation";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import NosSaucissonsDesc from "./components/NosSaucissonsDesc";
@@ -53,9 +48,6 @@ import NosSelectionDesc from "./components/NosSelectionDesc";
 import Terrine from "./components/Terrine";
 import ContactNous from "./components/ContactNous";
 // import Search from "./components/Search";
-import Aide from "./components/Aide";
-// import ToUp from "./components/ToUp";
-// import Where from "./components/Where";
 import CommandeCSE from "./components/CommandeCSE";
 import NotreHistoire from "./components/NotreHistoire";
 import MesCommande from "./components/MesCommande";
@@ -214,7 +206,6 @@ function App() {
           <>
             <AppStateProvider>
               <Header />
-              <Aide />
               <CommandeCSE />
               <Footer />
             </AppStateProvider>

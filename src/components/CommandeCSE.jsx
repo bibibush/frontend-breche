@@ -12,6 +12,8 @@ import { useRef } from "react";
 registerLocale("fr", fr);
 
 export default function CommandeCSE() {
+  const [matches, setMatches] = useState(false);
+
   const [files, setFiles] = useState([]);
   const [user, setUser] = useState({});
   const [btnState, setBtnState] = useState(false);
@@ -75,7 +77,14 @@ export default function CommandeCSE() {
       yoyoEase: "power2.out",
       repeat: -1,
     });
-  }, [getme]);
+    const media = window.matchMedia("(max-width: 767px)");
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
+  }, [getme, matches]);
   console.log(startDate);
 
   return (
@@ -167,30 +176,57 @@ export default function CommandeCSE() {
             fillRule="nonzero"
           />
         </svg>
-        <svg
-          ref={ref2}
-          xmlns="http://www.w3.org/2000/svg"
-          width="100"
-          zoomAndPan="magnify"
-          viewBox="0 0 375 374.999991"
-          height="100"
-          preserveAspectRatio="xMidYMid meet"
-          version="1.0"
-          style={{ position: "absolute", top: "22px", right: "24px" }}
-        >
-          <path
-            fill="#ff914d"
-            d="M 360.617188 133.332031 L 133.1875 133.332031 L 133.1875 240.238281 L 360.617188 240.238281 Z M 360.617188 133.332031 "
-            fillOpacity="1"
-            fillRule="nonzero"
-          />
-          <path
-            fill="#ff914d"
-            d="M 200.078125 67.332031 L 200.078125 306.226562 L 14.039062 186.785156 Z M 200.078125 67.332031 "
-            fillOpacity="1"
-            fillRule="nonzero"
-          />
-        </svg>
+        {matches ? (
+          <svg
+            ref={ref2}
+            xmlns="http://www.w3.org/2000/svg"
+            width="100"
+            zoomAndPan="magnify"
+            viewBox="0 0 375 374.999991"
+            height="100"
+            preserveAspectRatio="xMidYMid meet"
+            version="1.0"
+            style={{ position: "absolute", top: "22px", right: "0" }}
+          >
+            <path
+              fill="#ff914d"
+              d="M 360.617188 133.332031 L 133.1875 133.332031 L 133.1875 240.238281 L 360.617188 240.238281 Z M 360.617188 133.332031 "
+              fillOpacity="1"
+              fillRule="nonzero"
+            />
+            <path
+              fill="#ff914d"
+              d="M 200.078125 67.332031 L 200.078125 306.226562 L 14.039062 186.785156 Z M 200.078125 67.332031 "
+              fillOpacity="1"
+              fillRule="nonzero"
+            />
+          </svg>
+        ) : (
+          <svg
+            ref={ref2}
+            xmlns="http://www.w3.org/2000/svg"
+            width="100"
+            zoomAndPan="magnify"
+            viewBox="0 0 375 374.999991"
+            height="100"
+            preserveAspectRatio="xMidYMid meet"
+            version="1.0"
+            style={{ position: "absolute", top: "22px", right: "24px" }}
+          >
+            <path
+              fill="#ff914d"
+              d="M 360.617188 133.332031 L 133.1875 133.332031 L 133.1875 240.238281 L 360.617188 240.238281 Z M 360.617188 133.332031 "
+              fillOpacity="1"
+              fillRule="nonzero"
+            />
+            <path
+              fill="#ff914d"
+              d="M 200.078125 67.332031 L 200.078125 306.226562 L 14.039062 186.785156 Z M 200.078125 67.332031 "
+              fillOpacity="1"
+              fillRule="nonzero"
+            />
+          </svg>
+        )}
         <label htmlFor="fileupload">
           {files.length === 0
             ? "Enregistrez votre commande ici"
@@ -204,9 +240,15 @@ export default function CommandeCSE() {
           required
         />
         {btnState ? (
-          <Button onClick={upload} disabled>
-            <Oval width={40} height={40} secondaryColor="black" />
-          </Button>
+          matches ? (
+            <Button onClick={upload} disabled>
+              <Oval width={20} height={20} secondaryColor="black" />
+            </Button>
+          ) : (
+            <Button onClick={upload} disabled>
+              <Oval width={40} height={40} secondaryColor="black" />
+            </Button>
+          )
         ) : (
           <Button onClick={upload}>Envoyer</Button>
         )}

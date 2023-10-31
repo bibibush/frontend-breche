@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
+import logo from "../images/logo-Salaisons-de-la-Brèche-Blanc.png";
 
 export default function Header() {
   const [user, setUser] = useState({});
@@ -114,11 +115,7 @@ export default function Header() {
       </div>
       <div className="up-menu">
         <a href="/">
-          <img
-            src="./images/logo-Salaisons-de-la-Brèche-Blanc.png"
-            alt="Logo salaisons de la bréche"
-            className="logo"
-          />
+          <img src={logo} alt="Logo salaisons de la bréche" className="logo" />
         </a>
 
         <div className="sub-menu">

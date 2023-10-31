@@ -4,12 +4,12 @@
   background-color: #b9c9b4;
 }
 .orders .user_info {
-  width: 650px;
+  width: 40%;
   margin: 99px auto;
 }
 .orders .user_info p {
-  font-size: 32px;
-  margin-bottom: 65px;
+  font-size: 2rem;
+  margin-bottom: 10%;
   padding: 15px 20px;
   background-color: #fafaf2;
   border-radius: 8px;
@@ -20,14 +20,15 @@
   display: flex;
 }
 .orders .user_info .nom-prenom .mb-3 {
-  width: 315px;
+  width: calc(50% - 20px);
 }
 .orders .user_info .nom-prenom .mb-3:last-child {
+  width: 50%;
   margin-left: 20px;
 }
 .orders .user_orders {
-  width: 1100px;
-  margin: 0 auto 86px auto;
+  width: 75%;
+  margin: 0 auto 6% auto;
   position: relative;
   background-color: #fafaf2;
   padding: 100px 30px;
@@ -37,14 +38,14 @@
   position: absolute;
   background-color: white;
   border: 1px solid rgba(47, 47, 149, 0.3);
-  width: 708px;
-  font-size: 22px;
+  width: 62%;
+  font-size: 1.5rem;
   text-align: center;
   border-radius: 8px;
   padding: 25px 25px;
   top: 35px;
   left: 50%;
-  margin-left: calc(708px / -2);
+  margin-left: calc(62% / -2);
   transition: 0.4s;
 }
 .orders .user_orders label:hover {
@@ -62,7 +63,7 @@
   right: 20px;
   background-color: #59c064;
   border: 0;
-  font-size: 22px;
+  font-size: 1.4rem;
 }
 .orders .user_orders > button > div {
   position: absolute;
@@ -81,13 +82,13 @@
   position: relative;
 }
 .orders .user_orders .calendar p {
-  font-size: 23px;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 700;
 }
 .orders .user_orders .calendar .example-custom-input {
   position: absolute;
-  font-size: 22px;
+  font-size: 1.4rem;
   width: 280px;
   padding: 20px 30px;
   text-align: center;
@@ -98,4 +99,85 @@
 }
 .orders .user_orders .calendar .react-datepicker__day--outside-month {
   color: rgba(91, 135, 75, 0.692);
+}
+@media screen and (max-width: 1024px) {
+  .orders .user_info {
+    width: 60%;
+  }
+  .orders .user_info p {
+    font-size: 1.5rem;
+  }
+  .orders .user_orders label {
+    font-size: 1.2rem;
+    padding: 20px;
+    width: 50%;
+    margin-left: calc(50% / -2);
+  }
+  .orders .user_orders svg {
+    width: 80px;
+  }
+  .orders .user_orders .calendar {
+    margin-top: 56px;
+  }
+  .orders .user_orders .calendar p {
+    font-size: 1.2rem;
+  }
+  .orders .user_orders .calendar .example-custom-input {
+    left: 3vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .aide {
+    display: none;
+  }
+  .orders .user_info {
+    width: 80%;
+  }
+  .orders .user_info input {
+    font-size: 0.8rem;
+  }
+  .orders .user_orders label {
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 60%;
+    margin-left: calc(60% / -2);
+  }
+  .orders .user_orders svg {
+    position: absolute;
+    width: 40px;
+  }
+  .orders .user_orders svg:first-child {
+    left: 0;
+  }
+  .orders .user_orders .calendar {
+    margin-top: 26px;
+  }
+  .orders .user_orders .calendar p {
+    font-size: 0.8rem;
+  }
+  .orders .user_orders .calendar .example-custom-input {
+    font-size: 0.7rem;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f5fff2;
+    bottom: -86px;
+    left: 1%;
+  }
+  .orders .user_orders > button {
+    position: absolute;
+    width: 80px;
+    height: 27px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #59c064;
+    border: 0;
+    font-size: 0.7rem;
+  }
+  .orders .user_orders > button > div {
+    position: absolute;
+    left: 50%;
+    bottom: 70%;
+  }
 }

@@ -329,11 +329,17 @@ header .main-menu li .hidden-menu .hidden-menu-name p:hover {
   header .header-contact .material-symbols-outlined {
     font-size: 0.6rem;
   }
+  header .up-menu {
+    height: 24px;
+  }
   header .up-menu .sub-menu ul {
     font-size: 0.4rem;
   }
   header .up-menu .sub-menu ul li {
-    margin-left: 1%;
+    margin-left: 10px;
+  }
+  header .up-menu .sub-menu ul li::before {
+    display: none;
   }
   header .main-menu {
     left: 10%;

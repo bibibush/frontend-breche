@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
+import excel from "../images/excel.png";
 
 export default function ClientDownload() {
   const [searchParams] = useSearchParams();
@@ -42,7 +43,7 @@ export default function ClientDownload() {
 
   return (
     <div className="download" onClick={download}>
-      <img src="./images/excel.png" alt="Fiche excel" />
+      <img src={excel} alt="Fiche excel" />
       <div className="desc">Votre commande</div>
       <div className="material-symbols-outlined">download</div>
     </div>

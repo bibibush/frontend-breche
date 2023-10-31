@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import slate from "../images/Slate.png";
 
 export default function Cuire() {
   const items = [
@@ -15,7 +16,7 @@ export default function Cuire() {
         <h1>Gamme de saucisson à cuire</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="Carte menu ardoise" />
+      <img src={slate} alt="Carte menu ardoise" />
       <ul className="cuires_items">
         {items.map((item, i) => {
           return <li key={i}>{item}</li>;

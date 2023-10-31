@@ -1,10 +1,12 @@
+import familleProst from "../images/SALAISONS DE LA BRECHE - Famille Prost.jpg";
+
 export default function NotreHistore() {
   return (
     <section className="notre_histoire">
       <div className="notre_histoire_left_right">
         <div className="notre_histoire_left">
           <img
-            src="./images/SALAISONS DE LA BRECHE - Famille Prost.jpg"
+            src={familleProst}
             alt="La salaison familiale de 3 générations"
           />
           <div className="notre_histoire_left_img_desc">

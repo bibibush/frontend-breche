@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import slate from "../images/Slate.png";
 
 export default function Grignotage() {
   const items = ["Mignonettes"];
@@ -10,7 +11,7 @@ export default function Grignotage() {
         <h1>Gamme Grignotage</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="Carte menu ardoise" />
+      <img src={slate} alt="Carte menu ardoise" />
       <ul className="grignotage_items">
         {items.map((item, i) => {
           return <li key={i}>{item}</li>;

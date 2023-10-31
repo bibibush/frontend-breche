@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
+import slate from "../images/Slate.png";
 
 export default function Specialite() {
   const items = [
@@ -46,7 +47,7 @@ export default function Specialite() {
         <h1>Gamme spécialité</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="Carte menu ardoise" />
+      <img src={slate} alt="Carte menu ardoise" />
       <ul className="specialite_items">
         {results.map((result, i) => {
           return <li key={i}>{result}</li>;

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import slate from "../images/Slate.png";
 
 export default function Allegee() {
   const items = [
@@ -13,7 +14,7 @@ export default function Allegee() {
         <h1>Gamme de saucisson allégé</h1>
         <h2>Desc</h2>
       </div>
-      <img src="images/Slate.png" alt="Carte menu ardoise" />
+      <img src={slate} alt="Carte menu ardoise" />
       <ul className="allegees_items">
         {items.map((item, i) => {
           return <li key={i}>{item}</li>;

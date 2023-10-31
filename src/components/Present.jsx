@@ -1,6 +1,8 @@
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import { useRef } from "react";
+import logoTransparent from "../images/logo-Salaisons-de-la-Brèche- Fond transparent.png";
+import logoArtisan from "../images/logo artisan.png";
 
 export default function Present() {
   const ref = useRef();
@@ -19,7 +21,7 @@ export default function Present() {
     <section ref={ref} className="present">
       <div className="present-cover"></div>
       <img
-        src="./images/logo-Salaisons-de-la-Brèche- Fond transparent.png"
+        src={logoTransparent}
         alt="Logo salaisons de la brèche"
         className="present-logo"
       />
@@ -30,11 +32,7 @@ export default function Present() {
         </h1>
       </div>
       <div className="logo-div">
-        <img
-          src="./images/logo artisan.png"
-          alt="Logo artisan"
-          className="logo-artisan"
-        />
+        <img src={logoArtisan} alt="Logo artisan" className="logo-artisan" />
       </div>
     </section>
   );

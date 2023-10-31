@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import axios from "axios";
+import excel from "../images/excel.png";
 
 export default function Download() {
   const download = useCallback(async () => {
@@ -35,7 +36,7 @@ export default function Download() {
 
   return (
     <div className="download" onClick={download}>
-      <img src="./images/excel.png" alt="Fiche excel" />
+      <img src={excel} alt="Fiche excel" />
       <div className="desc">MODELE Tableau CSE 2022.xlsx</div>
       <div className="material-symbols-outlined">download</div>
     </div>
