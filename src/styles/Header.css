@@ -336,7 +336,7 @@ header .main-menu li .hidden-menu .hidden-menu-name p:hover {
     font-size: 0.4rem;
   }
   header .up-menu .sub-menu ul li {
-    margin-left: 10px;
+    margin-left: 8px;
   }
   header .up-menu .sub-menu ul li::before {
     display: none;

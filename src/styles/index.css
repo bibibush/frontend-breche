@@ -101,3 +101,8 @@ h2 {
     margin-top: 14vh;
   }
 }
+@media screen and (max-width: 767px) {
+  body {
+    background-color: #b9c9b4;
+  }
+}

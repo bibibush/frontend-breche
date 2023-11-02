@@ -75,6 +75,7 @@
 @media screen and (max-width: 767px) {
   .order_how {
     height: 80vh;
+    background-color: white;
   }
   .order_how .steps {
     height: 45vh;
@@ -90,7 +91,7 @@
     display: none;
   }
   .order_how .guide {
-    right: 40%;
+    right: 45%;
   }
   .order_how .guide,
   .order_how .commander {

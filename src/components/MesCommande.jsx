@@ -38,11 +38,11 @@ export default function MesCommande() {
           <div key={id} className="commande_info">
             <div className="commande_detail">
               <div className="commande_date">
-                <h3>Date de commande</h3>
+                <p>Date de commande</p>
                 {result.create_dt}
               </div>
               <div className="commande_numero">
-                <h3>Numéro de commande</h3>
+                <p>Numéro de commande</p>
                 {result.order_number}
               </div>
             </div>
@@ -60,9 +60,12 @@ export default function MesCommande() {
       <Pagination
         style={{
           position: "absolute",
+          width: "70%",
+          display: "flex",
+          justifyContent: "center",
           bottom: "38px",
           left: "50%",
-          marginLeft: "calc(280px / -2)",
+          marginLeft: "calc(70% / -2)",
         }}
         count={totalPage}
         variant="outlined"

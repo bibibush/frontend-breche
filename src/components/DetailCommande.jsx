@@ -120,6 +120,10 @@ export default function DetailCommande() {
 
   return (
     <section className="detail_commande">
+      <p>
+        Si vous voulez modifier votre commande, modifiez avec votre ordinateur
+        s'il vous plaît
+      </p>
       {successInfo.block ? (
         <p>* Vous ne pouvez plus modifier votre commande *</p>
       ) : (

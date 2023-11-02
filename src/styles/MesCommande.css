@@ -33,24 +33,66 @@
   margin-right: 95px;
   font-size: 20px;
 }
-.mescommande .commande_info .commande_detail .commande_date h3 {
+.mescommande .commande_info .commande_detail .commande_date p {
   font-size: 14px;
 }
 .mescommande .commande_info .commande_detail .commande_numero {
   margin-right: 55px;
   font-size: 20px;
 }
-.mescommande .commande_info .commande_detail .commande_numero h3 {
+.mescommande .commande_info .commande_detail .commande_numero p {
   font-size: 14px;
 }
 .mescommande .commande_info .commande_detail .commande_user {
   font-size: 20px;
 }
-.mescommande .commande_info .commande_detail .commande_user h3 {
+.mescommande .commande_info .commande_detail .commande_user p {
   font-size: 14px;
 }
 .mescommande .commande_info > button {
   position: absolute;
   bottom: 8px;
   right: 25px;
+}
+@media screen and (max-width: 1024px) {
+  .mescommande .commande_info {
+    width: 80%;
+    height: 150px;
+    margin: 0 auto 85px auto;
+    padding: 15px;
+    background-color: #fafaf2;
+    border-radius: 8px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mescommande .commande_info {
+    height: 120px;
+  }
+  .mescommande .commande_info .commande_detail .commande_date {
+    margin-right: 25px;
+    font-size: 0.8rem;
+  }
+  .mescommande .commande_info .commande_detail .commande_date p {
+    font-size: 0.5rem;
+  }
+  .mescommande .commande_info .commande_detail .commande_numero {
+    margin-right: 25px;
+    font-size: 0.8rem;
+  }
+  .mescommande .commande_info .commande_detail .commande_numero p {
+    font-size: 0.5rem;
+  }
+  .mescommande .commande_info .commande_detail .commande_user {
+    font-size: 0.8rem;
+  }
+  .mescommande .commande_info .commande_detail .commande_user p {
+    font-size: 0.5rem;
+  }
+  .mescommande .commande_info > button {
+    position: absolute;
+    bottom: 8px;
+    right: 25px;
+    font-size: 0.8rem;
+  }
 }

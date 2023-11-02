@@ -1,8 +1,11 @@
 .detail_commande {
   position: relative;
-  padding: 0 0 165px 0;
+  padding: 1px 0 165px 0;
   white-space: pre-line;
   background-color: #b9c9b4;
+}
+.detail_commande > p:first-child {
+  display: none;
 }
 .detail_commande > p {
   font-size: 1.5rem;
@@ -98,7 +101,7 @@
   background-color: white;
   border: 1px solid rgba(47, 47, 149, 0.3);
   border-radius: 8px;
-  width: 413px;
+  width: 378px;
   padding: 10px 15px;
   font-size: 22px;
   margin-right: 55px;
@@ -252,4 +255,187 @@
   font-size: 1.1em;
   bottom: 42px;
   left: 25%;
+}
+@media screen and (max-width: 1024px) {
+  .detail_commande > p:first-child {
+    display: block;
+    line-height: 1.4;
+  }
+  .detail_commande > p:last-child,
+  .detail_commande > p:nth-child(2) {
+    display: none;
+  }
+  .detail_commande > div {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .detail_commande .excel_date {
+    margin: 89px 40px 0 22px;
+    max-width: 390px;
+  }
+  .detail_commande .excel_date .commande_number > div {
+    font-size: 1.3rem;
+  }
+  .detail_commande .excel_date .commande_number > div p {
+    font-size: 1.2rem;
+    margin-right: 25px;
+  }
+  .detail_commande .excel_date .commande_number > div:first-child,
+  .detail_commande .excel_date .commande_number > div:nth-child(2),
+  .detail_commande .excel_date .commande_number > div:nth-child(3) {
+    margin-bottom: 25px;
+  }
+  .detail_commande .excel_date .excel .client_download button,
+  .detail_commande .excel_date .date .date_commande > button,
+  .detail_commande .commande_adresse > button {
+    display: none;
+  }
+  .detail_commande .excel_date .commande_number > div:last-child .mb-3 button {
+    display: none;
+  }
+  .detail_commande .excel_date .date .date_commande {
+    font-size: 1.5rem;
+  }
+  .detail_commande .excel_date .date .date_commande h3 {
+    margin-right: 0;
+  }
+  .detail_commande .commande_adresse {
+    padding: 35px;
+    height: 520px;
+  }
+  .detail_commande .commande_adresse .commande_name,
+  .detail_commande .commande_adresse .adresse,
+  .detail_commande .commande_adresse .entreprise,
+  .detail_commande .commande_adresse .email {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .detail_commande {
+    padding-bottom: 100px;
+  }
+  .detail_commande > p:first-child {
+    display: block;
+    font-size: 1rem;
+  }
+  .detail_commande > p:last-child,
+  .detail_commande > p:nth-child(2) {
+    display: none;
+  }
+  .detail_commande > div {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .detail_commande .excel_date {
+    margin: 69px 20px 0 22px;
+    max-width: 190px;
+  }
+  .detail_commande .excel_date .commande_number {
+    margin-bottom: 45px;
+  }
+  .detail_commande .excel_date .commande_number > div {
+    font-size: 0.7rem;
+  }
+  .detail_commande .excel_date .commande_number > div p {
+    font-size: 0.7rem;
+    margin-right: 15px;
+  }
+  .detail_commande .excel_date .commande_number > div:nth-child(2) p {
+    margin-right: 22px;
+  }
+  .detail_commande .excel_date .commande_number > div:nth-child(3) p,
+  .detail_commande .excel_date .commande_number > div:last-child p {
+    font-size: 0.7rem;
+  }
+  .detail_commande .excel_date .commande_number > div:first-child,
+  .detail_commande .excel_date .commande_number > div:nth-child(2),
+  .detail_commande .excel_date .commande_number > div:nth-child(3) {
+    margin-bottom: 15px;
+  }
+  .detail_commande .excel_date .excel .client_download button,
+  .detail_commande .excel_date .date .date_commande > button,
+  .detail_commande .commande_adresse > button {
+    display: none;
+  }
+  .detail_commande .excel_date .commande_number > div:last-child {
+    align-items: flex-start;
+  }
+  .detail_commande .excel_date .commande_number > div:last-child h3 {
+    font-size: 0.8rem;
+    margin-left: 0;
+  }
+  .detail_commande .excel_date .commande_number > div:last-child .mb-3 button {
+    display: none;
+  }
+  .detail_commande .excel_date .excel {
+    margin-bottom: 45px;
+    background-color: #fafaf2;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  .detail_commande .excel_date .excel p {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+  .detail_commande .excel_date .excel .client_download {
+    display: flex;
+    align-items: flex-end;
+  }
+  .detail_commande .excel_date .excel .client_download .download {
+    width: 150px;
+  }
+  .detail_commande .excel_date .excel .client_download .download .desc {
+    font-size: 0.8em;
+    width: 80px;
+  }
+  .detail_commande
+    .excel_date
+    .excel
+    .client_download
+    .download
+    .material-symbols-outlined {
+    display: none;
+  }
+  .detail_commande .excel_date .date .date_commande {
+    font-size: 1rem;
+  }
+  .detail_commande .excel_date .date p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  .detail_commande .excel_date .date .date_commande h3 {
+    margin-right: 0;
+  }
+  .detail_commande .commande_adresse {
+    padding: 15px;
+    height: 410px;
+    margin-top: 69px;
+  }
+  .detail_commande .commande_adresse .commande_name,
+  .detail_commande .commande_adresse .adresse,
+  .detail_commande .commande_adresse .entreprise,
+  .detail_commande .commande_adresse .email {
+    margin-bottom: 15px;
+  }
+  .detail_commande .commande_adresse .commande_name .commande_nom,
+  .detail_commande .commande_adresse .commande_name .commande_prenom,
+  .detail_commande .commande_adresse .adresse h3,
+  .detail_commande .commande_adresse .email h3,
+  .detail_commande .commande_adresse .entreprise h3,
+  .detail_commande .commande_adresse .phonenumber h3 {
+    font-size: 1rem;
+  }
+  .detail_commande > button {
+    position: absolute;
+    border: none;
+    color: #fafaf2;
+    border-radius: 12px;
+    padding: 1em 0.8em;
+    background-color: #b71919;
+    font-size: 1rem;
+    left: 5%;
+    bottom: 25px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+  }
 }
