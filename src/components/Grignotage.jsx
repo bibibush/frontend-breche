@@ -9,7 +9,6 @@ export default function Grignotage() {
       <div className="grignotage-cover"></div>
       <div className="desc">
         <h1>Gamme Grignotage</h1>
-        <h2>Desc</h2>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="grignotage_items">

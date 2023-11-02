@@ -25,6 +25,7 @@ export default function HowToOrder() {
       }
     } catch (err) {
       console.log(err.response);
+      window.location.href = "/";
     }
   }, []);
 

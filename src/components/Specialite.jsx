@@ -45,7 +45,6 @@ export default function Specialite() {
       <div className="specialite-cover"></div>
       <div className="desc">
         <h1>Gamme spécialité</h1>
-        <h2>Desc</h2>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="specialite_items">

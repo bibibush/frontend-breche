@@ -12,7 +12,6 @@ export default function Allegee() {
       <div className="allegees-cover"></div>
       <div className="desc">
         <h1>Gamme de saucisson allégé</h1>
-        <h2>Desc</h2>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="allegees_items">

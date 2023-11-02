@@ -1,9 +1,9 @@
 .nosselection-desc {
   height: 77vh;
-  background-image: url("../images/JAMBON-CRU-ARTICLE.jpg");
+  background-image: url("../images/031_SalaisonsCros-FranckTourneretPhotographe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top -30% left;
+  background-position: center;
   background-attachment: fixed;
   color: #f4ead8;
   position: relative;
@@ -13,19 +13,16 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .nosselection-desc .desc {
   position: absolute;
-  width: 50%;
+  width: 30%;
   text-align: center;
-  top: 16.5vh;
-  left: 50%;
-  margin-left: calc(50% / -2);
+  top: 5.5vh;
+  left: 1%;
 }
-.nosselection-desc .desc h2 {
-  margin-top: 5vh;
-}
+
 .nosselection-desc .btn-group {
   position: absolute;
   bottom: 0px;
@@ -58,26 +55,18 @@
 @media screen and (max-width: 1024px) {
   .nosselection-desc {
     height: 70vh;
-    background-size: 200%;
-    background-position: top -80% right 60%;
   }
-  .nosselection-desc .desc {
+  .nosselection-desc .desc h1 {
     top: 10vh;
+    font-size: 2rem;
   }
   .nosselection-desc .btn-group .btn {
     font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 767px) {
-  .nosselection-desc {
-    background-size: 255%;
-    background-position: bottom right 60%;
-  }
   .nosselection-desc .desc h1 {
     font-size: 1.5rem;
-  }
-  .nosselection-desc .desc h2 {
-    font-size: 1rem;
   }
   .nosselection-desc .btn-group .btn {
     font-size: 0.6rem;

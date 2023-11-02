@@ -7,7 +7,6 @@ export default function Artisanales() {
       <div className="artisanale-cover"></div>
       <div className="desc">
         <h1>Gamme artisanale</h1>
-        <h2>Desc</h2>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="artisanale_items">

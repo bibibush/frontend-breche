@@ -15,7 +15,6 @@ export default function Jambon() {
       <div className="jambon-cover"></div>
       <div className="desc">
         <h1>Gamme Jambon</h1>
-        <h2>Desc</h2>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="jambon_items">

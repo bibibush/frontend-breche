@@ -117,10 +117,13 @@
   }
   .cuires img {
     width: 40%;
-    height: 45vh;
+    height: 340px;
   }
   .cuires .cuires_items {
     font-size: 0.9rem;
     right: 8%;
+  }
+  .cuires .cuires_items li {
+    margin-bottom: 30%;
   }
 }

@@ -7,7 +7,6 @@ export default function NosSelectionDesc() {
       <div className="desc-cover"></div>
       <div className="desc">
         <h1>Nos Selection</h1>
-        <h2>desc</h2>
       </div>
       <ButtonGroup size="lg" className="mb-2">
         <Link to="/nos-selection/jambon">
