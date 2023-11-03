@@ -30,7 +30,7 @@ export default function LoginRequired() {
   return (
     <section className="login_required">
       <div className="dialogue">
-        <h2>Vous devez avoir un compte pour commander CSE</h2>
+        <p>Vous devez avoir un compte pour commander CSE</p>
         <Form id="loginrequired">
           <Form.Group className="mb-3">
             <Form.Label>Votre Email</Form.Label>

@@ -1,5 +1,5 @@
 .pas_compte {
-  height: 850px;
+  height: 750px;
 }
 .pas_compte .question-cover {
   height: 250px;
@@ -8,27 +8,27 @@
 }
 .pas_compte .question-cover h1 {
   text-align: center;
-  margin-top: 105px;
+  margin-top: 6.5%;
   color: #ffffe7;
 }
 .pas_compte h1 span {
   font-weight: 700;
   font-size: 69px;
   font-family: "Alkatra", cursive;
-  margin-right: 15px;
+  margin-right: 1.5%;
 }
 .pas_compte .desc {
-  margin-top: 55px;
+  margin-top: 6%;
   display: flex;
   justify-content: center;
 }
 .pas_compte .desc h2 {
   line-height: 1.6;
   font-family: "Alkatra", cursive;
-  font-size: 32px;
+  font-size: 2rem;
 }
 .pas_compte .desc h2:first-child {
-  margin-right: 35px;
+  margin-right: 3%;
   font-size: 52px;
 }
 .pas_compte .desc h2 span {
@@ -38,10 +38,66 @@
 }
 .pas_compte a {
   display: block;
-  width: 650px;
-  font-size: 34px;
+  width: 40%;
+  font-size: 2.2rem;
   text-align: center;
-  margin: 125px auto;
+  margin: 5% auto;
   text-decoration: underline;
   color: rgb(32, 92, 32);
+}
+@media screen and (max-width: 1024px) {
+  .pas_compte .question-cover h1 {
+    font-size: 3rem;
+    margin-top: 9%;
+  }
+  .pas_compte .desc {
+    margin-top: 15%;
+  }
+  .pas_compte .desc h2 {
+    font-size: 1.5rem;
+  }
+  .pas_compte .desc h2:first-child {
+    font-size: 2rem;
+  }
+  .pas_compte .desc h2 span {
+    font-size: 1.7rem;
+  }
+  .pas_compte a {
+    width: 60%;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pas_compte {
+    background-color: white;
+    height: 650px;
+  }
+  .pas_compte .question-cover {
+    height: 180px;
+  }
+  .pas_compte .question-cover h1 {
+    font-size: 2rem;
+  }
+  .pas_compte .question-cover h1 span {
+    font-size: 3rem;
+  }
+  .pas_compte .desc {
+    margin-top: 25%;
+  }
+  .pas_compte .desc h2 {
+    font-size: 1.2rem;
+  }
+  .pas_compte .desc h2 br {
+    display: none;
+  }
+  .pas_compte .desc h2:first-child {
+    font-size: 1.5rem;
+  }
+  .pas_compte .desc h2 span {
+    font-size: 1.4rem;
+  }
+  .pas_compte a {
+    font-size: 1.5rem;
+    margin: 20% auto;
+  }
 }
