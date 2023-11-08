@@ -13,8 +13,7 @@ import totaltarif from "../images/totaltarif.png";
 import recappe from "../images/recappe.png";
 
 export default function HowToOrder() {
-  const mediaMatch = window.matchMedia("(max-width: 767px)");
-  const [matches, setMatches] = useState(mediaMatch.matches);
+  const [matches, setMatches] = useState(false);
 
   const getme = useCallback(async () => {
     try {
@@ -31,10 +30,14 @@ export default function HowToOrder() {
 
   useEffect(() => {
     getme();
-    const handler = (e) => setMatches(e.matches);
-    mediaMatch.addListener(handler);
-    return () => mediaMatch.removeListener(handler);
-  }, [getme, mediaMatch]);
+    const mediaMatch = window.matchMedia("(max-width: 767px)");
+    if (mediaMatch.matches !== matches) {
+      setMatches(mediaMatch.matches);
+    }
+    const listener = () => setMatches(mediaMatch.matches);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
+  }, [getme, matches]);
   console.log(matches);
 
   const [show, setShow] = useState(false);

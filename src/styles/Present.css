@@ -2,16 +2,17 @@
 .present {
   position: relative;
   height: 98vh;
-  background-image: url("../images/essay\ 2.png");
+  background-image: url("../images/page_daccueil.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: bottom 70% right;
+  /* background-position: bottom 35% right; */
+  background-position: bottom 40% right;
   white-space: pre-line;
 }
 .present .present-cover {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 .present .present-logo {
   position: absolute;
@@ -35,22 +36,20 @@
 }
 
 .present .present-desc {
-  width: 45%;
   position: absolute;
-  bottom: 20%;
-  left: 52%;
-  margin-left: calc(45% / -2);
-}
-.present .present-desc h1 {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 23%;
+  left: 2%;
   color: white;
   font-family: "Noto Serif", serif;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   text-align: center;
   line-height: 1.4;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
-.present .present-desc h1 > p {
-  color: #99d188;
-}
+
 /* .present .present-desc .btn {
   position: absolute;
   bottom: -78px;
@@ -60,24 +59,24 @@
 @media screen and (max-width: 1024px) {
   .present {
     height: 72vh;
-    background-position: bottom 70% right 20%;
+    background-size: 260%;
+    background-position: bottom left 40%;
   }
   .present .logo-div {
     bottom: 5%;
   }
   .present .present-desc {
     bottom: 5%;
-  }
-  .present .present-desc h1 {
     font-size: 1.35rem;
   }
 }
 @media screen and (max-width: 767px) {
   .present {
     height: 58vh;
-    background-position: bottom 130px right 60%;
+    background-size: 270%;
+    background-position: bottom 180px left 40%;
   }
-  .present .present-desc h1 {
-    font-size: 1rem;
+  .present .present-desc {
+    font-size: 0.8rem;
   }
 }

@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   height: 45vh;
-  background-image: url("../images/montdulyonnais.jpg");
+  background-image: url("../images/montdulyonnais2.JPG");
   background-size: cover;
-  background-position: center;
+  background-position: bottom 40% left;
   color: white;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 5%;
@@ -79,6 +79,9 @@
   }
   .order_how .steps {
     height: 45vh;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: bottom left 30%;
   }
   .order_how .steps .step {
     font-size: 0.8rem;

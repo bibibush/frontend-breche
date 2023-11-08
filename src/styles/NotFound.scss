@@ -1,0 +1,60 @@
+.notfound {
+  height: 610px;
+  position: relative;
+  img {
+    position: absolute;
+    max-width: 60%;
+    display: block;
+    top: -21vh;
+    left: 50%;
+    margin-left: calc(60% / -2);
+  }
+  p {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    bottom: 95px;
+    font: {
+      family: "Alkatra", cursive;
+      size: 3.5rem;
+      weight: 700;
+    }
+    left: 50%;
+    margin: {
+      left: calc(80% / -2);
+    }
+  }
+}
+@media screen and (min-width: 1580px) {
+  .notfound {
+    p {
+      bottom: 25px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .notfound {
+    img {
+      max-width: 80%;
+      top: -10vh;
+      margin-left: calc(80% / -2);
+    }
+    p {
+      font-size: 2.5rem;
+      bottom: 10%;
+      line-height: 1.4;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .notfound {
+    background-color: white;
+    img {
+      top: 0;
+    }
+    p {
+      font-size: 1.5rem;
+      bottom: 30%;
+    }
+  }
+}
