@@ -1,13 +1,12 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import axios from "axios";
 import { Oval } from "react-loader-spinner";
+import useGetMe from "../hooks/useGetMe";
 
 export default function ContactNous() {
   const form = useRef();
-  const [info, setInfo] = useState({});
   const [btnState, setBtnState] = useState(false);
 
   const sendEmail = (e) => {
@@ -37,20 +36,11 @@ export default function ContactNous() {
   //   return target.value;
   // };
 
-  const getme = useCallback(async () => {
-    try {
-      const res = await axios.get("/api/getme/");
-
-      console.log("getme success", res);
-      setInfo(res.data);
-    } catch (err) {
-      console.log("getme error", err.response);
-    }
-  }, []);
+  const { getMe, user } = useGetMe();
 
   useEffect(() => {
-    getme();
-  }, [getme]);
+    getMe();
+  }, [getMe]);
   return (
     <section className="contact-nous">
       <div className="contact-bg">
@@ -62,7 +52,7 @@ export default function ContactNous() {
                 required
                 type="text"
                 name="nom"
-                defaultValue={info.nom}
+                defaultValue={user.nom}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -71,7 +61,7 @@ export default function ContactNous() {
                 required
                 type="text"
                 name="prenom"
-                defaultValue={info.prenom}
+                defaultValue={user.prenom}
               />
             </Form.Group>
           </div>
@@ -81,7 +71,7 @@ export default function ContactNous() {
               <Form.Control
                 type="text"
                 name="user_numero"
-                defaultValue={info.phonenumber}
+                defaultValue={user.phonenumber}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -91,7 +81,7 @@ export default function ContactNous() {
                 type="email"
                 placeholder="exemple@exemple.com"
                 name="user_email"
-                defaultValue={info.email}
+                defaultValue={user.email}
               />
             </Form.Group>
           </div>
@@ -101,7 +91,7 @@ export default function ContactNous() {
               type="text"
               placeholder="votre entreprise"
               name="entreprise"
-              defaultValue={info.entreprise}
+              defaultValue={user.entreprise}
             />
           </Form.Group>
           <Form.Label>Objet *</Form.Label>

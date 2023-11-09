@@ -76,130 +76,128 @@ function App() {
       <Route
         path="/"
         element={
-          <>
-            <AppStateProvider>
-              <Header />
-              <Present />
-              <Logos />
-              <NotreHistoire />
-              <NosSaucissonsDesc />
-              {/* <section className="promotion">
+          <AppStateProvider>
+            <Header />
+            <Present />
+            <Logos />
+            <NotreHistoire />
+            <NosSaucissonsDesc />
+            {/* <section className="promotion">
                 <PromotionTitle />
                 <Promotion />
               </section> */}
-              <Footer />
-            </AppStateProvider>
-          </>
+            <Footer />
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-saucissons"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <NosSaucissonsDescMobile />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-saucissons/artisanale"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Artisanales />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-saucissons/traditionnelle"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Traditionnelle />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-saucissons/cuires"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Cuire />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-saucissons/spécialité"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Specialite />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-saucissons/grignotage"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Grignotage />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-saucissons/allégé"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Allegee />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-selection"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <NosSelectionDesc />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-selection/jambon"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Jambon />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/nos-selection/terrine"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Terrine />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/contact"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <ContactNous />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
@@ -217,94 +215,94 @@ function App() {
       <Route
         path="/télécharge-cse"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <HowToOrder />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/commande-cse/success"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <OrderSuccess />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/login"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <LoginRequired />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/mes-commandes"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <MesCommande />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/mes-commandes/detail"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <DetailCommande />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/les-commandes"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <LesCommandes />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/les-commandes/detail"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <ManageCommande />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/demander-compte"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <PasCompte />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
       <Route
         path="/les-commandes/gestion"
         element={
-          <>
+          <AppStateProvider>
             <Header />
             <Calendar />
             <Footer />
-          </>
+          </AppStateProvider>
         }
       />
-      <Route path="/*" element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

@@ -8,14 +8,16 @@ import fr from "date-fns/locale/fr";
 import { Oval } from "react-loader-spinner";
 import gsap from "gsap";
 import { useRef } from "react";
+import useGetMe from "../hooks/useGetMe";
 
 registerLocale("fr", fr);
 
 export default function CommandeCSE() {
+  const { getMe, user } = useGetMe();
+
   const [matches, setMatches] = useState(false);
 
   const [files, setFiles] = useState([]);
-  const [user, setUser] = useState({});
   const [btnState, setBtnState] = useState(false);
 
   const date = new Date().setDate(new Date().getDate() + 15);
@@ -51,20 +53,10 @@ export default function CommandeCSE() {
         window.location.href = "/commande-cse";
       });
   }, [startDate, files]);
-  const getme = useCallback(async () => {
-    try {
-      const res = await axios.get("/api/getme/");
-      console.log("getme", res);
-      setUser(res.data);
-    } catch (err) {
-      console.log("getme error", err.response);
-      window.location.href = "/";
-    }
-  }, []);
   const ref = useRef();
   const ref2 = useRef();
   useEffect(() => {
-    getme();
+    getMe();
     gsap.to(ref.current, {
       x: "30px",
       duration: 1,
@@ -84,7 +76,7 @@ export default function CommandeCSE() {
     const listener = () => setMatches(media.matches);
     window.addEventListener("resize", listener);
     return () => window.removeEventListener("resize", listener);
-  }, [getme, matches]);
+  }, [getMe, matches]);
   console.log(startDate);
 
   return (

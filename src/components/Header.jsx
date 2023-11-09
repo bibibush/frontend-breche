@@ -4,11 +4,12 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 import logo from "../images/logo-Salaisons-de-la-Brèche-Blanc.png";
+import useGetMe from "../hooks/useGetMe";
 
 export default function Header() {
-  const [user, setUser] = useState({});
   const [show, setShow] = useState(false);
   const [pwdshow, setPwdshow] = useState(false);
+  const { user, getMe, setUser } = useGetMe();
 
   const handleClose = () => {
     setShow(false);
@@ -20,7 +21,7 @@ export default function Header() {
   const pwdhandleShow = () => {
     setPwdshow(true);
   };
-  const login = () => {
+  const login = useCallback(() => {
     const loginData = new FormData(document.getElementById("login"));
 
     axios
@@ -36,12 +37,15 @@ export default function Header() {
         alert(err.response.statusText);
         setShow(false);
       });
-  };
-  const loginEnter = useCallback((event) => {
-    if (event.key === "Enter") {
-      login();
-    }
-  }, []);
+  }, [setUser]);
+  const loginEnter = useCallback(
+    (event) => {
+      if (event.key === "Enter") {
+        login();
+      }
+    },
+    [login]
+  );
   const logout = () => {
     axios
       .get("/api/logout/")
@@ -79,15 +83,6 @@ export default function Header() {
   const enterPwdChange = useCallback((e) => {
     if (e.key === "Enter") {
       pwdchange();
-    }
-  }, []);
-  const getMe = useCallback(async () => {
-    try {
-      const res = await axios.get("/api/getme/");
-      console.log("getme res", res);
-      setUser(res.data);
-    } catch (err) {
-      console.log("getme error", err.response);
     }
   }, []);
 
