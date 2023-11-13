@@ -3,6 +3,11 @@
   font-family: "futuristic";
   src: url("../fonts/Futuristic\ Stylish.otf");
 }
+:root {
+  --font-color: #f4ead8;
+  --user-background-color: #f8f9f0;
+  --contact-background-color: rgb(248, 249, 250);
+}
 body {
   font-family: "Alkatra", cursive;
   color: #333;

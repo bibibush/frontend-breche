@@ -5,7 +5,7 @@
   background-size: cover;
   background-position: bottom 80% right;
   background-attachment: fixed;
-  color: #f4ead8;
+  color: var(--font-color);
   position: relative;
   white-space: pre-line;
 }
@@ -16,7 +16,7 @@
   background-size: cover;
   background-position: bottom 80% right;
   background-attachment: fixed;
-  color: #f4ead8;
+  color: var(--font-color);
   position: relative;
   white-space: pre-line;
 }
@@ -45,15 +45,15 @@
   margin-left: calc(80% / -2);
   bottom: 30px;
   font-family: "Noto Serif", serif;
-  background-color: #f8f9f0;
+  background-color: var(--font-color);
 }
 .nossaucissons-desc .btn-group a {
   width: 20%;
 }
 .nossaucissons-desc .btn-group .btn {
-  background-color: #f8f9f0;
+  background-color: var(--font-color);
   color: #333;
-  border-color: #f8f9f0;
+  border-color: var(--font-color);
   font-size: 20px;
   width: 100%;
 }

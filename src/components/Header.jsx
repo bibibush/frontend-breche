@@ -96,6 +96,9 @@ export default function Header() {
   const clickLogin = () => {
     window.location.href = "/login";
   };
+  const clickUser = () => {
+    window.location.href = `/user?user-id=${user.id}`;
+  };
   return (
     <header>
       <div className="header-contact">
@@ -117,7 +120,7 @@ export default function Header() {
           <ul>
             {user.username !== "" ? (
               <>
-                <li>{user.username}</li>
+                <li onClick={clickUser}>{user.username}</li>
                 <li onClick={logout}>Déconnectez-vous</li>
                 <li onClick={pwdhandleShow}>Changer les mots du passe</li>
                 <Modal show={pwdshow} onHide={handleClose}>

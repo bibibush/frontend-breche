@@ -28,6 +28,7 @@ import "./styles/Logos.css";
 import "./styles/PasCompte.css";
 import "./styles/Calendar.css";
 import "./styles/NotFound.scss";
+import "./styles/UserInfo.scss";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -65,6 +66,7 @@ import LoginRequired from "./components/LoginRequired";
 import PasCompte from "./components/PasCompte";
 import Calendar from "./components/Calendar";
 import NotFound from "./components/NotFound";
+import UserInfo from "./components/UserInfo";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -298,6 +300,16 @@ function App() {
           <AppStateProvider>
             <Header />
             <Calendar />
+            <Footer />
+          </AppStateProvider>
+        }
+      />
+      <Route
+        path="/user"
+        element={
+          <AppStateProvider>
+            <Header />
+            <UserInfo />
             <Footer />
           </AppStateProvider>
         }
