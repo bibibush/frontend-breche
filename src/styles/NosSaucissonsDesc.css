@@ -1,9 +1,9 @@
 .nossaucissons-desc {
   height: 88vh;
-  background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
+  background-image: url("../images/IMG_sechoir.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom 80% right;
+  background-position: top right;
   background-attachment: fixed;
   color: var(--font-color);
   position: relative;
@@ -11,10 +11,10 @@
 }
 .nossaucissons-desc.nossaucissons-mobile {
   height: 70vh;
-  background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
+  background-image: url("../images/IMG_sechoir.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom 80% right;
+  background-position: top right;
   background-attachment: fixed;
   color: var(--font-color);
   position: relative;
@@ -24,7 +24,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .nossaucissons-desc .desc {
   position: absolute;
@@ -70,7 +70,10 @@
 @media screen and (max-width: 1024px) {
   .nossaucissons-desc {
     height: 50vh;
-    background-position: top 10vh right 50%;
+    background-position: top 180px center;
+  }
+  .nossaucissons-desc.nossaucissons-mobile {
+    background-position: top 80px center;
   }
   .nossaucissons-desc .desc {
     top: 10vh;
@@ -80,6 +83,12 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .nossaucissons-desc {
+    background-position: top 70px center;
+  }
+  .nossaucissons-desc.nossaucissons-mobile {
+    background-position: top 40px center;
+  }
   .nossaucissons-desc .desc h1 {
     font-size: 1.5rem;
   }

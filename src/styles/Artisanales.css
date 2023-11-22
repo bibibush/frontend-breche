@@ -1,5 +1,5 @@
 .artisanale {
-  height: 95vh;
+  height: 115vh;
   background-image: url("../images/hg\ 300-400.JPG");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -27,7 +27,7 @@
 }
 .artisanale button {
   position: absolute;
-  bottom: 20vh;
+  bottom: 40vh;
   left: 35vw;
   background-color: rgb(151, 45, 45);
   padding: 25px 20px;
@@ -55,7 +55,7 @@
   color: rgb(236, 236, 236);
   font-size: 37px;
   right: 6%;
-  top: 20%;
+  top: 16%;
   font-family: "futuristic";
 }
 .artisanale ul li {
@@ -67,12 +67,6 @@
   color: rgb(70, 164, 77);
 }
 
-/* .modal-saucisson .modal-content img {
-  width: 900px;
-  border-radius: 8px;
-  height: 950px;
-  margin: 0 auto;
-} */
 @media screen and (min-width: 1580px) {
   .artisanale ul {
     font-size: 2.8rem;
@@ -88,7 +82,7 @@
   }
   .artisanale img {
     width: 40vw;
-    height: 45%;
+    height: 50%;
   }
   .artisanale ul {
     font-size: 1.5rem;

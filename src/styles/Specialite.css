@@ -1,10 +1,10 @@
 .specialite {
   height: 110vh;
-  background-image: url("../images/IMG_4145.JPG");
+  background-image: url("../images/IMG_spe.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: top -15% right;
+  background-position: top -10% right;
   color: #f4ead8;
   position: relative;
   white-space: pre-line;

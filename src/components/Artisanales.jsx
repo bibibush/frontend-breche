@@ -14,6 +14,7 @@ export default function Artisanales() {
         <li>Saucisson Artisanal bridé main 400g</li>
         <li>Saucisson Artisanal Courbe 300-400g</li>
         <li>Saucisson Artisanal bridé 600-700g</li>
+        <li>Rosette de Lyon</li>
       </ul>
 
       <Link to="/nos-saucissons/traditionnelle">
