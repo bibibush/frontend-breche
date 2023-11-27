@@ -17,7 +17,7 @@ export default function Grignotage() {
         })}
       </ul>
       <Link to="/nos-saucissons/allégé">
-        <button>Voir le gamme allégé</button>
+        <button>Voir la gamme allégée</button>
       </Link>
     </section>
   );

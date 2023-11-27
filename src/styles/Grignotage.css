@@ -1,10 +1,10 @@
 .grignotage {
   height: 92vh;
-  background-image: url("../images/atelier-de-fabrication-Régis-Bozon-©OT-Thônes-CDV-30-1200x800.jpg");
+  background-image: url("../images/mignonettes.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: top 20% right;
+  background-position: top right;
   color: #f4ead8;
   position: relative;
   white-space: pre-line;
@@ -13,10 +13,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .grignotage .desc {
   position: absolute;
+  display: none;
   width: 40%;
   text-align: center;
   top: 10%;
@@ -29,7 +30,7 @@
 .grignotage button {
   position: absolute;
   bottom: 20vh;
-  left: 35vw;
+  right: 30vw;
   background-color: rgb(151, 45, 45);
   padding: 25px 20px;
   border-radius: 12px;
@@ -77,10 +78,11 @@
 @media screen and (max-width: 1024px) {
   .grignotage {
     height: 70vh;
+    background-position: top 85px left 20% ;
   }
   .grignotage button {
     left: 20vw;
-    bottom: 10vh;
+    bottom: 7vh;
   }
   .grignotage img {
     height: 30%;
@@ -95,6 +97,7 @@
 @media screen and (max-width: 767px) {
   .grignotage {
     height: 60vh;
+    background-position: top 75px right 75%;
   }
   .grignotage .desc {
     left: 6%;
@@ -102,13 +105,11 @@
   .grignotage .desc h1 {
     font-size: 1rem;
   }
-  .grignotage .desc h2 {
-    font-size: 0.8rem;
-  }
   .grignotage button {
     padding: 15px 20px;
     font-size: 0.8rem;
     left: 10vw;
+    bottom: 15px;
   }
   .grignotage img {
     width: 40%;

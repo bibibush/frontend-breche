@@ -119,6 +119,7 @@
 @media screen and (max-width: 767px) {
   .specialite {
     height: 70vh;
+    background-position: top 15px right;
   }
   .specialite .desc {
     left: 6%;
