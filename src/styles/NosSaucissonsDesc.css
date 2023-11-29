@@ -1,20 +1,20 @@
 .nossaucissons-desc {
   height: 88vh;
-  background-image: url("../images/IMG_sechoir.jpg");
+  background-image: url("../images/sechoir_new.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top right;
   background-attachment: fixed;
+  background-position: bottom -55px right;
   color: var(--font-color);
   position: relative;
   white-space: pre-line;
 }
 .nossaucissons-desc.nossaucissons-mobile {
   height: 70vh;
-  background-image: url("../images/IMG_sechoir.jpg");
+  background-image: url("../images/sechoir_new.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top right;
+  background-position: bottom -45px right;
   background-attachment: fixed;
   color: var(--font-color);
   position: relative;
@@ -43,7 +43,7 @@
   width: 80%;
   left: 50%;
   margin-left: calc(80% / -2);
-  bottom: 30px;
+  bottom: 8px;
   font-family: "Noto Serif", serif;
   background-color: var(--font-color);
 }
@@ -70,10 +70,10 @@
 @media screen and (max-width: 1024px) {
   .nossaucissons-desc {
     height: 50vh;
-    background-position: top 180px center;
+    background-position: bottom center;
   }
   .nossaucissons-desc.nossaucissons-mobile {
-    background-position: top 80px center;
+    background-position: bottom 75px center;
   }
   .nossaucissons-desc .desc {
     top: 10vh;
@@ -84,10 +84,10 @@
 }
 @media screen and (max-width: 767px) {
   .nossaucissons-desc {
-    background-position: top 70px center;
+    background-position: bottom center;
   }
   .nossaucissons-desc.nossaucissons-mobile {
-    background-position: top 40px center;
+    background-position: bottom 105px center;
   }
   .nossaucissons-desc .desc h1 {
     font-size: 1.5rem;

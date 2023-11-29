@@ -255,11 +255,11 @@ export default function ManageCommande() {
               </div>
             ) : (
               <div className="date_commande">
-                <h3>
+                <em>
                   {new Date(successInfo.date).getDate()} /{" "}
                   {new Date(successInfo.date).getMonth() + 1} /{" "}
                   {new Date(successInfo.date).getFullYear()}
-                </h3>
+                </em>
                 <Button
                   variant="secondary"
                   onClick={() => {
@@ -342,19 +342,19 @@ export default function ManageCommande() {
               </div>
               <div className="adresse">
                 <p>Adresse</p>
-                <h3>{successInfo.adresse}</h3>
+                <em>{successInfo.adresse}</em>
               </div>
               <div className="entreprise">
                 <p>Entreprise</p>
-                <h3>{successInfo.entreprise}</h3>
+                <em>{successInfo.entreprise}</em>
               </div>
               <div className="email">
                 <p>Adresse email</p>
-                <h3>{successInfo.email}</h3>
+                <em>{successInfo.email}</em>
               </div>
               <div className="phonenumber">
                 <p>Numero téléphone</p>
-                <h3>{successInfo.phonenumber}</h3>
+                <em>{successInfo.phonenumber}</em>
               </div>
               <Button
                 variant="secondary"

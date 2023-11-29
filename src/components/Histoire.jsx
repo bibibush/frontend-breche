@@ -22,7 +22,6 @@ export default function Histoire() {
           duration: 0,
           zIndex: 1,
         });
-
         setFixed(true);
         setHistoire(true);
         setMonts(false);

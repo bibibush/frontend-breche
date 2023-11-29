@@ -150,9 +150,9 @@ export default function DetailCommande() {
             <div>
               <p>Statut de payment: </p>
               {successInfo.pay ? (
-                <h3>Votre payment est bien passé</h3>
+                <em>Votre payment est bien passé</em>
               ) : (
-                <h3>Vous n'avez pas payé</h3>
+                <em>Vous n'avez pas payé</em>
               )}
             </div>
           </div>
@@ -248,11 +248,11 @@ export default function DetailCommande() {
               </div>
             ) : (
               <div className="date_commande">
-                <h3>
+                <em>
                   {new Date(successInfo.date).getDate()} /{" "}
                   {new Date(successInfo.date).getMonth() + 1} /{" "}
                   {new Date(successInfo.date).getFullYear()}
-                </h3>
+                </em>
                 {successInfo.block ? (
                   <Button
                     variant="secondary"
@@ -358,19 +358,19 @@ export default function DetailCommande() {
               </div>
               <div className="adresse">
                 <p>Votre adresse</p>
-                <h3>{successInfo.adresse}</h3>
+                <em>{successInfo.adresse}</em>
               </div>
               <div className="entreprise">
                 <p>Votre entreprise</p>
-                <h3>{successInfo.entreprise}</h3>
+                <em>{successInfo.entreprise}</em>
               </div>
               <div className="email">
                 <p>Votre adresse email</p>
-                <h3>{successInfo.email}</h3>
+                <em>{successInfo.email}</em>
               </div>
               <div className="phonenumber">
                 <p>Votre numero téléphone</p>
-                <h3>{successInfo.phonenumber}</h3>
+                <em>{successInfo.phonenumber}</em>
               </div>
               {successInfo.block ? (
                 <Button
@@ -410,11 +410,11 @@ export default function DetailCommande() {
           {successInfo.done ? (
             ""
           ) : (
-            <h3>
+            <em>
               * Vous pouvez pas supprimer cette commande parce qu'elle est déjà
               validé. Si vous voulez supprimer cette commande, appelez nous s'il
               vous plaît
-            </h3>
+            </em>
           )}
         </>
       ) : (

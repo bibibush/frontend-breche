@@ -21,10 +21,10 @@ export default function Logos() {
         </div>
       </div>
       <div className="logos_desc">
-        <h2>Artisan Français</h2>
-        <h2>Fleur Naturelle</h2>
-        <h2>Affinage Lent</h2>
-        <h2>Viandes Rigoureusement Sélectionnées</h2>
+        <p>Artisan Français</p>
+        <p>Fleur Naturelle</p>
+        <p>Affinage Lent</p>
+        <p>Viandes Rigoureusement Sélectionnées</p>
       </div>
     </section>
   );

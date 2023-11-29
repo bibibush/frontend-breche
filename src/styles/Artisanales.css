@@ -1,10 +1,10 @@
 .artisanale {
   height: 115vh;
-  background-image: url("../images/hg\ 300-400.JPG");
+  background-image: url("../images/3400\ arti.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: top 20% right;
+  background-position: top 75px right;
   color: #f4ead8;
   position: relative;
   white-space: pre-line;
@@ -93,7 +93,7 @@
 @media screen and (max-width: 767px) {
   .artisanale {
     height: 60vh;
-    background-size: 230%;
+    background-position: top 50px left -75px;
   }
   .artisanale .desc {
     left: 6%;

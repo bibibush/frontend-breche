@@ -1,10 +1,10 @@
 .traditionnelle {
   height: 120vh;
-  background-image: url("../images/IMG_4165.JPG");
+  background-image: url("../images/7800\ tra.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: top 5% right 0;
+  background-position: top 48% right;
   color: #f4ead8;
   position: relative;
   white-space: pre-line;
@@ -75,8 +75,7 @@
 @media screen and (max-width: 1024px) {
   .traditionnelle {
     height: 75vh;
-    background-size: 120%;
-    background-position: top right 20%;
+    background-position: top -95px right;
   }
   .traditionnelle button {
     left: 20vw;
@@ -94,8 +93,7 @@
 @media screen and (max-width: 767px) {
   .traditionnelle {
     height: 70vh;
-    background-size: cover;
-    background-position: top right;
+    background-position: top -95px right 83%;
   }
   .traditionnelle .desc {
     left: 6%;

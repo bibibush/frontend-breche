@@ -62,7 +62,7 @@
 .detail_commande .excel_date .commande_number > div:last-child p {
   font-size: 22px;
 }
-.detail_commande .excel_date .commande_number > div:last-child h3 {
+.detail_commande .excel_date .commande_number > div:last-child em {
   font-family: "Noto Serif", serif;
   font-size: 20px;
   margin-left: 55px;
@@ -135,7 +135,7 @@
   font-size: 32px;
   display: flex;
 }
-.detail_commande .excel_date .date .date_commande h3 {
+.detail_commande .excel_date .date .date_commande em {
   margin-right: 295px;
 }
 .detail_commande .excel_date .date .date_commande > button {
@@ -184,7 +184,7 @@
   font-size: 16px;
   margin-bottom: 25px;
 }
-.detail_commande .commande_adresse .adresse h3 {
+.detail_commande .commande_adresse .adresse em {
   font-size: 22px;
 }
 .detail_commande .commande_adresse .entreprise {
@@ -194,7 +194,7 @@
   font-size: 16px;
   margin-bottom: 25px;
 }
-.detail_commande .commande_adresse .entreprise h3 {
+.detail_commande .commande_adresse .entreprise em {
   font-size: 22px;
 }
 .detail_commande .commande_adresse .email {
@@ -204,14 +204,14 @@
   font-size: 16px;
   margin-bottom: 25px;
 }
-.detail_commande .commande_adresse .email h3 {
+.detail_commande .commande_adresse .email em {
   font-size: 22px;
 }
 .detail_commande .commande_adresse .phonenumber p {
   font-size: 16px;
   margin-bottom: 25px;
 }
-.detail_commande .commande_adresse .phonenumber h3 {
+.detail_commande .commande_adresse .phonenumber em {
   font-size: 22px;
 }
 .detail_commande .commande_adresse > button {
@@ -250,7 +250,7 @@
 .detail_commande > button:hover {
   background-color: #731414;
 }
-.detail_commande > h3 {
+.detail_commande > em {
   position: absolute;
   font-size: 1.1em;
   bottom: 42px;
