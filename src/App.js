@@ -13,22 +13,20 @@ import "./styles/Jambon.css";
 import "./styles/NosSelectionDesc.css";
 import "./styles/Terrine.css";
 import "./styles/ContactNous.css";
-import "./styles/Search.css";
-import "./styles/Histoire.css";
-import "./styles/Nosproduits.css";
-import "./styles/CommandeCSE.css";
-import "./styles/HowToOrder.css";
-import "./styles/OrderSuccess.css";
+// import "./styles/Nosproduits.css";
+// import "./styles/CommandeCSE.css";
+// import "./styles/HowToOrder.css";
+// import "./styles/OrderSuccess.css";
 import "./styles/NotreHistoire.css";
-import "./styles/LoginRequired.css";
-import "./styles/MesCommande.css";
-import "./styles/DetailCommande.css";
+// import "./styles/LoginRequired.css";
+// import "./styles/MesCommande.css";
+// import "./styles/DetailCommande.css";
 import "./styles/Logos.css";
 // import "./styles/Offcanvas.css";
-import "./styles/PasCompte.css";
-import "./styles/Calendar.css";
+// import "./styles/PasCompte.css";
+// import "./styles/Calendar.css";
 import "./styles/NotFound.scss";
-import "./styles/UserInfo.scss";
+// import "./styles/UserInfo.scss";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -49,24 +47,23 @@ import Jambon from "./components/Jambon";
 import NosSelectionDesc from "./components/NosSelectionDesc";
 import Terrine from "./components/Terrine";
 import ContactNous from "./components/ContactNous";
-// import Search from "./components/Search";
-import CommandeCSE from "./components/CommandeCSE";
+// import CommandeCSE from "./components/CommandeCSE";
 import NotreHistoire from "./components/NotreHistoire";
-import MesCommande from "./components/MesCommande";
-import LesCommandes from "./components/LesCommandes";
-import DetailCommande from "./components/DetailCommande";
-import ManageCommande from "./components/ManageCommande";
+// import MesCommande from "./components/MesCommande";
+// import LesCommandes from "./components/LesCommandes";
+// import DetailCommande from "./components/DetailCommande";
+// import ManageCommande from "./components/ManageCommande";
 import Logos from "./components/Logos";
 // import Offcanvasss from "./components/Offcanvas";
 
 import axios from "axios";
-import HowToOrder from "./components/HowToOrder";
-import OrderSuccess from "./components/OrderSuccess";
-import LoginRequired from "./components/LoginRequired";
-import PasCompte from "./components/PasCompte";
-import Calendar from "./components/Calendar";
+// import HowToOrder from "./components/HowToOrder";
+// import OrderSuccess from "./components/OrderSuccess";
+// import LoginRequired from "./components/LoginRequired";
+// import PasCompte from "./components/PasCompte";
+// import Calendar from "./components/Calendar";
 import NotFound from "./components/NotFound";
-import UserInfo from "./components/UserInfo";
+// import UserInfo from "./components/UserInfo";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -202,7 +199,7 @@ function App() {
           </AppStateProvider>
         }
       />
-      <Route
+      {/* <Route
         path="/commande-cse"
         element={
           <>
@@ -223,8 +220,8 @@ function App() {
             <Footer />
           </AppStateProvider>
         }
-      />
-      <Route
+      /> */}
+      {/* <Route
         path="/commande-cse/success"
         element={
           <AppStateProvider>
@@ -313,7 +310,7 @@ function App() {
             <Footer />
           </AppStateProvider>
         }
-      />
+      /> */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -56,7 +56,7 @@ export default function UserInfo() {
                   type="text"
                   placeholder="Votre Nom"
                   defaultValue={user.nom}
-                  name="nom"
+                  name="first_name"
                 />
               </Form.Group>
               <Form.Group className="mb-3 prenom">
@@ -65,7 +65,7 @@ export default function UserInfo() {
                   defaultValue={user.prenom}
                   type="text"
                   placeholder="Votre prenom"
-                  name="prenom"
+                  name="last_name"
                 />
               </Form.Group>
             </div>
