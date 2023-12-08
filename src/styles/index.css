@@ -101,6 +101,9 @@ h2 {
   cursor: pointer;
   background-color: #4f4a82;
 }
+.ldBar-label {
+  font-size: 0;
+}
 @media screen and (max-width: 1024px) {
   body {
     margin-top: 14vh;

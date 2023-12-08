@@ -64,13 +64,29 @@ import axios from "axios";
 // import Calendar from "./components/Calendar";
 import NotFound from "./components/NotFound";
 // import UserInfo from "./components/UserInfo";
+import Loading from "./components/Loading";
+import { useEffect, useState } from "react";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 axios.defaults.withCredentials = true;
 
 function App() {
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    axios
+      .get("/api/load/")
+      .then((res) => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+      })
+      .catch((err) => {});
+  }, []);
+
+  return loading ? (
+    <Loading />
+  ) : (
     <Routes>
       <Route
         path="/"
