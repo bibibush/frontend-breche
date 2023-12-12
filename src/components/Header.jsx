@@ -1,26 +1,26 @@
 import { useCallback, useEffect, useState } from "react";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+// import Modal from "react-bootstrap/Modal";
+// import Button from "react-bootstrap/Button";
+// import Form from "react-bootstrap/Form";
 import axios from "axios";
 import logo from "../images/logo-Salaisons-de-la-Brèche-Blanc.png";
 import useGetMe from "../hooks/useGetMe";
 
 export default function Header() {
-  const [show, setShow] = useState(false);
-  const [pwdshow, setPwdshow] = useState(false);
+  // const [show, setShow] = useState(false);
+  // const [pwdshow, setPwdshow] = useState(false);
   const { user, getMe, setUser } = useGetMe();
 
-  const handleClose = () => {
-    setShow(false);
-    setPwdshow(false);
-  };
-  const handleShow = () => {
-    setShow(true);
-  };
-  const pwdhandleShow = () => {
-    setPwdshow(true);
-  };
+  // const handleClose = () => {
+  //   setShow(false);
+  //   setPwdshow(false);
+  // };
+  // const handleShow = () => {
+  //   setShow(true);
+  // };
+  // const pwdhandleShow = () => {
+  //   setPwdshow(true);
+  // };
   const login = useCallback(() => {
     const loginData = new FormData(document.getElementById("login"));
 
@@ -29,13 +29,13 @@ export default function Header() {
       .then((res) => {
         console.log("login res", res);
         setUser(res.data);
-        setShow(false);
+        // setShow(false);
         window.location.href = "/";
       })
       .catch((err) => {
         console.log("login error", err.response);
         alert(err.response.statusText);
-        setShow(false);
+        // setShow(false);
       });
   }, [setUser]);
   const loginEnter = useCallback(
@@ -61,30 +61,30 @@ export default function Header() {
     window.location.href = "/";
   };
 
-  const pwdchange = () => {
-    const pwddata = new FormData(document.getElementById("pwdchange"));
+  // const pwdchange = () => {
+  //   const pwddata = new FormData(document.getElementById("pwdchange"));
 
-    axios
-      .post("/api/pwdchange/", pwddata)
-      .then((res) => {
-        console.log("pwdchange res", res);
-        setPwdshow(false);
-      })
-      .catch((err) => {
-        console.log("pwdchange error", err.response);
-        if (err.response.status === 401) {
-          return alert(
-            "Vous devez mettre mot de passe different que l'ancienne"
-          );
-        }
-        alert("c'est pas bon");
-      });
-  };
-  const enterPwdChange = useCallback((e) => {
-    if (e.key === "Enter") {
-      pwdchange();
-    }
-  }, []);
+  //   axios
+  //     .post("/api/pwdchange/", pwddata)
+  //     .then((res) => {
+  //       console.log("pwdchange res", res);
+  //       setPwdshow(false);
+  //     })
+  //     .catch((err) => {
+  //       console.log("pwdchange error", err.response);
+  //       if (err.response.status === 401) {
+  //         return alert(
+  //           "Vous devez mettre mot de passe different que l'ancienne"
+  //         );
+  //       }
+  //       alert("c'est pas bon");
+  //     });
+  // };
+  // const enterPwdChange = useCallback((e) => {
+  //   if (e.key === "Enter") {
+  //     pwdchange();
+  //   }
+  // }, []);
 
   useEffect(() => {
     getMe();
@@ -116,7 +116,7 @@ export default function Header() {
           <img src={logo} alt="Logo salaisons de la bréche" className="logo" />
         </a>
 
-        <div className="sub-menu">
+        {/* <div className="sub-menu">
           <ul>
             {user.username !== "" ? (
               <>
@@ -255,7 +255,7 @@ export default function Header() {
             <input type="text" id="chercher" />
             <div className="material-symbols-outlined">search</div>
           </a> */}
-        </div>
+        {/* </div> */}
       </div>
       <div className="inner">
         <ul className="main-menu">
@@ -268,32 +268,32 @@ export default function Header() {
                 <ul>
                   <li className="hidden-menu-name">
                     <a href={"/nos-saucissons/artisanale"}>
-                      <p>Gamme artisanale</p>
+                      <p>L'Artisanal</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
                     <a href="/nos-saucissons/traditionnelle">
-                      <p>Gamme traditionnelle</p>
+                      <p>Le Traditionnel</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
                     <a href="/nos-saucissons/cuires">
-                      <p>Gamme saucisson à cuire</p>
+                      <p>Les Saucissons à Cuire</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
                     <a href="/nos-saucissons/spécialité">
-                      <p>Nos spécialités artisanale 200g</p>
+                      <p>Les Spécialités 200g</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
                     <a href="/nos-saucissons/grignotage">
-                      <p>Gamme grignotage</p>
+                      <p>Le Grignotage</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
                     <a href="/nos-saucissons/allégé">
-                      <p>Gamme allégée</p>
+                      <p>L'Allégée</p>
                     </a>
                   </li>
                 </ul>
@@ -302,19 +302,19 @@ export default function Header() {
           </li>
           <li className="NosSelections">
             <a href="/nos-selection">
-              <div className="menu-name">Notre selections</div>
+              <div className="menu-name">Nos selections</div>
             </a>
             <div className="hidden-menu">
               <div className="inner">
                 <ul>
                   <li className="hidden-menu-name">
                     <a href={"/nos-selection/jambon"}>
-                      <p>Gamme jambon</p>
+                      <p>Jambons</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
                     <a href="/nos-selection/terrine">
-                      <p>Gamme terrine</p>
+                      <p>Terrines</p>
                     </a>
                   </li>
                 </ul>

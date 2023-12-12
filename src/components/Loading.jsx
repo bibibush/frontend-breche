@@ -1,23 +1,7 @@
-import { useCallback } from "react";
-// import logo from "../images/logo-Salaisons-de-la-Brèche-Fond-transparent.webp";
 import logo2 from "../images/logo-Salaisons-de-la-Brèche- Fond transparent.png";
+import spinner from "../images/Spinner-1s-200px.gif";
 
 export default function Loading() {
-  const EnergyComponent = useCallback(() => {
-    return (
-      <div
-        data-value="100"
-        data-preset="energy"
-        data-transition-in
-        className="ldBar"
-        style={{
-          width: "30%",
-          height: "70px",
-          margin: "0 auto",
-        }}
-      ></div>
-    );
-  }, []);
   return (
     <section
       className="loading"
@@ -39,7 +23,14 @@ export default function Loading() {
         }}
       />
 
-      <EnergyComponent />
+      <img
+        src={spinner}
+        style={{
+          width: "10%",
+          margin: "0 auto",
+        }}
+        alt="spinner"
+      ></img>
     </section>
   );
 }

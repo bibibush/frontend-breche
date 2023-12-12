@@ -44,7 +44,7 @@ export default function NotreHistore() {
               Spécialisée dans la fabrication de saucissons,
               <br />
               Notre salaison propose une large gamme <br />
-              de produits authentiques issus de recettes traditionnelles.
+              de Saucissons authentiques issus de recettes traditionnelles.
             </h3>
           </div>
         </div>

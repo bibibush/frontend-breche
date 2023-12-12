@@ -3,10 +3,10 @@ import slate from "../images/Slate.png";
 
 export default function Cuire() {
   const items = [
-    "Saucisson à cuire des Monts du Lyonnais",
-    "Saucisson à cuire des Monts du Lyonnais à la Pistache",
-    "Saucisson à cuire des Monts du Lyonnais à la Truffe Française",
-    "Sabodet à cuire des Monts du Lyonnais",
+    "Saucisson à Cuire Nature 400g",
+    "Saucisson à Cuire à la\n Pistache 400g",
+    "Saucisson à Cuire à la\n Truffe Noire Française 400g",
+    "Sabodet à Cuire 600g",
   ];
 
   return (

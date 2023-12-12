@@ -54,6 +54,7 @@ header .up-menu > a {
   width: 8%;
   height: 150%;
   margin-left: 5vw;
+  margin-top: 0.8%;
 }
 header .up-menu img {
   max-width: 100%;
@@ -141,6 +142,7 @@ header .main-menu > li {
 header .main-menu > li:last-child {
   position: relative;
   margin-right: 0;
+  margin-left: 7.5%;
   box-sizing: border-box;
   height: 30px;
   background-color: #839b29;
@@ -247,7 +249,7 @@ header .main-menu li .hidden-menu .hidden-menu-name {
   position: relative;
   max-width: 180px;
   text-align: center;
-  margin-right: 46px;
+  margin-right: 76px;
 }
 header .main-menu li .hidden-menu .hidden-menu-name:last-child {
   margin-right: 0;
@@ -258,11 +260,11 @@ header .main-menu .NosSelections .hidden-menu .hidden-menu-name:last-child {
 header .main-menu li .hidden-menu .hidden-menu-name::before {
   content: "";
   position: absolute;
-  border-radius: 8px;
-  width: 4px;
-  height: 18px;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
   background-color: #839b29;
-  left: -25px;
+  left: -35px;
   top: 0;
   bottom: 0;
   margin: auto 0;
