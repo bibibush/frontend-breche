@@ -67,4 +67,10 @@ Salaisons de la Brèche
 04 77 54 38 55 
 (Icone fax) 04 77 54 39 63
 
+===========================================================
+
+Il faut changer coulour de spinner de loading v
+Il faut penser le bouton pour prochaine gamme
+Il faut travailler le size des ardoises
+
 

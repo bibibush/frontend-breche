@@ -10,16 +10,10 @@ export default function NosSelectionDesc() {
       </div>
       <ButtonGroup size="lg" className="mb-2">
         <Link to="/nos-selection/jambon">
-          <Button>
-            Gamme <br />
-            Jambon
-          </Button>
+          <Button>Jambon</Button>
         </Link>
         <Link to="/nos-selection/terrine">
-          <Button>
-            Gamme <br />
-            Terrines
-          </Button>
+          <Button>Terrines</Button>
         </Link>
       </ButtonGroup>
     </section>

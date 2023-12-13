@@ -1,5 +1,5 @@
 .cuires {
-  height: 120vh;
+  height: 115vh;
   background-image: url("../images/cuire_photp_plus_left.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,24 +29,22 @@
 .cuires button {
   position: absolute;
   bottom: 40vh;
-  left: 35vw;
+  right: 30vw;
   background-color: rgb(151, 45, 45);
-  padding: 25px 20px;
+  padding: 15px 10px;
   border-radius: 12px;
   border: none;
   box-shadow: 1px 1px 3px black;
   transition: 0.4s;
+  color: white;
 }
 .cuires button:hover {
   background-color: rgb(92, 31, 31);
 }
-.cuires a button {
-  color: white;
-}
 .cuires img {
   position: absolute;
-  width: 34%;
-  height: 85%;
+  width: 27%;
+  height: 460px;
   top: 5%;
   right: 2%;
   border-radius: 12px;
@@ -54,15 +52,15 @@
 .cuires .cuires_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 37px;
+  font-size: 28px;
   width: 25%;
-  right: 6%;
-  top: 12%;
+  right: 3.3%;
+  top: 10%;
   font-family: "futuristic";
 }
 .cuires .cuires_items li {
   text-align: center;
-  margin-bottom: 16%;
+  margin-bottom: 14%;
   line-height: 1.4;
   transition: 0.3s;
 }
@@ -71,7 +69,10 @@
 }
 @media screen and (min-width: 1580px) {
   .cuires .cuires_items {
-    font-size: 2.8rem;
+    font-size: 30px;
+  }
+  .cuires img {
+    height: 515px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -87,15 +88,16 @@
     font-size: 1.5rem;
   }
   .cuires button {
-    left: 40vw;
-    bottom: 5vh;
+    bottom: 13vh;
+    font-size: 1.3rem;
+    padding: 20px 15px;
   }
   .cuires img {
-    height: 62%;
+    height: 380px;
   }
   .cuires .cuires_items {
-    font-size: 1.5rem;
-    right: 6%;
+    font-size: 21px;
+    right: 3.5%;
     top: 10%;
   }
 }
@@ -103,7 +105,6 @@
   .cuires {
     height: 70vh;
     background-position: top 30px left 30%;
-
   }
   .cuires .desc {
     top: 70%;
@@ -113,13 +114,12 @@
   .cuires .desc h1 {
     font-size: 1rem;
   }
-  .cuires .desc h2 {
-    font-size: 0.8rem;
-  }
   .cuires button {
-    padding: 15px 20px;
+    padding: 5px 8px;
     font-size: 0.8rem;
-    left: 10vw;
+    line-height: 1.4;
+    width: 40%;
+    right: 2vw;
   }
   .cuires img {
     width: 40%;

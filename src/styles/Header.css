@@ -312,6 +312,12 @@ header .main-menu li .hidden-menu .hidden-menu-name p:hover {
   header .header-contact .material-symbols-outlined {
     font-size: 1rem;
   }
+  header .up-menu > a {
+    width: 16%;
+  }
+  header .up-menu > a img {
+    max-width: 100%;
+  }
   header .up-menu .sub-menu ul {
     font-size: 0.7rem;
   }

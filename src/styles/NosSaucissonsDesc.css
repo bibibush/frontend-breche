@@ -37,7 +37,7 @@
   box-sizing: border-box;
   box-shadow: 1px 1px 8px black;
   width: 30%;
-  top: 35%;
+  top: 65%;
   left: 50%;
   margin-left: calc(30% / -2);
   z-index: 1;
@@ -46,7 +46,7 @@
   position: absolute;
   max-width: 20%;
   left: 60%;
-  top: 35%;
+  top: 65%;
 }
 .nossaucissons-desc .desc {
   position: absolute;
@@ -98,11 +98,22 @@
   .nossaucissons-desc.nossaucissons-mobile {
     background-position: bottom 75px center;
   }
+  .nossaucissons-desc .discover-saucissons {
+    padding: 25px 35px;
+    width: 50%;
+    margin-left: calc(50% / -2);
+  }
+  .nossaucissons-desc > img {
+    position: absolute;
+    max-width: 20%;
+    left: 70%;
+    top: 75%;
+  }
   .nossaucissons-desc .desc {
     top: 10vh;
   }
   .nossaucissons-desc .btn-group .btn {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -112,13 +123,33 @@
   .nossaucissons-desc.nossaucissons-mobile {
     background-position: bottom 105px center;
   }
+  .nossaucissons-desc .discover-saucissons {
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    width: 55%;
+    margin-left: calc(50% / -2);
+  }
+  .nossaucissons-desc > img {
+    position: absolute;
+    max-width: 30%;
+    left: 70%;
+    top: 75%;
+  }
   .nossaucissons-desc .desc h1 {
     font-size: 1.5rem;
   }
   .nossaucissons-desc .desc h2 {
     font-size: 1rem;
   }
+  .nossaucissons-desc .btn-group {
+    width: 90%;
+    left: 50%;
+    margin-left: calc(90% / -2);
+  }
   .nossaucissons-desc .btn-group .btn {
     font-size: 0.4rem;
+  }
+  .nossaucissons-desc .btn-group a {
+    width: 17%;
   }
 }

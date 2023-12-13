@@ -293,7 +293,7 @@ export default function Header() {
                   </li>
                   <li className="hidden-menu-name">
                     <a href="/nos-saucissons/allégé">
-                      <p>L'Allégée</p>
+                      <p>L'Allégé</p>
                     </a>
                   </li>
                 </ul>

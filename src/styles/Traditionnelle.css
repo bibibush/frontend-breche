@@ -1,5 +1,5 @@
 .traditionnelle {
-  height: 120vh;
+  height: 115vh;
   background-image: url("../images/7800\ tra.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -28,24 +28,22 @@
 .traditionnelle button {
   position: absolute;
   bottom: 40vh;
-  left: 35vw;
+  right: 29vw;
   background-color: rgb(151, 45, 45);
-  padding: 25px 20px;
+  padding: 15px 10px;
   border-radius: 12px;
   border: none;
   box-shadow: 1px 1px 3px black;
   transition: 0.4s;
+  color: white;
 }
 .traditionnelle button:hover {
   background-color: rgb(92, 31, 31);
 }
-.traditionnelle a button {
-  color: white;
-}
 .traditionnelle img {
   position: absolute;
-  width: 32%;
-  height: 80%;
+  width: 26%;
+  height: 470px;
   top: 5%;
   right: 2%;
   border-radius: 12px;
@@ -53,9 +51,9 @@
 .traditionnelle .traditionnelle_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 37px;
+  font-size: 26px;
   right: 8%;
-  top: 12%;
+  top: 8%;
   font-family: "futuristic";
 }
 .traditionnelle .traditionnelle_items li {
@@ -69,7 +67,10 @@
 }
 @media screen and (min-width: 1580px) {
   .traditionnelle .traditionnelle_items {
-    font-size: 2.8rem;
+    font-size: 28px;
+  }
+  .traditionnelle img {
+    width: 24%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -78,14 +79,15 @@
     background-position: top -95px right;
   }
   .traditionnelle button {
-    left: 20vw;
-    bottom: 10vh;
+    right: 20vw;
+    bottom: 28vh;
   }
   .traditionnelle img {
-    height: 55%;
+    height: 400px;
+    width: 28%;
   }
   .traditionnelle .traditionnelle_items {
-    font-size: 1.5rem;
+    font-size: 21px;
     right: 6%;
     top: 10%;
   }
@@ -101,13 +103,12 @@
   .traditionnelle .desc h1 {
     font-size: 1.5rem;
   }
-  .traditionnelle .desc h2 {
-    font-size: 1rem;
-  }
   .traditionnelle button {
-    padding: 15px 20px;
+    padding: 5px 8px;
+    width: 40%;
     font-size: 0.8rem;
-    left: 10vw;
+    right: 3.5vw;
+    bottom: 25vh;
   }
   .traditionnelle img {
     width: 40%;

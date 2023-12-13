@@ -1,5 +1,5 @@
 import logo2 from "../images/logo-Salaisons-de-la-Brèche- Fond transparent.png";
-import spinner from "../images/Spinner-1s-200px.gif";
+import spinner from "../images/green spinner.gif";
 
 export default function Loading() {
   return (

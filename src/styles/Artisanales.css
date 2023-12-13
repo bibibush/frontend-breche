@@ -19,33 +19,28 @@
   position: absolute;
   width: 40%;
   text-align: center;
-  top: 15%;
+  top: 10%;
   left: 10%;
-}
-.artisanale .desc h2 {
-  margin-top: 6%;
 }
 .artisanale button {
   position: absolute;
   bottom: 40vh;
-  left: 35vw;
+  right: 32vw;
   background-color: rgb(151, 45, 45);
-  padding: 25px 20px;
+  padding: 15px 10px;
   border-radius: 12px;
   border: none;
   box-shadow: 1px 1px 3px black;
   transition: 0.4s;
+  color: white;
 }
 .artisanale button:hover {
   background-color: rgb(92, 31, 31);
 }
-.artisanale a button {
-  color: white;
-}
 .artisanale img {
   position: absolute;
-  width: 38%;
-  height: 80%;
+  width: 28%;
+  height: 480px;
   top: 5%;
   right: 2%;
   border-radius: 12px;
@@ -53,9 +48,9 @@
 .artisanale ul {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 37px;
+  font-size: 28px;
   right: 6%;
-  top: 16%;
+  top: 10%;
   font-family: "futuristic";
 }
 .artisanale ul li {
@@ -66,28 +61,25 @@
 .artisanale ul li:hover {
   color: rgb(70, 164, 77);
 }
-
 @media screen and (min-width: 1580px) {
   .artisanale ul {
-    font-size: 2.8rem;
+    font-size: 32px;
   }
 }
 @media screen and (max-width: 1024px) {
   .artisanale {
     height: 80vh;
   }
-  .artisanale button {
-    left: 20vw;
-    bottom: 10vh;
-  }
   .artisanale img {
-    width: 40vw;
-    height: 50%;
+    width: 35%;
+    height: 400px;
   }
   .artisanale ul {
-    font-size: 1.5rem;
+    font-size: 21px;
     right: 4%;
-    top: 13%;
+  }
+  .artisanale button {
+    right: 38vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -95,25 +87,23 @@
     height: 60vh;
     background-position: top 50px left -75px;
   }
-  .artisanale .desc {
-    left: 6%;
+  .artisanale img {
+    height: 300px;
+    width: 48%;
   }
   .artisanale .desc h1 {
     font-size: 1.5rem;
   }
-  .artisanale .desc h2 {
-    font-size: 1rem;
+  .artisanale ul {
+    width: 40%;
+    font-size: 16px;
   }
   .artisanale button {
-    padding: 15px 20px;
-    font-size: 0.8rem;
-    left: 10vw;
-  }
-  .artisanale img {
-    width: 45%;
-    height: 220px;
-  }
-  .artisanale ul {
-    font-size: 0.8rem;
+    width: 150px;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    padding: 5px 8px;
+    bottom: 12vh;
+    right: 5vw;
   }
 }

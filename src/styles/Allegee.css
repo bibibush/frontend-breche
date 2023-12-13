@@ -1,5 +1,5 @@
 .allegees {
-  height: 92vh;
+  height: 115vh;
   background-image: url("../images/IMG_sag.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -28,25 +28,23 @@
 }
 .allegees button {
   position: absolute;
-  bottom: 16vh;
-  left: 35vw;
+  bottom: 40vh;
+  right: 30vw;
   background-color: rgb(151, 45, 45);
-  padding: 25px 20px;
+  padding: 15px 10px;
   border-radius: 12px;
   border: none;
   box-shadow: 1px 1px 3px black;
   transition: 0.4s;
+  color: white;
 }
 .allegees button:hover {
   background-color: rgb(92, 31, 31);
 }
-.allegees a button {
-  color: white;
-}
 .allegees img {
   position: absolute;
-  width: 34%;
-  height: 80%;
+  width: 27%;
+  height: 445px;
   top: 5%;
   right: 2%;
   border-radius: 12px;
@@ -54,10 +52,10 @@
 .allegees .allegees_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 37px;
+  font-size: 28px;
   width: 26%;
-  right: 6%;
-  top: 22%;
+  right: 3.3%;
+  top: 15%;
   font-family: "futuristic";
 }
 .allegees .allegees_items li {
@@ -71,7 +69,7 @@
 }
 @media screen and (min-width: 1580px) {
   .allegees .allegees_items {
-    font-size: 2.6rem;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -82,19 +80,16 @@
   .allegees .desc h1 {
     font-size: 2rem;
   }
-  .allegees .desc h2 {
-    font-size: 1.5rem;
-  }
   .allegees button {
-    left: 20vw;
-    bottom: 10vh;
+    bottom: 35vh;
   }
   .allegees img {
-    height: 30vh;
+    height: 330px;
+    width: 29%;
   }
   .allegees .allegees_items {
-    font-size: 1.5rem;
-    right: 6%;
+    font-size: 21px;
+    right: 3.5%;
     top: 10%;
   }
 }
@@ -109,13 +104,13 @@
   .allegees .desc h1 {
     font-size: 1rem;
   }
-  .allegees .desc h2 {
-    font-size: 0.8rem;
-  }
   .allegees button {
-    padding: 15px 20px;
+    padding: 5px 8px;
+    width: 40%;
     font-size: 0.8rem;
-    left: 10vw;
+    line-height: 1.4;
+    right: 2vw;
+    bottom: 27vh;
   }
   .allegees img {
     top: 10%;

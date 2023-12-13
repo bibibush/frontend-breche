@@ -11,10 +11,10 @@ export default function NosSaucissonsDescMobile() {
       </div>
       <ButtonGroup size="lg" className="mb-2">
         <a href="/nos-saucissons/artisanale">
-          <Button>L'Artisanale</Button>
+          <Button>L'Artisanal</Button>
         </a>
         <a href="/nos-saucissons/traditionnelle">
-          <Button>Le Traditionnelle</Button>
+          <Button>Le Traditionnel</Button>
         </a>
         <a href="/nos-saucissons/cuires">
           <Button>Les Saucissons à Cuire</Button>
@@ -26,7 +26,7 @@ export default function NosSaucissonsDescMobile() {
           <Button>Le Grignotage</Button>
         </a>
         <a href="/nos-saucissons/allégé">
-          <Button>L'Allégée</Button>
+          <Button>L'Allégé</Button>
         </a>
       </ButtonGroup>
     </section>

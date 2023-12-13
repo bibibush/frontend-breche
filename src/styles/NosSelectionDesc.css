@@ -31,6 +31,7 @@
   margin-left: calc(30% / -2);
   font-family: "Noto Serif", serif;
   background-color: #f8f9f0;
+  height: 80px;
 }
 .nosselection-desc .btn-group a {
   width: 50%;
@@ -41,6 +42,7 @@
   border-color: #f8f9f0;
   font-size: 20px;
   width: 100%;
+  height: 100%;
 }
 .nosselection-desc .btn-group .btn:hover {
   background-color: #839b29;
@@ -60,15 +62,24 @@
     top: 10vh;
     font-size: 2rem;
   }
+  .nosselection-desc .btn-group {
+    width: 50%;
+    margin-left: calc(50% / -2);
+  }
   .nosselection-desc .btn-group .btn {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 767px) {
   .nosselection-desc .desc h1 {
     font-size: 1.5rem;
   }
+  .nosselection-desc .btn-group {
+    width: 70%;
+    margin-left: calc(70% / -2);
+    height: 40px;
+  }
   .nosselection-desc .btn-group .btn {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 }
