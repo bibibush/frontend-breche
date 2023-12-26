@@ -23,7 +23,7 @@ export default function Jambon() {
         })}
       </ul>
       <Link to="/nos-selection/terrine">
-        <button>Voir le gamme terrine</button>
+        <button>Voir la gamme terrine</button>
       </Link>
     </section>
   );

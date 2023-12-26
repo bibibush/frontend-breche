@@ -52,8 +52,11 @@ export default function Specialite() {
           return <li key={i}>{result}</li>;
         })}
       </ul>
-      <Link to="/nos-saucissons/grignotage">
-        <button>Voir le gamme grignotage</button>
+      <Link className="first_a" to="/nos-saucissons/cuires">
+        <button>Voir la gamme saucisson à cuire</button>
+      </Link>
+      <Link className="last_a" to="/nos-saucissons/grignotage">
+        <button>Voir la gamme grignotage</button>
       </Link>
       <ReactPaginate
         className="pagination"

@@ -26,7 +26,19 @@
 .cuires .desc h1 {
   font-size: 2rem;
 }
-.cuires button {
+.cuires .first_a button {
+  position: absolute;
+  bottom: 37vh;
+  left: 12vw;
+  background-color: rgb(151, 45, 45);
+  padding: 15px 10px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+  transition: 0.4s;
+  color: white;
+}
+.cuires a:last-child button {
   position: absolute;
   bottom: 40vh;
   right: 30vw;

@@ -63,7 +63,9 @@
     background-position: bottom left 40%;
   }
   .present .logo-div {
-    bottom: 5%;
+    right: 2vw;
+    bottom: 1%;
+    width: 30%;
   }
   .present .present-desc {
     bottom: 5%;

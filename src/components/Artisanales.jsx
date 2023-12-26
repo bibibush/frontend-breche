@@ -17,8 +17,11 @@ export default function Artisanales() {
         <li>Saucisson Artisanal 250g</li>
       </ul>
 
+      <Link className="first_a" to={"/nos-saucissons/allégé"}>
+        <button>Voir la gamme allégée</button>
+      </Link>
       <Link to="/nos-saucissons/traditionnelle">
-        <button>Voir le gamme traditionnelle</button>
+        <button>Voir la gamme traditionnelle</button>
       </Link>
     </section>
   );

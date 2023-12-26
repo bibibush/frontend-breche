@@ -27,7 +27,7 @@
 .grignotage .desc h2 {
   margin-top: 6%;
 }
-.grignotage button {
+.grignotage .first_a button {
   position: absolute;
   bottom: 20vh;
   right: 30vw;
@@ -37,12 +37,22 @@
   border: none;
   box-shadow: 1px 1px 3px black;
   transition: 0.4s;
+  color: white;
+}
+.grignotage a:last-child button {
+  position: absolute;
+  bottom: 20vh;
+  right: 5vw;
+  background-color: rgb(151, 45, 45);
+  padding: 25px 20px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+  transition: 0.4s;
+  color: white;
 }
 .grignotage button:hover {
   background-color: rgb(92, 31, 31);
-}
-.grignotage a button {
-  color: white;
 }
 .grignotage img {
   position: absolute;
@@ -78,7 +88,7 @@
 @media screen and (max-width: 1024px) {
   .grignotage {
     height: 70vh;
-    background-position: top 85px left 20% ;
+    background-position: top 85px left 20%;
   }
   .grignotage button {
     left: 20vw;

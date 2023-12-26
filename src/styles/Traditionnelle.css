@@ -25,7 +25,19 @@
 .traditionnelle .desc h2 {
   margin-top: 6%;
 }
-.traditionnelle button {
+.traditionnelle .first_a button {
+  position: absolute;
+  bottom: 40vh;
+  left: 12vw;
+  background-color: rgb(151, 45, 45);
+  padding: 15px 10px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+  transition: 0.4s;
+  color: white;
+}
+.traditionnelle a:last-child button {
   position: absolute;
   bottom: 40vh;
   right: 29vw;

@@ -21,8 +21,11 @@ export default function Cuire() {
           return <li key={i}>{item}</li>;
         })}
       </ul>
+      <Link className="first_a" to="/nos-saucissons/traditionnelle">
+        <button>Voir la gamme traditionnelle</button>
+      </Link>
       <Link to="/nos-saucissons/spécialité">
-        <button>Voir le gamme spécialité</button>
+        <button>Voir la gamme spécialité</button>
       </Link>
     </section>
   );

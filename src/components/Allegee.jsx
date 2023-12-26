@@ -19,8 +19,11 @@ export default function Allegee() {
           return <li key={i}>{item}</li>;
         })}
       </ul>
+      <Link className="first_a" to="/nos-saucissons/grignotage">
+        <button>Voir la gamme grignotage</button>
+      </Link>
       <Link to="/nos-saucissons/artisanale">
-        <button>Voir le gamme artisanale</button>
+        <button>Voir la gamme artisanale</button>
       </Link>
     </section>
   );

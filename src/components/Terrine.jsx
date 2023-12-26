@@ -13,7 +13,7 @@ export default function Grignotage() {
         })}
       </ul>
       <Link to="/nos-selection/jambon">
-        <button>Voir le gamme jambon</button>
+        <button>Voir la gamme jambon</button>
       </Link>
     </section>
   );

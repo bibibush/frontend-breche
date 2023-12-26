@@ -23,8 +23,11 @@ export default function Traditionnelle() {
           return <li key={i}>{item}</li>;
         })}
       </ul>
+      <Link className="first_a" to="/nos-saucissons/artisanale">
+        <button>Voir la gamme artisanale</button>
+      </Link>
       <Link to="/nos-saucissons/cuires">
-        <button>Voir le gamme saucisson cuire</button>
+        <button>Voir la gamme saucisson à cuire</button>
       </Link>
     </section>
   );

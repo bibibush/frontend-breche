@@ -16,6 +16,9 @@ export default function Grignotage() {
           return <li key={i}>{item}</li>;
         })}
       </ul>
+      <Link className="first_a" to="/nos-saucissons/spécialité">
+        <button>Voir la gamme spécialité</button>
+      </Link>
       <Link to="/nos-saucissons/allégé">
         <button>Voir la gamme allégée</button>
       </Link>

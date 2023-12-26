@@ -12,7 +12,7 @@ import "./styles/Allegee.css";
 import "./styles/Jambon.css";
 import "./styles/NosSelectionDesc.css";
 import "./styles/Terrine.css";
-import "./styles/ContactNous.css";
+import "./styles/ContactNous.scss";
 // import "./styles/Nosproduits.css";
 // import "./styles/CommandeCSE.css";
 // import "./styles/HowToOrder.css";

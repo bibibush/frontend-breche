@@ -54,10 +54,13 @@
 }
 @media screen and (max-width: 1024px) {
   .logos {
-    height: 30vh;
+    height: 28vh;
+  }
+  .logos .logos_flex {
+    height: 40%;
   }
   .logos .logos_flex .logos_flex_rond {
-    height: 70%;
+    height: 100%;
   }
   .logos .logos_desc p {
     font-size: 1.5rem;
@@ -65,10 +68,10 @@
 }
 @media screen and (max-width: 767px) {
   .logos {
-    height: 23vh;
+    height: 20vh;
   }
   .logos .logos_flex .logos_flex_rond {
-    height: 70%;
+    height: 100%;
   }
   .logos .logos_desc p {
     font-size: 0.75rem;
