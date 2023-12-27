@@ -6,7 +6,7 @@ export default function Artisanales() {
     <section className="artisanale">
       <div className="artisanale-cover"></div>
       <div className="desc">
-        <h1>Gamme artisanale</h1>
+        <h1>Gamme Artisanale</h1>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="artisanale_items">
@@ -18,10 +18,10 @@ export default function Artisanales() {
       </ul>
 
       <Link className="first_a" to={"/nos-saucissons/allégé"}>
-        <button>Voir la gamme allégée</button>
+        <button>Voir la gamme Allégée</button>
       </Link>
       <Link to="/nos-saucissons/traditionnelle">
-        <button>Voir la gamme traditionnelle</button>
+        <button>Voir la gamme Traditionnelle</button>
       </Link>
     </section>
   );

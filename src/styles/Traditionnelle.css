@@ -63,23 +63,19 @@
 .traditionnelle .traditionnelle_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 26px;
-  right: 8%;
-  top: 8%;
-  font-family: "futuristic";
+  font-size: 22px;
+  right: 5%;
+  top: 10%;
+  font-family: "Sofia", cursive;
 }
 .traditionnelle .traditionnelle_items li {
   text-align: center;
-  margin-bottom: 20%;
+  margin-bottom: 15%;
   line-height: 1.2;
-  transition: 0.3s;
-}
-.traditionnelle .traditionnelle_items li:hover {
-  color: rgb(70, 164, 77);
 }
 @media screen and (min-width: 1580px) {
   .traditionnelle .traditionnelle_items {
-    font-size: 28px;
+    font-size: 23px;
   }
   .traditionnelle img {
     width: 24%;
@@ -90,17 +86,20 @@
     height: 75vh;
     background-position: top -95px right;
   }
-  .traditionnelle button {
+  .traditionnelle .first_a button {
+    display: none;
+  }
+  .traditionnelle a:last-child button {
     right: 20vw;
     bottom: 28vh;
   }
   .traditionnelle img {
     height: 400px;
-    width: 28%;
+    width: 31%;
   }
   .traditionnelle .traditionnelle_items {
-    font-size: 21px;
-    right: 6%;
+    font-size: 16px;
+    right: 4%;
     top: 10%;
   }
 }
@@ -115,7 +114,7 @@
   .traditionnelle .desc h1 {
     font-size: 1.5rem;
   }
-  .traditionnelle button {
+  .traditionnelle a:last-child button {
     padding: 5px 8px;
     width: 40%;
     font-size: 0.8rem;
@@ -127,7 +126,8 @@
     height: 270px;
   }
   .traditionnelle .traditionnelle_items {
-    font-size: 0.8rem;
-    right: 7%;
+    font-size: 12px;
+    right: 2.5%;
+    width: 40%;
   }
 }

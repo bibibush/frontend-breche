@@ -1,19 +1,26 @@
 .contact-nous {
   background-color: white;
-  padding: {
-    top: 1.5%;
-    left: 15%;
-    right: 15%;
-    bottom: 10%;
+  padding-top: 1px;
+  h1 {
+    text-align: center;
+    margin: 2% 0;
+  }
+  img {
+    position: absolute;
+    max-width: 40%;
+    border-radius: 12px;
+    left: 5%;
   }
   form {
     background-color: rgb(226, 232, 226);
-    padding: 3% 15% 1%;
+    width: 40%;
+    padding: 3% 5% 1%;
     border-radius: 8px;
     max-width: 1150px;
-    margin: 0 auto;
-    .nom-prenom-number {
-      display: flex;
+    margin-left: 60%;
+    .nom-prenom-number-email {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   > button {
@@ -22,10 +29,10 @@
     border: none;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     background-color: rgb(91, 160, 224);
-    width: 60%;
+    width: 30%;
     padding: 15px 0;
     border-radius: 8px;
-    margin: 1% auto;
+    margin: 1% 65% 5%;
     &:hover {
       background-color: rgb(87, 137, 184);
     }

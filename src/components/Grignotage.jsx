@@ -17,10 +17,10 @@ export default function Grignotage() {
         })}
       </ul>
       <Link className="first_a" to="/nos-saucissons/spécialité">
-        <button>Voir la gamme spécialité</button>
+        <button>Voir la gamme Spécialités</button>
       </Link>
       <Link to="/nos-saucissons/allégé">
-        <button>Voir la gamme allégée</button>
+        <button>Voir la gamme Allégée</button>
       </Link>
     </section>
   );

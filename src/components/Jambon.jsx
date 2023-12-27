@@ -14,7 +14,7 @@ export default function Jambon() {
     <section className="jambon">
       <div className="jambon-cover"></div>
       <div className="desc">
-        <h1>Gamme Jambon</h1>
+        <h1>Gamme Jambons</h1>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="jambon_items">
@@ -23,7 +23,7 @@ export default function Jambon() {
         })}
       </ul>
       <Link to="/nos-selection/terrine">
-        <button>Voir la gamme terrine</button>
+        <button>Voir la gamme Terrines</button>
       </Link>
     </section>
   );

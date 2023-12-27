@@ -15,7 +15,7 @@ export default function Traditionnelle() {
     <section className="traditionnelle">
       <div className="traditionnelle-cover"></div>
       <div className="desc">
-        <h1>Gamme traditionnelle</h1>
+        <h1>Gamme Traditionnelle</h1>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="traditionnelle_items">
@@ -24,10 +24,10 @@ export default function Traditionnelle() {
         })}
       </ul>
       <Link className="first_a" to="/nos-saucissons/artisanale">
-        <button>Voir la gamme artisanale</button>
+        <button>Voir la gamme Artisanale</button>
       </Link>
       <Link to="/nos-saucissons/cuires">
-        <button>Voir la gamme saucisson à cuire</button>
+        <button>Voir la gamme Saucissons à Cuire</button>
       </Link>
     </section>
   );

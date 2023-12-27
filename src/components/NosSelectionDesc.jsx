@@ -10,7 +10,7 @@ export default function NosSelectionDesc() {
       </div>
       <ButtonGroup size="lg" className="mb-2">
         <Link to="/nos-selection/jambon">
-          <Button>Jambon</Button>
+          <Button>Jambons</Button>
         </Link>
         <Link to="/nos-selection/terrine">
           <Button>Terrines</Button>

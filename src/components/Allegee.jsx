@@ -11,7 +11,7 @@ export default function Allegee() {
     <section className="allegees">
       <div className="allegees-cover"></div>
       <div className="desc">
-        <h1>Gamme de saucisson allégé</h1>
+        <h1>Gamme Allégée</h1>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="allegees_items">
@@ -20,10 +20,10 @@ export default function Allegee() {
         })}
       </ul>
       <Link className="first_a" to="/nos-saucissons/grignotage">
-        <button>Voir la gamme grignotage</button>
+        <button>Voir la gamme Grignotage</button>
       </Link>
       <Link to="/nos-saucissons/artisanale">
-        <button>Voir la gamme artisanale</button>
+        <button>Voir la gamme Artisanale</button>
       </Link>
     </section>
   );

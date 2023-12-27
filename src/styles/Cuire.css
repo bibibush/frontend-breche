@@ -64,20 +64,16 @@
 .cuires .cuires_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 28px;
+  font-size: 22px;
   width: 25%;
   right: 3.3%;
   top: 10%;
-  font-family: "futuristic";
+  font-family: "Sofia", cursive;
 }
 .cuires .cuires_items li {
   text-align: center;
   margin-bottom: 14%;
   line-height: 1.4;
-  transition: 0.3s;
-}
-.cuires .cuires_items li:hover {
-  color: rgb(70, 164, 77);
 }
 @media screen and (min-width: 1580px) {
   .cuires .cuires_items {
@@ -99,7 +95,10 @@
   .cuires .desc h1 {
     font-size: 1.5rem;
   }
-  .cuires button {
+  .cuires .first_a button {
+    display: none;
+  }
+  .cuires a:last-child button {
     bottom: 13vh;
     font-size: 1.3rem;
     padding: 20px 15px;
@@ -108,7 +107,7 @@
     height: 380px;
   }
   .cuires .cuires_items {
-    font-size: 21px;
+    font-size: 16px;
     right: 3.5%;
     top: 10%;
   }
@@ -126,7 +125,7 @@
   .cuires .desc h1 {
     font-size: 1rem;
   }
-  .cuires button {
+  .cuires a:last-child button {
     padding: 5px 8px;
     font-size: 0.8rem;
     line-height: 1.4;
@@ -134,14 +133,15 @@
     right: 2vw;
   }
   .cuires img {
-    width: 40%;
+    width: 50%;
     height: 340px;
   }
   .cuires .cuires_items {
-    font-size: 0.9rem;
+    font-size: 14px;
     right: 8%;
+    width: 35%;
   }
   .cuires .cuires_items li {
-    margin-bottom: 30%;
+    margin-bottom: 22%;
   }
 }

@@ -44,7 +44,7 @@ export default function Specialite() {
     <section className="specialite">
       <div className="specialite-cover"></div>
       <div className="desc">
-        <h1>Gamme spécialité</h1>
+        <h1>Gamme Spécialités 200g</h1>
       </div>
       <img src={slate} alt="Carte menu ardoise" />
       <ul className="specialite_items">
@@ -53,10 +53,10 @@ export default function Specialite() {
         })}
       </ul>
       <Link className="first_a" to="/nos-saucissons/cuires">
-        <button>Voir la gamme saucisson à cuire</button>
+        <button>Voir la gamme Saucissons à Cuire</button>
       </Link>
       <Link className="last_a" to="/nos-saucissons/grignotage">
-        <button>Voir la gamme grignotage</button>
+        <button>Voir la gamme Grignotage</button>
       </Link>
       <ReactPaginate
         className="pagination"

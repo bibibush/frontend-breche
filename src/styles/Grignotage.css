@@ -65,20 +65,16 @@
 .grignotage .grignotage_items {
   position: absolute;
   color: rgb(236, 236, 236);
-  font-size: 42px;
+  font-size: 38px;
   width: 25%;
   right: 6%;
   top: 22%;
-  font-family: "futuristic";
+  font-family: "Sofia", cursive;
 }
 .grignotage .grignotage_items li {
   text-align: center;
   margin-bottom: 18%;
   line-height: 1.4;
-  transition: 0.3s;
-}
-.grignotage .grignotage_items li:hover {
-  color: rgb(70, 164, 77);
 }
 @media screen and (min-width: 1580px) {
   .grignotage .grignotage_items {
@@ -90,7 +86,10 @@
     height: 70vh;
     background-position: top 85px left 20%;
   }
-  .grignotage button {
+  .grignotage .first_a button {
+    display: none;
+  }
+  .grignotage a:last-child button {
     left: 20vw;
     bottom: 7vh;
   }
@@ -115,7 +114,7 @@
   .grignotage .desc h1 {
     font-size: 1rem;
   }
-  .grignotage button {
+  .grignotage a:last-child button {
     padding: 15px 20px;
     font-size: 0.8rem;
     left: 10vw;
