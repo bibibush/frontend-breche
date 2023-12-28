@@ -23,25 +23,33 @@ export default function ContactNous() {
       <h1>Nous-Contactez</h1>
       <img src={arti} alt="saucisson artisanale" />
       <Form id="contact_form">
+        <p>* est obligatoire</p>
         <div className="nom-prenom-number-email">
           <Form.Group className="mb-3 me-3 nom">
-            <Form.Control name="nom" type="text" placeholder="Nom" />
+            <Form.Control name="nom" type="text" placeholder="* Nom" required />
           </Form.Group>
           <Form.Group className="mb-3 prenom">
-            <Form.Control name="prenom" type="text" placeholder="Prenom" />
+            <Form.Control
+              name="prenom"
+              type="text"
+              placeholder="* Prenom"
+              required
+            />
           </Form.Group>
           <Form.Group className="mb-3 me-3 number">
             <Form.Control
               name="number"
               type="text"
-              placeholder="Numero Téléphone"
+              placeholder="* Numero Téléphone"
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3 email">
             <Form.Control
               name="email"
               type="email"
-              placeholder="Adresse Email"
+              placeholder="* Adresse Email"
+              required
             />
           </Form.Group>
         </div>
@@ -53,7 +61,8 @@ export default function ContactNous() {
             name="question"
             as="textarea"
             rows={5}
-            placeholder="Votre question"
+            placeholder="* Votre question"
+            required
           />
         </Form.Group>
       </Form>

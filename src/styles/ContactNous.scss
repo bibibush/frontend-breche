@@ -1,6 +1,7 @@
 .contact-nous {
   background-color: white;
   padding-top: 1px;
+  position: relative;
   h1 {
     text-align: center;
     margin: 2% 0;
@@ -12,9 +13,13 @@
     left: 5%;
   }
   form {
+    p {
+      text-align: center;
+      margin-bottom: 4%;
+    }
     background-color: rgb(226, 232, 226);
     width: 40%;
-    padding: 3% 5% 1%;
+    padding: 1% 5%;
     border-radius: 8px;
     max-width: 1150px;
     margin-left: 60%;
@@ -35,6 +40,48 @@
     margin: 1% 65% 5%;
     &:hover {
       background-color: rgb(87, 137, 184);
+    }
+  }
+}
+@media screen and (min-width: 1580px) {
+  .contact-nous {
+    img {
+      max-width: 35%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contact-nous {
+    height: 700px;
+    h1 {
+      margin: 5% 0;
+    }
+    img {
+      max-width: 45%;
+    }
+    form {
+      width: 48%;
+      margin-left: 52%;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-nous {
+    height: 650px;
+    h1 {
+      font-size: 2rem;
+      margin: 10% 0;
+    }
+    img {
+      display: none;
+    }
+    form {
+      width: 90%;
+      margin: 0 auto;
+    }
+    > button {
+      margin: 10% auto;
+      width: 40%;
     }
   }
 }
