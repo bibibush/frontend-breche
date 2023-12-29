@@ -1,0 +1,83 @@
+@mixin marbot() {
+  h2 {
+    margin-bottom: 1.5%;
+  }
+}
+@mixin wid80() {
+  p {
+    width: 80%;
+  }
+}
+.legale {
+  padding: 2% 3%;
+  line-height: 1.4;
+  font-size: 1.5rem;
+  background-color: white;
+  h1 {
+    margin-bottom: 5%;
+  }
+  .salaison_info {
+    margin: 2% 0;
+    width: 50%;
+    border: {
+      top: 2px solid black;
+      bottom: 2px solid black;
+    }
+    padding: 2% 0;
+    em {
+      font-size: 1.7rem;
+    }
+  }
+  > em {
+    font-size: 1.8rem;
+  }
+  .info_legales {
+    margin-top: 4%;
+    @include marbot();
+    @include wid80();
+  }
+  .o2switch {
+    margin-top: 4%;
+    @include marbot();
+  }
+  .cookies {
+    margin-top: 4%;
+    @include marbot();
+    @include wid80();
+  }
+  .legale_contact {
+    margin-top: 4%;
+    @include marbot();
+    p {
+      em {
+        font-weight: 700;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .legale {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .legale {
+    font-size: 1rem;
+    padding: 5%;
+    h1 {
+      font-size: 2rem;
+    }
+    .salaison_info {
+      width: 85%;
+      em {
+        font-size: 1.3rem;
+      }
+    }
+    > em {
+      font-size: 1.2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}

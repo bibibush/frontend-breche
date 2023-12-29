@@ -1,7 +1,7 @@
 import "./styles/Present.css";
 import "./styles/Header.css";
 // import "./styles/Promotion.css";
-import "./styles/Footer.css";
+import "./styles/Footer.scss";
 import "./styles/NosSaucissonsDesc.css";
 import "./styles/Artisanales.css";
 import "./styles/Traditionnelle.css";
@@ -27,6 +27,7 @@ import "./styles/Logos.css";
 // import "./styles/Calendar.css";
 import "./styles/NotFound.scss";
 // import "./styles/UserInfo.scss";
+import "./styles/MentionLegale.scss";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -55,6 +56,7 @@ import NotreHistoire from "./components/NotreHistoire";
 // import ManageCommande from "./components/ManageCommande";
 import Logos from "./components/Logos";
 // import Offcanvasss from "./components/Offcanvas";
+import MentionLegale from "./components/MentionLegale";
 
 import axios from "axios";
 // import HowToOrder from "./components/HowToOrder";
@@ -211,6 +213,16 @@ function App() {
           <AppStateProvider>
             <Header />
             <ContactNous />
+            <Footer />
+          </AppStateProvider>
+        }
+      />
+      <Route
+        path="/mentions-legales"
+        element={
+          <AppStateProvider>
+            <Header />
+            <MentionLegale />
             <Footer />
           </AppStateProvider>
         }
