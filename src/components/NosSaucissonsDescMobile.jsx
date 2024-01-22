@@ -7,7 +7,6 @@ export default function NosSaucissonsDescMobile() {
 
       <div className="desc">
         <h1>Nos Saucissons</h1>
-        <h2>desc</h2>
       </div>
       <ButtonGroup size="lg" className="mb-2">
         <a href="/nos-saucissons/artisanale">

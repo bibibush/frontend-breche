@@ -5,8 +5,8 @@ export default function Cuire() {
   const items = [
     "Saucisson à Cuire Nature 400g",
     "Saucisson à Cuire à la\n Pistache 400g",
-    "Saucisson à Cuire à la\n Truffe Noire Française 400g",
     "Sabodet à Cuire 600g",
+    "Saucisson à Cuire à la\n Truffe Noire Française 400g \n(Décembre uniquement)",
   ];
 
   return (

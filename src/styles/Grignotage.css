@@ -30,7 +30,7 @@
 .grignotage .first_a button {
   position: absolute;
   bottom: 20vh;
-  right: 30vw;
+  left: 5vw;
   background-color: rgb(151, 45, 45);
   padding: 25px 20px;
   border-radius: 12px;

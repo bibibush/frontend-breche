@@ -72,12 +72,12 @@
 }
 .cuires .cuires_items li {
   text-align: center;
-  margin-bottom: 14%;
-  line-height: 1.4;
+  margin-bottom: 12%;
+  line-height: 1.6;
 }
 @media screen and (min-width: 1580px) {
   .cuires .cuires_items {
-    font-size: 30px;
+    font-size: 26px;
   }
   .cuires img {
     height: 515px;
@@ -131,10 +131,11 @@
     line-height: 1.4;
     width: 40%;
     right: 2vw;
+    bottom: 1vh;
   }
   .cuires img {
     width: 50%;
-    height: 340px;
+    height: 420px;
   }
   .cuires .cuires_items {
     font-size: 14px;

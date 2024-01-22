@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="foot_info">
         <p>
           <span className="material-symbols-outlined">location_on</span> &nbsp;
-          ZI de Montalègre Chazelles sur Lyon FRANCE 42140
+          7 Rue Claude Brosse 42140 CHAZELLES-SUR-LYON
         </p>
         <p>
           <span className="material-symbols-outlined">call</span> &nbsp; 04 77
@@ -24,9 +24,9 @@ export default function Footer() {
           contact@salaisonsdelabreche.com
         </p>
       </div>
+      <img src={logo} alt="logo salaisonsdelabreche" />
       <div className="copyright">
-        <img src={logo} alt="logo salaisonsdelabreche" />
-        <p>&copy; {year} Salaisons de la brèche</p>
+        <p>&copy; {year} Salaisons de la Brèche</p>
       </div>
     </footer>
   );

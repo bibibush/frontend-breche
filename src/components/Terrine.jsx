@@ -12,7 +12,7 @@ export default function Grignotage() {
           return <li key={i}>{item}</li>;
         })}
       </ul>
-      <Link to="/nos-selection/jambon">
+      <Link to="/nos-selection/jambons">
         <button>Voir la gamme Jambons</button>
       </Link>
     </section>

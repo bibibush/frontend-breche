@@ -1,18 +1,19 @@
 export default function MentionLegale() {
   return (
     <section className="legale">
-      <h1>Mention Légales</h1>
+      <h1>Mentions Légales</h1>
       <p>Le site internet www.salaisonsdelabreche.com est la propriété de :</p>
-      <p>SARL Salaisons de la Brèche</p>
+      <p>SAS Salaisons de la Brèche</p>
       <div className="salaison_info">
         <em>Salaisons de la Brèche</em>
-        <p>S.A.R.L au Capital de 600 000 Euros ZI de Montalègre- B.P. 27</p>
+        <p>SAS au Capital de 600 000 Euros 7 Rue Claude Brosse</p>
         <p>42140 Chazelles sur Lyon - France Tél : 04 77 54 38 55</p>
-        <p>salaisons.de.la.breche@wanadoo.fr N° SIRET 382 791 069 00042</p>
+        <p>contact@salaisonsdelabreche.com N° SIRET 382 791 069 00042</p>
+        <p>RCS: 382791069 - Saint Etienne</p>
+        <p>N° TVA: FR16 382791069</p>
       </div>
-      <em>Directeur de Publication : Paul PROST</em>
       <div className="info_legales">
-        <h2>INFORMATION LÉGALES :</h2>
+        <h2>INFORMATIONS LÉGALES :</h2>
         <p>
           Ledit site internet est protégé au titre des droits de propriété
           intellectuelle.

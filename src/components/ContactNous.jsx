@@ -1,29 +1,32 @@
 import axios from "axios";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import Form from "react-bootstrap/Form";
 import arti from "../images/3400 arti.jpg";
 
 export default function ContactNous() {
+  const [value, setValue] = useState("");
   const submit = useCallback(() => {
     const formdata = new FormData(document.getElementById("contact_form"));
 
     axios
       .post("/user/contact/", formdata)
       .then((res) => {
-        alert("Votre demande est bien envoyé");
+        alert("Votre demande a bien été envoyée.");
         window.location.href = "/";
       })
       .catch((err) => {
-        alert("Votre demande n'est pas bien passé. Appelez-nous !");
+        alert(
+          "La demande n’a pas pu être envoyée. \nMerci de renseigner correctement tous les champs obligatoires (*)."
+        );
       });
   }, []);
 
   return (
     <section className="contact-nous">
-      <h1>Nous-Contactez</h1>
+      <h1>CONTACTEZ-NOUS</h1>
       <img src={arti} alt="saucisson artisanale" />
       <Form id="contact_form">
-        <p>* est obligatoire</p>
+        <p>(*) Champs Obligatoires</p>
         <div className="nom-prenom-number-email">
           <Form.Group className="mb-3 me-3 nom">
             <Form.Control name="nom" type="text" placeholder="* Nom" required />
@@ -40,7 +43,7 @@ export default function ContactNous() {
             <Form.Control
               name="number"
               type="text"
-              placeholder="* Numero Téléphone"
+              placeholder="* Numero de Téléphone"
               required
             />
           </Form.Group>
@@ -54,14 +57,22 @@ export default function ContactNous() {
           </Form.Group>
         </div>
         <Form.Group className="mb-3 sujet">
-          <Form.Control name="sujet" type="text" placeholder="Objet" />
+          <Form.Control
+            value={value}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+            name="sujet"
+            type="text"
+            placeholder="Objet"
+          />
         </Form.Group>
         <Form.Group className="mb-3 question">
           <Form.Control
             name="question"
             as="textarea"
             rows={5}
-            placeholder="* Votre question"
+            placeholder="* Votre demande"
             required
           />
         </Form.Group>

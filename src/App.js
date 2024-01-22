@@ -178,7 +178,7 @@ function App() {
         }
       />
       <Route
-        path="/nos-selection"
+        path="/nos-selections"
         element={
           <AppStateProvider>
             <Header />
@@ -188,7 +188,7 @@ function App() {
         }
       />
       <Route
-        path="/nos-selection/jambon"
+        path="/nos-selection/jambons"
         element={
           <AppStateProvider>
             <Header />
@@ -198,7 +198,7 @@ function App() {
         }
       />
       <Route
-        path="/nos-selection/terrine"
+        path="/nos-selection/terrines"
         element={
           <AppStateProvider>
             <Header />

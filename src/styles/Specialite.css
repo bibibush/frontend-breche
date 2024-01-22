@@ -71,9 +71,6 @@
   margin-bottom: 14%;
   line-height: 1.2;
 }
-.specialite .specialite_items li:hover {
-  color: rgb(70, 164, 77);
-}
 .specialite .pagination {
   position: absolute;
   right: 8%;
@@ -97,7 +94,7 @@
 }
 @media screen and (min-width: 1580px) {
   .specialite .specialite_items {
-    font-size: 30px;
+    font-size: 23px;
   }
   .specialite .pagination {
     font-size: 1.5rem;
@@ -107,20 +104,28 @@
     height: 525px;
   }
 }
+@media screen and (max-width: 1400px) {
+  .specialite .pagination {
+    bottom: 32%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .specialite {
     height: 75vh;
+  }
+  .specialite .desc h1 {
+    font-size: 46px;
   }
   .specialite .first_a button {
     display: none;
   }
   .specialite .last_a button {
-    bottom: 33vh;
-    right: 30vw;
+    bottom: 29vh;
+    right: 35vw;
     padding: 15px 20px;
   }
   .specialite img {
-    height: 45%;
+    height: 55%;
     width: 30%;
   }
   .specialite .specialite_items {
@@ -134,7 +139,7 @@
   }
   .specialite .pagination {
     right: 6%;
-    bottom: 38vh;
+    bottom: 32vh;
     font-size: 1.2rem;
   }
 }
@@ -144,10 +149,10 @@
     background-position: top 15px right;
   }
   .specialite .desc {
-    left: 6%;
+    left: 3%;
   }
   .specialite .desc h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .specialite .last_a button {
     padding: 5px 8px;
@@ -155,24 +160,24 @@
     width: 40%;
     line-height: 1.4;
     right: 2vw;
-    bottom: 22vh;
+    bottom: 10vh;
   }
   .specialite img {
-    width: 40%;
-    height: 38vh;
+    width: 45%;
+    height: 48vh;
   }
   .specialite .specialite_items {
     font-size: 14px;
-    right: 6%;
-    width: 30%;
+    right: 7%;
+    width: 35%;
   }
   .specialite .specialite_items li {
     margin-bottom: 15%;
     line-height: 1.4;
   }
   .specialite .pagination {
-    right: 7%;
-    bottom: 30vh;
+    right: 10%;
+    bottom: 20vh;
     font-size: 0.8rem;
   }
   .specialite .pagination li {

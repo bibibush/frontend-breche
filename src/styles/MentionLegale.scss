@@ -1,35 +1,42 @@
 @mixin marbot() {
   h2 {
     margin-bottom: 1.5%;
+    color: #99d188;
   }
 }
 @mixin wid80() {
   p {
     width: 80%;
+    margin: 0 auto;
   }
 }
 .legale {
   padding: 2% 3%;
+  text-align: center;
   line-height: 1.4;
   font-size: 1.5rem;
-  background-color: white;
+  background-color: #333;
+  color: white;
   h1 {
     margin-bottom: 5%;
+    color: #99d188;
   }
   .salaison_info {
-    margin: 2% 0;
+    margin: 2% auto;
     width: 50%;
     border: {
-      top: 2px solid black;
-      bottom: 2px solid black;
+      top: 2px solid white;
+      bottom: 2px solid white;
     }
     padding: 2% 0;
     em {
       font-size: 1.7rem;
+      color: #99d188;
     }
   }
   > em {
     font-size: 1.8rem;
+    color: #99d188;
   }
   .info_legales {
     margin-top: 4%;

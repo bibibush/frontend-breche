@@ -1,26 +1,26 @@
 import { useCallback, useEffect, useState } from "react";
-// import Modal from "react-bootstrap/Modal";
-// import Button from "react-bootstrap/Button";
-// import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 import axios from "axios";
 import logo from "../images/logo-Salaisons-de-la-Brèche-Blanc.png";
 import useGetMe from "../hooks/useGetMe";
 
 export default function Header() {
-  // const [show, setShow] = useState(false);
-  // const [pwdshow, setPwdshow] = useState(false);
+  const [show, setShow] = useState(false);
+  const [pwdshow, setPwdshow] = useState(false);
   const { user, getMe, setUser } = useGetMe();
 
-  // const handleClose = () => {
-  //   setShow(false);
-  //   setPwdshow(false);
-  // };
-  // const handleShow = () => {
-  //   setShow(true);
-  // };
-  // const pwdhandleShow = () => {
-  //   setPwdshow(true);
-  // };
+  const handleClose = () => {
+    setShow(false);
+    setPwdshow(false);
+  };
+  const handleShow = () => {
+    setShow(true);
+  };
+  const pwdhandleShow = () => {
+    setPwdshow(true);
+  };
   const login = useCallback(() => {
     const loginData = new FormData(document.getElementById("login"));
 
@@ -61,30 +61,30 @@ export default function Header() {
     window.location.href = "/";
   };
 
-  // const pwdchange = () => {
-  //   const pwddata = new FormData(document.getElementById("pwdchange"));
+  const pwdchange = () => {
+    const pwddata = new FormData(document.getElementById("pwdchange"));
 
-  //   axios
-  //     .post("/api/pwdchange/", pwddata)
-  //     .then((res) => {
-  //       console.log("pwdchange res", res);
-  //       setPwdshow(false);
-  //     })
-  //     .catch((err) => {
-  //       console.log("pwdchange error", err.response);
-  //       if (err.response.status === 401) {
-  //         return alert(
-  //           "Vous devez mettre mot de passe different que l'ancienne"
-  //         );
-  //       }
-  //       alert("c'est pas bon");
-  //     });
-  // };
-  // const enterPwdChange = useCallback((e) => {
-  //   if (e.key === "Enter") {
-  //     pwdchange();
-  //   }
-  // }, []);
+    axios
+      .post("/api/pwdchange/", pwddata)
+      .then((res) => {
+        console.log("pwdchange res", res);
+        setPwdshow(false);
+      })
+      .catch((err) => {
+        console.log("pwdchange error", err.response);
+        if (err.response.status === 401) {
+          return alert(
+            "Vous devez mettre mot de passe different que l'ancienne"
+          );
+        }
+        alert("c'est pas bon");
+      });
+  };
+  const enterPwdChange = useCallback((e) => {
+    if (e.key === "Enter") {
+      pwdchange();
+    }
+  }, []);
 
   useEffect(() => {
     getMe();
@@ -116,7 +116,7 @@ export default function Header() {
           <img src={logo} alt="Logo salaisons de la bréche" className="logo" />
         </a>
 
-        {/* <div className="sub-menu">
+        <div className="sub-menu">
           <ul>
             {user.username !== "" ? (
               <>
@@ -251,11 +251,11 @@ export default function Header() {
               </>
             )}
           </ul>
-          {/* <a className="search" href="/search">
+          <a className="search" href="/search">
             <input type="text" id="chercher" />
             <div className="material-symbols-outlined">search</div>
-          </a> */}
-        {/* </div> */}
+          </a>
+        </div>
       </div>
       <div className="inner">
         <ul className="main-menu">
@@ -301,19 +301,19 @@ export default function Header() {
             </div>
           </li>
           <li className="NosSelections">
-            <a href="/nos-selection">
+            <a href="/nos-selections">
               <div className="menu-name">Nos selections</div>
             </a>
             <div className="hidden-menu">
               <div className="inner">
                 <ul>
                   <li className="hidden-menu-name">
-                    <a href={"/nos-selection/jambon"}>
+                    <a href={"/nos-selection/jambons"}>
                       <p>Jambons</p>
                     </a>
                   </li>
                   <li className="hidden-menu-name">
-                    <a href="/nos-selection/terrine">
+                    <a href="/nos-selection/terrines">
                       <p>Terrines</p>
                     </a>
                   </li>

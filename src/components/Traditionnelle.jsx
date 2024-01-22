@@ -8,7 +8,6 @@ export default function Traditionnelle() {
     "Saucisson 650g",
     "Saucisse droite 250g",
     "Mini-rosette 400g",
-    "Rosette 1 - 1.2kg",
   ];
 
   return (

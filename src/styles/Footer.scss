@@ -4,9 +4,10 @@ footer {
   padding: 2% 10%;
   background-color: #333;
   color: white;
-  display: flex;
-  gap: 50%;
   .mentions {
+    position: absolute;
+    right: 21%;
+    bottom: 3%;
     .mention-legale {
       color: white;
       text-decoration: underline;
@@ -14,35 +15,36 @@ footer {
   }
   .foot_info {
     font-variation-settings: "FILL" 1;
+    position: absolute;
+    right: 3%;
     p {
       display: flex;
       align-items: center;
       margin-bottom: 10%;
     }
   }
+  img {
+    max-width: 22%;
+  }
   .copyright {
     position: absolute;
     display: flex;
     align-items: center;
     bottom: 2%;
-    left: 2%;
-    img {
-      max-width: 8%;
-      margin-right: 15px;
-    }
+    left: 9%;
   }
 }
 @media screen and (max-width: 1024px) {
   footer {
-    gap: 0;
     .mentions {
-      width: 50%;
+      right: 10%;
     }
   }
 }
 @media screen and (max-width: 767px) {
   footer {
     padding: 2% 5%;
+    height: 150px;
     font-size: 0.5rem;
     .foot_info {
       p {

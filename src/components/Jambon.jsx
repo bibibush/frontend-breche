@@ -3,11 +3,12 @@ import slate from "../images/Slate.png";
 
 export default function Jambon() {
   const items = [
+    "1/6 Jambon sec sans os Sans Jarret VPF",
+    "1/2 Jambon sec sans os Sans Jarret VPF",
+    "Jambon sec 10 tranches 250g VPF",
+    "Jambon cru avec os VPF",
     "Jambon sec sans os VPF",
     "Jambon sec sans os Supérieur VPF",
-    "1/2 Jambon sec sans os Sans Jarret VPF",
-    "1/6 Jambon sec sans os Sans Jarret VPF",
-    "Jambon sec 10 tranches 250g VPF",
   ];
 
   return (
@@ -22,7 +23,7 @@ export default function Jambon() {
           return <li key={i}>{item}</li>;
         })}
       </ul>
-      <Link to="/nos-selection/terrine">
+      <Link to="/nos-selection/terrines">
         <button>Voir la gamme Terrines</button>
       </Link>
     </section>
