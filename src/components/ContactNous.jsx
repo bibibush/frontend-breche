@@ -2,19 +2,26 @@ import axios from "axios";
 import { useCallback, useState } from "react";
 import Form from "react-bootstrap/Form";
 import arti from "../images/3400 arti.jpg";
+import { Oval } from "react-loader-spinner";
 
 export default function ContactNous() {
   const [value, setValue] = useState("");
-  const submit = useCallback(() => {
-    const formdata = new FormData(document.getElementById("contact_form"));
+  const [btnState, setBtnState] = useState(false);
 
+  const submit = useCallback(() => {
+    setBtnState(true);
+    const formdata = new FormData(document.getElementById("contact_form"));
+    formdata.append("create_dt", "");
     axios
       .post("/user/contact/", formdata)
       .then((res) => {
-        alert("Votre demande a bien été envoyée.");
+        alert(
+          "Votre demande a bien été envoyée. \nVous allez recevoir d’ici quelques minutes un mail de confirmation d’envoi sur l’adresse mail que vous avez indiquée. \nS’il n’apparaît pas dans votre boîte de réception, pensez à vérifier vos courriers indésirables ou SPAM. 🙂"
+        );
         window.location.href = "/";
       })
       .catch((err) => {
+        console.log(err.response);
         alert(
           "La demande n’a pas pu être envoyée. \nMerci de renseigner correctement tous les champs obligatoires (*)."
         );
@@ -77,7 +84,13 @@ export default function ContactNous() {
           />
         </Form.Group>
       </Form>
-      <button onClick={submit}>Envoyer</button>
+      {btnState ? (
+        <button style={{ padding: "5px 0" }} disabled>
+          <Oval width={30} height={30} secondaryColor="black" />
+        </button>
+      ) : (
+        <button onClick={submit}>Envoyer</button>
+      )}
     </section>
   );
 }

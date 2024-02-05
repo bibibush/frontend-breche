@@ -119,6 +119,7 @@
 @media screen and (max-width: 767px) {
   .nossaucissons-desc {
     background-position: bottom center;
+    background-attachment: local;
   }
   .nossaucissons-desc.nossaucissons-mobile {
     background-position: bottom 105px center;

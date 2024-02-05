@@ -5,6 +5,7 @@ import axios from "axios";
 const AppStateProvider = ({ children }) => {
   const [inputValue, SetInputValue] = useState({});
   const [user, setUser] = useState({});
+  const [matches, setMatches] = useState(false);
 
   const putName = useCallback((event) => {
     SetInputValue((inputValue) => {
@@ -49,25 +50,36 @@ const AppStateProvider = ({ children }) => {
   const getMe = useCallback(async () => {
     try {
       const res = await axios.get("/api/getme/");
-      console.log("getme res", res);
       setUser(res.data);
     } catch (err) {
       console.log("err", err.response);
     }
   }, []);
+  const getMatches = useCallback(() => {
+    const media = window.matchMedia("(max-width: 767px)");
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    window.addEventListener("resize", listener);
+    return () => window.removeEventListener("resize", listener);
+  }, [matches]);
 
   return (
     <AppStateContext.Provider
       value={{
         inputValue,
         user,
+        matches,
         putName,
         putEntreprise,
         putAdresse,
         putNumero,
         putEmail,
         setUser,
+        setMatches,
         getMe,
+        getMatches,
       }}
     >
       {children}

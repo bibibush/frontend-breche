@@ -2,12 +2,11 @@
 .present {
   position: relative;
   height: 98vh;
-  background-image: url("../images/page_daccueil.jpg");
+  background-image: url("../images/present.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* background-position: bottom 35% right; */
-  background-position: bottom 40% right;
+  background-position: top 150px right;
   white-space: pre-line;
 }
 .present .present-cover {
@@ -49,18 +48,11 @@
   box-sizing: border-box;
   padding: 0 10px;
 }
-
-/* .present .present-desc .btn {
-  position: absolute;
-  bottom: -78px;
-  left: 50%;
-  margin-left: calc(126px / -2);
-} */
 @media screen and (max-width: 1024px) {
   .present {
-    height: 72vh;
-    background-size: 260%;
-    background-position: bottom left 40%;
+    height: 33vh;
+    background-attachment: local;
+    background-position: bottom left 50%;
   }
   .present .logo-div {
     right: 2vw;
@@ -74,9 +66,9 @@
 }
 @media screen and (max-width: 767px) {
   .present {
-    height: 58vh;
-    background-size: 270%;
-    background-position: bottom 180px left 40%;
+    height: 22vh;
+    background-attachment: local;
+    background-position: bottom left 50%;
   }
   .present .present-desc {
     font-size: 0.8rem;

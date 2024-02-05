@@ -11,6 +11,8 @@ export default function MentionLegale() {
         <p>contact@salaisonsdelabreche.com N° SIRET 382 791 069 00042</p>
         <p>RCS: 382791069 - Saint Etienne</p>
         <p>N° TVA: FR16 382791069</p>
+        <p>Code APE : 1013A</p>
+        <p>N° agrément sanitaire : FR 42.059.001CE</p>
       </div>
       <div className="info_legales">
         <h2>INFORMATIONS LÉGALES :</h2>
@@ -33,8 +35,8 @@ export default function MentionLegale() {
           Le site salaisons de la brèche est hébergé par l’entreprise o2switch :
         </p>
         <p>
-          Dont le siège est situé à l’adresse suivante : 222-224 Boulevard
-          Gustave Flaubert 63000 Clermont-Ferrand
+          Dont le siège est situé à l’adresse suivante : Chemin DES PARDIAUX
+          63000 CLERMONT-FERRAND
         </p>
         <p>Téléphone : 04 44 44 60 40</p>
       </div>

@@ -13,20 +13,19 @@ import "./styles/Jambon.css";
 import "./styles/NosSelectionDesc.css";
 import "./styles/Terrine.css";
 import "./styles/ContactNous.scss";
-// import "./styles/Nosproduits.css";
-// import "./styles/CommandeCSE.css";
-// import "./styles/HowToOrder.css";
-// import "./styles/OrderSuccess.css";
+import "./styles/CommandeCSE.css";
+import "./styles/HowToOrder.css";
+import "./styles/OrderSuccess.css";
 import "./styles/NotreHistoire.css";
-// import "./styles/LoginRequired.css";
-// import "./styles/MesCommande.css";
-// import "./styles/DetailCommande.css";
+import "./styles/LoginRequired.css";
+import "./styles/MesCommande.css";
+import "./styles/DetailCommande.css";
 import "./styles/Logos.css";
 // import "./styles/Offcanvas.css";
-// import "./styles/PasCompte.css";
-// import "./styles/Calendar.css";
+import "./styles/PasCompte.css";
+import "./styles/Calendar.css";
 import "./styles/NotFound.scss";
-// import "./styles/UserInfo.scss";
+import "./styles/UserInfo.scss";
 import "./styles/MentionLegale.scss";
 
 import Header from "./components/Header";
@@ -71,7 +70,6 @@ import { useEffect, useState } from "react";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
-axios.defaults.withCredentials = true;
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -99,10 +97,6 @@ function App() {
             <Logos />
             <NotreHistoire />
             <NosSaucissonsDesc />
-            {/* <section className="promotion">
-                <PromotionTitle />
-                <Promotion />
-              </section> */}
             <Footer />
           </AppStateProvider>
         }
@@ -248,8 +242,8 @@ function App() {
             <Footer />
           </AppStateProvider>
         }
-      /> */}
-      {/* <Route
+      />
+      <Route
         path="/commande-cse/success"
         element={
           <AppStateProvider>

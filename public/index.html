@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M1F04PC6KM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M1F04PC6KM");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N7W9RP2C");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Situé dans la Loire et à deux pas du Rhône, Salaisons de la Brèche est une entreprise qui propose une large gamme de saucissons avec recettes traditionnelles."
+      content="Découvrez nos saucissons, présentés en fleur naturelle avec le logo Artisan. Notre savoir-faire depuis 3 générations est un gage de qualité."
     />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -23,7 +51,8 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>SALAISONS DE LA BRECHE, Fabrication Artisanale de Saucissons</title>
+    <title>SALAISONS DE LA BRECHE, Fabrication Artisanale</title>
+    <link rel="canonical" href="https://www.salaisonsdelabreche.com" />
     <base href="/" />
     <!-- BOOTSTRAP -->
     <link
@@ -60,6 +89,16 @@
     ondragstart="return false"
     onselectstart="return false"
   >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N7W9RP2C"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

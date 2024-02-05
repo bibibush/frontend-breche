@@ -13,15 +13,20 @@
     position: absolute;
     width: 80%;
     text-align: center;
+    line-height: 1.4;
     bottom: 95px;
     font: {
       family: "Alkatra", cursive;
-      size: 3.5rem;
+      size: 2.5rem;
       weight: 700;
     }
     left: 50%;
     margin: {
       left: calc(80% / -2);
+    }
+    a {
+      color: rgb(24, 24, 125);
+      text-decoration: underline;
     }
   }
 }

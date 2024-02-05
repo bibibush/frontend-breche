@@ -103,28 +103,6 @@ header .up-menu .sub-menu ul li:first-child {
 header .up-menu .sub-menu ul li:first-child::before {
   display: none;
 }
-header .up-menu .sub-menu .search {
-  position: absolute;
-  right: -55px;
-  top: 0;
-  cursor: pointer;
-}
-header .up-menu .sub-menu .search input {
-  width: 28px;
-  height: 28px;
-  border-radius: 5px;
-  transition: width 0.4s;
-}
-
-header .up-menu .sub-menu .search .material-symbols-outlined {
-  color: black;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  font-size: 28px;
-}
 
 header .main-menu {
   position: absolute;
@@ -150,7 +128,7 @@ header .main-menu > li:last-child {
   transition: background-color 0.4s;
 }
 header .main-menu > li:nth-child(3) {
-  display: none;
+  /* display: none; */
 }
 header .main-menu > li:last-child:hover {
   background-color: #ff4040;
