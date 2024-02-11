@@ -1,101 +1,101 @@
-// import { useCallback, useEffect, useState } from "react";
-// import Modal from "react-bootstrap/Modal";
-// import Button from "react-bootstrap/Button";
-// import Form from "react-bootstrap/Form";
-// import axios from "axios";
+import { useCallback, useEffect, useState } from "react";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import axios from "axios";
 import logo from "../images/logo-Salaisons-de-la-Brèche-Blanc.png";
-// import useGetMe from "../hooks/useGetMe";
+import useGetMe from "../hooks/useGetMe";
 
 export default function Header() {
-  // const [show, setShow] = useState(false);
-  // const [pwdshow, setPwdshow] = useState(false);
-  // const { user, getMe, setUser } = useGetMe();
+  const [show, setShow] = useState(false);
+  const [pwdshow, setPwdshow] = useState(false);
+  const { user, getMe, setUser } = useGetMe();
 
-  // const handleClose = () => {
-  //   setShow(false);
-  //   setPwdshow(false);
-  // };
-  // const handleShow = () => {
-  //   setShow(true);
-  // };
-  // const pwdhandleShow = () => {
-  //   setPwdshow(true);
-  // };
-  // const login = useCallback(() => {
-  //   const loginData = new FormData(document.getElementById("login"));
+  const handleClose = () => {
+    setShow(false);
+    setPwdshow(false);
+  };
+  const handleShow = () => {
+    setShow(true);
+  };
+  const pwdhandleShow = () => {
+    setPwdshow(true);
+  };
+  const login = useCallback(() => {
+    const loginData = new FormData(document.getElementById("login"));
 
-  //   axios
-  //     .post("/api/login/", loginData)
-  //     .then((res) => {
-  //       setUser(res.data);
-  //       // setShow(false);
-  //       window.location.href = "/";
-  //     })
-  //     .catch((err) => {
-  //       console.log("login error", err.response);
-  //       alert(err.response.statusText);
-  //       // setShow(false);
-  //     });
-  // }, [setUser]);
-  // const loginEnter = useCallback(
-  //   (event) => {
-  //     if (event.key === "Enter") {
-  //       login();
-  //     }
-  //   },
-  //   [login]
-  // );
-  // const logout = () => {
-  //   axios
-  //     .post("/api/logout/")
-  //     .then((res) => {
-  //       setUser({
-  //         username: "",
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       console.log("logout error", err.response);
-  //     });
-  //   window.location.href = "/";
-  // };
+    axios
+      .post("/api/login/", loginData)
+      .then((res) => {
+        setUser(res.data);
+        // setShow(false);
+        window.location.href = "/";
+      })
+      .catch((err) => {
+        console.log("login error", err.response);
+        alert(err.response.statusText);
+        // setShow(false);
+      });
+  }, [setUser]);
+  const loginEnter = useCallback(
+    (event) => {
+      if (event.key === "Enter") {
+        login();
+      }
+    },
+    [login]
+  );
+  const logout = () => {
+    axios
+      .post("/api/logout/")
+      .then((res) => {
+        setUser({
+          username: "",
+        });
+      })
+      .catch((err) => {
+        console.log("logout error", err.response);
+      });
+    window.location.href = "/";
+  };
 
-  // const pwdchange = () => {
-  //   const pwddata = new FormData(document.getElementById("pwdchange"));
+  const pwdchange = () => {
+    const pwddata = new FormData(document.getElementById("pwdchange"));
 
-  //   axios
-  //     .post("/api/pwdchange/", pwddata)
-  //     .then((res) => {
-  //       setPwdshow(false);
-  //     })
-  //     .catch((err) => {
-  //       console.log("pwdchange error", err.response);
-  //       if (err.response.status === 401) {
-  //         return alert(
-  //           "Vous devez mettre mot de passe different que l'ancienne"
-  //         );
-  //       }
-  //       alert("c'est pas bon");
-  //     });
-  // };
-  // const enterPwdChange = useCallback((e) => {
-  //   if (e.key === "Enter") {
-  //     pwdchange();
-  //   }
-  // }, []);
+    axios
+      .post("/api/pwdchange/", pwddata)
+      .then((res) => {
+        setPwdshow(false);
+      })
+      .catch((err) => {
+        console.log("pwdchange error", err.response);
+        if (err.response.status === 401) {
+          return alert(
+            "Vous devez mettre mot de passe different que l'ancienne"
+          );
+        }
+        alert("c'est pas bon");
+      });
+  };
+  const enterPwdChange = useCallback((e) => {
+    if (e.key === "Enter") {
+      pwdchange();
+    }
+  }, []);
 
-  // useEffect(() => {
-  //   getMe();
-  // }, [getMe]);
+  useEffect(() => {
+    getMe();
+  }, [getMe]);
 
-  // const clickCommande = () => {
-  //   window.location.href = "/télécharge-cse";
-  // };
-  // const clickLogin = () => {
-  //   window.location.href = "/login";
-  // };
-  // const clickUser = () => {
-  //   window.location.href = `/user?user-id=${user.id}`;
-  // };
+  const clickCommande = () => {
+    window.location.href = "/télécharge-cse";
+  };
+  const clickLogin = () => {
+    window.location.href = "/login";
+  };
+  const clickUser = () => {
+    window.location.href = `/user?user-id=${user.id}`;
+  };
   return (
     <header>
       <div className="header-contact">
@@ -113,7 +113,7 @@ export default function Header() {
           <img src={logo} alt="Logo salaisons de la bréche" className="logo" />
         </a>
 
-        {/* <div className="sub-menu">
+        <div className="sub-menu">
           <ul>
             {user.username !== "" ? (
               <>
@@ -248,7 +248,7 @@ export default function Header() {
               </>
             )}
           </ul>
-        </div> */}
+        </div>
       </div>
       <div className="inner">
         <ul className="main-menu">
@@ -315,9 +315,9 @@ export default function Header() {
             </div>
           </li>
 
-          {/* <li onClick={user.username === "" ? clickLogin : clickCommande}>
+          <li onClick={user.username === "" ? clickLogin : clickCommande}>
             <div className="menu-name">Commandez CSE</div>
-          </li> */}
+          </li>
 
           <li>
             <a href="/contact">

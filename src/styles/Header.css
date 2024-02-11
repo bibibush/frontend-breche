@@ -64,7 +64,7 @@ header .up-menu .sub-menu {
   position: absolute;
   right: 5%;
   top: 8px;
-  display: none;
+  /* display: none; */
 }
 header .up-menu .sub-menu ul {
   display: flex;

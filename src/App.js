@@ -47,24 +47,24 @@ import Jambon from "./components/Jambon";
 import NosSelectionDesc from "./components/NosSelectionDesc";
 import Terrine from "./components/Terrine";
 import ContactNous from "./components/ContactNous";
-// import CommandeCSE from "./components/CommandeCSE";
+import CommandeCSE from "./components/CommandeCSE";
 import NotreHistoire from "./components/NotreHistoire";
-// import MesCommande from "./components/MesCommande";
-// import LesCommandes from "./components/LesCommandes";
-// import DetailCommande from "./components/DetailCommande";
-// import ManageCommande from "./components/ManageCommande";
+import MesCommande from "./components/MesCommande";
+import LesCommandes from "./components/LesCommandes";
+import DetailCommande from "./components/DetailCommande";
+import ManageCommande from "./components/ManageCommande";
 import Logos from "./components/Logos";
 // import Offcanvasss from "./components/Offcanvas";
 import MentionLegale from "./components/MentionLegale";
 
 import axios from "axios";
-// import HowToOrder from "./components/HowToOrder";
-// import OrderSuccess from "./components/OrderSuccess";
-// import LoginRequired from "./components/LoginRequired";
-// import PasCompte from "./components/PasCompte";
-// import Calendar from "./components/Calendar";
+import HowToOrder from "./components/HowToOrder";
+import OrderSuccess from "./components/OrderSuccess";
+import LoginRequired from "./components/LoginRequired";
+import PasCompte from "./components/PasCompte";
+import Calendar from "./components/Calendar";
 import NotFound from "./components/NotFound";
-// import UserInfo from "./components/UserInfo";
+import UserInfo from "./components/UserInfo";
 import Loading from "./components/Loading";
 import { useEffect, useState } from "react";
 
@@ -221,7 +221,7 @@ function App() {
           </AppStateProvider>
         }
       />
-      {/* <Route
+      <Route
         path="/commande-cse"
         element={
           <>
@@ -332,7 +332,7 @@ function App() {
             <Footer />
           </AppStateProvider>
         }
-      /> */}
+      />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
