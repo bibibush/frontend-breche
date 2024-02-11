@@ -48,6 +48,11 @@
   box-sizing: border-box;
   padding: 0 10px;
 }
+@media screen and (max-width: 1430px) {
+  .present {
+    background-position: top 80px right;
+  }
+}
 @media screen and (max-width: 1024px) {
   .present {
     height: 33vh;

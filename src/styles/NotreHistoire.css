@@ -134,6 +134,14 @@
   span {
   color: #99d188;
 }
+@media screen and (max-width: 1430px) {
+  .notre_histoire
+    .notre_histoire_left_right
+    .notre_histoire_left
+    .notre_histoire_left_img_desc {
+    font-size: 1rem;
+  }
+}
 @media screen and (max-width: 1024px) {
   .notre_histoire {
     height: 40vh;

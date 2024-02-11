@@ -69,6 +69,11 @@
   margin-bottom: 15%;
   line-height: 1.2;
 }
+@media screen and (max-width: 1430px) {
+  .artisanale ul {
+    font-size: 19px;
+  }
+}
 @media screen and (min-width: 1580px) {
   .artisanale ul {
     font-size: 24px;
