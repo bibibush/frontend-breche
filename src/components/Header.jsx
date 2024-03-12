@@ -3,7 +3,7 @@
 // import Button from "react-bootstrap/Button";
 // import Form from "react-bootstrap/Form";
 // import axios from "axios";
-import logo from "../images/logo-Salaisons-de-la-Brèche-Blanc.png";
+import logo from "../images/logo-Salaisons-de-la-Breche-Blanc.png";
 // import useGetMe from "../hooks/useGetMe";
 
 export default function Header() {

@@ -1,7 +1,7 @@
 import logoArtisan from "../images/logo artisan.png";
-import leaf from "../images/나뭇잎.png";
-import sandwatch from "../images/모래시계.png";
-import dotbogi from "../images/돋보기.png";
+import leaf from "../images/leaf.png";
+import sandwatch from "../images/sand-clock.png";
+import dotbogi from "../images/glass.png";
 
 export default function Logos() {
   return (

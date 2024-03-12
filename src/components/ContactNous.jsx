@@ -15,16 +15,14 @@ export default function ContactNous() {
     axios
       .post("/user/contact/", formdata)
       .then((res) => {
-        alert(
-          "Votre demande a bien été envoyée. \nVous allez recevoir d’ici quelques minutes un mail de confirmation d’envoi sur l’adresse mail que vous avez indiquée. \nS’il n’apparaît pas dans votre boîte de réception, pensez à vérifier vos courriers indésirables ou SPAM. 🙂"
-        );
-        window.location.href = "/";
+        window.location.href = "/contact/envoyé";
       })
       .catch((err) => {
         console.log(err.response);
         alert(
           "La demande n’a pas pu être envoyée. \nMerci de renseigner correctement tous les champs obligatoires (*)."
         );
+        setBtnState(false)
       });
   }, []);
 

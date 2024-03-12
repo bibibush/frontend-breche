@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import { useRef } from "react";
-import logoTransparent from "../images/logo-Salaisons-de-la-Brèche- Fond transparent.png";
+import logoTransparent from "../images/logo-Salaisons-de-la-Breche- Fond transparent.png";
 import logoArtisan from "../images/logo artisan.png";
 
 export default function Present() {

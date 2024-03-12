@@ -1,0 +1,95 @@
+.contact-pass {
+  position: relative;
+  height: 700px;
+  padding-top: 1px;
+  h1 {
+    position: relative;
+    text-align: center;
+    padding: 5% 3%;
+    // background-color: #486541;
+    // color: #f8f9f0;;
+    background-color: #f8f9f0;
+    .h1_bar {
+      position: absolute;
+      width: 60%;
+      height: 5px;
+      border-radius: 8px;
+      background-color: #486541;
+      bottom: 5%;
+      left: 50%;
+      margin-left: calc(60% / -2);
+      opacity: 0;
+      scale: 0;
+    }
+  }
+  h2 {
+    padding: 3% 8%;
+    text-align: center;
+    line-height: 1.5;
+  }
+  button {
+    position: absolute;
+    width: 20%;
+    padding: 15px 20px;
+    border: none;
+    background-color: #59c064;
+    border-radius: 8px;
+    left: 50%;
+    margin-left: calc(20% / -2);
+    &:hover {
+      background-color: #3b8543;
+    }
+    a {
+      color: #f8f9f0;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contact-pass {
+    height: 1000px;
+    h1 {
+      padding: 10% 5%;
+    }
+    h2 {
+      padding: 10% 15%;
+    }
+    button {
+      width: 40%;
+      margin-left: calc(40% / -2);
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .contact-pass {
+    height: 800px;
+    h1 {
+      font-size: 3rem;
+      padding: 10% 5%;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    button {
+      width: 40%;
+      margin-left: calc(40% / -2);
+      bottom: 25px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-pass {
+    background-color: white;
+    height: 700px;
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      padding: 15% 8%;
+    }
+    button {
+      font-size: 0.8rem;
+      bottom: 125px;
+    }
+  }
+}

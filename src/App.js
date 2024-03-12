@@ -27,6 +27,7 @@ import "./styles/Calendar.css";
 import "./styles/NotFound.scss";
 import "./styles/UserInfo.scss";
 import "./styles/MentionLegale.scss";
+import './styles/SuccessContact.scss'
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -56,6 +57,7 @@ import NotreHistoire from "./components/NotreHistoire";
 import Logos from "./components/Logos";
 // import Offcanvasss from "./components/Offcanvas";
 import MentionLegale from "./components/MentionLegale";
+import SuccessContact from "./components/SuccessContact";
 
 import axios from "axios";
 // import HowToOrder from "./components/HowToOrder";
@@ -211,6 +213,13 @@ function App() {
           </AppStateProvider>
         }
       />
+      <Route path="/contact/envoyé" element = {
+        <AppStateProvider>
+          <Header />
+          <SuccessContact />
+          <Footer />
+        </AppStateProvider>
+      } />
       <Route
         path="/mentions-legales"
         element={

@@ -1,4 +1,4 @@
-import logo from "../images/logo-Salaisons-de-la-Brèche- Fond transparent.png";
+import logo from "../images/logo-Salaisons-de-la-Breche- Fond transparent.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
