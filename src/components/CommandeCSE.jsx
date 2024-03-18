@@ -9,13 +9,13 @@ import { Oval } from "react-loader-spinner";
 import gsap from "gsap";
 import { useRef } from "react";
 import useGetMe from "../hooks/useGetMe";
+import useMatches from "../hooks/useMatches";
 
 registerLocale("fr", fr);
 
 export default function CommandeCSE() {
   const { getMe, user } = useGetMe();
-
-  const [matches, setMatches] = useState(false);
+  const { matches, setMatches, getMatches } = useMatches();
 
   const [files, setFiles] = useState([]);
   const [btnState, setBtnState] = useState(false);
@@ -69,13 +69,7 @@ export default function CommandeCSE() {
       yoyoEase: "power2.out",
       repeat: -1,
     });
-    const media = window.matchMedia("(max-width: 767px)");
-    if (media.matches !== matches) {
-      setMatches(media.matches);
-    }
-    const listener = () => setMatches(media.matches);
-    window.addEventListener("resize", listener);
-    return () => window.removeEventListener("resize", listener);
+    getMatches();
   }, [getMe, matches]);
   console.log(startDate);
 
