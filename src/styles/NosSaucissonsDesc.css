@@ -90,6 +90,11 @@
   color: white;
   border-color: #5e6f1f;
 }
+@media screen and (min-width: 1900px) {
+  .nossaucissons-desc .btn-group {
+    height: 10%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .nossaucissons-desc {
     height: 50vh;
