@@ -21,13 +21,13 @@ import "./styles/LoginRequired.css";
 import "./styles/MesCommande.css";
 import "./styles/DetailCommande.css";
 import "./styles/Logos.css";
-// import "./styles/Offcanvas.css";
+import "./styles/Offcanvas.css";
 import "./styles/PasCompte.css";
 import "./styles/Calendar.css";
 import "./styles/NotFound.scss";
 import "./styles/UserInfo.scss";
 import "./styles/MentionLegale.scss";
-import './styles/SuccessContact.scss'
+import "./styles/SuccessContact.scss";
 
 import Header from "./components/Header";
 import Present from "./components/Present";
@@ -48,25 +48,25 @@ import Jambon from "./components/Jambon";
 import NosSelectionDesc from "./components/NosSelectionDesc";
 import Terrine from "./components/Terrine";
 import ContactNous from "./components/ContactNous";
-// import CommandeCSE from "./components/CommandeCSE";
+import CommandeCSE from "./components/CommandeCSE";
 import NotreHistoire from "./components/NotreHistoire";
-// import MesCommande from "./components/MesCommande";
-// import LesCommandes from "./components/LesCommandes";
-// import DetailCommande from "./components/DetailCommande";
-// import ManageCommande from "./components/ManageCommande";
+import MesCommande from "./components/MesCommande";
+import LesCommandes from "./components/LesCommandes";
+import DetailCommande from "./components/DetailCommande";
+import ManageCommande from "./components/ManageCommande";
 import Logos from "./components/Logos";
-// import Offcanvasss from "./components/Offcanvas";
+import Offcanvasss from "./components/Offcanvas";
 import MentionLegale from "./components/MentionLegale";
 import SuccessContact from "./components/SuccessContact";
 
 import axios from "axios";
-// import HowToOrder from "./components/HowToOrder";
-// import OrderSuccess from "./components/OrderSuccess";
-// import LoginRequired from "./components/LoginRequired";
-// import PasCompte from "./components/PasCompte";
-// import Calendar from "./components/Calendar";
+import HowToOrder from "./components/HowToOrder";
+import OrderSuccess from "./components/OrderSuccess";
+import LoginRequired from "./components/LoginRequired";
+import PasCompte from "./components/PasCompte";
+import Calendar from "./components/Calendar";
 import NotFound from "./components/NotFound";
-// import UserInfo from "./components/UserInfo";
+import UserInfo from "./components/UserInfo";
 import Loading from "./components/Loading";
 import { useEffect, useState } from "react";
 
@@ -213,13 +213,16 @@ function App() {
           </AppStateProvider>
         }
       />
-      <Route path="/contact/envoyé" element = {
-        <AppStateProvider>
-          <Header />
-          <SuccessContact />
-          <Footer />
-        </AppStateProvider>
-      } />
+      <Route
+        path="/contact/envoyé"
+        element={
+          <AppStateProvider>
+            <Header />
+            <SuccessContact />
+            <Footer />
+          </AppStateProvider>
+        }
+      />
       <Route
         path="/mentions-legales"
         element={
@@ -230,7 +233,7 @@ function App() {
           </AppStateProvider>
         }
       />
-      {/* <Route
+      <Route
         path="/commande-cse"
         element={
           <>
@@ -341,7 +344,7 @@ function App() {
             <Footer />
           </AppStateProvider>
         }
-      /> */}
+      />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
