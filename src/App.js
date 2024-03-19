@@ -233,7 +233,7 @@ function App() {
           </AppStateProvider>
         }
       />
-      <Route
+      {/* <Route
         path="/commande-cse"
         element={
           <>
@@ -344,7 +344,7 @@ function App() {
             <Footer />
           </AppStateProvider>
         }
-      />
+      /> */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
