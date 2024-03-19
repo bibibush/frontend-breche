@@ -11,10 +11,9 @@ import nomPrenom from "../images/nom_prenom.png";
 import quantite from "../images/quantite.png";
 import totaltarif from "../images/totaltarif.png";
 import recappe from "../images/recappe.png";
+import useMatches from "../hooks/useMatches";
 
 export default function HowToOrder() {
-  const [matches, setMatches] = useState(false);
-
   const getme = useCallback(async () => {
     try {
       const res = await axios.get("/api/getme/");
@@ -27,18 +26,12 @@ export default function HowToOrder() {
       window.location.href = "/";
     }
   }, []);
+  const { matches, setMatches, getMatches } = useMatches();
 
   useEffect(() => {
     getme();
-    const mediaMatch = window.matchMedia("(max-width: 767px)");
-    if (mediaMatch.matches !== matches) {
-      setMatches(mediaMatch.matches);
-    }
-    const listener = () => setMatches(mediaMatch.matches);
-    window.addEventListener("resize", listener);
-    return () => window.removeEventListener("resize", listener);
+    getMatches();
   }, [getme, matches]);
-  console.log(matches);
 
   const [show, setShow] = useState(false);
   return (

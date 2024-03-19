@@ -10,8 +10,7 @@ export default function PasCompte() {
         <h2>A.</h2>
         <h2>
           Vous devez nous contacter pour demander un compte.
-          <br /> Cliquez le link en bas et choisisez
-          <span> l'objet 'demander compte'</span>
+          <br /> Cliquez le link en bas s'il vous plaît.
         </h2>
       </div>
       <a href="/contact">Aller pour demander un compte</a>
