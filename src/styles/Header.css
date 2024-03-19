@@ -64,7 +64,7 @@ header .up-menu .sub-menu {
   position: absolute;
   right: 5%;
   top: 8px;
-  display: none;
+  /* display: none; */
 }
 header .up-menu .sub-menu ul {
   display: flex;
@@ -126,9 +126,6 @@ header .main-menu > li:last-child {
   background-color: #839b29;
   border-radius: 8px;
   transition: background-color 0.4s;
-}
-header .main-menu > li:nth-child(3) {
-  /* display: none; */
 }
 header .main-menu > li:last-child:hover {
   background-color: #ff4040;
