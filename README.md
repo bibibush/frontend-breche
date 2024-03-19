@@ -145,8 +145,12 @@ export default function LoginRequired() {
     },
     [login]
   );
+```
 
-  return (
+로그인 폼은 React bootstrap을 사용했고 엔터키를 눌러도 로그인이 될 수 있도록 onKeyDown을 설정했습니다.
+
+```
+return (
     <section className="login_required">
       <div className="dialogue">
         <p>Vous devez avoir un compte pour commander CSE</p>
@@ -188,13 +192,11 @@ export default function LoginRequired() {
 }
 ```
 
-로그인 폼은 React bootstrap을 사용했고 엔터키를 눌러도 로그인이 될 수 있도록 onKeyDown을 설정했습니다.
-<br />로그인이 성공하면 '주문하기'페이지로 자동으로 넘어갑니다.
+로그인이 성공하면 '주문하기'페이지로 자동으로 넘어갑니다.
 
 주문하기 페이지 입니다.
 
 ```
-export default function HowToOrder() {
   const getme = useCallback(async () => {
     try {
       const res = await axios.get("/api/getme/");
@@ -215,7 +217,13 @@ export default function HowToOrder() {
   }, [getme, matches]);
 
   const [show, setShow] = useState(false);
-  return (
+```
+
+혹시 로그인이 안되어있는 상태로 접속을 해도 바로 접속을 튕길 수 있도록
+getme 함수를 정의하고 useEffect로 실행시켜줬습니다.
+
+```
+return (
     <section className="order_how">
       <div className="steps">
         <div className="steps-cover"></div>
@@ -301,11 +309,7 @@ export default function HowToOrder() {
       </Modal>
     </section>
   );
-}
 ```
-
-혹시 로그인이 안되어있는 상태로 접속을 해도 바로 접속을 튕길 수 있도록
-getme 함수를 정의하고 useEffect로 실행시켜줬습니다.
 
 주문서 양식을 다운로드 받을 수 있는 Download 컴포넌트와 BondeCommande 컴포넌트를 정의해서 코드 중간에 넣었습니다.
 
@@ -516,6 +520,640 @@ Download 컴포넌트와 BondeCommande 컴포넌트는 파일과 형식만 다�
 
 첨부파일을 올릴 때 엑셀 파일만 업로드 할 수 있게 하였습니다.
 
-ReactDatePicker를 사용해 고객이 제품을 받고싶은 날짜를 정할 수 있도록 했습니다.
+ReactDatePicker를 사용해 고객이 제품을 받고싶은 날짜를 정할 수 있도록 했습니다. 날짜는 오늘 날짜로부터 15일 이후부터 가능하고 주말은 선택할 수 없습니다.
 
 ---
+
+#### 주문확인 페이지
+
+```
+import axios from "axios";
+import { useCallback, useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
+import { Pagination } from "@mui/material";
+
+export default function MesCommande() {
+  const [orders, setOrders] = useState([]);
+
+  const [page, setPage] = useState(1);
+  const limit = 5;
+  const offset = (page - 1) * limit;
+  let totalPage = Math.ceil(orders.length / limit);
+  let results = orders.slice(offset, offset + limit);
+  const pageChange = (event, value) => {
+    setPage(value);
+    window.scroll(0, 0);
+  };
+
+  const orderInfo = useCallback(async () => {
+    try {
+      const res = await axios.get("/api/list/");
+      console.log("orderInfo success", res);
+      setOrders(res.data);
+    } catch (err) {
+      console.log("orderInfo Error", err.response);
+      window.location.href = "/";
+    }
+  }, []);
+  useEffect(() => {
+    orderInfo();
+  }, [orderInfo]);
+
+  ...
+}
+```
+
+고객 본인이 주문한 내역은 주문확인 페이지에서 리스트로 보여지도록 했습니다.
+
+```
+return (
+    <section className="mescommande">
+      {results.map((result) => {
+        const { id } = result;
+        return (
+          <div key={id} className="commande_info">
+            <div className="commande_detail">
+              <div className="commande_date">
+                <p>Date de commande</p>
+                {result.create_dt}
+              </div>
+              <div className="commande_numero">
+                <p>Numéro de commande</p>
+                {result.order_number}
+              </div>
+            </div>
+            <Button
+              onClick={() => {
+                window.location.href = `/mes-commandes/detail?id=${id}`;
+              }}
+              variant="warning"
+            >
+              Detail de la commande
+            </Button>
+          </div>
+        );
+      })}
+      <Pagination
+        style={{
+          position: "absolute",
+          width: "70%",
+          display: "flex",
+          justifyContent: "center",
+          bottom: "38px",
+          left: "50%",
+          marginLeft: "calc(70% / -2)",
+        }}
+        count={totalPage}
+        variant="outlined"
+        shape="rounded"
+        color="secondary"
+        size="large"
+        onChange={pageChange}
+      />
+    </section>
+  );
+```
+
+주문이 5개가 넘으면 한 페이지에 다 보여지도록 하는 것이 아닌 페이지네이션을 통해 다음 페이지에서 보여집니다.
+
+```
+const [page, setPage] = useState(1);
+  const limit = 5;
+  const offset = (page - 1) * limit;
+  let totalPage = Math.ceil(orders.length / limit);
+  let results = orders.slice(offset, offset + limit);
+  const pageChange = (event, value) => {
+    setPage(value);
+    window.scroll(0, 0);
+  };
+
+  ...
+
+  <Pagination
+        style={{
+          position: "absolute",
+          width: "70%",
+          display: "flex",
+          justifyContent: "center",
+          bottom: "38px",
+          left: "50%",
+          marginLeft: "calc(70% / -2)",
+        }}
+        count={totalPage}
+        variant="outlined"
+        shape="rounded"
+        color="secondary"
+        size="large"
+        onChange={pageChange}
+      />
+```
+
+주문 디테일 버튼을 누르면
+
+```
+<Button
+    onClick={() => {
+    window.location.href = `/mes-commandes/detail?id=${id}`;
+        }}
+    variant="warning"
+  >
+    Detail de la commande
+</Button>
+```
+
+주문 상세정보 확인 페이지로 접속합니다.
+
+주문정보는 successInfo state에 담았습니다.
+
+```
+const [searchParams] = useSearchParams();
+  const id = searchParams.get("id");
+  const [successInfo, setSuccessInfo] = useState({});
+
+  const [excelUpdate, setExcelUpdate] = useState(false);
+  const [dateUpdate, setDateUpdate] = useState(false);
+  const [infoUpdate, setInfoUpdate] = useState(false);
+
+  const [show, setShow] = useState(false);
+
+  const date = new Date();
+  const [startDate, setStartDate] = useState();
+  const isWeekday = (date) => {
+    const day = date.getDay(date);
+    return day !== 0 && day !== 6;
+  };
+
+  const [files, setFiles] = useState([]);
+  const onChangeupload = useCallback((event) => {
+    setFiles(event.target.files);
+  }, []);
+
+  const infoUpload = useCallback(() => {
+    const formdata = new FormData(document.getElementById("info_form"));
+    axios
+      .post(`/api/info/${id}/update`, formdata)
+      .then((res) => {
+        console.log("infoupload success", res);
+        window.location.href = `/mes-commandes/detail?id=${id}`;
+      })
+      .catch((err) => {
+        console.log(err.response.statusText);
+        alert(err.response.statusText);
+      });
+  }, [id]);
+  const enterInfo = useCallback(
+    (e) => {
+      if (e.key === "Enter") {
+        infoUpload();
+      }
+    },
+    [infoUpload]
+  );
+
+  const excelUpload = useCallback(() => {
+    const formdata = new FormData();
+    formdata.append("order_file", files[0]);
+
+    axios
+      .post(`/api/excel/${id}/update`, formdata, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then((res) => {
+        console.log("excelupload success", res);
+        window.location.href = `/mes-commandes/detail?id=${id}`;
+      })
+      .catch((err) => {
+        console.log(err.response.statusText);
+        alert(err.response.statusText);
+      });
+  }, [id, files]);
+  const dateUpload = useCallback(() => {
+    const formdata = new FormData();
+    formdata.append("date", startDate.toLocaleDateString("fr-FR"));
+
+    axios
+      .post(`/api/date/${id}/update`, formdata)
+      .then((res) => {
+        console.log("date upload success", res);
+        window.location.href = `/mes-commandes/detail?id=${id}`;
+      })
+      .catch((err) => {
+        console.log(err.response.statusText);
+        alert(err.response.statusText);
+      });
+  }, [id, startDate]);
+
+  const getSuccess = useCallback(async () => {
+    try {
+      const res = await axios.get(`/api/success/${id}/`);
+      console.log("commande success", res);
+      setSuccessInfo(res.data);
+    } catch (err) {
+      console.log(err.response);
+      alert(err.response.statusText);
+      window.location.href = "/";
+    }
+  }, [id]);
+
+  const deleteCommande = useCallback(() => {
+    axios
+      .delete(`/api/commande/${id}/delete`)
+      .then((res) => {
+        console.log("delete success !", res);
+        window.location.href = "/mes-commandes";
+      })
+      .catch((err) => {
+        console.log(err.response);
+        alert(err.response.statusText);
+      });
+  }, [id]);
+
+  useEffect(() => {
+    getSuccess();
+  }, [getSuccess]);
+```
+
+이 페이지에서는 고객이 주문정보를 확인하고 주문 정보 또는 주문서를 수정할 수 있도록 업데이트 함수들을 정의했습니다.
+<br />하지만 제품 수령날짜로 정한 일이 오늘로부터 2주보다 적다면 수정을 못하도록 state를 block으로 처리하여 모든 수정 버튼을 disabled 처리했습니다.
+
+```
+<section className="detail_commande">
+      <p>
+        Si vous voulez modifier votre commande, modifiez avec votre ordinateur
+        s'il vous plaît
+      </p>
+      {successInfo.block ? (
+        <p>* Vous ne pouvez plus modifier votre commande *</p>
+      ) : (
+        <p>
+          * Vous pouvez modifier votre commande jusqu'a 2 semaines avant la date
+          que vous avez choisi pour recevoir la commande *
+        </p>
+      )}
+      <div>
+        <div className="excel_date">
+          <div className="commande_number">
+            <div>
+              <p>Numero de votre commande: </p>
+              {successInfo.order_number}
+            </div>
+            <div>
+              <p>Date de votre commande: </p>
+              {successInfo.create_dt}
+            </div>
+            <div>
+              <p>Date de votre commande modifié: </p>
+              {successInfo.modify_dt}
+            </div>
+            <div>
+              <p>Statut de payment: </p>
+              {successInfo.pay ? (
+                <em>Votre payment est bien passé</em>
+              ) : (
+                <em>Vous n'avez pas payé</em>
+              )}
+            </div>
+          </div>
+          <div className="excel">
+            <p>Fiche de votre commande: </p>
+            {excelUpdate ? (
+              <div className="client_upload">
+                <label htmlFor="fileupdate">
+                  {files.length === 0
+                    ? "Enregistrez votre commande ici"
+                    : files[0].name}
+                </label>
+                <input
+                  id="fileupdate"
+                  type="file"
+                  onChange={onChangeupload}
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                />
+                <Button variant="success" onClick={excelUpload}>
+                  Enregistrez
+                </Button>
+                <Button
+                  variant="danger"
+                  onClick={() => {
+                    setExcelUpdate(false);
+                    setFiles([]);
+                  }}
+                >
+                  Annuler
+                </Button>
+              </div>
+            ) : (
+              <div className="client_download">
+                <ClientDownload />
+                {successInfo.block ? (
+                  <Button
+                    variant="secondary"
+                    disabled
+                    onClick={() => {
+                      setExcelUpdate(true);
+                    }}
+                  >
+                    Changez
+                    <br /> votre commande
+                  </Button>
+                ) : (
+                  <Button
+                    variant="secondary"
+                    onClick={() => {
+                      setExcelUpdate(true);
+                    }}
+                  >
+                    Changez votre commande
+                  </Button>
+                )}
+              </div>
+            )}
+          </div>
+          <div className="date">
+            <p>La date que vous recevoir la commande</p>
+            {dateUpdate ? (
+              <div className="date_change">
+                <ReactDatePicker
+                  showMonthDropdown
+                  showYearDropdown
+                  shouldCloseOnSelect={false}
+                  placeholderText="Choisiz la date"
+                  filterDate={isWeekday}
+                  minDate={new Date().setDate(date.getDate() + 15)}
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  locale={"fr"}
+                  dateFormat={"dd/ MM /yyyy"}
+                  disabledKeyboardNavigation
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      dateUpload();
+                    }
+                  }}
+                />
+                <Button variant="success" onClick={dateUpload}>
+                  Enregistrez
+                </Button>
+                <Button
+                  variant="danger"
+                  onClick={() => {
+                    setDateUpdate(false);
+                    setStartDate();
+                  }}
+                >
+                  Annuler
+                </Button>
+              </div>
+            ) : (
+              <div className="date_commande">
+                <em>
+                  {new Date(successInfo.date).getDate()} /{" "}
+                  {new Date(successInfo.date).getMonth() + 1} /{" "}
+                  {new Date(successInfo.date).getFullYear()}
+                </em>
+                {successInfo.block ? (
+                  <Button
+                    variant="secondary"
+                    disabled
+                    onClick={() => {
+                      console.log(successInfo.date);
+                      setDateUpdate(true);
+                    }}
+                  >
+                    Changez la date
+                  </Button>
+                ) : (
+                  <Button
+                    variant="secondary"
+                    onClick={() => {
+                      console.log(successInfo.date);
+                      setDateUpdate(true);
+                    }}
+                  >
+                    Changez la date
+                  </Button>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="commande_adresse">
+          {infoUpdate ? (
+            <form id="info_form">
+              <div className="commande_name">
+                <p>Votre nom et prenom</p>
+                <input
+                  type="text"
+                  name="nom"
+                  defaultValue={successInfo.nom}
+                  onKeyDown={enterInfo}
+                />
+                <br />
+                <br />
+                <input
+                  type="text"
+                  name="prenom"
+                  defaultValue={successInfo.prenom}
+                  onKeyDown={enterInfo}
+                />
+              </div>
+              <div className="adresse">
+                <p>Votre adresse</p>
+                <input
+                  type="text"
+                  name="adresse"
+                  defaultValue={successInfo.adresse}
+                  onKeyDown={enterInfo}
+                />
+              </div>
+              <div className="entreprise">
+                <p>Votre entreprise</p>
+                <input
+                  type="text"
+                  name="entreprise"
+                  defaultValue={successInfo.entreprise}
+                  onKeyDown={enterInfo}
+                />
+              </div>
+              <div className="email">
+                <p>Votre adresse email</p>
+                <input
+                  type="text"
+                  name="email"
+                  defaultValue={successInfo.email}
+                  onKeyDown={enterInfo}
+                />
+              </div>
+              <div className="phonenumber">
+                <p>Votre numero téléphone</p>
+                <input
+                  type="text"
+                  name="phonenumber"
+                  defaultValue={successInfo.phonenumber}
+                  onKeyDown={enterInfo}
+                />
+              </div>
+              <div className="buttons">
+                <Button variant="success" onClick={infoUpload}>
+                  Enregistrez
+                </Button>
+                <Button
+                  variant="danger"
+                  onClick={() => {
+                    setInfoUpdate(false);
+                  }}
+                >
+                  Annuler
+                </Button>
+              </div>
+            </form>
+          ) : (
+            <>
+              <div className="commande_name">
+                <p>Votre nom et prenom</p>
+                <div className="commande_nom">{successInfo.nom}</div>
+                <div className="commande_prenom">{successInfo.prenom}</div>
+              </div>
+              <div className="adresse">
+                <p>Votre adresse</p>
+                <em>{successInfo.adresse}</em>
+              </div>
+              <div className="entreprise">
+                <p>Votre entreprise</p>
+                <em>{successInfo.entreprise}</em>
+              </div>
+              <div className="email">
+                <p>Votre adresse email</p>
+                <em>{successInfo.email}</em>
+              </div>
+              <div className="phonenumber">
+                <p>Votre numero téléphone</p>
+                <em>{successInfo.phonenumber}</em>
+              </div>
+              {successInfo.block ? (
+                <Button
+                  variant="secondary"
+                  disabled
+                  onClick={() => {
+                    setInfoUpdate(true);
+                  }}
+                >
+                  Changez les infos
+                </Button>
+              ) : (
+                <Button
+                  variant="secondary"
+                  onClick={() => {
+                    setInfoUpdate(true);
+                  }}
+                >
+                  Changez les infos
+                </Button>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+      {successInfo.validable ? (
+        <>
+          <button
+            disabled
+            style={{ backgroundColor: "rgba(183, 25, 25, 0.365)" }}
+            onClick={() => {
+              setShow(true);
+            }}
+          >
+            Supprimez la commande
+          </button>
+          {successInfo.done ? (
+            ""
+          ) : (
+            <em>
+              * Vous pouvez pas supprimer cette commande parce qu'elle est déjà
+              validé. Si vous voulez supprimer cette commande, appelez nous s'il
+              vous plaît
+            </em>
+          )}
+        </>
+      ) : (
+        <button
+          onClick={() => {
+            setShow(true);
+          }}
+        >
+          Supprimez la commande
+        </button>
+      )}
+
+      <MyVerticallyCenteredModal
+        show={show}
+        onHide={() => {
+          setShow(false);
+        }}
+        deletecommande={deleteCommande}
+      />
+    </section>
+```
+
+삭제 요청 버튼을 클릭 시
+
+```
+<button
+  onClick={() => {
+    setShow(true);
+  }}
+  >
+  Supprimez la commande
+</button>
+```
+
+MyVerticallyCenteredModal이라는 컴포넌트를 사용해 모달창을 띄어 주문을 삭제요청 할 수 있습니다.
+
+```
+<MyVerticallyCenteredModal
+        show={show}
+        onHide={() => {
+          setShow(false);
+        }}
+        deletecommande={deleteCommande}
+      />
+```
+
+show와 onHide, deletecommande 3개의 props를 상속시켰습니다.
+
+```
+export default function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      show={props.show}
+      onHide={props.onHide}
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Supprimer la commande
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <p>Est-ce que vous voulez supprimer votre commande ?</p>
+        <div
+          className="confirmation"
+          style={{ marginTop: "3em", marginRight: "1.5em", textAlign: "end" }}
+        >
+          <Button variant="success" onClick={props.deletecommande}>
+            Oui
+          </Button>
+          <Button
+            variant="danger"
+            onClick={props.onHide}
+            style={{ marginLeft: "1em" }}
+          >
+            Pas encore
+          </Button>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+}
+```

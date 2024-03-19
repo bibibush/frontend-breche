@@ -69,7 +69,7 @@ export default function CommandeCSE() {
       repeat: -1,
     });
     getMatches();
-  }, [getMe, matches]);
+  }, [getMe, matches, getMatches]);
   console.log(startDate);
 
   return (

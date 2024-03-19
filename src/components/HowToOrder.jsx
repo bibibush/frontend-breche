@@ -31,7 +31,7 @@ export default function HowToOrder() {
   useEffect(() => {
     getme();
     getMatches();
-  }, [getme, matches]);
+  }, [getme, matches, getMatches]);
 
   const [show, setShow] = useState(false);
   return (

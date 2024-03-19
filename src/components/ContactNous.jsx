@@ -11,7 +11,6 @@ export default function ContactNous() {
   const submit = useCallback(() => {
     setBtnState(true);
     const formdata = new FormData(document.getElementById("contact_form"));
-    formdata.append("create_dt", "");
     axios
       .post("/user/contact/", formdata)
       .then((res) => {
@@ -22,7 +21,7 @@ export default function ContactNous() {
         alert(
           "La demande n’a pas pu être envoyée. \nMerci de renseigner correctement tous les champs obligatoires (*)."
         );
-        setBtnState(false)
+        setBtnState(false);
       });
   }, []);
 
