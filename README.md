@@ -50,7 +50,6 @@ css 파일들은 styles 폴더 안에 넣었습니다.
 #### 문의하기
 
 - ['문의하기' 페이지](https://www.salaisonsdelabreche.com/contact)
-- ['문의하기' 기능 Backend 코드 보기](https://github.com/bibibush/salaisons-de-la-breche)
 
 ```
 const [value, setValue] = useState("");
